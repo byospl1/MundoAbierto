@@ -1,0 +1,898 @@
+{
+ "version": "2026-S29",
+ "generado": "2026-07-18",
+ "mazmorras": [
+  {
+   "id": "el-nino-superviviente-curar-el-trauma-de",
+   "libro": "El niño superviviente: Curar el trauma del desarrollo",
+   "autor": "Joyanna L. Silberg",
+   "nombre": "Mazmorra de El niño superviviente",
+   "resumen": "El libro aborda en profundidad el trauma del desarrollo y la disociación en niños y adolescentes que han sufrido múltiples formas de abuso y negligencia temprana. La autora conceptualiza al 'niño superviviente' no desde la patología, sino desde la adaptación: ",
+   "salas": [
+    {
+     "id": "el-nino-superviviente-curar-el-trauma-de-1",
+     "nombre": "Sala 1 de El niño superviviente",
+     "monstruo": "Guardián del Saber",
+     "sprite": "ghost",
+     "preguntas": [
+      {
+       "q": "(El niño superviviente · S1-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El trauma temprano afecta gravemente seis áreas clave: la regulación afectiva, la conciencia, la autopercepción, la percepción del agresor, las relaciones y los sistemas de significado.",
+        "La impunidad y la permisividad social son los principales catalizadores de la violencia extrema; los agresores actúan simplemente porque pueden hacerlo.",
+        "La 'policía del sexo' no busca la prohibición absoluta, sino la reglamentación útil y pública de las conductas."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de El niño superviviente: Curar el trauma del desarrollo."
+      },
+      {
+       "q": "(El niño superviviente · S1-2) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "Los síntomas y conductas problemáticas del niño traumatizado (como mentir o agredir) no son mera patología, sino adaptaciones funcionales desarrolladas por necesidad para sobrevivir.",
+        "No existe un perfil psicológico único para los agresores sexuales, aunque la inmensa mayoría comparte la condición de ser varones.",
+        "El enfoque de Hans Asperger, que veía el autismo como un espectro con potencial de adaptación y genialidad, fue ignorado durante mucho tiempo en favor del modelo restrictivo de Kanner."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de El niño superviviente: Curar el trauma del desarrollo."
+      },
+      {
+       "q": "(El niño superviviente · S1-3) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El trauma repetido altera las vías del miedo en el cerebro, provocando respuestas fisiológicas inmediatas y descontroladas ante los desencadenantes.",
+        "El perfil psicológico del mexicano es abnegado, sometido y tradicionalista.",
+        "El Estado moderno vincula su futuro, demografía y fortuna al control de las prácticas sexuales de sus ciudadanos."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de El niño superviviente: Curar el trauma del desarrollo."
+      }
+     ]
+    },
+    {
+     "id": "el-nino-superviviente-curar-el-trauma-de-2",
+     "nombre": "Sala 2 de El niño superviviente",
+     "monstruo": "Guardián del Saber",
+     "sprite": "slime",
+     "preguntas": [
+      {
+       "q": "(El niño superviviente · S2-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La disociación actúa como un mecanismo de evitación afectiva automática frente a estímulos que el cerebro asocia con el peligro original.",
+        "Expresar el trauma a través de las palabras permite separar el acontecimiento del sufrimiento puro, restándole poder de daño a la experiencia vivida.",
+        "La confesión obligatoria convierte al sexo en un secreto permanente que debe ser constantemente verbalizado."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de El niño superviviente: Curar el trauma del desarrollo."
+      },
+      {
+       "q": "(El niño superviviente · S2-2) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La terapia debe enfocarse en identificar los momentos de transición crítica y enseñar conductas alternativas en lugar de castigar el síntoma.",
+        "La confesión obligatoria convierte al sexo en un secreto permanente que debe ser constantemente verbalizado.",
+        "La modernidad no ha silenciado el sexo, sino que ha multiplicado e institucionalizado los discursos sobre él."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de El niño superviviente: Curar el trauma del desarrollo."
+      },
+      {
+       "q": "(El niño superviviente · S2-3) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "Incluso los niños más desmoralizados conservan metas y deseos para el futuro, los cuales deben ser el motor del cambio terapéutico.",
+        "La modernidad no ha silenciado el sexo, sino que ha multiplicado e institucionalizado los discursos sobre él.",
+        "La 'policía del sexo' no busca la prohibición absoluta, sino la reglamentación útil y pública de las conductas."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de El niño superviviente: Curar el trauma del desarrollo."
+      }
+     ]
+    },
+    {
+     "id": "el-nino-superviviente-curar-el-trauma-de-3",
+     "nombre": "Sala 3 de El niño superviviente",
+     "monstruo": "Guardián del Saber",
+     "sprite": "bat",
+     "preguntas": [
+      {
+       "q": "(El niño superviviente · S3-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "Los amigos imaginarios en niños disociativos suelen ser más complejos, controladores y malévolos, reflejando la fragmentación de su experiencia interna.",
+        "La teoría de las 'madres refrigerador' causó un daño incalculable al culpar injustamente a los padres y desviar la investigación científica durante décadas.",
+        "La confesión obligatoria convierte al sexo en un secreto permanente que debe ser constantemente verbalizado."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de El niño superviviente: Curar el trauma del desarrollo."
+      }
+     ]
+    }
+   ],
+   "jefe": {
+    "nombre": "Guardián Final",
+    "sprite": "lich",
+    "preguntas": [
+     {
+      "q": "¿Qué es \"Trauma del desarrollo\"?",
+      "o": [
+       "Impacto acumulativo de múltiples formas de trauma de inicio temprano y negligencia en el cuidado de niños y adolescentes.",
+       "Alteración o fragmentación de las funciones normalmente integradas de la conciencia, la memoria, la identidad o la percepción como mecanismo de defensa.",
+       "Activación automática de patrones de acción y pensamiento sobreaprendidos para evitar la reactividad emocional asociada a recuerdos traumáticos."
+      ],
+      "c": 0,
+      "x": "Concepto de El niño superviviente: Curar el trauma del desarrollo."
+     },
+     {
+      "q": "¿Qué es \"Disociación\"?",
+      "o": [
+       "Alteración o fragmentación de las funciones normalmente integradas de la conciencia, la memoria, la identidad o la percepción como mecanismo de defensa.",
+       "Impacto acumulativo de múltiples formas de trauma de inicio temprano y negligencia en el cuidado de niños y adolescentes.",
+       "Activación automática de patrones de acción y pensamiento sobreaprendidos para evitar la reactividad emocional asociada a recuerdos traumáticos."
+      ],
+      "c": 0,
+      "x": "Concepto de El niño superviviente: Curar el trauma del desarrollo."
+     },
+     {
+      "q": "¿Qué es \"Evitación afectiva\"?",
+      "o": [
+       "Activación automática de patrones de acción y pensamiento sobreaprendidos para evitar la reactividad emocional asociada a recuerdos traumáticos.",
+       "Impacto acumulativo de múltiples formas de trauma de inicio temprano y negligencia en el cuidado de niños y adolescentes.",
+       "Alteración o fragmentación de las funciones normalmente integradas de la conciencia, la memoria, la identidad o la percepción como mecanismo de defensa."
+      ],
+      "c": 0,
+      "x": "Concepto de El niño superviviente: Curar el trauma del desarrollo."
+     },
+     {
+      "q": "¿Qué es \"Neurobiología interpersonal\"?",
+      "o": [
+       "Estudio de cómo las relaciones tempranas entre el cuidador y el niño moldean el desarrollo de las rutas neuronales que regulan el afecto.",
+       "Impacto acumulativo de múltiples formas de trauma de inicio temprano y negligencia en el cuidado de niños y adolescentes.",
+       "Alteración o fragmentación de las funciones normalmente integradas de la conciencia, la memoria, la identidad o la percepción como mecanismo de defensa."
+      ],
+      "c": 0,
+      "x": "Concepto de El niño superviviente: Curar el trauma del desarrollo."
+     }
+    ]
+   }
+  },
+  {
+   "id": "la-voluntad-de-saber",
+   "libro": "La voluntad de saber",
+   "autor": "Michel Foucault",
+   "nombre": "Mazmorra de La voluntad de saber",
+   "resumen": "El lector extrae de esta obra una profunda deconstrucción de la 'hipótesis represiva'. Contrario a la creencia común de que la modernidad silenció la sexualidad, Foucault argumenta que desde el siglo XVIII ha existido una verdadera explosión discursiva, una in",
+   "salas": [
+    {
+     "id": "la-voluntad-de-saber-1",
+     "nombre": "Sala 1 de La voluntad de saber",
+     "monstruo": "Guardián del Saber",
+     "sprite": "ghost",
+     "preguntas": [
+      {
+       "q": "(La voluntad de saber · S1-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La modernidad no ha silenciado el sexo, sino que ha multiplicado e institucionalizado los discursos sobre él.",
+        "El autismo no es una enfermedad moderna ni una psicosis infantil, sino una variación neurológica innata que ha existido siempre.",
+        "El trauma temprano afecta gravemente seis áreas clave: la regulación afectiva, la conciencia, la autopercepción, la percepción del agresor, las relaciones y los sistemas de significado."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de La voluntad de saber."
+      },
+      {
+       "q": "(La voluntad de saber · S1-2) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La 'policía del sexo' no busca la prohibición absoluta, sino la reglamentación útil y pública de las conductas.",
+        "El trauma no es solo un daño psicológico, sino un fenómeno biológico que altera los circuitos neuronales, las hormonas y el sistema inmunitario.",
+        "El abuso sexual infantil no solo afecta a la víctima directa, sino que organiza y corrompe la dinámica de todo el núcleo familiar a través del silencio."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de La voluntad de saber."
+      },
+      {
+       "q": "(La voluntad de saber · S1-3) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El Estado moderno vincula su futuro, demografía y fortuna al control de las prácticas sexuales de sus ciudadanos.",
+        "La tecnología y la informática han servido históricamente como herramientas de socialización y nichos de desarrollo para la comunidad neurodivergente.",
+        "El trauma no es solo un daño psicológico, sino un fenómeno biológico que altera los circuitos neuronales, las hormonas y el sistema inmunitario."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de La voluntad de saber."
+      }
+     ]
+    },
+    {
+     "id": "la-voluntad-de-saber-2",
+     "nombre": "Sala 2 de La voluntad de saber",
+     "monstruo": "Guardián del Saber",
+     "sprite": "slime",
+     "preguntas": [
+      {
+       "q": "(La voluntad de saber · S2-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La confesión obligatoria convierte al sexo en un secreto permanente que debe ser constantemente verbalizado.",
+        "Los amigos imaginarios en niños disociativos suelen ser más complejos, controladores y malévolos, reflejando la fragmentación de su experiencia interna.",
+        "La comunicación va mucho más allá del habla verbal; priorizar sistemas alternativos de comunicación es clave para la inclusión."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de La voluntad de saber."
+      },
+      {
+       "q": "(La voluntad de saber · S2-2) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La psiquiatría del siglo XIX transformó la homosexualidad de un mero acto condenable a una identidad patológica y psicológica.",
+        "La disociación actúa como un mecanismo de evitación afectiva automática frente a estímulos que el cerebro asocia con el peligro original.",
+        "La impunidad y la permisividad social son los principales catalizadores de la violencia extrema; los agresores actúan simplemente porque pueden hacerlo."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de La voluntad de saber."
+      },
+      {
+       "q": "(La voluntad de saber · S2-3) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La medicina y la pedagogía convirtieron la sexualidad infantil en un foco de vigilancia constante y pánico moral.",
+        "El uso de terapias aversivas y castigos físicos en el conductismo temprano demostró ser ineficaz a largo plazo en comparación con la enseñanza de conductas adaptativas.",
+        "El verdadero tabú social no es la existencia del abuso sexual, sino la acción de nombrarlo, analizarlo y confrontarlo abiertamente."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de La voluntad de saber."
+      }
+     ]
+    },
+    {
+     "id": "la-voluntad-de-saber-3",
+     "nombre": "Sala 3 de La voluntad de saber",
+     "monstruo": "Guardián del Saber",
+     "sprite": "bat",
+     "preguntas": [
+      {
+       "q": "(La voluntad de saber · S3-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El poder y el placer no se excluyen mutuamente, sino que se persiguen, se intensifican y se realimentan en espirales continuas.",
+        "El trauma no es solo un daño psicológico, sino un fenómeno biológico que altera los circuitos neuronales, las hormonas y el sistema inmunitario.",
+        "Los síntomas y conductas problemáticas del niño traumatizado (como mentir o agredir) no son mera patología, sino adaptaciones funcionales desarrolladas por necesidad para sobrevivir."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de La voluntad de saber."
+      }
+     ]
+    }
+   ],
+   "jefe": {
+    "nombre": "Guardián Final",
+    "sprite": "lich",
+    "preguntas": [
+     {
+      "q": "¿Qué es \"Discurso\"?",
+      "o": [
+       "Conjunto de enunciados institucionalizados que producen, regulan y legitiman la verdad sobre un tema específico.",
+       "Red móvil de relaciones de fuerza que produce realidades, saberes y placeres en lugar de limitarse a reprimir.",
+       "Ritual de producción de verdad donde el sujeto se ve obligado a verbalizar sus deseos y actos más íntimos ante una autoridad."
+      ],
+      "c": 0,
+      "x": "Concepto de La voluntad de saber."
+     },
+     {
+      "q": "¿Qué es \"Poder\"?",
+      "o": [
+       "Red móvil de relaciones de fuerza que produce realidades, saberes y placeres en lugar de limitarse a reprimir.",
+       "Conjunto de enunciados institucionalizados que producen, regulan y legitiman la verdad sobre un tema específico.",
+       "Ritual de producción de verdad donde el sujeto se ve obligado a verbalizar sus deseos y actos más íntimos ante una autoridad."
+      ],
+      "c": 0,
+      "x": "Concepto de La voluntad de saber."
+     },
+     {
+      "q": "¿Qué es \"Confesión\"?",
+      "o": [
+       "Ritual de producción de verdad donde el sujeto se ve obligado a verbalizar sus deseos y actos más íntimos ante una autoridad.",
+       "Conjunto de enunciados institucionalizados que producen, regulan y legitiman la verdad sobre un tema específico.",
+       "Red móvil de relaciones de fuerza que produce realidades, saberes y placeres en lugar de limitarse a reprimir."
+      ],
+      "c": 0,
+      "x": "Concepto de La voluntad de saber."
+     },
+     {
+      "q": "¿Qué es \"Normalización\"?",
+      "o": [
+       "Proceso mediante el cual la medicina y la psiquiatría definen y corrigen las conductas para adaptarlas a un estándar social.",
+       "Conjunto de enunciados institucionalizados que producen, regulan y legitiman la verdad sobre un tema específico.",
+       "Red móvil de relaciones de fuerza que produce realidades, saberes y placeres en lugar de limitarse a reprimir."
+      ],
+      "c": 0,
+      "x": "Concepto de La voluntad de saber."
+     }
+    ]
+   }
+  },
+  {
+   "id": "psicologia-del-mexicano-desconocido",
+   "libro": "Psicologia del Mexicano - Desconocido",
+   "autor": "Unknown",
+   "nombre": "Mazmorra de Psicologia del Mexicano - Desconocido",
+   "resumen": "El perfil psicológico del mexicano es abnegado, sometido y tradicionalista. Los valores fundamentales son familia, patria y religión.",
+   "salas": [
+    {
+     "id": "psicologia-del-mexicano-desconocido-1",
+     "nombre": "Sala 1 de Psicologia del Mexicano - Desconocido",
+     "monstruo": "Guardián del Saber",
+     "sprite": "ghost",
+     "preguntas": [
+      {
+       "q": "(Psicologia del Mexicano - Desconocido · S1-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El perfil psicológico del mexicano es abnegado, sometido y tradicionalista.",
+        "No existe un perfil psicológico único para los agresores sexuales, aunque la inmensa mayoría comparte la condición de ser varones.",
+        "La disociación actúa como un mecanismo de evitación afectiva automática frente a estímulos que el cerebro asocia con el peligro original."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Psicologia del Mexicano - Desconocido."
+      },
+      {
+       "q": "(Psicologia del Mexicano - Desconocido · S1-2) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "Los valores fundamentales del mexicano son familia, patria y religión.",
+        "El autismo no es una enfermedad moderna ni una psicosis infantil, sino una variación neurológica innata que ha existido siempre.",
+        "La medicina y la pedagogía convirtieron la sexualidad infantil en un foco de vigilancia constante y pánico moral."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Psicologia del Mexicano - Desconocido."
+      }
+     ]
+    }
+   ],
+   "jefe": {
+    "nombre": "Guardián Final",
+    "sprite": "lich",
+    "preguntas": [
+     {
+      "q": "¿Qué es \"Abnegado\"?",
+      "o": [
+       "Ser dispuesto a sacrificarse por los demás.",
+       "Ser de carácter dócil y obediente.",
+       "Valorizar las costumbres y tradiciones establecidas."
+      ],
+      "c": 0,
+      "x": "Concepto de Psicologia del Mexicano - Desconocido."
+     },
+     {
+      "q": "¿Qué es \"Sometido\"?",
+      "o": [
+       "Ser de carácter dócil y obediente.",
+       "Ser dispuesto a sacrificarse por los demás.",
+       "Valorizar las costumbres y tradiciones establecidas."
+      ],
+      "c": 0,
+      "x": "Concepto de Psicologia del Mexicano - Desconocido."
+     },
+     {
+      "q": "¿Qué es \"Tradicionalista\"?",
+      "o": [
+       "Valorizar las costumbres y tradiciones establecidas.",
+       "Ser dispuesto a sacrificarse por los demás.",
+       "Ser de carácter dócil y obediente."
+      ],
+      "c": 0,
+      "x": "Concepto de Psicologia del Mexicano - Desconocido."
+     },
+     {
+      "q": "¿Qué es \"Familia\"?",
+      "o": [
+       "La relación entre los miembros de una familia.",
+       "Ser dispuesto a sacrificarse por los demás.",
+       "Ser de carácter dócil y obediente."
+      ],
+      "c": 0,
+      "x": "Concepto de Psicologia del Mexicano - Desconocido."
+     }
+    ]
+   }
+  },
+  {
+   "id": "triste-tigre",
+   "libro": "Triste tigre",
+   "autor": "Neige Sinno",
+   "nombre": "Mazmorra de Triste tigre",
+   "resumen": "Triste tigre es una obra profundamente reflexiva y dolorosa que aborda el abuso sexual infantil y el incesto desde la experiencia personal de la autora y un riguroso análisis multidisciplinar. El libro desmitifica la figura del agresor, alejándolo de la imagen",
+   "salas": [
+    {
+     "id": "triste-tigre-1",
+     "nombre": "Sala 1 de Triste tigre",
+     "monstruo": "Guardián del Saber",
+     "sprite": "ghost",
+     "preguntas": [
+      {
+       "q": "(Triste tigre · S1-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El verdadero tabú social no es la existencia del abuso sexual, sino la acción de nombrarlo, analizarlo y confrontarlo abiertamente.",
+        "La medicina y la pedagogía convirtieron la sexualidad infantil en un foco de vigilancia constante y pánico moral.",
+        "El trauma temprano afecta gravemente seis áreas clave: la regulación afectiva, la conciencia, la autopercepción, la percepción del agresor, las relaciones y los sistemas de significado."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Triste tigre."
+      },
+      {
+       "q": "(Triste tigre · S1-2) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La violación y el abuso sexual infantil no son actos de deseo sexual, sino mecanismos pseudosexuales de dominación, control y poder.",
+        "Los valores fundamentales del mexicano son familia, patria y religión.",
+        "La modernidad no ha silenciado el sexo, sino que ha multiplicado e institucionalizado los discursos sobre él."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Triste tigre."
+      },
+      {
+       "q": "(Triste tigre · S1-3) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "No existe un perfil psicológico único para los agresores sexuales, aunque la inmensa mayoría comparte la condición de ser varones.",
+        "El uso de terapias aversivas y castigos físicos en el conductismo temprano demostró ser ineficaz a largo plazo en comparación con la enseñanza de conductas adaptativas.",
+        "Los amigos imaginarios en niños disociativos suelen ser más complejos, controladores y malévolos, reflejando la fragmentación de su experiencia interna."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Triste tigre."
+      }
+     ]
+    },
+    {
+     "id": "triste-tigre-2",
+     "nombre": "Sala 2 de Triste tigre",
+     "monstruo": "Guardián del Saber",
+     "sprite": "slime",
+     "preguntas": [
+      {
+       "q": "(Triste tigre · S2-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El abuso sexual infantil no solo afecta a la víctima directa, sino que organiza y corrompe la dinámica de todo el núcleo familiar a través del silencio.",
+        "Los síntomas y conductas problemáticas del niño traumatizado (como mentir o agredir) no son mera patología, sino adaptaciones funcionales desarrolladas por necesidad para sobrevivir.",
+        "El trauma repetido altera las vías del miedo en el cerebro, provocando respuestas fisiológicas inmediatas y descontroladas ante los desencadenantes."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Triste tigre."
+      },
+      {
+       "q": "(Triste tigre · S2-2) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El trauma no es solo un daño psicológico, sino un fenómeno biológico que altera los circuitos neuronales, las hormonas y el sistema inmunitario.",
+        "Los síntomas y conductas problemáticas del niño traumatizado (como mentir o agredir) no son mera patología, sino adaptaciones funcionales desarrolladas por necesidad para sobrevivir.",
+        "La disociación actúa como un mecanismo de evitación afectiva automática frente a estímulos que el cerebro asocia con el peligro original."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Triste tigre."
+      },
+      {
+       "q": "(Triste tigre · S2-3) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "Expresar el trauma a través de las palabras permite separar el acontecimiento del sufrimiento puro, restándole poder de daño a la experiencia vivida.",
+        "La disociación actúa como un mecanismo de evitación afectiva automática frente a estímulos que el cerebro asocia con el peligro original.",
+        "Los valores fundamentales del mexicano son familia, patria y religión."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Triste tigre."
+      }
+     ]
+    },
+    {
+     "id": "triste-tigre-3",
+     "nombre": "Sala 3 de Triste tigre",
+     "monstruo": "Guardián del Saber",
+     "sprite": "bat",
+     "preguntas": [
+      {
+       "q": "(Triste tigre · S3-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La impunidad y la permisividad social son los principales catalizadores de la violencia extrema; los agresores actúan simplemente porque pueden hacerlo.",
+        "La teoría de las 'madres refrigerador' causó un daño incalculable al culpar injustamente a los padres y desviar la investigación científica durante décadas.",
+        "Los amigos imaginarios en niños disociativos suelen ser más complejos, controladores y malévolos, reflejando la fragmentación de su experiencia interna."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Triste tigre."
+      }
+     ]
+    }
+   ],
+   "jefe": {
+    "nombre": "Guardián Final",
+    "sprite": "lich",
+    "preguntas": [
+     {
+      "q": "¿Qué es \"Trauma\"?",
+      "o": [
+       "El impacto profundo y duradero de la violencia que altera tanto la mente como la biología de una persona.",
+       "La fuerza motriz detrás del abuso sexual, utilizado para someter y dominar la identidad de la víctima.",
+       "El tabú cultural y familiar que protege al agresor y perpetúa la impunidad del abuso."
+      ],
+      "c": 0,
+      "x": "Concepto de Triste tigre."
+     },
+     {
+      "q": "¿Qué es \"Silencio\"?",
+      "o": [
+       "El tabú cultural y familiar que protege al agresor y perpetúa la impunidad del abuso.",
+       "La fuerza motriz detrás del abuso sexual, utilizado para someter y dominar la identidad de la víctima.",
+       "El impacto profundo y duradero de la violencia que altera tanto la mente como la biología de una persona."
+      ],
+      "c": 0,
+      "x": "Concepto de Triste tigre."
+     },
+     {
+      "q": "¿Qué es \"Resiliencia\"?",
+      "o": [
+       "La capacidad de transformar el daño recibido en una narrativa de supervivencia y liberación a través de la palabra.",
+       "La fuerza motriz detrás del abuso sexual, utilizado para someter y dominar la identidad de la víctima.",
+       "El impacto profundo y duradero de la violencia que altera tanto la mente como la biología de una persona."
+      ],
+      "c": 0,
+      "x": "Concepto de Triste tigre."
+     }
+    ]
+   }
+  },
+  {
+   "id": "una-tribu-propia-autismo-y-el-futuro-de-",
+   "libro": "Una tribu propia: Autismo y el futuro de la neurodiversidad",
+   "autor": "Steve Silberman",
+   "nombre": "Mazmorra de Una tribu propia",
+   "resumen": "Este libro ofrece una crónica histórica del autismo, revelando cómo las concepciones erróneas y las teorías patologizantes del siglo XX retrasaron décadas de comprensión y apoyo adecuado para las personas neurodivergentes. El lector destaca la transición desde",
+   "salas": [
+    {
+     "id": "una-tribu-propia-autismo-y-el-futuro-de--1",
+     "nombre": "Sala 1 de Una tribu propia",
+     "monstruo": "Guardián del Saber",
+     "sprite": "ghost",
+     "preguntas": [
+      {
+       "q": "(Una tribu propia · S1-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El autismo no es una enfermedad moderna ni una psicosis infantil, sino una variación neurológica innata que ha existido siempre.",
+        "No existe un perfil psicológico único para los agresores sexuales, aunque la inmensa mayoría comparte la condición de ser varones.",
+        "La disociación actúa como un mecanismo de evitación afectiva automática frente a estímulos que el cerebro asocia con el peligro original."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+      },
+      {
+       "q": "(Una tribu propia · S1-2) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La teoría de las 'madres refrigerador' causó un daño incalculable al culpar injustamente a los padres y desviar la investigación científica durante décadas.",
+        "El perfil psicológico del mexicano es abnegado, sometido y tradicionalista.",
+        "Expresar el trauma a través de las palabras permite separar el acontecimiento del sufrimiento puro, restándole poder de daño a la experiencia vivida."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+      },
+      {
+       "q": "(Una tribu propia · S1-3) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La institucionalización sistemática de niños autistas impidió su educación y perpetuó el falso mito de que eran incapaces de aprender.",
+        "El perfil psicológico del mexicano es abnegado, sometido y tradicionalista.",
+        "La terapia debe enfocarse en identificar los momentos de transición crítica y enseñar conductas alternativas en lugar de castigar el síntoma."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+      }
+     ]
+    },
+    {
+     "id": "una-tribu-propia-autismo-y-el-futuro-de--2",
+     "nombre": "Sala 2 de Una tribu propia",
+     "monstruo": "Guardián del Saber",
+     "sprite": "slime",
+     "preguntas": [
+      {
+       "q": "(Una tribu propia · S2-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El enfoque de Hans Asperger, que veía el autismo como un espectro con potencial de adaptación y genialidad, fue ignorado durante mucho tiempo en favor del modelo restrictivo de Kanner.",
+        "El perfil psicológico del mexicano es abnegado, sometido y tradicionalista.",
+        "El trauma temprano afecta gravemente seis áreas clave: la regulación afectiva, la conciencia, la autopercepción, la percepción del agresor, las relaciones y los sistemas de significado."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+      },
+      {
+       "q": "(Una tribu propia · S2-2) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La tecnología y la informática han servido históricamente como herramientas de socialización y nichos de desarrollo para la comunidad neurodivergente.",
+        "La violación y el abuso sexual infantil no son actos de deseo sexual, sino mecanismos pseudosexuales de dominación, control y poder.",
+        "Expresar el trauma a través de las palabras permite separar el acontecimiento del sufrimiento puro, restándole poder de daño a la experiencia vivida."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+      },
+      {
+       "q": "(Una tribu propia · S2-3) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "La comunicación va mucho más allá del habla verbal; priorizar sistemas alternativos de comunicación es clave para la inclusión.",
+        "Los amigos imaginarios en niños disociativos suelen ser más complejos, controladores y malévolos, reflejando la fragmentación de su experiencia interna.",
+        "El trauma temprano afecta gravemente seis áreas clave: la regulación afectiva, la conciencia, la autopercepción, la percepción del agresor, las relaciones y los sistemas de significado."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+      }
+     ]
+    },
+    {
+     "id": "una-tribu-propia-autismo-y-el-futuro-de--3",
+     "nombre": "Sala 3 de Una tribu propia",
+     "monstruo": "Guardián del Saber",
+     "sprite": "bat",
+     "preguntas": [
+      {
+       "q": "(Una tribu propia · S3-1) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El activismo de los padres y la desculpabilización familiar fueron los motores principales para la creación de servicios educativos y de apoyo reales.",
+        "La modernidad no ha silenciado el sexo, sino que ha multiplicado e institucionalizado los discursos sobre él.",
+        "El verdadero tabú social no es la existencia del abuso sexual, sino la acción de nombrarlo, analizarlo y confrontarlo abiertamente."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+      },
+      {
+       "q": "(Una tribu propia · S3-2) ¿Cuál de estas ideas es correcta?",
+       "o": [
+        "El uso de terapias aversivas y castigos físicos en el conductismo temprano demostró ser ineficaz a largo plazo en comparación con la enseñanza de conductas adaptativas.",
+        "La 'policía del sexo' no busca la prohibición absoluta, sino la reglamentación útil y pública de las conductas.",
+        "El trauma temprano afecta gravemente seis áreas clave: la regulación afectiva, la conciencia, la autopercepción, la percepción del agresor, las relaciones y los sistemas de significado."
+       ],
+       "c": 0,
+       "x": "Idea clave de tus notas de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+      }
+     ]
+    }
+   ],
+   "jefe": {
+    "nombre": "Guardián Final",
+    "sprite": "lich",
+    "preguntas": [
+     {
+      "q": "¿Qué es \"Neurodiversidad\"?",
+      "o": [
+       "La idea de que las diferencias neurológicas como el autismo son variaciones naturales del genoma humano y no patologías que deban curarse.",
+       "La práctica de recluir a personas con diferencias cognitivas en asilos u hospitales estatales, privándolas de educación y desarrollo social.",
+       "El proceso de categorización clínica que, según su amplitud o rigidez, puede abrir puertas al apoyo o condenar al ostracismo y la confusión."
+      ],
+      "c": 0,
+      "x": "Concepto de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+     },
+     {
+      "q": "¿Qué es \"Institucionalización\"?",
+      "o": [
+       "La práctica de recluir a personas con diferencias cognitivas en asilos u hospitales estatales, privándolas de educación y desarrollo social.",
+       "La idea de que las diferencias neurológicas como el autismo son variaciones naturales del genoma humano y no patologías que deban curarse.",
+       "El proceso de categorización clínica que, según su amplitud o rigidez, puede abrir puertas al apoyo o condenar al ostracismo y la confusión."
+      ],
+      "c": 0,
+      "x": "Concepto de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+     },
+     {
+      "q": "¿Qué es \"Diagnóstico\"?",
+      "o": [
+       "El proceso de categorización clínica que, según su amplitud o rigidez, puede abrir puertas al apoyo o condenar al ostracismo y la confusión.",
+       "La idea de que las diferencias neurológicas como el autismo son variaciones naturales del genoma humano y no patologías que deban curarse.",
+       "La práctica de recluir a personas con diferencias cognitivas en asilos u hospitales estatales, privándolas de educación y desarrollo social."
+      ],
+      "c": 0,
+      "x": "Concepto de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+     },
+     {
+      "q": "¿Qué es \"Estigmatización\"?",
+      "o": [
+       "La atribución de culpa y vergüenza a los padres o a los propios individuos debido a teorías pseudocientíficas sobre el origen de sus conductas.",
+       "La idea de que las diferencias neurológicas como el autismo son variaciones naturales del genoma humano y no patologías que deban curarse.",
+       "La práctica de recluir a personas con diferencias cognitivas en asilos u hospitales estatales, privándolas de educación y desarrollo social."
+      ],
+      "c": 0,
+      "x": "Concepto de Una tribu propia: Autismo y el futuro de la neurodiversidad."
+     }
+    ]
+   }
+  }
+ ],
+ "dragon": {
+  "nombre": "Dragón de las Convergencias",
+  "semana": "2026-S29",
+  "intro": "El dragón cruza los saberes de tus 5 libros. Solo quien domina las convergencias puede enfrentarlo.",
+  "preguntas": [
+   {
+    "q": "(Foucault) La modernidad ha ___ el sexo:",
+    "o": [
+     "Multiplicado e institucionalizado sus discursos",
+     "Silenciado por completo",
+     "Prohibido penalmente"
+    ],
+    "c": 0,
+    "x": "Convergencia de la semana 29."
+   },
+   {
+    "q": "(Silberg) El trauma temprano afecta gravemente…",
+    "o": [
+     "Seis áreas clave del desarrollo",
+     "Solo la memoria",
+     "Únicamente el apego"
+    ],
+    "c": 0,
+    "x": "Regulación afectiva, conciencia, autopercepción, percepción del agresor, relaciones y significado."
+   },
+   {
+    "q": "Síntesis de la semana:",
+    "o": [
+     "Los discursos sociales moldean la percepción del sexo y el trauma temprano marca el desarrollo",
+     "Los libros no se relacionan entre sí",
+     "Solo importa la biología"
+    ],
+    "c": 0,
+    "x": "Tu síntesis del 2026-07-16."
+   }
+  ]
+ },
+ "cartas": [
+  {
+   "id": "c-abnegado",
+   "frente": "Abnegado",
+   "dorso": "Ser dispuesto a sacrificarse por los demás.",
+   "libro": "Psicologia del Mexicano - Desconocido"
+  },
+  {
+   "id": "c-biopoli-tica",
+   "frente": "Biopoli-tica",
+   "dorso": "Tecnología de poder que gestiona la vida, la población y los procesos biológicos de la sociedad.",
+   "libro": "La voluntad de saber"
+  },
+  {
+   "id": "c-conductismo",
+   "frente": "Conductismo",
+   "dorso": "Enfoque psicológico centrado en la modificación del comportamiento que históricamente debatió entre el uso del castigo aversivo y el refuerzo positivo.",
+   "libro": "Una tribu propia Autismo y el futuro de la neurodiversidad"
+  },
+  {
+   "id": "c-confesio-n",
+   "frente": "Confesio-n",
+   "dorso": "Ritual de producción de verdad donde el sujeto se ve obligado a verbalizar sus deseos y actos más íntimos ante una autoridad.",
+   "libro": "La voluntad de saber"
+  },
+  {
+   "id": "c-diagno-stico",
+   "frente": "Diagno-stico",
+   "dorso": "El proceso de categorización clínica que, según su amplitud o rigidez, puede abrir puertas al apoyo o condenar al ostracismo y la confusión.",
+   "libro": "Una tribu propia Autismo y el futuro de la neurodiversidad"
+  },
+  {
+   "id": "c-discurso",
+   "frente": "Discurso",
+   "dorso": "Conjunto de enunciados institucionalizados que producen, regulan y legitiman la verdad sobre un tema específico.",
+   "libro": "La voluntad de saber"
+  },
+  {
+   "id": "c-disociacio-n",
+   "frente": "Disociacio-n",
+   "dorso": "Alteración o fragmentación de las funciones normalmente integradas de la conciencia, la memoria, la identidad o la percepción como mecanismo de defensa.",
+   "libro": "El niño superviviente Curar el trauma del desarrollo"
+  },
+  {
+   "id": "c-dominacio-n",
+   "frente": "Dominacio-n",
+   "dorso": "La estructura de control total que anula la voluntad del otro, manifestada de forma física, psicológica y simbólica.",
+   "libro": "Triste tigre"
+  },
+  {
+   "id": "c-estados-afectivos",
+   "frente": "Estados afectivos",
+   "dorso": "Respuestas biológicas e innatas que actúan como el pegamento psíquico que mantiene unificada la experiencia del yo.",
+   "libro": "El niño superviviente Curar el trauma del desarrollo"
+  },
+  {
+   "id": "c-estigmatizacio-n",
+   "frente": "Estigmatizacio-n",
+   "dorso": "La atribución de culpa y vergüenza a los padres o a los propios individuos debido a teorías pseudocientíficas sobre el origen de sus conductas.",
+   "libro": "Una tribu propia Autismo y el futuro de la neurodiversidad"
+  },
+  {
+   "id": "c-evitacio-n-afectiva",
+   "frente": "Evitacio-n afectiva",
+   "dorso": "Activación automática de patrones de acción y pensamiento sobreaprendidos para evitar la reactividad emocional asociada a recuerdos traumáticos.",
+   "libro": "El niño superviviente Curar el trauma del desarrollo"
+  },
+  {
+   "id": "c-familia",
+   "frente": "Familia",
+   "dorso": "La relación entre los miembros de una familia.",
+   "libro": "Psicologia del Mexicano - Desconocido"
+  },
+  {
+   "id": "c-identidad",
+   "frente": "Identidad",
+   "dorso": "La reconstrucción del ser tras haber sido sometido a la voluntad destructiva de un agresor.",
+   "libro": "Triste tigre"
+  },
+  {
+   "id": "c-institucionalizacio-n",
+   "frente": "Institucionalizacio-n",
+   "dorso": "La práctica de recluir a personas con diferencias cognitivas en asilos u hospitales estatales, privándolas de educación y desarrollo social.",
+   "libro": "Una tribu propia Autismo y el futuro de la neurodiversidad"
+  },
+  {
+   "id": "c-mecanismo-de-adaptacio-n",
+   "frente": "Mecanismo de adaptacio-n",
+   "dorso": "Conductas o síntomas desarrollados por necesidad para sobrevivir y ajustarse a un entorno hostil o postraumático.",
+   "libro": "El niño superviviente Curar el trauma del desarrollo"
+  },
+  {
+   "id": "c-neurobiologi-a-interpersonal",
+   "frente": "Neurobiologi-a interpersonal",
+   "dorso": "Estudio de cómo las relaciones tempranas entre el cuidador y el niño moldean el desarrollo de las rutas neuronales que regulan el afecto.",
+   "libro": "El niño superviviente Curar el trauma del desarrollo"
+  },
+  {
+   "id": "c-neurodiversidad",
+   "frente": "Neurodiversidad",
+   "dorso": "La idea de que las diferencias neurológicas como el autismo son variaciones naturales del genoma humano y no patologías que deban curarse.",
+   "libro": "Una tribu propia Autismo y el futuro de la neurodiversidad"
+  },
+  {
+   "id": "c-normalizacio-n",
+   "frente": "Normalizacio-n",
+   "dorso": "Proceso mediante el cual la medicina y la psiquiatría definen y corrigen las conductas para adaptarlas a un estándar social.",
+   "libro": "La voluntad de saber"
+  },
+  {
+   "id": "c-patria",
+   "frente": "Patria",
+   "dorso": "El amor y lealtad hacia la tierra y su gente.",
+   "libro": "Psicologia del Mexicano - Desconocido"
+  },
+  {
+   "id": "c-placer",
+   "frente": "Placer",
+   "dorso": "Efecto y motor de las relaciones de poder que se intensifica a través de su persecución, secreto y reglamentación.",
+   "libro": "La voluntad de saber"
+  },
+  {
+   "id": "c-poder",
+   "frente": "Poder",
+   "dorso": "Red móvil de relaciones de fuerza que produce realidades, saberes y placeres en lugar de limitarse a reprimir.",
+   "libro": "La voluntad de saber"
+  },
+  {
+   "id": "c-religio-n",
+   "frente": "Religio-n",
+   "dorso": "La creencia y práctica de un sistema de creencias espirituales.",
+   "libro": "Psicologia del Mexicano - Desconocido"
+  },
+  {
+   "id": "c-resiliencia",
+   "frente": "Resiliencia",
+   "dorso": "La capacidad de transformar el daño recibido en una narrativa de supervivencia y liberación a través de la palabra.",
+   "libro": "Triste tigre"
+  },
+  {
+   "id": "c-silencio",
+   "frente": "Silencio",
+   "dorso": "El tabú cultural y familiar que protege al agresor y perpetúa la impunidad del abuso.",
+   "libro": "Triste tigre"
+  },
+  {
+   "id": "c-sometido",
+   "frente": "Sometido",
+   "dorso": "Ser de carácter dócil y obediente.",
+   "libro": "Psicologia del Mexicano - Desconocido"
+  },
+  {
+   "id": "c-tecnologi-a-asistiva",
+   "frente": "Tecnologi-a asistiva",
+   "dorso": "Herramientas y dispositivos, desde máquinas de escribir interactivas hasta computadoras, que facilitan el aprendizaje y la comunicación sin la presión del juicio humano.",
+   "libro": "Una tribu propia Autismo y el futuro de la neurodiversidad"
+  },
+  {
+   "id": "c-tradicionalista",
+   "frente": "Tradicionalista",
+   "dorso": "Valorizar las costumbres y tradiciones establecidas.",
+   "libro": "Psicologia del Mexicano - Desconocido"
+  },
+  {
+   "id": "c-trauma-del-desarrollo",
+   "frente": "Trauma del desarrollo",
+   "dorso": "Impacto acumulativo de múltiples formas de trauma de inicio temprano y negligencia en el cuidado de niños y adolescentes.",
+   "libro": "El niño superviviente Curar el trauma del desarrollo"
+  },
+  {
+   "id": "c-trauma",
+   "frente": "Trauma",
+   "dorso": "El impacto profundo y duradero de la violencia que altera tanto la mente como la biología de una persona.",
+   "libro": "Triste tigre"
+  }
+ ]
+}

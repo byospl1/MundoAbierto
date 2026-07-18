@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Ejecuta Actualizar automáticamente cada DOMINGO a las 18:00.
+  Instalación (una vez), en Terminal:
+
+    1. Edita la ruta de abajo (ProgramArguments) para que apunte a tu carpeta del repo.
+    2. cp com.hugo.torre-erudito.plist ~/Library/LaunchAgents/
+    3. launchctl load ~/Library/LaunchAgents/com.hugo.torre-erudito.plist
+
+  Para quitarlo:  launchctl unload ~/Library/LaunchAgents/com.hugo.torre-erudito.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.hugo.torre-erudito</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-lc</string>
+        <!-- CAMBIA esta ruta por la de tu repo -->
+        <string>cd "$HOME/torre-erudito" &amp;&amp; ./Actualizar.command</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Weekday</key><integer>0</integer>   <!-- 0 = domingo -->
+        <key>Hour</key><integer>18</integer>
+        <key>Minute</key><integer>0</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>/tmp/torre-erudito.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/torre-erudito.err</string>
+</dict>
+</plist>
