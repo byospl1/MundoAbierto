@@ -45,15 +45,29 @@ function listMd(dir) {
 }
 
 /* ---------- Gemini ---------- */
-async function gemini(prompt) {
+function parseLooseJSON(txt) {
+  let s = String(txt || '').trim();
+  s = s.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '');   // quita cercas markdown
+  const a = s.indexOf('{'), b = s.lastIndexOf('}');
+  if (a >= 0 && b > a) s = s.slice(a, b + 1);
+  try { return JSON.parse(s); } catch (e) {}
+  // Reparación: escapa comillas dobles dentro de valores de texto (causa típica de "Según "Lett"...")
+  let fixed = s.replace(/:\s*"((?:[^"\\]|\\.)*)"/g, (m, inner) => ': "' + inner.replace(/\\"/g, '"').replace(/"/g, '\\"') + '"');
+  return JSON.parse(fixed);
+}
+async function gemini(prompt, retry = true) {
   const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${API_KEY}`, {
     method: 'POST', headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0.7 } })
+    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0.5 } })
   });
   if (!res.ok) throw new Error('Gemini ' + res.status + ': ' + (await res.text()).slice(0, 300));
   const data = await res.json();
   const txt = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
-  return JSON.parse(txt);
+  try { return parseLooseJSON(txt); }
+  catch (e) {
+    if (retry) { console.warn('  (JSON inválido, reintentando una vez…)'); return gemini(prompt + '\n\nIMPORTANTE: responde SOLO JSON válido. Escapa las comillas dobles dentro de los textos como \\". No uses comillas tipográficas.', false); }
+    throw e;
+  }
 }
 
 const SPRITES = ['ghost', 'slime', 'bat', 'golem', 'snake', 'imp', 'eye', 'cultist', 'wolf'];
@@ -109,12 +123,16 @@ const prev = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : { mazmorr
 
 const books = [...listMd('Libros'), ...listMd('Uni')].map(({ name, txt }) => {
   const { fm, sec, bullets } = parseNote(txt);
-  return {
+  const b = {
     id: slug(fm.titulo || name), titulo: fm.titulo || name, autor: fm.autor || 'Desconocido',
     resumen: sec('resumen').split('\n\n')[0] || '', ideas: bullets('ideas'), conceptos: bullets('concepto'),
     citas: sec('citas').split('\n').filter(l => l.startsWith('>')).map(l => l.replace(/^>\s*/, '')),
-    hash: hash(txt)
   };
+  // Hash SOLO del contenido de estudio (ideas/conceptos/citas/resumen), no del frontmatter:
+  // así fechas o metadatos que cambian en cada sync de Obsidian no fuerzan re-generar (ahorra tokens).
+  // Solo se re-generará cuando agregues o edites entradas reales.
+  b.hash = hash(JSON.stringify([b.titulo, b.autor, b.resumen, b.ideas, b.conceptos, b.citas]));
+  return b;
 });
 
 // ── Dedup global de preguntas: normaliza el enunciado; descarta repetidas entre libros/salas/jefes ──
