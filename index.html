@@ -1447,26 +1447,39 @@ function renderCombatBars(){
   $('btnPista').textContent='🔮 Pista ×'+(player.pociones.pista||0);
   $('btnElixir').textContent='🧪 Elixir ×'+(player.pociones.elixir||0);
 }
+const STOPWORDS=new Set(['para','como','este','esta','esto','entre','sobre','porque','cuando','desde','hasta','tiene','todos','todas','segun','según','contra','mediante','entonces','entre','entre']);
+function buildFill(q){
+  const correct=q.o[q.c]; const words=correct.split(/\s+/);
+  const cand=words.map((w,idx)=>({w,idx,clean:w.replace(/[^\wáéíóúñÁÉÍÓÚÑ]/g,'')})).filter(o=>o.clean.length>=5 && !STOPWORDS.has(o.clean.toLowerCase()));
+  if(!cand.length) return null;
+  const pick=cand[Math.floor(Math.random()*cand.length)];
+  // distractores: palabras largas de las otras opciones
+  const otras=q.o.filter((_,i)=>i!==q.c).join(' ').split(/\s+/).map(w=>w.replace(/[^\wáéíóúñ]/g,'')).filter(w=>w.length>=5 && w.toLowerCase()!==pick.clean.toLowerCase());
+  const uniq=[...new Set(otras)].sort(()=>Math.random()-.5).slice(0,2);
+  if(uniq.length<2) return null;
+  const blanked=words.map((w,i)=>i===pick.idx?'<span style="color:var(--a200);border-bottom:2px solid var(--a200);padding:0 18px">​</span>':escapeHtml(w)).join(' ');
+  const opts=[pick.clean,...uniq].sort(()=>Math.random()-.5);
+  return {prompt:q.q, frase:blanked, opts, c:opts.indexOf(pick.clean), x:q.x};
+}
 function loadQuestion(){
   const q=cb.qs[cb.i];
-  $('cbQ').textContent=q.q;
+  $('cbFeedback').style.display='none'; $('cbNext').style.display='none';
+  // elegir minijuego (no en la 1ª pregunta del combate)
+  let mode='mc';
+  if(cb.i>0){ const r=Math.random(); if(r<0.22 && cb.qs.length>=3) mode='match'; else if(r<0.5){ if(buildFill(q)) mode='fill'; } }
+  cb.mode=mode;
+  if(mode==='fill') return miniFill(q);
+  if(mode==='match') return miniMatch();
+  // opción múltiple normal
+  $('cbQ').innerHTML='<span class="tag" style="background:transparent;border-color:#f3f2f2;color:#f3f2f2;font-size:9px">Pregunta</span><br>'+escapeHtml(q.q);
   $('cbOpts').innerHTML=q.o.map((o,i)=>'<button class="copt" onclick="answer('+i+')">'+escapeHtml(o)+'</button>').join('');
   if(player.mascota==='basilisco'&&(cb.tipo==='jefe'||cb.tipo==='dragon')){ const w=[...document.querySelectorAll('.copt')].map((el,i)=>({el,i})).filter(o=>o.i!==q.c); if(w.length>1){ w[Math.floor(Math.random()*w.length)].el.classList.add('dim'); } }
-  $('cbFeedback').style.display='none'; $('cbNext').style.display='none';
 }
-function answer(i){
-  const q=cb.qs[cb.i];
-  const opts=document.querySelectorAll('.copt');
-  opts.forEach(o=>o.classList.add('dim'));
-  if(i===q.c){
-    opts[i].classList.remove('dim'); opts[i].classList.add('good');
-    cb.monHp--; sfx('ok'); $('cbMonSpr').classList.add('shake'); setTimeout(()=>$('cbMonSpr').classList.remove('shake'),320);
-  } else {
-    opts[i].classList.remove('dim'); opts[i].classList.add('bad');
-    opts[q.c].classList.remove('dim'); opts[q.c].classList.add('good');
-    cb.hp--; cb.flawless=false; sfx('bad'); const ar=document.querySelector('.arena'); if(ar){ar.classList.remove('hit');void ar.offsetWidth;ar.classList.add('hit');}
-  }
-  if(q.x){ $('cbFeedback').style.display='block'; $('cbFeedback').textContent='📜 '+q.x; }
+/* ---- resolución compartida de un turno ---- */
+function resolveTurn(ok,x){
+  if(ok){ cb.monHp--; sfx('ok'); $('cbMonSpr').classList.add('shake'); setTimeout(()=>$('cbMonSpr').classList.remove('shake'),320); }
+  else { cb.hp--; cb.flawless=false; sfx('bad'); const ar=document.querySelector('.arena'); if(ar){ar.classList.remove('hit');void ar.offsetWidth;ar.classList.add('hit');} }
+  if(x){ $('cbFeedback').style.display='block'; $('cbFeedback').style.background=''; $('cbFeedback').style.color=''; $('cbFeedback').textContent='📜 '+x; }
   renderCombatBars();
   if(cb.hp<=0){
     if(player.mascota==='fenix'&&!cb.revivido){ cb.revivido=true; cb.hp=1; renderCombatBars(); sfx('lvl'); toast('🔥 ¡Tu Fénix te revive con 1 corazón!'); }
@@ -1474,6 +1487,54 @@ function answer(i){
   }
   $('cbNext').style.display='flex';
   $('cbNext').textContent=(cb.monHp<=0)?'⚔ ¡Rematar!':'Continuar →';
+}
+function answer(i){
+  const q=cb.qs[cb.i];
+  const opts=document.querySelectorAll('.copt');
+  opts.forEach(o=>o.classList.add('dim'));
+  if(i===q.c){ opts[i].classList.remove('dim'); opts[i].classList.add('good'); }
+  else { opts[i].classList.remove('dim'); opts[i].classList.add('bad'); opts[q.c].classList.remove('dim'); opts[q.c].classList.add('good'); }
+  resolveTurn(i===q.c, q.x);
+}
+/* ---- MINIJUEGO: completar la frase ---- */
+function miniFill(q){
+  const f=buildFill(q); if(!f){ cb._forceMc=true; return loadQuestion(); }
+  window._fill=f;
+  $('cbQ').innerHTML='<span class="tag" style="background:var(--accent);border-color:var(--accent);color:#fff;font-size:9px">Completa la frase</span><br><span style="font-size:13px;opacity:.8">'+escapeHtml(f.prompt)+'</span>';
+  $('cbOpts').innerHTML='<div style="border:2px solid #f3f2f2;padding:12px;margin-bottom:10px;font-size:15px;line-height:1.5">'+f.frase+'</div>'+f.opts.map((o,i)=>'<button class="copt" onclick="fillPick('+i+')">'+escapeHtml(o)+'</button>').join('');
+}
+function fillPick(i){
+  const f=window._fill; const opts=document.querySelectorAll('.copt'); opts.forEach(o=>o.classList.add('dim'));
+  if(i===f.c){ opts[i].classList.remove('dim'); opts[i].classList.add('good'); }
+  else { opts[i].classList.remove('dim'); opts[i].classList.add('bad'); opts[f.c].classList.remove('dim'); opts[f.c].classList.add('good'); }
+  resolveTurn(i===f.c, f.x);
+}
+/* ---- MINIJUEGO: emparejar concepto ↔ definición ---- */
+function miniMatch(){
+  const pool=[...cb.qs].sort(()=>Math.random()-.5).slice(0,3);
+  const defs=pool.map((q,idx)=>({idx,concepto:q.q,def:q.o[q.c]}));
+  const derecha=defs.map(d=>d).sort(()=>Math.random()-.5);
+  window._match={defs,derecha,sel:null,hechos:0,wrong:0};
+  $('cbQ').innerHTML='<span class="tag" style="background:var(--accent);border-color:var(--accent);color:#fff;font-size:9px">Empareja</span><br><span style="font-size:13px;opacity:.8">Toca un concepto y luego su definición.</span>';
+  let h='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">';
+  h+='<div id="mLeft">'+defs.map(d=>'<button class="copt mL" data-i="'+d.idx+'" style="margin-top:0;margin-bottom:8px;font-size:13px" onclick="matchLeft('+d.idx+')">'+escapeHtml(d.concepto.length>70?d.concepto.slice(0,68)+'…':d.concepto)+'</button>').join('')+'</div>';
+  h+='<div id="mRight">'+derecha.map(d=>'<button class="copt mR" data-i="'+d.idx+'" style="margin-top:0;margin-bottom:8px;font-size:13px" onclick="matchRight('+d.idx+')">'+escapeHtml(d.def.length>70?d.def.slice(0,68)+'…':d.def)+'</button>').join('')+'</div>';
+  h+='</div>';
+  $('cbOpts').innerHTML=h;
+}
+function matchLeft(i){
+  const m=window._match; if(m.done)return;
+  m.sel=i;
+  document.querySelectorAll('.mL').forEach(b=>{ b.style.outline=(+b.dataset.i===i && !b.disabled)?'3px solid var(--a200)':''; });
+}
+function matchRight(i){
+  const m=window._match; if(m.done||m.sel==null)return;
+  const lBtn=[...document.querySelectorAll('.mL')].find(b=>+b.dataset.i===m.sel);
+  const rBtn=[...document.querySelectorAll('.mR')].find(b=>+b.dataset.i===i&&!b.disabled);
+  if(!rBtn)return;
+  if(i===m.sel){ lBtn.classList.add('good'); rBtn.classList.add('good'); lBtn.disabled=rBtn.disabled=true; lBtn.style.outline=''; m.hechos++; sfx('ok');
+    if(m.hechos>=m.defs.length){ m.done=true; resolveTurn(m.wrong===0, m.wrong===0?'¡Todo emparejado sin errores!':'Emparejaste, pero con algún fallo.'); }
+  } else { m.wrong++; cb.flawless=false; rBtn.classList.add('bad'); setTimeout(()=>rBtn.classList.remove('bad'),400); if(lBtn)lBtn.style.outline=''; m.sel=null; sfx('bad'); }
 }
 function nextQuestion(){
   if(cb.monHp<=0){
@@ -1516,6 +1577,7 @@ function defeat(){
 function afterCombat(){ if(cb&&cb.tipo==='dragon'){ showTab('mapa'); } else if(curDg){ openDg(curDg.id); renderHud(); } else showTab('mapa'); renderHud(); }
 function fleeCombat(){ setMusicCtx('granja'); $('combat').classList.remove('active'); afterCombat(); }
 function usePista(){
+  if(cb.mode&&cb.mode!=='mc'){ toast('La pista solo sirve en preguntas de opción múltiple.'); return; }
   if(cb.pistaGratis){ const q0=cb.qs[cb.i]; const w0=[...document.querySelectorAll('.copt')].map((el,i)=>({el,i})).filter(o=>o.i!==q0.c&&!o.el.classList.contains('dim')); if(w0.length){ cb.pistaGratis=false; w0[Math.floor(Math.random()*w0.length)].el.classList.add('dim'); sfx('ok'); toast('🐙 Tu Kraken susurra la respuesta (pista gratis).'); } return; }
   if((player.pociones.pista||0)<1){ toast('No tienes pistas. Cómpralas en la Tienda.'); return; }
   const q=cb.qs[cb.i]; const wrong=[...document.querySelectorAll('.copt')].map((el,i)=>({el,i})).filter(o=>o.i!==q.c&&!o.el.classList.contains('dim'));

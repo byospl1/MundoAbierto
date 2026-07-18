@@ -61,6 +61,7 @@ async function gemini(prompt, retry = true) {
     body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }], generationConfig: { responseMimeType: 'application/json', temperature: 0.5 } })
   });
   if (!res.ok) throw new Error('Gemini ' + res.status + ': ' + (await res.text()).slice(0, 300));
+  await new Promise(r => setTimeout(r, 4500)); // pausa: respeta el límite del plan gratuito (evita 429)
   const data = await res.json();
   const txt = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
   try { return parseLooseJSON(txt); }

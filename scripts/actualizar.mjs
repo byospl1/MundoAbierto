@@ -83,7 +83,7 @@ try {
   else {
     sh('git add -A');
     sh(`git commit -m "🐉 Actualización automática ${new Date().toISOString().slice(0, 10)}"`);
-    sh('git push');
+    sh('git push -u origin HEAD');
     log('¡Subido a GitHub! GitHub Pages republicará en 1-2 min.');
   }
 } catch (e) {

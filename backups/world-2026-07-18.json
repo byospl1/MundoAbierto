@@ -6,205 +6,205 @@
    "id": "el-nino-superviviente-curar-el-trauma-de",
    "libro": "El niño superviviente: Curar el trauma del desarrollo",
    "autor": "Joyanna L. Silberg",
-   "nombre": "El Bastión del Olvido Protector",
+   "nombre": "La Fortaleza del Recuerdo Olvidado",
    "resumen": "El libro aborda en profundidad el trauma del desarrollo y la disociación en niños y adolescentes que han sufrido múltiples formas de abuso y negligencia temprana. La autora conceptualiza al 'niño superviviente' no desde la patología, sino desde la adaptación: ",
    "salas": [
     {
-     "nombre": "La Galería de los Espejos Rotos",
-     "monstruo": "Sombra Fragmentada",
-     "sprite": "ghost",
+     "nombre": "El Foso de la Adaptación",
+     "monstruo": "Slime de las Mil Formas",
+     "sprite": "slime",
      "preguntas": [
       {
-       "q": "¿Cómo conceptualiza Joyanna L. Silberg los síntomas disociativos y conductas problemáticas en el niño superviviente?",
+       "q": "¿Cómo conceptualiza Silberg las conductas problemáticas (como mentir o agredir) en niños supervivientes?",
        "o": [
-        "Como patologías puras que deben ser erradicadas de inmediato mediante castigos.",
-        "Como mecanismos de defensa adaptativos y creativos para sobrevivir en entornos hostiles.",
-        "Como fallos cognitivos de carácter hereditario sin relación con el entorno."
+        "Como fallos cognitivos de carácter hereditario sin propósito adaptativo.",
+        "Como patologías puras que deben ser erradicadas mediante castigos severos.",
+        "Como mecanismos de adaptación funcionales y necesarios para sobrevivir en entornos hostiles."
+       ],
+       "c": 2,
+       "x": "Las conductas problemáticas son adaptaciones funcionales desarrolladas por necesidad para sobrevivir."
+      },
+      {
+       "q": "Según el texto, ¿cuál es el origen de los síntomas disociativos en el niño superviviente?",
+       "o": [
+        "Un defecto genético en la regulación de la dopamina cerebral.",
+        "Adaptaciones creativas y necesarias para sobrevivir en entornos hostiles y caóticos.",
+        "Una simple falta de disciplina y límites claros en el hogar actual."
        ],
        "c": 1,
-       "x": "Silberg propone que los síntomas son adaptaciones funcionales y creativas desarrolladas por necesidad para sobrevivir."
+       "x": "Los síntomas disociativos son mecanismos de defensa creativos y necesarios desarrollados para la supervivencia."
       },
       {
-       "q": "Según el texto, ¿cuál es el impacto del trauma temprano en el desarrollo del niño?",
+       "q": "¿Qué áreas clave se ven gravemente afectadas por el trauma temprano según el libro?",
        "o": [
-        "Afecta gravemente seis áreas clave, incluyendo la regulación afectiva, la autopercepción y las relaciones.",
-        "Se limita exclusivamente a la pérdida de memoria a corto plazo y habilidades motoras.",
-        "Afecta únicamente a la capacidad de aprendizaje académico y lógico-matemático."
+        "La memoria a largo plazo, la capacidad motora y el sistema inmunológico.",
+        "La regulación afectiva, la conciencia, la autopercepción, la percepción del agresor, las relaciones y los sistemas de significado.",
+        "Únicamente el desarrollo del lenguaje y la orientación espacial."
        ],
-       "c": 0,
-       "x": "El trauma temprano altera gravemente seis áreas clave del desarrollo, como la regulación afectiva, la autopercepción y los sistemas de significado."
-      },
-      {
-       "q": "¿Qué función cumple la disociación en el contexto del trauma del desarrollo?",
-       "o": [
-        "Actúa como un mecanismo de evitación afectiva automática ante estímulos asociados al peligro original.",
-        "Es una simulación consciente para llamar la atención de los cuidadores negligentes.",
-        "Funciona como un potenciador de la miopía cognitiva para recordar mejor el peligro."
-       ],
-       "c": 0,
-       "x": "La disociación opera como una evitación afectiva automática para proteger al cerebro de la reactividad emocional del trauma."
+       "c": 1,
+       "x": "El trauma temprano altera gravemente seis áreas clave, incluyendo la regulación afectiva, la conciencia y las relaciones."
       }
      ],
      "id": "el-nino-superviviente-curar-el-trauma-de-1"
     },
     {
-     "nombre": "El Laberinto de las Vías Alteradas",
-     "monstruo": "Golem de Impulsos",
-     "sprite": "golem",
+     "nombre": "El Laberinto de la Disociación",
+     "monstruo": "Espectro del Olvido Automático",
+     "sprite": "ghost",
      "preguntas": [
       {
-       "q": "¿Cómo afecta el trauma repetido a las vías del miedo en el cerebro del niño?",
+       "q": "¿Qué función cumple la disociación en el niño superviviente según las notas?",
        "o": [
-        "Las desactiva por completo, haciendo que el niño sea inmune al miedo.",
-        "Provoca respuestas fisiológicas inmediatas y descontroladas ante los desencadenantes.",
-        "Ralentiza los tiempos de reacción física ante cualquier tipo de estímulo externo."
-       ],
-       "c": 1,
-       "x": "El trauma repetido altera las vías del miedo, generando respuestas fisiológicas automáticas y descontroladas ante estímulos desencadenantes."
-      },
-      {
-       "q": "Según la teoría de Tomkins citada en el texto, ¿cuántos estados afectivos innatos existen y cuántos son negativos?",
-       "o": [
-        "Nueve estados afectivos en total, de los cuales seis son negativos.",
-        "Seis estados afectivos en total, siendo todos de carácter negativo.",
-        "Diez estados afectivos en total, con solo tres de carácter negativo."
+        "Funciona como un mecanismo de evitación afectiva automática frente a estímulos asociados al peligro original.",
+        "Es un estado de rebeldía consciente para manipular a los cuidadores.",
+        "Es una alteración temporal que solo ocurre durante el sueño profundo."
        ],
        "c": 0,
-       "x": "Tomkins propone nueve estados afectivos innatos, discretos y biológicos, de los cuales seis son negativos."
+       "x": "La disociación actúa como evitación afectiva automática ante estímulos que el cerebro asocia con el peligro original."
       },
       {
-       "q": "¿Qué papel juegan los estados afectivos en la experiencia del individuo según el texto?",
+       "q": "¿Cómo describe Amy su propia experiencia con la disociación en la cita del libro?",
        "o": [
-        "Son meras reacciones secundarias que no influyen en la identidad.",
-        "Actúan como el pegamento psíquico que mantiene unificada la experiencia del yo.",
-        "Son bloqueadores que impiden el desarrollo de la memoria a largo plazo."
+        "Dice que se queda ausente y que olvidar es lo que mejor hace desde que la forzaron a vivir una doble vida.",
+        "Afirma que recuerda cada detalle con perfecta claridad gracias a su memoria fotográfica.",
+        "Explica que la disociación le genera una inmensa rabia física incontrolable."
        ],
-       "c": 1,
-       "x": "Los estados afectivos son respuestas biológicas que funcionan como el pegamento psíquico para unificar la experiencia del yo."
+       "c": 0,
+       "x": "Amy relata que se queda ausente y que olvidar es lo que mejor hace tras haber sido forzada a llevar una doble vida."
+      },
+      {
+       "q": "¿Qué es la 'evitación afectiva' según los conceptos clave?",
+       "o": [
+        "Un esfuerzo consciente y planificado para ignorar las normas sociales.",
+        "La incapacidad biológica de sentir cualquier emoción básica como la alegría.",
+        "La activación automática de patrones de acción y pensamiento sobreaprendidos para evitar la reactividad emocional de recuerdos traumáticos."
+       ],
+       "c": 2,
+       "x": "La evitación afectiva activa patrones automáticos para esquivar el dolor emocional ligado a recuerdos del trauma."
       }
      ],
      "id": "el-nino-superviviente-curar-el-trauma-de-2"
     },
     {
-     "nombre": "La Cueva de los Aliados Sombríos",
-     "monstruo": "Duendecillo del Rencor",
-     "sprite": "imp",
+     "nombre": "La Caverna de las Vías Alteradas",
+     "monstruo": "Serpiente de los Senderos de Miedo",
+     "sprite": "snake",
      "preguntas": [
       {
-       "q": "¿Cómo suelen ser los amigos imaginarios en los niños que experimentan disociación?",
+       "q": "¿Cómo afecta el trauma repetido a las vías del miedo en el cerebro del niño?",
        "o": [
-        "Simples, pacíficos y orientados únicamente al juego cooperativo.",
-        "Complejos, controladores y malévolos, reflejando la fragmentación interna.",
-        "Entidades neutrales que desaparecen inmediatamente al ser confrontadas."
+        "Las desactiva por completo, haciendo que el niño no sienta ningún tipo de miedo.",
+        "Las regenera constantemente, mejorando la memoria emocional del niño.",
+        "Las altera, provocando respuestas fisiológicas inmediatas y descontroladas ante los desencadenantes."
        ],
-       "c": 1,
-       "x": "Los amigos imaginarios en niños disociativos reflejan la fragmentación interna siendo más complejos, controladores y malévolos."
+       "c": 2,
+       "x": "El trauma repetido altera las vías del miedo, desatando respuestas fisiológicas inmediatas ante detonantes."
       },
       {
-       "q": "Si un niño traumatizado miente, roba o agrede, ¿bajo qué premisa debe analizarse esta conducta según Silberg?",
+       "q": "¿Qué estudia la neurobiología interpersonal mencionada en los conceptos?",
        "o": [
-        "Como una conducta que atiende a buenas e importantes razones de supervivencia y adaptación.",
-        "Como una muestra de maldad intrínseca que requiere castigos severos inmediatos.",
-        "Como un síntoma neurológico irreversible que no puede ser modificado."
+        "Cómo las relaciones tempranas entre el cuidador y el niño moldean el desarrollo de las rutas neuronales que regulan el afecto.",
+        "El impacto de los fármacos en el sistema nervioso central de los adultos.",
+        "La evolución filogenética de las respuestas de huida en mamíferos salvajes."
        ],
        "c": 0,
-       "x": "Silberg afirma que incluso las conductas problemáticas como mentir o agredir se desarrollan por necesidad y atienden a razones de supervivencia."
+       "x": "La neurobiología interpersonal analiza cómo el vínculo temprano moldea las vías neuronales de regulación afectiva."
       },
       {
-       "q": "¿Qué concepto define el impacto acumulativo de múltiples traumas de inicio temprano y negligencia en el cuidado?",
+       "q": "¿Cuántos estados afectivos innatos y biológicos propone Tomkins según la cita?",
        "o": [
-        "Disociación selectiva.",
-        "Trauma del desarrollo.",
-        "Evitación afectiva primaria."
+        "Nueve estados afectivos innatos, de los cuales seis son negativos.",
+        "Tres estados afectivos, todos ellos de carácter positivo.",
+        "Cinco estados afectivos neutros que se aprenden únicamente en la adultez."
        ],
-       "c": 1,
-       "x": "El trauma del desarrollo es el impacto acumulativo de múltiples traumas tempranos y negligencia en el cuidado infantil."
+       "c": 0,
+       "x": "Tomkins propone nueve estados afectivos innatos, discretos y biológicos, siendo seis de ellos negativos."
       }
      ],
      "id": "el-nino-superviviente-curar-el-trauma-de-3"
     },
     {
-     "nombre": "El Santuario de la Transición",
-     "monstruo": "Serpiente de las Transiciones",
-     "sprite": "snake",
+     "nombre": "La Torre de los Espejos Rotos",
+     "monstruo": "Diablillo de las Sombras Internas",
+     "sprite": "imp",
      "preguntas": [
       {
-       "q": "¿En qué debe enfocarse la terapia para niños traumatizados en lugar de castigar el síntoma?",
+       "q": "¿Cómo suelen ser los amigos imaginarios en los niños disociativos según el libro?",
        "o": [
-        "En identificar transiciones críticas y enseñar conductas alternativas.",
-        "En la supresión farmacológica absoluta de cualquier estado afectivo negativo.",
-        "En confrontar directamente al agresor en sesiones conjuntas obligatorias."
-       ],
-       "c": 0,
-       "x": "La terapia debe centrarse en identificar transiciones críticas y enseñar conductas alternativas en lugar de castigar los síntomas."
-      },
-      {
-       "q": "¿Cuál debe ser el motor del cambio terapéutico incluso en los niños más desmoralizados?",
-       "o": [
-        "El miedo al castigo y a la exclusión social permanente.",
-        "Sus propias metas y deseos para el futuro.",
-        "La aceptación pasiva de que su pasado no puede ser superado."
+        "Simples proyecciones alegres que desaparecen rápidamente al jugar.",
+        "Más complejos, controladores y malévolos, reflejando la fragmentación de su experiencia interna.",
+        "Idénticos a los de los niños sin trauma, sin ninguna diferencia cualitativa."
        ],
        "c": 1,
-       "x": "Incluso el niño más desmoralizado conserva metas y deseos futuros que deben impulsar el cambio terapéutico."
+       "x": "Los amigos imaginarios en niños disociativos reflejan la fragmentación interna siendo más complejos y controladores."
       },
       {
-       "q": "¿Qué estudia la neurobiología interpersonal mencionada en los conceptos clave?",
+       "q": "En lugar de castigar el síntoma, ¿en qué debe enfocarse la terapia según las ideas clave?",
        "o": [
-        "Cómo las relaciones tempranas cuidador-niño moldean las rutas neuronales que regulan el afecto.",
-        "El efecto de los videojuegos educativos en la corteza prefrontal del niño.",
-        "La transmisión genética directa de los trastornos disociativos de padres a hijos."
+        "En identificar los momentos de transición crítica y enseñar conductas alternativas.",
+        "En aislar al niño hasta que decida cambiar su comportamiento por sí mismo.",
+        "En ignorar por completo las conductas problemáticas esperando que desaparezcan solas."
        ],
        "c": 0,
-       "x": "La neurobiología interpersonal analiza cómo las relaciones tempranas con el cuidador moldean las vías neuronales de regulación afectiva."
+       "x": "La terapia efectiva se enfoca en enseñar conductas alternativas durante las transiciones críticas en vez de castigar el síntoma."
+      },
+      {
+       "q": "¿Qué elemento actúa como el 'pegamento psíquico' que mantiene unificada la experiencia del yo?",
+       "o": [
+        "Los estados afectivos, que son respuestas biológicas e innatas.",
+        "Los castigos y recompensas impuestos por el entorno escolar.",
+        "La memoria a corto plazo y la capacidad de razonamiento lógico puro."
+       ],
+       "c": 0,
+       "x": "Los estados afectivos actúan como el pegamento psíquico que mantiene unificada la experiencia del yo."
       }
      ],
      "id": "el-nino-superviviente-curar-el-trauma-de-4"
     }
    ],
    "jefe": {
-    "nombre": "El Archimago del Olvido",
+    "nombre": "El Archiliche del Trauma",
     "sprite": "lich",
     "preguntas": [
      {
-      "q": "La joven Amy escribió que olvidar es lo que mejor hace desde que la forzaron a vivir una doble vida. ¿Qué mecanismo ilustra este testimonio?",
+      "q": "¿Cuál debe ser el motor del cambio terapéutico incluso en los niños más desmoralizados?",
       "o": [
-       "La disociación como defensa adaptativa ante un entorno hostil y caótico.",
-       "Una amnesia orgánica causada por un golpe físico en el lóbulo temporal.",
-       "Un intento consciente de manipulación para evadir sus deberes escolares."
-      ],
-      "c": 0,
-      "x": "La disociación y el olvido selectivo son adaptaciones necesarias para sobrevivir a una doble vida impuesta por el abuso."
-     },
-     {
-      "q": "¿Por qué se considera que las conductas problemáticas (como agredir o mentir) son 'mecanismos de adaptación'?",
-      "o": [
-       "Porque son respuestas biológicas aleatorias sin ninguna finalidad práctica.",
-       "Porque fueron desarrolladas por necesidad para sobrevivir y ajustarse a un entorno hostil.",
-       "Porque demuestran que el niño ha superado por completo el trauma del desarrollo."
+       "El miedo a las consecuencias legales de sus actos.",
+       "Sus metas y deseos para el futuro, los cuales siempre conservan.",
+       "La imposición externa de un sistema estricto de premios y castigos."
       ],
       "c": 1,
-      "x": "Estas conductas problemáticas son adaptaciones funcionales que el niño necesitó para sobrevivir en su entorno hostil."
+      "x": "Las metas y deseos para el futuro, presentes incluso en los más desmoralizados, deben guiar el cambio terapéutico."
      },
      {
-      "q": "¿Cuál de los siguientes es un afecto neutro según la clasificación de Tomkins mencionada en el texto?",
+      "q": "¿Cuál de las siguientes afirmaciones resume mejor la filosofía de Joyanna L. Silberg sobre el 'niño superviviente'?",
       "o": [
-       "El miedo-terror.",
-       "La sorpresa-sobresalto.",
-       "El malestar-angustia."
+       "Es un niño con patologías incurables que requiere medicación de por vida.",
+       "Es un niño que ha desarrollado adaptaciones funcionales y creativas para sobrevivir a entornos hostiles.",
+       "Es un niño manipulador que utiliza la disociación para evadir sus responsabilidades escolares."
       ],
       "c": 1,
-      "x": "Tomkins clasifica la sorpresa-sobresalto como un afecto neutro, diferenciándolo de los seis afectos negativos."
+      "x": "Silberg ve al niño superviviente desde la adaptación y la resiliencia, no desde la mera patología."
      },
      {
-      "q": "Para lograr una intervención terapéutica exitosa, ¿cuál es la actitud correcta hacia los síntomas del niño superviviente?",
+      "q": "¿Qué postula el libro respecto a la capacidad de cambio de los niños traumatizados?",
       "o": [
-       "Reconocer que se desarrollaron por necesidad y que el niño tiene la capacidad de cambiar sus conductas.",
-       "Castigar severamente cada síntoma para extinguir la conducta disociativa rápidamente.",
-       "Ignorar los síntomas por completo esperando que el desarrollo natural los elimine."
+       "Que carecen de ella debido al daño irreversible en sus vías del miedo.",
+       "Que tienen la capacidad de cambiar sus conductas y que todo lo que hacen atiende a buenas razones de supervivencia.",
+       "Que solo pueden cambiar si se les somete a un aislamiento total de sus familias."
       ],
-      "c": 0,
-      "x": "Silberg enfatiza que los síntomas se desarrollaron por necesidad y que los niños poseen la capacidad innata de cambiar sus conductas."
+      "c": 1,
+      "x": "El libro afirma que los niños tienen la capacidad de cambiar y que sus conductas iniciales tenían razones adaptativas importantes."
+     },
+     {
+      "q": "¿Qué define al 'trauma del desarrollo' según los conceptos clave?",
+      "o": [
+       "Un evento traumático único que ocurre exclusivamente durante la edad adulta.",
+       "Un retraso en el crecimiento físico debido a desnutrición severa.",
+       "El impacto acumulativo de múltiples formas de trauma de inicio temprano y negligencia en el cuidado."
+      ],
+      "c": 2,
+      "x": "El trauma del desarrollo se refiere al impacto acumulativo de traumas tempranos y negligencia en el cuidado infantil."
      }
     ]
    }
@@ -213,157 +213,157 @@
    "id": "la-voluntad-de-saber",
    "libro": "La voluntad de saber",
    "autor": "Michel Foucault",
-   "nombre": "El Archivo del Biopoder",
+   "nombre": "El Bastión del Saber Oculto",
    "resumen": "El lector extrae de esta obra una profunda deconstrucción de la 'hipótesis represiva'. Contrario a la creencia común de que la modernidad silenció la sexualidad, Foucault argumenta que desde el siglo XVIII ha existido una verdadera explosión discursiva, una in",
    "salas": [
     {
-     "nombre": "La Galería del Discurso Infinito",
-     "monstruo": "Limo de Tinta Susurrante",
-     "sprite": "slime",
+     "nombre": "La Galería de los Discursos Multiplicados",
+     "monstruo": "Susurro Parlanchín",
+     "sprite": "imp",
      "preguntas": [
       {
        "q": "¿Qué sostiene Foucault en contra de la 'hipótesis represiva' tradicional?",
        "o": [
-        "Que la modernidad multiplicó e institucionalizó los discursos sobre el sexo en lugar de silenciarlo.",
-        "Que la modernidad logró censurar por completo cualquier mención pública de la sexualidad.",
-        "Que el sexo pasó a ser un asunto puramente privado y libre de regulaciones estatales."
+        "Que la modernidad multiplicó e institucionalizó los discursos sobre el sexo.",
+        "Que el sexo fue completamente silenciado desde el siglo XVIII.",
+        "Que la Iglesia prohibió hablar del sexo de forma absoluta."
        ],
        "c": 0,
-       "x": "Foucault argumenta que desde el siglo XVIII ha existido una explosión discursiva y una incitación política a hablar de sexo de manera reglamentada."
+       "x": "La modernidad no silenció el sexo, sino que desató una explosión discursiva y reglamentada sobre él."
       },
       {
-       "q": "Según las notas, ¿qué es un 'Discurso'?",
+       "q": "¿Cuál es el verdadero objetivo de la llamada 'policía del sexo'?",
        "o": [
-        "Un monólogo teatral diseñado para entretener a las masas oprimidas.",
-        "Un conjunto de enunciados institucionalizados que producen, regulan y legitiman la verdad sobre un tema.",
-        "La prohibición absoluta y el silencio impuesto sobre los temas tabú."
+        "La prohibición absoluta de toda práctica sexual.",
+        "La reglamentación útil y pública de las conductas.",
+        "La eliminación de los discursos médicos sobre el cuerpo."
        ],
        "c": 1,
-       "x": "El discurso se define como el conjunto de enunciados institucionalizados que producen y legitiman la verdad sobre un tema específico."
+       "x": "La policía del sexo busca administrar y regular las conductas de manera útil y pública en lugar de prohibirlas."
       },
       {
-       "q": "¿Cuál es el verdadero objetivo de la 'policía del sexo'?",
+       "q": "¿Qué concepto define al conjunto de enunciados institucionalizados que regulan la verdad sobre un tema?",
        "o": [
-        "La prohibición absoluta de toda práctica sexual fuera del matrimonio.",
-        "La eliminación de toda institución médica y psiquiátrica del reino.",
-        "La reglamentación útil y pública de las conductas mediante discursos."
+        "Biopolítica",
+        "Poder",
+        "Discurso"
        ],
        "c": 2,
-       "x": "La policía del sexo no busca la prohibición absoluta, sino la reglamentación útil y pública de las conductas."
+       "x": "El Discurso produce, regula y legitima la verdad institucional sobre un tema específico como el sexo."
       }
      ],
      "id": "la-voluntad-de-saber-1"
     },
     {
-     "nombre": "El Confesionario de las Sombras",
-     "monstruo": "Imp del Secreto Perpetuo",
-     "sprite": "imp",
+     "nombre": "El Altar del Secreto Verbalizado",
+     "monstruo": "Ojo del Confesionario",
+     "sprite": "eye",
      "preguntas": [
       {
-       "q": "¿Qué efecto produce el ritual de la confesión obligatoria según la obra?",
+       "q": "¿Cómo transforma la confesión obligatoria nuestra relación con el sexo?",
        "o": [
-        "Libera al sujeto de toda culpa y elimina el poder de las instituciones.",
-        "Convierte al sexo en un secreto permanente que debe ser constantemente verbalizado.",
-        "Silencia definitivamente los deseos íntimos de las personas."
+        "Lo convierte en un secreto permanente que debe ser constantemente verbalizado.",
+        "Permite liberarse definitivamente de la influencia del poder.",
+        "Elimina la necesidad de que la medicina intervenga en la vida privada."
        ],
-       "c": 1,
-       "x": "La confesión obligatoria convierte al sexo en un secreto permanente que el sujeto se ve obligado a verbalizar ante una autoridad."
+       "c": 0,
+       "x": "La confesión obliga al sujeto a verbalizar constantemente sus deseos íntimos, volviendo al sexo un secreto sin fin."
       },
       {
-       "q": "¿Cómo se relacionan el poder y el placer en las sociedades modernas?",
+       "q": "Según Foucault, ¿cómo se relacionan el poder y el placer?",
        "o": [
-        "Se excluyen mutuamente, pues el poder siempre destruye al placer.",
+        "Se excluyen mutuamente de forma destructiva.",
         "Se persiguen, se intensifican y se realimentan en espirales continuas.",
-        "Son independientes y nunca llegan a cruzarse en la vida social."
+        "El poder destruye el placer mediante la prohibición total."
        ],
        "c": 1,
-       "x": "El poder y el placer no se excluyen, sino que se persiguen, se intensifican y se realimentan en espirales continuas."
+       "x": "El poder y el placer se persiguen e intensifican mutuamente en espirales perpetuas."
       },
       {
-       "q": "¿Qué define al 'Poder' en el marco foucaultiano presentado?",
+       "q": "¿Qué es el 'Poder' según las notas de esta obra?",
        "o": [
-        "Una fuerza puramente represiva que solo dicta prohibiciones soberanas.",
-        "El control absoluto ejercido exclusivamente por un rey medieval.",
-        "Una red móvil de relaciones de fuerza que produce realidades, saberes y placeres."
+        "Una fuerza puramente represiva en manos del soberano.",
+        "Una red móvil de relaciones de fuerza que produce realidades, saberes y placeres.",
+        "Un sistema estático que solo busca prohibir y castigar."
        ],
-       "c": 2,
-       "x": "El poder se concibe como una red móvil de relaciones de fuerza capaz de producir realidades, saberes y placeres."
+       "c": 1,
+       "x": "El poder no es solo represivo, sino una red móvil que produce saberes, realidades y placeres."
       }
      ],
      "id": "la-voluntad-de-saber-2"
     },
     {
      "nombre": "El Laboratorio de la Normalización",
-     "monstruo": "Ojo Examinador de Desviaciones",
-     "sprite": "eye",
+     "monstruo": "Limo de la Patología",
+     "sprite": "slime",
      "preguntas": [
       {
-       "q": "¿Cómo transformó la psiquiatría del siglo XIX la homosexualidad?",
+       "q": "¿Qué cambio crucial introdujo la psiquiatría del siglo XIX respecto a la homosexualidad?",
        "o": [
-        "La despenalizó completamente eliminando todo prejuicio moral.",
+        "La consideró un simple acto condenable sin importancia médica.",
         "La transformó de un mero acto condenable a una identidad patológica y psicológica.",
-        "La ignoró para centrarse únicamente en la sexualidad de los ancianos."
+        "La despenalizó por completo en toda Europa."
        ],
        "c": 1,
-       "x": "La psiquiatría del siglo XIX constituyó la homosexualidad como una categoría patológica y psicológica, y no solo como un acto condenable."
+       "x": "La psiquiatría del siglo XIX creó la categoría médica de la homosexualidad como una identidad psicológica y patológica."
       },
       {
-       "q": "¿Qué es la 'Normalización' según los conceptos clave?",
+       "q": "¿Qué proceso define la conducta adaptándola a un estándar social mediante la medicina y la psiquiatría?",
        "o": [
-        "El proceso de definir y corregir conductas para adaptarlas a un estándar social mediante la medicina y psiquiatría.",
-        "La aceptación libre y sin reglas de cualquier comportamiento humano.",
-        "Un método biopolítico para aumentar la natalidad sin intervención médica."
+        "Normalización",
+        "Biopolítica",
+        "Confesión"
        ],
        "c": 0,
-       "x": "La normalización es el proceso mediante el cual la medicina y la psiquiatría definen y corrigen las conductas para adaptarlas a un estándar."
+       "x": "La normalización define y corrige las conductas para ajustarlas a los estándares de la sociedad."
       },
       {
-       "q": "¿Qué hito histórico se menciona como el nacimiento de la categoría médica de la homosexualidad?",
+       "q": "¿Qué sectores convirtieron la sexualidad infantil en un foco de vigilancia constante y pánico moral?",
        "o": [
-        "La publicación de las leyes de prohibición absoluta en el siglo XVIII.",
-        "El artículo de Westphal sobre las «sensaciones sexuales contrarias» en 1870.",
-        "La creación de los primeros manuales de pedagogía infantil."
+        "La medicina y la pedagogía.",
+        "La economía de mercado y el clero medieval.",
+        "La policía secreta y la judicatura."
        ],
-       "c": 1,
-       "x": "El artículo de Westphal de 1870 sobre las «sensaciones sexuales contrarias» marca el nacimiento de esta categoría médica y psiquiátrica."
+       "c": 0,
+       "x": "La medicina y la pedagogía fueron las encargadas de vigilar y alarmar sobre la sexualidad de los niños."
       }
      ],
      "id": "la-voluntad-de-saber-3"
     },
     {
-     "nombre": "El Bastión de la Biopolítica",
-     "monstruo": "Golem de Carne Reglamentada",
+     "nombre": "La Cámara de la Biopolítica",
+     "monstruo": "Gólem de la Población",
      "sprite": "golem",
      "preguntas": [
       {
-       "q": "¿Qué es la 'Biopolítica' según las notas?",
-       "o": [
-        "Una tecnología de poder que gestiona la vida, la población y los procesos biológicos.",
-        "La prohibición de la medicina científica en favor de la teología.",
-        "El estudio biológico de los monstruos en el calabozo."
-       ],
-       "c": 0,
-       "x": "La biopolítica es la tecnología de poder encargada de gestionar la vida, la población y los procesos biológicos de la sociedad."
-      },
-      {
        "q": "¿A qué vincula el Estado moderno su futuro, demografía y fortuna?",
        "o": [
-        "Únicamente a la acumulación de oro y conquistas militares.",
-        "A la eliminación total de los discursos médicos.",
-        "Al control de las prácticas sexuales de sus ciudadanos."
-       ],
-       "c": 2,
-       "x": "El Estado moderno asocia su porvenir y su demografía al control y gestión de las prácticas sexuales de su población."
-      },
-      {
-       "q": "¿En qué convirtieron la medicina y la pedagogía la sexualidad infantil?",
-       "o": [
-        "En un tema tabú del que nunca se permitía hablar bajo ninguna circunstancia.",
-        "En un foco de vigilancia constante y pánico moral.",
-        "En una práctica libre de regulaciones estatales."
+        "A la prohibición absoluta de todo discurso científico.",
+        "Al control de las prácticas sexuales de sus ciudadanos.",
+        "Únicamente a la acumulación de metales preciosos."
        ],
        "c": 1,
-       "x": "La medicina y la pedagogía transformaron la sexualidad infantil en un objeto de constante vigilancia y pánico moral."
+       "x": "El Estado moderno asocia su propio destino y demografía al control y gestión de la sexualidad de su población."
+      },
+      {
+       "q": "¿Qué es la 'Biopolítica'?",
+       "o": [
+        "El estudio puramente biológico de las especies animales.",
+        "La prohibición de la medicina en los asuntos del Estado.",
+        "Una tecnología de poder que gestiona la vida, la población y los procesos biológicos."
+       ],
+       "c": 2,
+       "x": "La biopolítica es la tecnología de poder encargada de gestionar los procesos biológicos y la vida de la población."
+      },
+      {
+       "q": "¿Qué autor y obra sirven como base para esta deconstrucción del poder y el sexo?",
+       "o": [
+        "Michel Foucault en 'La voluntad de saber'.",
+        "Karl Marx en 'El Capital'.",
+        "Sigmund Freud en 'El malestar en la cultura'."
+       ],
+       "c": 0,
+       "x": "Toda esta deconstrucción de la hipótesis represiva pertenece a 'La voluntad de saber' de Michel Foucault."
       }
      ],
      "id": "la-voluntad-de-saber-4"
@@ -374,44 +374,44 @@
     "sprite": "lich",
     "preguntas": [
      {
-      "q": "¿Cuál es la paradoja central de la modernidad respecto al sexo según el autor?",
+      "q": "¿Por qué la modernidad no silenció el sexo según Foucault?",
       "o": [
-       "Que pretendiendo reprimir el sexo, en realidad multiplicó exponencialmente los discursos para controlarlo.",
-       "Que al intentar hablar más del sexo, logró silenciarlo por completo.",
-       "Que eliminó el poder del Estado al liberar las prácticas sexuales."
-      ],
-      "c": 0,
-      "x": "La paradoja radica en que la modernidad no silenció el sexo, sino que incitó una proliferación constante de discursos reglamentados sobre él."
-     },
-     {
-      "q": "¿Cómo se produce la verdad sobre el sexo en el ritual de la confesión?",
-      "o": [
-       "A través de la imposición de un silencio absoluto por parte de la autoridad.",
-       "Obligando al sujeto a verbalizar sus deseos y actos más íntimos ante una figura de poder.",
-       "Mediante estudios puramente biológicos y sin mediación del lenguaje."
+       "Porque las leyes medievales perdieron toda su fuerza represiva.",
+       "Porque se produjo una incitación política, económica y técnica a hablar de él de forma reglamentada.",
+       "Porque la Iglesia decidió democratizar el placer libremente."
       ],
       "c": 1,
-      "x": "La confesión obliga al sujeto a producir la verdad sobre sí mismo verbalizando sus secretos ante una autoridad."
+      "x": "En lugar de silencio, hubo una explosión discursiva incitada por razones políticas, económicas y técnicas."
      },
      {
-      "q": "¿Qué papel juega el 'Placer' en la mecánica del poder?",
+      "q": "¿Cuál es la relación entre el saber, el poder y el placer en la obra?",
       "o": [
-       "Funciona como un motor y efecto que se intensifica mediante la persecución y la reglamentación.",
-       "Es un elemento subversivo que el poder siempre logra destruir por completo.",
-       "Es ajeno a las tecnologías de normalización y biopolítica."
+       "Se anulan entre sí en un estado de represión total.",
+       "El saber anula al poder para liberar el placer puro.",
+       "Se persiguen, intensifican y realimentan mutuamente en espirales."
+      ],
+      "c": 2,
+      "x": "El poder y el placer se realimentan continuamente en espirales dinámicas donde el saber juega un rol regulador."
+     },
+     {
+      "q": "¿Qué papel juega la confesión en la economía del discurso moderno?",
+      "o": [
+       "Es un ritual de producción de verdad que obliga a verbalizar lo más íntimo ante la autoridad.",
+       "Es una herramienta obsoleta que ya no tiene impacto social.",
+       "Es un método de liberación psicológica que destruye las estructuras de poder."
       ],
       "c": 0,
-      "x": "El placer se intensifica y realimenta en espirales perpetuas junto al poder a través de su persecución y reglamentación."
+      "x": "La confesión es un ritual de poder que extrae la verdad obligando al sujeto a verbalizar sus deseos íntimos."
      },
      {
-      "q": "¿Por qué la sexualidad infantil y la homosexualidad se convirtieron en focos de la medicina y psiquiatría?",
+      "q": "¿Cómo define Foucault la gestión estatal de la vida y la población?",
       "o": [
-       "Para liberar a los individuos de las garras del Estado soberano.",
-       "Para normalizar y corregir las conductas adaptándolas a los estándares de la biopolítica estatal.",
-       "Porque eran las únicas prácticas que no generaban discursos públicos."
+       "Normalización",
+       "Biopolítica",
+       "Discurso represivo"
       ],
       "c": 1,
-      "x": "Ambas categorías fueron objeto de vigilancia y patologización para normalizar las conductas y gestionar la población."
+      "x": "La biopolítica es la gestión estatal y tecnológica de la vida, la demografía y los procesos biológicos de la sociedad."
      }
     ]
    }
@@ -420,91 +420,91 @@
    "id": "psicologia-del-mexicano-desconocido",
    "libro": "Psicologia del Mexicano - Desconocido",
    "autor": "Unknown",
-   "nombre": "La Mazmorra de la Devoción Eterna",
+   "nombre": "La Cripta del Deber Ancestral",
    "resumen": "El perfil psicológico del mexicano es abnegado, sometido y tradicionalista. Los valores fundamentales son familia, patria y religión.",
    "salas": [
     {
      "nombre": "La Galería de la Sumisión",
-     "monstruo": "Gárgola del Deber Familiar",
+     "monstruo": "Cultista del Sacrificio",
      "sprite": "cultist",
      "preguntas": [
       {
-       "q": "¿Cuáles son los tres rasgos que definen el perfil psicológico del mexicano según las notas?",
+       "q": "¿Cuáles son los valores fundamentales del mexicano según el perfil psicológico presentado?",
        "o": [
-        "Rebelde, individualista y progresista",
-        "Abnegado, sometido y tradicionalista",
-        "Indiferente, pragmático y secular"
-       ],
-       "c": 1,
-       "x": "El perfil psicológico se caracteriza por la abnegación, la sumisión y el apego a las tradiciones."
-      },
-      {
-       "q": "¿Qué significa que el perfil del mexicano sea 'abnegado'?",
-       "o": [
-        "Que busca el beneficio propio a toda costa",
-        "Que rechaza cualquier tipo de autoridad espiritual",
-        "Que está dispuesto a sacrificarse por los demás"
-       ],
-       "c": 2,
-       "x": "La abnegación implica la disposición de sacrificarse por el bienestar de los otros."
-      },
-      {
-       "q": "¿Cómo se define el concepto de 'sometido' en este contexto psicológico?",
-       "o": [
-        "Tener un carácter dócil y obediente",
-        "Mostrar una actitud desafiante ante las normas",
-        "Buscar el liderazgo y el control absoluto"
+        "Familia, patria y religión",
+        "Libertad, igualdad y fraternidad",
+        "Trabajo, éxito y autonomía"
        ],
        "c": 0,
-       "x": "El carácter sometido se manifiesta a través de la docilidad y la obediencia."
+       "x": "Los valores fundamentales descritos en el perfil son la familia, la patria y la religión."
+      },
+      {
+       "q": "¿Qué implica el concepto de ser 'abnegado' en este contexto psicológico?",
+       "o": [
+        "Buscar el beneficio propio a toda costa",
+        "Estar dispuesto a sacrificarse por los demás",
+        "Rebelarse ante las injusticias sociales"
+       ],
+       "c": 1,
+       "x": "La abnegación se define como la disposición a sacrificarse por el bienestar de los demás."
+      },
+      {
+       "q": "¿Cómo se describe el carácter de un individuo 'sometido' en las notas?",
+       "o": [
+        "De carácter impulsivo y rebelde",
+        "Indiferente a las normas sociales",
+        "De carácter dócil y obediente"
+       ],
+       "c": 2,
+       "x": "El perfil del sometido se caracteriza por mostrar un carácter dócil y obediente."
       }
      ],
      "id": "psicologia-del-mexicano-desconocido-1"
     }
    ],
    "jefe": {
-    "nombre": "El Guardián de la Tríada Sagrada",
+    "nombre": "El Golem del Dogma",
     "sprite": "golem",
     "preguntas": [
      {
-      "q": "¿Cuáles son los tres valores fundamentales identificados en la psicología del mexicano?",
+      "q": "¿Cuáles son los tres rasgos que definen el perfil psicológico del mexicano en esta lectura?",
       "o": [
-       "Ciencia, libertad y progreso",
-       "Familia, patria y religión",
-       "Dinero, estatus y poder"
-      ],
-      "c": 1,
-      "x": "Los valores esenciales que rigen esta psicología son la familia, la patria y la religión."
-     },
-     {
-      "q": "Si un mexicano valora enormemente las costumbres y tradiciones establecidas, ¿qué concepto está demostrando?",
-      "o": [
-       "Tradicionalista",
-       "Sometido",
-       "Abnegado"
+       "Abnegado, sometido y tradicionalista",
+       "Independiente, racional y pragmático",
+       "Rebelde, laico y cosmopolita"
       ],
       "c": 0,
-      "x": "El tradicionalismo se define específicamente como la valorización de las costumbres y tradiciones establecidas."
+      "x": "El perfil psicológico se define específicamente como abnegado, sometido y tradicionalista."
      },
      {
-      "q": "El amor y la lealtad hacia la tierra y su gente corresponden al concepto de:",
+      "q": "¿Qué es lo que valoriza principalmente una persona bajo el concepto de 'tradicionalista'?",
       "o": [
-       "Religión",
-       "Familia",
-       "Patria"
-      ],
-      "c": 2,
-      "x": "La patria representa el afecto y la fidelidad hacia la propia tierra y su comunidad."
-     },
-     {
-      "q": "¿Qué valor define la relación y el vínculo afectivo entre los miembros de un hogar según las notas?",
-      "o": [
-       "Religión",
-       "Familia",
-       "Patria"
+       "La innovación tecnológica constante",
+       "Las costumbres y tradiciones establecidas",
+       "La ruptura con el pasado familiar"
       ],
       "c": 1,
-      "x": "La familia es el valor fundamental que rige las relaciones entre sus miembros."
+      "x": "El tradicionalista otorga un gran valor a mantener las costumbres y tradiciones establecidas."
+     },
+     {
+      "q": "¿Cuál de los siguientes NO es uno de los tres valores fundamentales mencionados en el texto?",
+      "o": [
+       "La patria",
+       "La religión",
+       "La riqueza"
+      ],
+      "c": 2,
+      "x": "Los únicos tres valores fundamentales mencionados son la familia, la patria y la religión."
+     },
+     {
+      "q": "¿Cómo se integra el concepto de 'familia' dentro del perfil psicológico descrito?",
+      "o": [
+       "Es un concepto secundario frente al individualismo",
+       "Es uno de los valores fundamentales junto a la patria y la religión",
+       "Se considera un obstáculo para la abnegación"
+      ],
+      "c": 1,
+      "x": "La familia se establece firmemente como uno de los tres valores fundamentales del mexicano."
      }
     ]
    }
@@ -513,205 +513,205 @@
    "id": "triste-tigre",
    "libro": "Triste tigre",
    "autor": "Neige Sinno",
-   "nombre": "La Bastilla del Silencio",
+   "nombre": "La Fosa de las Sombras Mudas",
    "resumen": "Triste tigre es una obra profundamente reflexiva y dolorosa que aborda el abuso sexual infantil y el incesto desde la experiencia personal de la autora y un riguroso análisis multidisciplinar. El libro desmitifica la figura del agresor, alejándolo de la imagen",
    "salas": [
     {
-     "nombre": "La Galería de los Susurros Cómplices",
-     "monstruo": "Espectro del Tabú",
+     "nombre": "Galería de Susurros Amordazados",
+     "monstruo": "Sombra del Tabú",
      "sprite": "ghost",
      "preguntas": [
       {
-       "q": "¿Cuál es el verdadero tabú social en torno al abuso sexual infantil según la obra?",
+       "q": "¿Cuál es el verdadero tabú social respecto al abuso sexual infantil según la obra?",
        "o": [
-        "La existencia misma del abuso en la sociedad.",
-        "La acción de nombrarlo, analizarlo y confrontarlo abiertamente.",
-        "La aplicación de penas de cárcel a los agresores."
-       ],
-       "c": 1,
-       "x": "El verdadero tabú no radica en que el abuso ocurra, sino en romper el silencio social para nombrarlo y confrontarlo."
-      },
-      {
-       "q": "¿Cómo afecta el abuso sexual infantil a la estructura del núcleo familiar?",
-       "o": [
-        "Organiza y corrompe la dinámica de todo el núcleo a través del silencio.",
-        "Provoca una unión instantánea para proteger a la víctima.",
-        "Afecta única y exclusivamente a la víctima directa sin alterar el entorno."
+        "Nombrarlo, analizarlo y confrontarlo abiertamente.",
+        "La mera existencia del abuso en sí mismo dentro del reino.",
+        "La falta de leyes punitivas escritas en los pergaminos reales."
        ],
        "c": 0,
-       "x": "El abuso no es un hecho aislado, sino que corrompe y organiza de forma nociva toda la dinámica familiar mediante el silencio."
+       "x": "¡La verdad duele más que una bola de fuego, pero es el único camino para disipar la oscuridad del tabú!"
       },
       {
-       "q": "¿Qué papel cumple el concepto de 'Silencio' en la impunidad del agresor?",
+       "q": "¿Cómo afecta el silencio del abuso al núcleo familiar de la víctima?",
        "o": [
-        "Es una herramienta temporal de sanación para la víctima.",
-        "Es el tabú cultural y familiar que protege al agresor y perpetúa el abuso.",
-        "Es un método de mediación recomendado por psicólogos forenses."
+        "Fortalece temporalmente los lazos de protección mágica.",
+        "Organiza y corrompe la dinámica de todo el núcleo familiar.",
+        "Aísla únicamente a la víctima directa sin alterar al resto de la corte."
        ],
        "c": 1,
-       "x": "El silencio actúa como un escudo cultural que protege al agresor de ser descubierto y castigado."
+       "x": "El silencio actúa como un veneno de área que corrompe a todo el grupo familiar, no solo a un jugador."
+      },
+      {
+       "q": "¿Qué papel juega el silencio cultural en la impunidad del agresor?",
+       "o": [
+        "Es una consecuencia inevitable que no influye en el combate.",
+        "Es una herramienta que confunde temporalmente al agresor.",
+        "Es el velo protector que perpetúa la impunidad del abuso."
+       ],
+       "c": 2,
+       "x": "El silencio es el escudo invisible que protege al villano de la justicia del reino."
       }
      ],
      "id": "triste-tigre-1"
     },
     {
-     "nombre": "El Foso de las Falsas Bestias",
-     "monstruo": "Sierpe de las Apariencias",
-     "sprite": "snake",
+     "nombre": "Altar del Falso Poder",
+     "monstruo": "Gárgola de la Dominación",
+     "sprite": "golem",
      "preguntas": [
       {
-       "q": "¿Cómo desmitifica la autora la figura del agresor sexual?",
+       "q": "¿Cuál es la verdadera fuerza motriz detrás de la violación y el abuso infantil?",
        "o": [
-        "Revelándolo como un ser patético pero altamente manipulador, lejos del monstruo mitológico.",
-        "Describiéndolo como un ser de pura maldad sin capacidad de razonamiento.",
-        "Mostrándolo como un enfermo mental que no comprende la realidad de sus actos."
+        "El deseo y la pulsión sexual descontrolada.",
+        "Mecanismos pseudosexuales de dominación, control y poder.",
+        "La falta de educación afectiva en los gremios de aventureros."
+       ],
+       "c": 1,
+       "x": "No busques pasiones románticas aquí; este monstruo solo busca el control absoluto de tu hoja de personaje."
+      },
+      {
+       "q": "¿Cómo se desmitifica la figura del agresor en esta obra?",
+       "o": [
+        "Se le revela como un ser patético pero altamente manipulador.",
+        "Se le retrata como un monstruo mitológico inevitable de leyenda.",
+        "Se le define bajo un perfil psicológico único y predecible."
        ],
        "c": 0,
-       "x": "La autora aleja al agresor del mito del monstruo para mostrarlo como un ser patético y manipulador que vive en la cotidianidad."
+       "x": "Despojar al agresor de su aura mítica de 'monstruo' revela a un rival patético pero astuto."
       },
       {
-       "q": "¿Qué revela el análisis sobre el perfil psicológico de los agresores?",
+       "q": "¿Por qué actúan los agresores según la melancólica reflexión de la obra?",
        "o": [
-        "Que existe un patrón mental único y fácilmente detectable por la guardia del reino.",
-        "Que no existe un perfil psicológico único, aunque la inmensa mayoría comparte la condición de ser varones.",
-        "Que todos los agresores sufren de la misma patología cerebral hereditaria."
+        "Por un impulso biológico incontrolable del que son víctimas.",
+        "Porque la sociedad los empuja mediante la provocación constante.",
+        "Simplemente porque pueden hacerlo, debido a la permisividad social."
        ],
-       "c": 1,
-       "x": "No hay un perfil psicológico universal para los agresores, pero estadísticamente casi todos comparten el género masculino."
-      },
-      {
-       "q": "Según el análisis histórico del libro, ¿por qué actúan los agresores con extrema violencia?",
-       "o": [
-        "Por un impulso biológico incontrolable que anula su libre albedrío.",
-        "Simplemente porque pueden, catalizados por la impunidad y la permisividad social.",
-        "Debido a la influencia de antiguas maldiciones mágicas del calabozo."
-       ],
-       "c": 1,
-       "x": "La impunidad y la falta de consecuencias sociales son los motores que permiten a los agresores actuar libremente."
+       "c": 2,
+       "x": "Al igual que un goblin oportunista, el agresor actúa simplemente cuando el entorno se lo permite."
       }
      ],
      "id": "triste-tigre-2"
     },
     {
-     "nombre": "La Cámara de la Biología Alterada",
-     "monstruo": "Gólem de Nervios Corrompidos",
-     "sprite": "golem",
+     "nombre": "Foso de la Carne Herida",
+     "monstruo": "Sanguijuela del Dolor Biológico",
+     "sprite": "slime",
      "preguntas": [
       {
-       "q": "¿Por qué el trauma del abuso no se limita a un daño puramente psicológico?",
+       "q": "Además del daño psicológico, ¿qué otra dimensión altera profundamente el trauma?",
        "o": [
-        "Porque altera físicamente los circuitos neuronales, las hormonas y el sistema inmunitario.",
-        "Porque se transmite como una maldición mágica a las armas del portador.",
-        "Porque solo afecta la capacidad de memoria a corto plazo del individuo."
+        "La biología, alterando circuitos neuronales, hormonas y el sistema inmunitario.",
+        "Únicamente la capacidad de memoria a corto plazo del aventurero.",
+        "El desarrollo físico de los huesos y la estatura del personaje."
        ],
        "c": 0,
-       "x": "El trauma es un fenómeno biológico real que modifica la estructura neuronal y el sistema inmunitario de la víctima."
+       "x": "¡El trauma inflige daño real en tus puntos de constitución y altera tu biología interna!"
       },
       {
-       "q": "Si la violación no es un acto de deseo sexual, ¿qué mecanismo representa realmente?",
+       "q": "¿Qué caracteriza al perfil psicológico de los agresores sexuales?",
        "o": [
-        "Un mecanismo pseudosexual de dominación, control y poder.",
-        "Un desajuste hormonal temporal del agresor.",
-        "Una simple falta de comunicación asertiva entre las partes."
+        "No existe un perfil psicológico único, aunque casi todos son varones.",
+        "Comparten un trastorno de personalidad antisocial idéntico y detectable.",
+        "Son siempre ermitaños marginados sin lazos familiares ni sociales."
        ],
        "c": 0,
-       "x": "La violación utiliza lo pseudosexual como un canal para ejercer control, dominación y poder sobre el otro."
+       "x": "No hay un manual de monstruos único para ellos, aunque casi todos comparten el rasgo de ser varones."
       },
       {
-       "q": "¿Cómo se define el concepto de 'Dominación' en el contexto del abuso?",
+       "q": "¿Cómo se manifiesta el trauma en el cuerpo de la víctima según las notas?",
        "o": [
-        "Como un acuerdo mutuo de sumisión temporal en el campo de batalla.",
-        "Como la estructura de control total que anula la voluntad física, psicológica y simbólica del otro.",
-        "Como el liderazgo natural que ejerce el héroe sobre su grupo de aventureros."
+        "Como un fenómeno puramente mental que no deja huella física.",
+        "Como una alteración biológica y neuronal duradera.",
+        "Como una dolencia ficticia que desaparece al subir de nivel."
        ],
        "c": 1,
-       "x": "La dominación busca la anulación absoluta de la voluntad de la víctima en todos los niveles posibles."
+       "x": "El daño no se queda en la mente; altera tus circuitos neuronales como una maldición persistente."
       }
      ],
      "id": "triste-tigre-3"
     },
     {
-     "nombre": "El Templo del Verbo Liberado",
-     "monstruo": "Sectario de la Palabra",
-     "sprite": "cultist",
+     "nombre": "Templo de la Palabra Redentora",
+     "monstruo": "Sierpe de las Palabras Atadas",
+     "sprite": "snake",
      "preguntas": [
       {
-       "q": "¿Qué efecto sanador tiene expresar el trauma a través de las palabras?",
+       "q": "¿Qué efecto tiene expresar el trauma a través de las palabras?",
        "o": [
         "Permite separar el acontecimiento del sufrimiento puro, restándole poder de daño.",
-        "Borra mágicamente el recuerdo del abuso de la mente de la víctima.",
-        "Permite que el agresor sea perdonado automáticamente por la sociedad."
+        "Revive el dolor con la misma intensidad destructiva que el primer día.",
+        "Borra por completo el recuerdo del evento de la memoria del bardo."
        ],
        "c": 0,
-       "x": "Nombrar la experiencia con palabras ayuda a distanciar el hecho del dolor, restándole poder destructivo al trauma."
+       "x": "Conjurar palabras es el hechizo definitivo para restarle poder al sufrimiento del pasado."
       },
       {
-       "q": "¿Cómo se manifiesta la 'Resiliencia' según las notas de lectura?",
+       "q": "¿En qué consiste la reconstrucción de la identidad tras el abuso?",
        "o": [
-        "En la capacidad de olvidar el pasado para no sufrir en el presente.",
-        "En transformar el daño recibido en una narrativa de supervivencia y liberación a través de la palabra.",
-        "En la fuerza física necesaria para derrotar al agresor en un duelo singular."
+        "En resignarse a ser definidos para siempre por la voluntad del agresor.",
+        "En elegir qué hacer con lo que han hecho de nosotros.",
+        "En olvidar el pasado mediante pociones de amnesia mística."
        ],
        "c": 1,
-       "x": "La resiliencia es el proceso de reconstruir el ser y el daño mediante la creación de un relato de supervivencia."
+       "x": "Tu destino no lo escribe el enemigo, sino las decisiones que tomas con tu inventario dañado."
       },
       {
-       "q": "Según la experiencia de la autora, ¿qué deseo sigue siempre al 'golpe' del abuso?",
+       "q": "¿Qué herramienta permite transformar el daño en una narrativa de supervivencia?",
        "o": [
-        "El deseo de explicarlo y analizarlo.",
-        "El deseo de huir a otro reino sin mirar atrás.",
-        "El deseo de sumirse en un silencio eterno para proteger a otros."
+        "El aislamiento total en una torre del mago.",
+        "La venganza física contra el opresor.",
+        "La capacidad de usar la palabra para narrar y liberar."
        ],
-       "c": 0,
-       "x": "Para la autora, recibir el golpe activa de inmediato la necesidad vital de explicar y comprender lo sucedido."
+       "c": 2,
+       "x": "La palabra es un arma legendaria que transforma las cicatrices en crónicas de victoria."
       }
      ],
      "id": "triste-tigre-4"
     }
    ],
    "jefe": {
-    "nombre": "El Archiliche del Poder e Impunidad",
-    "sprite": "lich",
+    "nombre": "El Tigre de las Sombras",
+    "sprite": "wolf",
     "preguntas": [
      {
-      "q": "¿Cuál es la fuerza motriz principal que define el abuso sexual y somete la identidad de la víctima?",
+      "q": "¿Cuál es el núcleo de la desmitificación del agresor en 'Triste tigre'?",
       "o": [
-       "El deseo carnal desmedido.",
-       "El poder utilizado para dominar y anular al otro.",
-       "La ignorancia de las leyes del reino."
-      ],
-      "c": 1,
-      "x": "El abuso es fundamentalmente un ejercicio de poder y dominación, no una expresión de deseo sexual."
-     },
-     {
-      "q": "Según la cita de Sartre, ¿qué es lo verdaderamente crucial tras sufrir una experiencia traumática?",
-      "o": [
-       "Lo que hacemos con lo que han hecho de nosotros.",
-       "El castigo físico que logremos imponer al culpable.",
-       "Olvidar por completo el daño para recuperar la inocencia."
+       "Dejar de verlo como un monstruo mitológico para entenderlo como un ser patético y manipulador.",
+       "Justificar sus actos mediante traumas de su propia infancia en el calabozo.",
+       "Elevar su figura a la de un villano de leyenda imbatible."
       ],
       "c": 0,
-      "x": "La cita enfatiza la agencia de la víctima: la capacidad de elegir cómo reconstruirse a partir del daño recibido."
+      "x": "Derrotar al jefe requiere ver su verdadera y patética naturaleza, despojándolo de su disfraz de leyenda."
      },
      {
-      "q": "¿Por qué los agresores cometen abusos extremos según la respuesta del historiador de las guerras mundiales?",
+      "q": "¿Qué relación se establece entre la impunidad social y la violencia extrema?",
       "o": [
-       "Porque carecen de alma y nacieron bajo una estrella oscura.",
-       "Porque pueden, debido a la impunidad y la falta de límites.",
-       "Porque son controlados por fuerzas externas que no pueden comprender."
+       "La impunidad no influye, pues la violencia es puramente instintiva.",
+       "La permisividad social es el principal catalizador que permite actuar a los agresores.",
+       "La violencia extrema disminuye cuando hay impunidad en el reino."
       ],
       "c": 1,
-      "x": "La melancólica verdad es que la violencia extrema ocurre simplemente porque los agresores tienen el poder y la impunidad para ejercerla."
+      "x": "La impunidad es el portal que permite a los peores monstruos cruzar a nuestro mundo."
      },
      {
-      "q": "¿En qué consiste la reconstrucción de la 'Identidad' tras sobrevivir al abuso?",
+      "q": "¿Por qué el abuso se considera un mecanismo de dominación y no de deseo?",
       "o": [
-       "En la reconstrucción del ser tras haber sido sometido a la voluntad destructiva de un agresor.",
-       "En fingir que el evento nunca ocurrió para encajar en la sociedad.",
-       "En adoptar una nueva personalidad mágica para olvidar el pasado."
+       "Porque busca anular la voluntad e identidad de la víctima mediante el control.",
+       "Porque los agresores carecen por completo de hormonas en su sistema.",
+       "Porque se realiza únicamente en contextos de guerra y conflicto armado."
       ],
       "c": 0,
-      "x": "Reconstruir la identidad implica volver a erigir el propio ser después de que este fuera anulado por la dominación de otro."
+      "x": "Este combate no es por pasión, sino una batalla total por la soberanía de tu propia identidad."
+     },
+     {
+      "q": "Según la cita final de la obra, ¿cuál es la elección crucial ante el trauma?",
+      "o": [
+       "Decidir qué hacemos con lo que han hecho de nosotros.",
+       "Olvidar el saco del pasado para no cargar con él en la aventura.",
+       "Permitir que el golpe defina nuestra identidad futura."
+      ],
+      "c": 0,
+      "x": "¡El botín final de esta mazmorra es la soberanía sobre tu propia historia y tu futuro!"
      }
     ]
    }
@@ -720,205 +720,205 @@
    "id": "una-tribu-propia-autismo-y-el-futuro-de-",
    "libro": "Una tribu propia: Autismo y el futuro de la neurodiversidad",
    "autor": "Steve Silberman",
-   "nombre": "El Bastión de la Neuroesencia",
+   "nombre": "La Fortaleza del Espectro Olvidado",
    "resumen": "Este libro ofrece una crónica histórica del autismo, revelando cómo las concepciones erróneas y las teorías patologizantes del siglo XX retrasaron décadas de comprensión y apoyo adecuado para las personas neurodivergentes. El lector destaca la transición desde",
    "salas": [
     {
-     "nombre": "La Cripta de los Corazones Helados",
-     "monstruo": "Gárgola de Escarcha de Bettelheim",
+     "nombre": "El Pasillo de las Sombras Estigmatizadas",
+     "monstruo": "Sombra de la Culpa",
      "sprite": "ghost",
      "preguntas": [
       {
-       "q": "¿Qué impacto tuvo la teoría de las 'madres refrigerador' de Bruno Bettelheim?",
+       "q": "¿Qué impacto devastador tuvo la teoría de las 'madres refrigerador' de Bruno Bettelheim?",
        "o": [
-        "Culpó injustamente a los padres y desvió la investigación científica durante décadas.",
-        "Demostró que el autismo era una condición genética heredada.",
-        "Ayudó a diseñar terapias de comunicación eficientes."
+        "Causó un daño incalculable al culpar injustamente a los padres y desviar la investigación científica durante décadas.",
+        "Permitió financiar tratamientos biológicos avanzados en hospitales públicos.",
+        "Ayudó a las familias a comprender el origen genético de la condición de sus hijos."
        ],
        "c": 0,
-       "x": "Esta teoría pseudocientífica causó un daño incalculable al estigmatizar a las familias y retrasar la ciencia."
+       "x": "Esta teoría pseudocientífica culpó injustamente a los progenitores, retrasando gravemente la comprensión real del autismo."
       },
       {
-       "q": "¿A qué condenaba el estrecho diagnóstico de Leo Kanner a muchos niños autistas?",
+       "q": "¿Cuál fue una de las consecuencias del estrecho diagnóstico planteado por Leo Kanner?",
        "o": [
-        "A la integración escolar inmediata.",
-        "Al diagnóstico erróneo de esquizofrenia infantil o a la reclusión.",
-        "A recibir tecnología asistiva avanzada."
+        "Facilitó la rápida inclusión escolar de miles de niños neurodivergentes.",
+        "Condenó a muchos niños al diagnóstico erróneo de esquizofrenia infantil o a la reclusión institucional.",
+        "Permitió que los adultos recibieran pensiones de apoyo de forma inmediata."
        ],
        "c": 1,
-       "x": "El modelo restrictivo de Kanner limitó el diagnóstico, dejando a muchos sin apoyo o encerrados en asilos."
+       "x": "El restrictivo modelo de Kanner limitó el diagnóstico y provocó que muchos niños terminaran encerrados o mal diagnosticados."
       },
       {
-       "q": "¿Cómo define el concepto de 'Neurodiversidad' al autismo?",
+       "q": "¿Qué mito se perpetuó debido a la institucionalización sistemática de niños autistas?",
        "o": [
-        "Como una psicosis infantil causada por el entorno familiar.",
-        "Como una enfermedad moderna que requiere cura médica.",
-        "Como una variación neurológica innata y natural del genoma humano."
+        "El mito de que poseían habilidades místicas de telepatía.",
+        "El mito de que su condición se curaba con el aislamiento absoluto.",
+        "El falso mito de que eran incapaces de aprender, al privarlos de educación."
        ],
        "c": 2,
-       "x": "La neurodiversidad plantea que las diferencias cognitivas son variaciones naturales, no patologías."
+       "x": "Encerrar a los niños en asilos impidió su desarrollo educativo, haciendo creer al mundo que no tenían capacidad de aprendizaje."
       }
      ],
      "id": "una-tribu-propia-autismo-y-el-futuro-de--1"
     },
     {
-     "nombre": "El Archivo del Sabio Olvidado",
-     "monstruo": "Gólem de Archivo",
+     "nombre": "El Refugio del Sabio Asperger",
+     "monstruo": "Gólem de la Comprensión",
      "sprite": "golem",
      "preguntas": [
       {
-       "q": "¿Cuál era la visión de Hans Asperger sobre el autismo?",
+       "q": "¿Cómo concebía Hans Asperger el autismo en contraste con el modelo restrictivo de Kanner?",
        "o": [
-        "Un espectro con potencial de adaptación y genialidad.",
-        "Una discapacidad mental absoluta sin posibilidad de aprendizaje.",
-        "Una fase temporal del desarrollo infantil."
+        "Como un espectro con potencial de adaptación y genialidad.",
+        "Como una psicosis infantil severa que requería reclusión inmediata.",
+        "Como una patología moderna causada por la industrialización."
        ],
        "c": 0,
-       "x": "Asperger defendía un enfoque amplio y compasivo que reconocía las capacidades de los individuos."
+       "x": "Asperger vio el autismo como una variación con un amplio espectro que incluía capacidades extraordinarias de adaptación."
       },
       {
-       "q": "¿Qué consecuencia sufrieron los adultos no diagnosticados debido a la definición de Kanner?",
+       "q": "¿Qué sostiene fundamentalmente el concepto de 'Neurodiversidad'?",
        "o": [
-        "Pudieron jubilarse anticipadamente con apoyo estatal.",
-        "Vagaron décadas sin explicación para sus dificultades laborales y sociales.",
-        "Fueron reclutados inmediatamente por empresas tecnológicas."
+        "Que el autismo es una enfermedad que debe curarse mediante intervenciones quirúrgicas.",
+        "Que las diferencias neurológicas son variaciones naturales del genoma humano y no patologías.",
+        "Que todos los cerebros humanos deben funcionar de manera idéntica para ser productivos."
        ],
        "c": 1,
-       "x": "Al definir el autismo solo como infantil, los adultos quedaron desamparados y sin comprender sus desafíos."
+       "x": "La neurodiversidad plantea que condiciones como el autismo son diferencias naturales y no enfermedades que requieran cura."
       },
       {
-       "q": "¿Por qué el enfoque de Hans Asperger fue ignorado durante mucho tiempo?",
+       "q": "¿Por qué el enfoque compasivo de Hans Asperger fue ignorado durante tanto tiempo?",
        "o": [
-        "En favor del modelo restrictivo de Leo Kanner.",
-        "Porque sus escritos se perdieron en un incendio.",
-        "Debido a que sus teorías no usaban el término 'espectro'."
+        "Porque la comunidad científica prefirió adoptar el modelo restrictivo de Kanner.",
+        "Porque Asperger nunca llegó a publicar sus estudios por escrito.",
+        "Porque sus teorías proponían el uso de castigos físicos extremos."
        ],
        "c": 0,
-       "x": "El modelo de Kanner dominó la psiquiatría occidental, eclipsando la perspectiva más amplia de Asperger."
+       "x": "El trabajo de Asperger quedó en la sombra durante décadas debido al predominio del restrictivo paradigma de Kanner."
       }
      ],
      "id": "una-tribu-propia-autismo-y-el-futuro-de--2"
     },
     {
-     "nombre": "La Forja de los Engranajes Parlantes",
-     "monstruo": "Ojo Centinela de Silicio",
+     "nombre": "El Taller de la Tecnología Asistiva",
+     "monstruo": "Ojo del Código",
      "sprite": "eye",
      "preguntas": [
       {
-       "q": "¿Cómo han servido históricamente la tecnología y la informática a la comunidad neurodivergente?",
+       "q": "¿Qué rol han jugado históricamente la tecnología y la informática para la comunidad neurodivergente?",
        "o": [
-        "Como herramientas de socialización y nichos de desarrollo.",
-        "Como elementos de distracción que retrasaron su educación.",
-        "Como métodos para curar sus diferencias neurológicas."
+        "Han servido como herramientas de socialización y nichos de desarrollo.",
+        "Han empeorado los síntomas al aislar por completo a los individuos.",
+        "Han sido utilizadas únicamente para registrar datos clínicos en los asilos."
        ],
        "c": 0,
-       "x": "La tecnología ofrece un entorno predecible que facilita la interacción y el crecimiento profesional."
+       "x": "La informática y las herramientas interactivas ofrecieron un espacio seguro de desarrollo y conexión para las personas autistas."
       },
       {
-       "q": "Según Lettick, ¿cuál era el error al priorizar el habla verbal en niños autistas?",
+       "q": "Según Lettick, ¿cuál era el error al priorizar el habla sobre otros sistemas en niños autistas?",
        "o": [
-        "Que no se les permitía usar tecnología moderna.",
-        "Que se descuidaba el verdadero objetivo, que es permitirles comunicarse.",
-        "Que el habla verbal es la única forma de inteligencia real."
+        "Que el habla verbal es la única forma válida de pensamiento lógico.",
+        "Que se ponía demasiado énfasis en enseñar a hablar, cuando lo esencial era permitirles comunicarse.",
+        "Que los sistemas alternativos de comunicación dañaban las cuerdas vocales."
        ],
        "c": 1,
-       "x": "La comunicación va más allá del habla; los sistemas alternativos son clave para la inclusión."
+       "x": "Lettick defendía que la verdadera inclusión radica en facilitar la comunicación, independientemente de si es verbal o no."
       },
       {
-       "q": "¿Qué define a la 'Tecnología asistiva' en el contexto de la neurodiversidad?",
+       "q": "¿Cómo define el texto a la 'Tecnología asistiva'?",
        "o": [
-        "Herramientas que facilitan el aprendizaje sin la presión del juicio humano.",
-        "Dispositivos médicos para corregir anomalías cerebrales.",
-        "Sistemas de vigilancia para controlar conductas disruptivas."
+        "Herramientas y dispositivos que facilitan el aprendizaje y la comunicación sin la presión del juicio humano.",
+        "Tratamientos de electrochoque automatizados para corregir la conducta.",
+        "Sistemas de vigilancia para evitar que los niños salgan de las aulas."
        ],
        "c": 0,
-       "x": "Estas herramientas permiten a las personas expresarse y aprender a su propio ritmo sin ansiedad social."
+       "x": "Estas tecnologías permiten interactuar y aprender en un entorno libre de la ansiedad que a veces genera el juicio social directo."
       }
      ],
      "id": "una-tribu-propia-autismo-y-el-futuro-de--3"
     },
     {
-     "nombre": "El Santuario de la Rebelión Familiar",
-     "monstruo": "Secta del Castigo Aversivo",
+     "nombre": "La Rebelión de las Familias",
+     "monstruo": "Secta del Castigo",
      "sprite": "cultist",
      "preguntas": [
       {
-       "q": "¿Qué demostró el uso de terapias aversivas y castigos físicos en el conductismo temprano?",
+       "q": "Según Bernard Rimland, ¿qué desencadenó un enorme estallido de productividad y creatividad en favor de los niños?",
        "o": [
-        "Que eran ineficaces a largo plazo frente a la enseñanza de conductas adaptativas.",
-        "Que eran el único método para garantizar el aprendizaje.",
-        "Que aceleraban la inserción laboral de los jóvenes."
-       ],
-       "c": 0,
-       "x": "Los castigos resultaron inútiles y dañinos comparados con el refuerzo de conductas adaptativas."
-      },
-      {
-       "q": "¿Quiénes fueron los motores principales para la creación de servicios educativos reales?",
-       "o": [
-        "Las juntas de directores de los asilos estatales.",
-        "El activismo de los padres y la desculpabilización familiar.",
-        "Los psicólogos partidarios del conductismo radical."
+        "La aplicación de leyes de reclusión obligatoria.",
+        "Desembarazar a los padres del peso de la vergüenza y la culpabilidad.",
+        "El descubrimiento de fármacos sedantes de última generación."
        ],
        "c": 1,
-       "x": "La unión de las familias libres de culpa generó la fuerza necesaria para exigir educación y apoyos."
+       "x": "Liberar a las familias de la culpa infundada les dio la fuerza para organizarse y luchar activamente por sus hijos."
       },
       {
-       "q": "Según Bernard Rimland, ¿qué desató un estallido de productividad en favor de los niños?",
+       "q": "¿Qué demostró el conductismo temprano al emplear terapias aversivas y castigos físicos?",
        "o": [
-        "El uso de fármacos de última generación.",
-        "El confinamiento en escuelas especiales alejadas de la ciudad.",
-        "Desembarazar a los padres del peso de la vergüenza y la culpabilidad."
+        "Que eran ineficaces a largo plazo en comparación con la enseñanza de conductas adaptativas.",
+        "Que eran el método más rápido y humano para garantizar el aprendizaje.",
+        "Que lograban curar definitivamente el autismo en la adolescencia."
        ],
-       "c": 2,
-       "x": "Liberar a los padres del estigma les permitió canalizar su energía en crear un futuro para sus hijos."
+       "c": 0,
+       "x": "Los castigos físicos demostraron ser inútiles y dañinos frente al enfoque constructivo de enseñar conductas adaptativas."
+      },
+      {
+       "q": "¿Quiénes fueron los motores principales para la creación de servicios educativos y de apoyo reales?",
+       "o": [
+        "Los directores de los grandes hospitales psiquiátricos estatales.",
+        "El activismo de los padres y la desculpabilización familiar.",
+        "Las agencias gubernamentales de control de asilos."
+       ],
+       "c": 1,
+       "x": "Fueron los propios padres organizados quienes impulsaron la creación de escuelas y apoyos reales ante el abandono estatal."
       }
      ],
      "id": "una-tribu-propia-autismo-y-el-futuro-de--4"
     }
    ],
    "jefe": {
-    "nombre": "El Guardián del Estigma",
+    "nombre": "Kanneron, el Archivero del Dogma",
     "sprite": "lich",
     "preguntas": [
      {
-      "q": "¿Qué mito perpetuó la institucionalización sistemática de niños autistas?",
+      "q": "¿Qué trágica consecuencia sufrieron los adultos autistas no diagnosticados debido a las teorías de Kanner?",
       "o": [
-       "El falso mito de que eran incapaces de aprender.",
-       "La idea de que eran genios incomprendidos.",
-       "Que el autismo era una condición puramente adulta."
+       "Pasaron décadas vagando sin una explicación para sus luchas en el trabajo, el amor o la amistad.",
+       "Fueron contratados masivamente por empresas de tecnología gracias a su diagnóstico.",
+       "Recibieron educación universitaria gratuita adaptada a sus necesidades específicas."
       ],
       "c": 0,
-      "x": "Al privarles de educación en los asilos, se alimentó la creencia errónea de que no podían desarrollarse."
+      "x": "Al definir el autismo como un trastorno puramente infantil, Kanner dejó a generaciones de adultos sin respuestas ni apoyo."
      },
      {
-      "q": "En la desgarradora cita del libro, ¿qué respondió el niño cuando su madre le preguntó cuándo hablaría?",
+      "q": "¿Cuál es la visión fundamental sobre el autismo que propone el libro de Steve Silberman?",
       "o": [
-       "'Nunca más'.",
-       "'Cuando esté preparado'.",
-       "'No lo sé'."
+       "Es una variación neurológica innata que ha existido siempre, no una enfermedad moderna.",
+       "Es una psicosis infantil transitoria provocada por la falta de afecto materno.",
+       "Es un trastorno del comportamiento causado por la sobreexposición a la tecnología asistiva."
       ],
-      "c": 1,
-      "x": "Esta respuesta demostró que la falta de habla verbal no implica una ausencia de comprensión o voluntad."
+      "c": 0,
+      "x": "El libro demuestra históricamente que el autismo es una parte natural de la diversidad humana, presente a lo largo de la historia."
      },
      {
-      "q": "¿Cuál es la principal conclusión histórica sobre el origen del autismo según el libro?",
+      "q": "En la desgarradora anécdota del niño que no hablaba, ¿qué le respondió a su madre cuando esta le preguntó angustiada cuándo lo haría?",
       "o": [
-       "Es una epidemia moderna causada por las vacunas y la tecnología.",
-       "Es una variación neurológica innata que ha existido siempre.",
-       "Es una psicosis infantil reversible mediante terapia conductual estricta."
+       "«Nunca podré hacerlo».",
+       "«Cuando esté preparado».",
+       "«No me interesa hablar»."
       ],
       "c": 1,
-      "x": "El autismo no es nuevo; siempre ha existido como parte de la diversidad natural humana."
+      "x": "La respuesta 'Cuando esté preparado' demostró que el niño procesaba perfectamente su entorno y poseía una profunda vida interior."
      },
      {
-      "q": "¿Qué representó la transición del modelo de Kanner al redescubrimiento de Asperger?",
+      "q": "¿Cuál ha sido la gran transición histórica en la concepción del autismo descrita en la obra?",
       "o": [
-       "Un retroceso hacia teorías místicas sin base científica.",
-       "El paso de un diagnóstico estrecho y patologizante a un enfoque de espectro compasivo.",
-       "La confirmación de que la institucionalización era necesaria."
+       "El paso de la terapia de electrochoque a la reclusión permanente en asilos.",
+       "El paso de concepciones erróneas y patologizantes hacia un enfoque de neurodiversidad y apoyo adecuado.",
+       "El paso de la educación pública inclusiva hacia la segregación tecnológica obligatoria."
       ],
       "c": 1,
-      "x": "Redescubrir a Asperger permitió entender el autismo como un espectro amplio lleno de potencial."
+      "x": "La historia del autismo es el viaje desde la culpa y el encierro hacia la aceptación de la neurodiversidad y la comunicación real."
      }
     ]
    }
