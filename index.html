@@ -170,6 +170,10 @@ button{ font-family:inherit; cursor:pointer; color:inherit; -webkit-appearance:n
 #islandFrame{background:repeating-conic-gradient(#8fc3d4 0% 25%,#7fb6c9 0% 50%) 0 0/18px 18px;animation:waterShift 3.5s ease-in-out infinite}
 #skyBand{position:relative;z-index:10}
 #torreGrid{margin:10px auto!important;box-shadow:0 6px 0 #57804a,0 10px 18px rgba(37,51,43,.35);border-radius:6px;overflow:hidden}
+#muelle{margin:0 -12px -14px}
+#muelle .sea{background:repeating-conic-gradient(#8fc3d4 0% 25%,#7fb6c9 0% 50%) 0 0/18px 18px;animation:waterShift 3.5s ease-in-out infinite;border-top:2px solid #3f5d4f;padding:8px 12px 12px;position:relative;z-index:9}
+#muelle .seaLabel{font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#123;opacity:.7}
+#muelle .seaBoats{display:flex;gap:14px;align-items:flex-end;min-height:36px;margin-top:4px;flex-wrap:wrap}
 .firefly{position:absolute;width:4px;height:4px;border-radius:50%;background:#ffe58a;box-shadow:0 0 6px 2px #ffe58a;animation:firefly 4s ease-in-out infinite;pointer-events:none;z-index:5}
 #xpbar{overflow:hidden}
 #xpfill::after{content:'';position:absolute;top:0;bottom:0;width:26%;left:-40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);animation:shine 2.6s ease-in-out infinite}
@@ -334,6 +338,7 @@ button{ font-family:inherit; cursor:pointer; color:inherit; -webkit-appearance:n
     <hr class="rule">
     <div class="kicker">Racha</div>
     <p style="font-size:15px;margin:8px 0 0" id="streakInfo"></p>
+    <div id="ruletaBox"></div>
   </div>
 
   <!-- TIENDA -->
@@ -476,6 +481,10 @@ cuervo:['..K.......','.KKK..K...','KKKKKKKK..','.KKKKKK...','..K..K....'],
 zorro:['.O....O...','.OO..OO...','..OOOOO...','..OWOWO...','..OOOOO...','.OO.O.OO..','O........O'],
 plaga:['.G..G..G..','G.GG.GG.G.','.GGGGGGG..','G.GG.GG.G.','.G..G..G..'],
 barco:['...W......','...W......','..WWW.....','NNNNNNNNN.','.NNNNNNN..','..NBNBN...'],
+puerto_ed:['NN..NN..NN','NNNNNNNNNN','NN..NN..NN','.M.M.M.M..','.MMMMMMM..','BBBBBBBBBB','.BBBBBBBB.','BBBBBBBBBB'],
+barca:['..........','....YY....','...YWWY...','..NNNNNN..','.NNNNNNNN.','..BBBBBB..'],
+mercante:['....W.....','....WW....','...WWWW...','...WWWW...','.NNNNNNNN.','..NNNNNN..','..BBBBBB..'],
+galeon:['..W..W..W.','..WW.WW.WW','.WWWWWWWWW','.WWWWWWWWW','NNNNNNNNNN','.NNNNNNNN.','..NNNNNN..','..BBBBBB..'],
 trabajador:['...NNN....','..NSSN....','..SSSS....','..NBBN....','.BBBBBB...','..B..B....','..N..N....'],
 pollo:['....WW....','...WWWW...','..OWWWW...','...WWWW...','....WW....','...Y..Y...'],
 conejo:['..L..L....','..LL.LL...','..LLLLL...','..LWLWL...','..LLLLL...','...L.L....'],
@@ -679,7 +688,7 @@ function freshPlayer(nombre,email){
     srs:{},torre:{plots:{},supply:{agua:3,abono:1},inv:['vela'],avatar:{hat:'#3c6c9c',robe:'#7a4f9e'}},semillas:{zanahoria:2},
     pociones:{pista:1,elixir:1},retos:{d:'',prog:{},done:{}},semanal:{},lastVersion:'',creado:Date.now(),
     logros:{},cnt:{cartas:0,oro:0,decos:0,flawless:0},
-    mana:20,manaAt:Date.now(),meta:{d:'',n:0},nivelClaim:1,dominio:{},escudo:0,rachaCofre:{last:'',n:0},archivadas:{}};
+    mana:20,manaAt:Date.now(),meta:{d:'',n:0},nivelClaim:1,dominio:{},escudo:0,rachaCofre:{last:'',n:0},archivadas:{},barcos:[]};
 }
 const $=id=>document.getElementById(id);
 const hoy=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');};
@@ -864,6 +873,14 @@ function startGame(){
     $('worldBanner').textContent='⚔ ¡Nuevos portales! El mundo se actualizó a la versión '+WORLD.version+'. Revisa las mazmorras.';
   }
   if(player.lastVersion!==WORLD.version){ player.lastVersion=WORLD.version; markDirty(); }
+  // Regalo único de prueba: 1 barca + 1 puerto (se guarda en tu progreso / Firebase al sincronizar).
+  if(!player.starterFleet){
+    player.starterFleet=true;
+    player.barcos=player.barcos||[]; player.barcos.push({tipo:'barca',endsAt:null});
+    player.puerto=true;
+    markDirty();
+    setTimeout(()=>toast('🎁 Regalo de prueba: 🛶 Barca pesquera + ⚓ Puerto en tu muelle. Toca el muelle para zarpar.'),1600);
+  }
   player.nivelClaim=player.nivelClaim||1; if(nivel()>player.nivelClaim){ const rw=claimNiveles(nivel(),true); setTimeout(()=>toast('🎁 Recompensas de nivel acumuladas: '+rw),1800); }
   renderHud(); showTab('torre');
   const el=$('hMusic'); if(el)el.textContent=musicOn?'🎵':'🔇';
@@ -1024,10 +1041,19 @@ function animalGoldMult(){ let m=player.mascota==='grifo'?1.2:1; if(hasBuild('es
 function animalCycles(p){ const a=ANIMALS[p.animal]; const c=Math.floor((Date.now()-(p.animalAt||0))/(a.cada*animalCadaMult())); return Math.min(12,Math.max(0,c)); }
 function animalYield(p){ return Math.round(ANIMALS[p.animal].prod*animalGoldMult())*animalCycles(p); }
 function harvestAnimal(p){ let oro=animalYield(p); let fed=false; const t=G(); const auto=(player.trabajador&&player.trabajador.hired); if((t.supply.comida||0)>0){ t.supply.comida--; oro=Math.round(oro*1.5); t.supply.estiercol=(t.supply.estiercol||0)+1; fed=true; } else if(auto){ oro=Math.round(oro*1.25); t.supply.estiercol=(t.supply.estiercol||0)+1; fed=true; } p.animalAt=Date.now(); return {oro,fed}; }
-function cropGoldMult(){ return (hasBuild('granero')?1.25:1)*(player.trabajador&&player.trabajador.hired?1.15:1)*(1+0.03*decoCount('gema')+0.02*decoCount('trofeo')); }
+// Cada objeto colocado en la granja aporta un bono pasivo (así todo crafteable/decorativo sirve).
+const DECO_FX={
+ cofre:{oro:.02}, librero:{xp:.05}, vela:{mana:1}, cristal:{mana:1}, estandarte:{oroC:.03}, caldero:{oro:.01},
+ tumba:{xp:.03}, hongo:{xp:.02}, reloj:{oro:.02}, trofeo:{oro:.02,oroC:.02}, antorcha:{xp:.02}, espada:{oroC:.02},
+ escudo:{def:1,oroC:.02}, yunque:{oroC:.02}, pozo:{mana:1}, gargola:{def:1}, jaula:{def:1}, barril:{oro:.01},
+ runa:{mana:1}, portal:{mana:1,xp:.03}, huesos:{xp:.03}, gema:{oro:.03,oroC:.03}, fuente:{mana:1}, banderin:{oroC:.03},
+ mimico:{xp:.05,oro:.02}, espanta:{def:1}, cerca:{def:1}, perro:{def:1}
+};
+function cropGoldMult(){ return (hasBuild('granero')?1.25:1)*(player.trabajador&&player.trabajador.hired?1.15:1)*(1+decoFx('oro')); }
 function decoCount(id){ const t=(player.torre&&player.torre.plots)||{}; let n=0; for(const k in t){ if(t[k]&&t[k].deco===id)n++; } return n; }
-function defensaCount(){ return decoCount('espanta')+decoCount('cerca')+decoCount('perro')+decoCount('gargola'); }
-function manaRegenBonus(){ return decoCount('cristal')+decoCount('runa')+decoCount('fuente'); }
+function decoFx(kind){ const t=(player.torre&&player.torre.plots)||{}; let s=0; for(const k in t){ const d=t[k]&&t[k].deco; if(d&&DECO_FX[d]&&DECO_FX[d][kind])s+=DECO_FX[d][kind]; } return s; }
+function defensaCount(){ return Math.round(decoFx('def')); }
+function manaRegenBonus(){ return Math.round(decoFx('mana')); }
 const TRAB_PRECIO=6000;
 function trabajadorSpeed(){ return (player.trabajador&&player.trabajador.hired)?0.8:1; } // cultivos 20% más rápidos
 function animalesPenned(){ return hasBuild('corral')||hasBuild('establo'); }
@@ -1053,6 +1079,15 @@ function moveRoamingAnimals(){
  if(moved){ markDirty(); renderIsland(); }
 }
 const INSUMOS={agua:{n:'Bidón de agua ×5',precio:40,k:'agua',amt:5,e:'💧'},abono:{n:'Saco de abono ×3',precio:60,k:'abono',amt:3,e:'✨'},comida:{n:'Forraje ×5',precio:70,k:'comida',amt:5,e:'🌾'}};
+// ===== FLOTA: barcos que zarpan por su cuenta y traen botín =====
+const BOATS={
+ barca:{n:'Barca pesquera',precio:2500,dur:20*6e4,e:'🛶',spr:'barca',loot:{oro:[60,140],comida:[2,4],rec:0},d:'Trae oro y forraje para tus animales.'},
+ mercante:{n:'Mercante',precio:6000,dur:60*6e4,e:'⛵',spr:'mercante',loot:{oro:[180,340],comida:[1,2],rec:1},d:'Trae oro y algún recurso.'},
+ galeon:{n:'Galeón',precio:15000,dur:3*36e5,e:'🚢',spr:'galeon',loot:{oro:[500,950],comida:[2,4],rec:2},d:'Grandes cargamentos: oro, recursos y a veces 🐲.'}};
+const BOAT_RECS=['madera','piedra','esencia','cuero','escama'];
+const PUERTO_PRECIO=5000;
+function puertoBonus(){ return player.puerto?0.75:1; }       // -25% duración con puerto
+function puertoLoot(){ return player.puerto?1.25:1; }        // +25% botín con puerto
 // Ciclo: alimentas al animal → produce el doble Y deja estiércol → conviertes estiércol en abono gratis.
 const ESTIERCOL_POR_ABONO=3;
 function diaDelAno(){ const d=new Date(); return Math.floor((d-new Date(d.getFullYear(),0,0))/864e5); }
@@ -1236,12 +1271,14 @@ function renderIsland(){ const mm=new Date().getMinutes(); if(mm!==lastSkyMin){ 
   let tileStyle='width:'+tile+'px;height:'+tile+'px';
   if(p&&p.tree){ const st=treeStatus(p); const ready=treeFruitReady(p); tileStyle+=';position:relative;overflow:visible;z-index:20';
    inner='<span class="'+(ready?'ready':'')+'" style="position:absolute;left:0;bottom:8%;width:'+(tile*2)+'px;display:flex;justify-content:center;pointer-events:none">'+spriteHTML(st.sprite,sc+1)+'</span>'+(st.badge?'<span class="pbadge" style="z-index:21">'+st.badge+'</span>':'')+(st.timer?'<span class="ptimer" style="z-index:21">'+st.timer+'</span>':'');
-  } else if(p&&p.build){ const b=BUILDS[p.build]; tileStyle+=';position:relative;overflow:visible;z-index:30';
+  } else if(p&&p.build){ const b=BUILDS[p.build]; if(!b){ if(p.build==='puerto'){ player.puerto=true; } delete t.plots[i]; inner='<span class="plus">+</span>'; }
+   else { tileStyle+=';position:relative;overflow:visible;z-index:30';
    let bBadge='';
    if(b.passive){ if(!p.prodAt)p.prodAt=p.at||Date.now(); if(Date.now()-p.prodAt>=b.passive.cada)bBadge='<span class="pbadge" style="z-index:31">'+(b.passive.type==='oro'?'🪙':'💧')+'</span>'; }
    else { let readyN=Object.values(t.plots).filter(x=>x&&x.animal&&animalCycles(x)>=1).length; if(p.animales){ readyN+=p.animales.filter(a=>animalCycles(a)>=1).length; } const total=(p.animales||[]).length; if(readyN)bBadge='<span class="pbadge" style="z-index:31">🪙'+readyN+'</span>'; else if((p.build==='corral'||p.build==='establo')&&total)bBadge='<span class="pbadge" style="z-index:31;font-size:9px">'+total+'/'+penCap(p)+'</span>'; }
    inner='<span style="position:absolute;left:0;top:0;width:'+(tile*b.w)+'px;height:'+(tile*b.h)+'px;display:flex;align-items:center;justify-content:center;pointer-events:none">'+spriteHTML(SPR[b.spr],Math.max(3,Math.floor(tile*b.w/11)))+'</span>'+bBadge;
-  } else if(p&&p.link!=null){ inner=''; }
+   }
+  } else if(p&&p.link!=null){ const mp=t.plots[p.link]; if(mp&&!BUILDS[mp.build]){ delete t.plots[i]; } inner=''; }
   else if(p&&p.crop){ const pr=cropProgress(p),ready=pr>=1; const badge=(p.waterUntil>Date.now())?'💧':(p.fert?'✨':'');
    inner='<span class="'+(ready?'ready':'')+'">'+spriteHTML(stageSprite(p),sc)+'</span>'+(badge?'<span class="pbadge">'+badge+'</span>':'')+(ready?'':'<span class="ptimer">'+fmtRemain(p)+'</span><span class="pbar"><i style="width:'+Math.round(pr*100)+'%"></i></span>');
   } else if(p&&p.animal){ const a=ANIMALS[p.animal]; const cyc=animalCycles(p); const ready=cyc>=1;
@@ -1253,7 +1290,49 @@ function renderIsland(){ const mm=new Date().getMinutes(); if(mm!==lastSkyMin){ 
   out+='<div class="ttile g'+g+(moveSel===i?' sel':'')+'" style="'+tileStyle+'" onclick="plotAction('+i+')">'+inner+'</div>';
  }
  grid.innerHTML=out;
+ renderMuelle();
 }
+function renderMuelle(){
+ const frame=$('islandFrame'); if(!frame)return;
+ let m=$('muelle'); if(!m){ m=document.createElement('div'); m.id='muelle'; frame.appendChild(m); }
+ player.barcos=player.barcos||[];
+ const puerto=player.puerto;
+ const boats=player.barcos.map((b,idx)=>{
+  const nav=b.endsAt&&Date.now()<b.endsAt;
+  const listo=b.endsAt&&Date.now()>=b.endsAt;
+  const badge=listo?'<span class="pbadge" style="position:static">📦</span>':(nav?'<span class="ptimer" style="position:static;background:rgba(255,253,248,.9)">'+Math.ceil((b.endsAt-Date.now())/6e4)+'m</span>':'');
+  return '<button onclick="openFlota()" style="border:0;background:none;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;'+(nav?'opacity:.6':'')+'"><span class="'+(nav?'':'floaty')+'">'+spriteHTML(SPR[BOATS[b.tipo].spr],3)+'</span>'+badge+'</button>';
+ }).join('');
+ m.innerHTML='<div class="sea"><div class="seaLabel">🌊 Muelle'+(puerto?' · ⚓ Puerto':'')+'</div><div class="seaBoats">'+(puerto?'<span style="display:flex;flex-direction:column;align-items:center">'+spriteHTML(SPR.puerto_ed,3)+'</span>':'')+(boats||(puerto?'':'<button onclick="openFlota()" style="border:0;background:none;color:#dff;font-size:12px;font-weight:700;cursor:pointer">Compra un barco en la Tienda → Granja</button>'))+'</div></div>';
+}
+function openFlota(){
+ player.barcos=player.barcos||[];
+ let h='<div class="modal-box"><div class="kicker">🌊 Tu flota</div>';
+ if(!player.barcos.length){ h+='<p style="font-size:13px;color:var(--muted);margin:8px 0 0">Aún no tienes barcos. Cómpralos en la Tienda → Granja. Zarpan solos y traen oro, recursos y forraje.</p>'; }
+ else h+=player.barcos.map((b,idx)=>{
+   const B=BOATS[b.tipo]; const nav=b.endsAt&&Date.now()<b.endsAt; const listo=b.endsAt&&Date.now()>=b.endsAt;
+   let estado, btn;
+   if(listo){ estado='📦 ¡De vuelta con carga!'; btn='<button class="pricebtn" style="width:auto" onclick="claimBoat('+idx+')">Recoger botín</button>'; }
+   else if(nav){ estado='⏳ En altamar, vuelve en '+Math.ceil((b.endsAt-Date.now())/6e4)+' min'; btn='<button class="pricebtn" style="width:auto" disabled>Navegando…</button>'; }
+   else { estado='⚓ En puerto, listo para zarpar'; btn='<button class="pricebtn" style="width:auto" onclick="sendBoat('+idx+')">Zarpar ('+(B.dur*puertoBonus()>=36e5?Math.round(B.dur*puertoBonus()/36e5)+'h':Math.round(B.dur*puertoBonus()/6e4)+'m')+')</button>'; }
+   return '<div class="reto" style="margin-top:8px"><span>'+spriteHTML(SPR[B.spr],2)+'</span><span style="flex:1;font-size:13px"><b>'+B.n+'</b><br><span style="color:var(--muted);font-size:12px">'+estado+'</span></span>'+btn+'</div>';
+ }).join('');
+ h+='<button class="btn" style="margin-top:14px" onclick="closeModal()">Cerrar</button></div>';
+ openModal('flota',h);
+}
+function sendBoat(idx){ const b=player.barcos[idx]; if(!b)return; if(b.endsAt&&Date.now()<b.endsAt)return; b.endsAt=Date.now()+Math.round(BOATS[b.tipo].dur*puertoBonus()); sfx('ok'); markDirty(); renderIsland(); openFlota(); toast(BOATS[b.tipo].e+' '+BOATS[b.tipo].n+' zarpó.'); }
+function claimBoat(idx){
+ const b=player.barcos[idx]; if(!b||!b.endsAt||Date.now()<b.endsAt)return;
+ const B=BOATS[b.tipo], L=B.loot, mult=puertoLoot(); const reel=[];
+ const oro=Math.round((L.oro[0]+Math.random()*(L.oro[1]-L.oro[0]))*mult); addOro(oro); reel.push('+'+oro+' 🪙');
+ const com=Math.round((L.comida[0]+Math.random()*(L.comida[1]-L.comida[0]))); if(com){ G().supply.comida=(G().supply.comida||0)+com; reel.push('🌾×'+com); }
+ let recN=L.rec; if(b.tipo==='galeon'&&Math.random()<.5)recN++;
+ for(let i=0;i<recN;i++){ const rk=(b.tipo==='galeon'&&Math.random()<.35)?'escama':BOAT_RECS[Math.floor(Math.random()*4)]; addRec(rk,1); reel.push(RECURSOS[rk].e+'+1'); }
+ b.endsAt=null; sfx('coin'); coinBurst(5); markDirty(); renderHud(); renderIsland();
+ openModal('flota','<div class="modal-box" style="text-align:center"><div class="kicker">Cargamento</div><div style="margin:8px 0;display:flex;justify-content:center" class="bump">'+spriteHTML(SPR[B.spr],4)+'</div><h3 style="font-family:\'Archivo Black\';font-size:18px">'+B.n+' regresó</h3><p style="font-size:15px;font-weight:700;margin:8px 0 0">'+reel.join(' · ')+'</p><button class="btn btn-acc" style="margin-top:12px" onclick="openFlota()">Continuar</button></div>');
+}
+function buyBoat(tipo){ const B=BOATS[tipo]; if(player.oro<B.precio){toast('Te faltan monedas.');return;} player.oro-=B.precio; player.barcos=player.barcos||[]; player.barcos.push({tipo,endsAt:null}); sfx('win'); confetti(); markDirty(); renderHud(); shopTab('granja'); toast(B.e+' '+B.n+' amarrado en tu muelle.'); }
+function buyPuerto(){ if(player.puerto){return;} if(player.oro<PUERTO_PRECIO){toast('Te faltan monedas.');return;} player.oro-=PUERTO_PRECIO; player.puerto=true; sfx('win'); confetti(); markDirty(); renderHud(); renderIsland(); shopTab('granja'); toast('⚓ ¡Puerto construido en tu muelle!'); }
 function petPending(){
  if(!player.mascota)return 0; const pt=PETS[player.mascota]; if(!pt.rec)return 0;
  player.petAt=player.petAt||Date.now();
@@ -1282,12 +1361,9 @@ function plotAction(i){ const t=G(); let p=t.plots[i];
   const bd=BUILDS[p.build];
   if(p.build==='biblioteca' && tool!=='plantar'){ openBiblioteca(); return; }
   if(bd.passive){ if(!p.prodAt)p.prodAt=p.at||Date.now(); const cyc=Math.min(24,Math.floor((Date.now()-p.prodAt)/bd.passive.cada)); if(cyc>0){ p.prodAt=Date.now(); const amt=bd.passive.amt*cyc; if(bd.passive.type==='oro'){ addOro(amt); coinBurst(5); toast('🏚 '+bd.n+' produce +'+amt+' 🪙'); } else { G().supply.agua=(G().supply.agua||0)+amt; toast('🏚 '+bd.n+': +'+amt+' 💧 agua'); } sfx('coin'); markDirty(); renderIsland(); renderHud(); } else toast('🏚 '+bd.n+': aún produciendo…'); return; }
-  // Pen (corral/establo): cosecha de los animales alojados dentro + los sueltos listos
-  let oroT=0,cuero=0,n=0;
-  if(esPen){ (p.animales||[]).forEach(a=>{ if(animalCycles(a)>=1){ const h=harvestAnimal(a); oroT+=h.oro; if(Math.random()<.5)cuero++; n++; } }); }
-  Object.values(t.plots).forEach(x=>{ if(x&&x.animal){ if(animalCycles(x)>=1){ const h=harvestAnimal(x); oroT+=h.oro; if(Math.random()<.5)cuero++; n++; } } });
-  if(n){ addOro(oroT); if(cuero)addRec('cuero',cuero); sfx('coin'); coinBurst(Math.min(8,n*2)); toast('🏚 '+BUILDS[p.build].n+': '+n+' animal(es) recogidos · +'+oroT+' 🪙'+(cuero?' · 🟤+'+cuero:'')); renderIsland(); renderHud(); }
-  else toast('🏚 '+BUILDS[p.build].n+(esPen?' ('+(p.animales||[]).length+'/'+penCap(p)+' animales)':'')+': ningún animal listo aún.');
+  if(esPen){ openPen(i); return; }
+  // otros edificios: nada que gestionar
+  toast('🏚 '+bd.n+': '+bd.d);
   return;
  }
  if(tool==='mover'){ if(moveSel==null){ if(!p){toast('Elige primero qué mover.');return;} moveSel=i; } else { const a=t.plots[moveSel]; const b=t.plots[i]; delete t.plots[moveSel]; delete t.plots[i]; if(a)t.plots[i]=a; if(b)t.plots[moveSel]=b; moveSel=null; markDirty(); } renderIsland(); return; }
@@ -1601,7 +1677,8 @@ function victory(){
   if(cb.tipo==='sala'){ oro=cb.replay?ORO_REPLAY:ORO_SALA; xp=cb.replay?5:XP_SALA; if(!cb.replay){ player.salas[cb.id]=hoy(); questProg('salas',1); recTxt=addRec('piedra',2); dominioBump(cb.dg,'salas'); } gainMana(8); metaBump(); titulo2='Sala dominada'; }
   if(cb.tipo==='jefe'){ oro=cb.replay?ORO_REPLAY:ORO_JEFE; xp=cb.replay?8:XP_JEFE; if(!cb.replay){ player.jefes[cb.id]=hoy(); recTxt=addRec('piedra',3)+' · '+addRec('escama',1); const dgm=(WORLD.mazmorras||[]).find(m=>m.id===cb.dg); if(dgm&&esArchivada(dgm)){ player.archivadas=player.archivadas||{}; player.archivadas[cb.dg]=hoy(); setTimeout(()=>toast('🏆 ¡'+dgm.libro.split(':')[0]+' DOMINADO! Se archiva; sus preguntas volverán en el repaso diario.'),1400);} } gainMana(8); metaBump(); titulo2='¡Jefe vencido!'; }
   if(cb.tipo==='dragon'){ oro=cb.replay?ORO_REPLAY:ORO_DRAGON; xp=cb.replay?10:XP_DRAGON; if(!cb.replay){ player.dragones[cb.id]=hoy(); recTxt=addRec('escama',3)+' · '+addRec('esencia',3);} titulo2='¡El dragón cae!'; }
-  oro=Math.round(oro*(hasBuild('altar')?1.25:1));
+  oro=Math.round(oro*(hasBuild('altar')?1.25:1)*(1+decoFx('oroC')));
+  xp=Math.round(xp*(1+decoFx('xp')));
   if(cb.flawless){ questProg('flawless',1); player.cnt=player.cnt||{}; player.cnt.flawless=(player.cnt.flawless||0)+1; }
   addOro(oro); addXP(xp); sfx('coin');
   openModal('win','<div class="modal-box"><div class="kicker">'+titulo2+'</div><h2 style="font-family:\'Archivo Black\';font-size:26px;margin-top:4px">'+escapeHtml(cb.mon)+' derrotado</h2><div style="margin:12px 0" class="bump">'+spriteHTML(SPR[cb.spr]||SPR.slime,5)+'</div><p style="font-size:16px;font-weight:700">+'+oro+' 🪙 · +'+xp+' XP'+(cb.flawless?' · ⭐ Sin daño':'')+'</p>'+(recTxt?'<p style="font-size:14px;font-weight:700;color:var(--accent-deep)">Botín: '+recTxt+'</p>':'')+(cb.replay?'<p style="font-size:12px;color:var(--muted)">Repetición: recompensa reducida.</p>':'')+'<button class="btn btn-acc" style="margin-top:12px" onclick="closeModal();afterCombat()">Continuar</button></div>');
@@ -1687,6 +1764,51 @@ function renderRetos(){
   }).join('');
   const r=player.racha, activa=r.last===hoy()||r.last===ayer();
   $('streakInfo').innerHTML=activa?('🔥 <b>'+r.n+(r.n>1?' días':' día')+'</b> seguidos estudiando.'+(r.last!==hoy()?' <span style="color:var(--accent-deep);font-weight:700">¡Estudia hoy para no perderla!</span>':' Vuelve mañana para mantenerla.')):'Sin racha activa. Cualquier repaso o combate la enciende. 🔥';
+  const rl=$('ruletaBox'); if(rl){ const libre=(player.ruleta!==hoy()); rl.innerHTML='<hr class="rule"><div class="kicker">🎰 Ruleta diaria</div><p style="font-size:13px;color:var(--muted);margin:6px 0 0">'+(libre?'Tu giro gratis de hoy está disponible. Premios desde básicos hasta ⭐ legendarios.':'Ya giraste hoy. Vuelve mañana — o gira otra vez por 300 🪙.')+'</p><button class="btn btn-acc" style="margin-top:10px" onclick="openRuleta()">'+(libre?'🎰 Girar gratis':'🎰 Girar (300 🪙)')+'</button>'; }
+}
+/* ===== RULETA DIARIA ===== */
+const RULETA=[
+ {w:34,tier:'común',t:'oro',v:120,txt:'+120 🪙'},
+ {w:16,tier:'común',t:'rec',rec:'madera',v:5,txt:'🪵 Madera ×5'},
+ {w:14,tier:'común',t:'insumo',k:'agua',v:8,txt:'💧 Agua ×8'},
+ {w:12,tier:'raro',t:'oro',v:400,txt:'+400 🪙'},
+ {w:9,tier:'raro',t:'rec',rec:'esencia',v:4,txt:'💠 Esencia ×4'},
+ {w:6,tier:'raro',t:'pocion',k:'elixir',v:2,txt:'🧪 Elixir ×2'},
+ {w:5,tier:'épico',t:'cofre',txt:'🎁 Cofre rúnico gratis'},
+ {w:2.5,tier:'épico',t:'oro',v:1500,txt:'+1500 🪙'},
+ {w:1.5,tier:'legendario',t:'legpet',txt:'⭐ Desbloqueo de mascota legendaria'}
+];
+function ruletaPick(){ const tot=RULETA.reduce((a,x)=>a+x.w,0); let r=Math.random()*tot; for(const p of RULETA){ r-=p.w; if(r<=0)return p; } return RULETA[0]; }
+function openRuleta(){
+ const libre=(player.ruleta!==hoy());
+ if(!libre){ if(player.oro<300){ toast('Giro gratis usado. Necesitas 300 🪙 para otro.'); return; } }
+ const tierCol={'común':'var(--muted)','raro':'#3c6c9c','épico':'#7a4f9e','legendario':'var(--gold)'};
+ let h='<div class="modal-box" style="text-align:center"><div class="kicker">🎰 Ruleta diaria</div>';
+ h+='<div id="ruletaReel" style="font-family:\'Archivo Black\';font-size:20px;margin:16px 0;min-height:30px">—</div>';
+ h+='<div style="display:flex;flex-wrap:wrap;gap:4px;justify-content:center;margin-bottom:10px">'+RULETA.map(p=>'<span class="tag" style="font-size:9px;border-color:'+tierCol[p.tier]+';color:'+tierCol[p.tier]+'">'+p.txt+'</span>').join('')+'</div>';
+ h+='<button class="btn btn-acc" id="ruletaGo" onclick="spinRuleta()">'+(libre?'¡Girar gratis!':'Girar por 300 🪙')+'</button><button class="btn" style="margin-top:8px" onclick="closeModal()">Cerrar</button></div>';
+ openModal('ruleta',h);
+}
+function spinRuleta(){
+ const libre=(player.ruleta!==hoy());
+ if(!libre){ if(player.oro<300){ toast('Necesitas 300 🪙.'); return; } player.oro-=300; } else { player.ruleta=hoy(); }
+ const go=$('ruletaGo'); if(go)go.disabled=true;
+ const reel=$('ruletaReel'); const prize=ruletaPick();
+ let ticks=0; const anim=setInterval(()=>{ const p=RULETA[Math.floor(Math.random()*RULETA.length)]; if(reel)reel.textContent=p.txt; ticks++; if(ticks>14){ clearInterval(anim); aplicarPremioRuleta(prize); } },90);
+}
+function aplicarPremioRuleta(p){
+ const reel=$('ruletaReel'); let msg=p.txt;
+ if(p.t==='oro'){ addOro(p.v); }
+ else if(p.t==='rec'){ addRec(p.rec,p.v); }
+ else if(p.t==='insumo'){ G().supply[p.k]=(G().supply[p.k]||0)+p.v; }
+ else if(p.t==='pocion'){ player.pociones[p.k]=(player.pociones[p.k]||0)+p.v; }
+ else if(p.t==='cofre'){ player.cofrePend=(player.cofrePend||0)+1; msg='🎁 Cofre rúnico añadido (Tienda → Cofres)'; }
+ else if(p.t==='legpet'){ const locked=Object.entries(PETS).filter(([id,pt])=>pt.leg && !(player.mascotas||[]).includes(id)); if(locked.length){ const [id,pt]=locked[Math.floor(Math.random()*locked.length)]; player.mascotas=player.mascotas||[]; player.mascotas.push(id); msg='⭐ ¡'+pt.n+' desbloqueada!'; } else { player.oro+=3000; msg='⭐ +3000 🪙 (ya tienes todas las legendarias)'; } }
+ if(reel)reel.textContent=msg;
+ const leg=p.tier==='legendario'||p.tier==='épico'; sfx(leg?'win':'coin'); if(leg)confetti();
+ markDirty(); renderHud();
+ const go=$('ruletaGo'); if(go){ go.disabled=false; go.textContent='Cerrar'; go.setAttribute('onclick','closeModal()'); }
+ toast('🎰 '+p.tier.toUpperCase()+': '+msg);
 }
 /* ============ TIENDA ============ */
 let shopCur='cultivos';
@@ -1718,6 +1840,13 @@ function shopTab(t){
     const trH=player.trabajador&&player.trabajador.hired;
     h+='<div class="kicker" style="margin-top:16px">👷 Trabajador de granja</div>';
     h+='<div class="panel" style="margin-top:6px;display:flex;gap:12px;align-items:center"><span>'+spriteHTML(SPR.trabajador,3)+'</span><div style="flex:1"><b style="font-size:14px">'+(trH?'Contratado':'Contrata un peón')+'</b><p style="font-size:12px;color:var(--muted);margin:4px 0 0">Cultivos +20% rápidos, cosechas +15% oro, y alimenta a tus animales solo (deja estiércol) aunque no tengas forraje.</p>'+(trH?'<span class="tag tag-ok" style="margin-top:6px">Activo</span>':'<button class="pricebtn" style="margin-top:8px" '+(player.oro<TRAB_PRECIO?'disabled':'')+' onclick="hireTrabajador()">'+TRAB_PRECIO+' 🪙 · Contratar</button>')+'</div></div>';
+    // Flota
+    h+='<div class="kicker" style="margin-top:16px">🌊 Flota y puertos</div>';
+    h+='<p style="font-size:12px;color:var(--muted);margin:4px 0 6px">Los barcos zarpan solos y traen oro, recursos y forraje. Construye un <b>Puerto</b> en tu muelle para que sean más rápidos y rindan más.</p>';
+    h+='<div class="panel" style="margin-top:6px;display:flex;gap:12px;align-items:center"><span class="sspr" style="background:#7fb6c9">'+spriteHTML(SPR.puerto_ed,2)+'</span><div style="flex:1"><b style="font-size:14px">⚓ Puerto '+(player.puerto?'(construido)':'')+'</b><p style="font-size:12px;color:var(--muted);margin:4px 0 0">Se levanta sobre el mar de tu muelle. Barcos 25% más rápidos y +25% de botín.</p>'+(player.puerto?'<span class="tag tag-ok" style="margin-top:6px">Activo</span>':'<button class="pricebtn" style="margin-top:8px" '+(player.oro<PUERTO_PRECIO?'disabled':'')+' onclick="buyPuerto()">'+PUERTO_PRECIO+' 🪙 · Construir</button>')+'</div></div>';
+    h+='<div class="shopgrid">'+Object.entries(BOATS).map(([id,b])=>{ const tengo=(player.barcos||[]).filter(x=>x.tipo===id).length;
+      return '<div class="shopitem"><span class="sspr" style="background:#7fb6c9">'+spriteHTML(SPR[b.spr],3)+'</span><b style="font-size:13px">'+b.n+(tengo?' <span style="color:var(--muted)">×'+tengo+'</span>':'')+'</b><span style="font-size:11px;color:var(--muted)">'+b.d+' Viaje '+(b.dur>=36e5?Math.round(b.dur/36e5)+'h':Math.round(b.dur/6e4)+'m')+'.</span><button class="pricebtn" '+(player.oro<b.precio?'disabled':'')+' onclick="buyBoat(\''+id+'\')">'+b.precio+' 🪙 · Comprar</button></div>'; }).join('')+'</div>';
+    if((player.barcos||[]).length) h+='<button class="btn" style="margin-top:10px" onclick="openFlota()">⚓ Gestionar flota</button>';
   }
   if(secs.includes('insumo')){
     h+=SEC('insumo');
@@ -1771,6 +1900,7 @@ function shopTab(t){
     h+='<div class="shopgrid">'+comunes.map(render).join('')+'</div>';
     h+='<div class="kicker" style="margin-top:16px">⭐ Mascotas legendarias</div><p style="font-size:12px;color:var(--muted);margin:4px 0 0">Se desbloquean con hazañas de estudio y además cuestan recursos raros.</p>';
     h+='<div class="shopgrid">'+legs.map(render).join('')+'</div>';
+    h+='<div class="kicker" style="margin-top:16px">⚔ Cruzadas</div><p style="font-size:12px;color:var(--muted);margin:4px 0 0">Manda tus mascotas a la aventura: si ganan traen recursos y XP, suben de nivel y desbloquean ventajas. No siempre se gana.</p><button class="btn" style="margin-top:10px" onclick="openCruzadas()">⚔ Ver cruzadas</button>';
   }
   if(secs.includes('ropa')){
     h+=SEC('ropa')+'<div class="panel" style="margin-top:6px"><p style="font-size:14px;margin:0 0 10px">Toca tu mago en la Granja para cambiar de atuendo. Cada color nuevo cuesta <b>'+HAT_PRECIO+' 🪙</b>.</p><div style="display:flex;justify-content:center">'+magoSprite(6,player.torre.avatar)+'</div><button class="btn" style="margin-top:12px" onclick="showTab(\'torre\');setTimeout(openAvatar,100)">Cambiar atuendo →</button></div>';
@@ -1791,6 +1921,115 @@ function expandIsla(){
  t.plots=np;
  sfx('lvl'); confetti(); markDirty(); renderHud(); shopTab('insumo');
  toast('🏝 ¡Isla ampliada a '+newN+'×'+newN+'!');
+}
+function openPen(i){
+ const t=G(); const p=t.plots[i]; if(!p||!p.build){closeModal();return;}
+ p.animales=p.animales||[];
+ const cap=penCap(p), dentro=p.animales.length;
+ const listos=p.animales.filter(a=>animalCycles(a)>=1).length;
+ const porTipo={}; p.animales.forEach(a=>porTipo[a.animal]=(porTipo[a.animal]||0)+1);
+ const invCount={}; t.inv.forEach(d=>{ if(d.indexOf('animal:')===0){ const id=d.slice(7); invCount[id]=(invCount[id]||0)+1; } });
+ let h='<div class="modal-box"><div class="kicker">'+BUILDS[p.build].n+'</div>';
+ h+='<h3 style="font-family:\'Archivo Black\';font-size:20px;margin-top:2px">'+dentro+' / '+cap+' animales'+(listos?' · '+listos+' listos 🪙':'')+'</h3>';
+ h+='<button class="btn btn-acc" style="margin-top:10px" '+(listos?'':'disabled')+' onclick="penCosechar('+i+')">🧺 Cosechar todo'+(listos?' ('+listos+')':'')+'</button>';
+ h+='<p style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:14px 0 4px">Dentro</p>';
+ if(dentro){ h+=Object.entries(porTipo).map(([id,c])=>'<div class="reto" style="margin-top:6px"><span>'+spriteHTML(SPR[ANIMALS[id].spr],2)+'</span><span style="flex:1;font-size:13px;font-weight:700">'+ANIMALS[id].n+' ×'+c+'</span><button class="pricebtn" style="width:auto" onclick="penSacar('+i+',\''+id+'\')">Sacar 1</button></div>').join(''); }
+ else h+='<p style="font-size:13px;color:var(--muted)">Vacío. Los animales sueltos entran solos, o mételos desde tu inventario.</p>';
+ h+='<p style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:14px 0 4px">Meter desde inventario</p>';
+ const invE=Object.entries(invCount);
+ if(invE.length){ h+=invE.map(([id,c])=>'<div class="reto" style="margin-top:6px"><span>'+spriteHTML(SPR[ANIMALS[id].spr],2)+'</span><span style="flex:1;font-size:13px;font-weight:700">'+ANIMALS[id].n+' ×'+c+'</span><button class="pricebtn" style="width:auto" '+(dentro<cap?'':'disabled')+' onclick="penMeter('+i+',\''+id+'\')">Meter 1</button></div>').join(''); }
+ else h+='<p style="font-size:13px;color:var(--muted)">No tienes animales sueltos en el inventario. Compra en la Tienda → Granja.</p>';
+ h+='<button class="btn" style="margin-top:14px" onclick="closeModal()">Cerrar</button></div>';
+ openModal('pen',h);
+}
+function penCosechar(i){
+ const t=G(); const p=t.plots[i]; if(!p)return;
+ let oroT=0,cuero=0,n=0;
+ (p.animales||[]).forEach(a=>{ if(animalCycles(a)>=1){ const hh=harvestAnimal(a); oroT+=hh.oro; if(Math.random()<.5)cuero++; n++; } });
+ if(n){ addOro(oroT); if(cuero)addRec('cuero',cuero); sfx('coin'); coinBurst(Math.min(8,n*2)); toast('🧺 '+n+' animal(es) · +'+oroT+' 🪙'+(cuero?' · 🟤+'+cuero:'')); }
+ markDirty(); renderHud(); openPen(i);
+}
+function penSacar(i,id){
+ const t=G(); const p=t.plots[i]; if(!p||!p.animales)return;
+ const idx=p.animales.findIndex(a=>a.animal===id); if(idx<0)return;
+ p.animales.splice(idx,1); t.inv.push('animal:'+id); sfx('ok'); markDirty(); renderIsland(); openPen(i);
+ toast('🐄 '+ANIMALS[id].n+' devuelto al inventario.');
+}
+function penMeter(i,id){
+ const t=G(); const p=t.plots[i]; if(!p)return; p.animales=p.animales||[];
+ if(p.animales.length>=penCap(p)){ toast('El '+BUILDS[p.build].n+' está lleno.'); return; }
+ const di=t.inv.indexOf('animal:'+id); if(di<0)return;
+ t.inv.splice(di,1); p.animales.push({animal:id,animalAt:Date.now()}); sfx('ok'); markDirty(); renderIsland(); openPen(i);
+ toast('🐄 '+ANIMALS[id].n+' metido al '+BUILDS[p.build].n+'.');
+}
+/* ===== CRUZADAS DE MASCOTAS ===== */
+const CRUZADAS={
+ corta:{n:'Patrulla',dur:15*6e4,base:.80,oro:[40,90],recN:1,xp:10,e:'🌾'},
+ media:{n:'Expedición',dur:45*6e4,base:.62,oro:[120,240],recN:2,xp:24,e:'🏔'},
+ larga:{n:'Cruzada épica',dur:2*36e5,base:.42,oro:[350,700],recN:3,xp:55,e:'🐉'}
+};
+const RECS_CRUZADA=['madera','piedra','esencia','cuero','escama'];
+function petStat(id){ player.petLv=player.petLv||{}; player.petLv[id]=player.petLv[id]||{lv:1,xp:0}; return player.petLv[id]; }
+function petXpNeeded(lv){ return 20+lv*lv*10; }
+function petWinBonus(id){ return Math.min(.20, (petStat(id).lv-1)*0.03); } // +3% por nivel, tope +20%
+function petLootMult(id){ return 1+(petStat(id).lv-1)*0.10; } // +10% botín por nivel
+function petAbilities(lv){ const a=[]; if(lv>=2)a.push('+3% victoria/nivel'); if(lv>=3)a.push('Botín aumentado'); if(lv>=5)a.push('Doble recurso ocasional'); if(lv>=8)a.push('Nunca vuelve con las manos vacías'); return a; }
+function petGiveXp(id,xp){
+ const s=petStat(id); s.xp+=xp; let subio=false;
+ while(s.xp>=petXpNeeded(s.lv)){ s.xp-=petXpNeeded(s.lv); s.lv++; subio=true; }
+ if(subio){ sfx('lvl'); confetti(); toast('⭐ '+(PETS[id].n)+' subió a nivel '+s.lv+'!'); }
+ markDirty(); return subio;
+}
+function openCruzadas(){
+ player.mascotas=player.mascotas||[];
+ if(!player.mascotas.length){ toast('Aún no tienes mascotas. Adopta una primero.'); return; }
+ const cz=player.cruzada;
+ let h='<div class="modal-box"><div class="kicker">⚔ Cruzadas</div>';
+ if(cz){
+  const pt=PETS[cz.id], s=petStat(cz.id), c=CRUZADAS[cz.tipo];
+  const listo=Date.now()>=cz.endsAt;
+  h+='<h3 style="font-family:\'Archivo Black\';font-size:18px;margin-top:4px">'+c.e+' '+pt.n+' en '+c.n+'</h3>';
+  if(listo){ h+='<p style="font-size:13px;color:var(--muted);margin:8px 0 0">¡Regresó! Lanza la moneda del destino…</p><button class="btn btn-acc" style="margin-top:12px" onclick="resolveCruzada()">🪙 Resolver cruzada</button>'; }
+  else { const min=Math.ceil((cz.endsAt-Date.now())/6e4); h+='<p style="font-size:13px;color:var(--muted);margin:8px 0 0">Regresa en '+(min>=60?Math.ceil(min/60)+' h':min+' min')+'. Prob. de victoria: '+Math.round((c.base+petWinBonus(cz.id))*100)+'%.</p>'; }
+  h+='<button class="btn" style="margin-top:10px" onclick="closeModal()">Cerrar</button></div>';
+  openModal('cruz',h); return;
+ }
+ h+='<p style="font-size:12px;color:var(--muted);margin:6px 0 0">Elige mascota y misión. Cuanto más larga, mejor botín pero menos probabilidad de ganar. El nivel de la mascota mejora su suerte y su botín.</p>';
+ h+='<p style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:12px 0 4px">Tus mascotas</p>';
+ h+=player.mascotas.map(id=>{ const s=petStat(id); return '<div class="reto" style="margin-top:6px"><span>'+spriteHTML(SPR[id],2)+'</span><span style="flex:1;font-size:13px;font-weight:700">'+PETS[id].n+' <span style="color:var(--muted);font-weight:600">· Nv '+s.lv+' ('+s.xp+'/'+petXpNeeded(s.lv)+' XP)</span></span></div>'+
+  '<div style="display:flex;gap:6px;margin:4px 0 8px">'+Object.entries(CRUZADAS).map(([t,c])=>'<button class="pricebtn" style="width:auto;font-size:11px" onclick="startCruzada(\''+id+'\',\''+t+'\')">'+c.e+' '+c.n+'</button>').join('')+'</div>'; }).join('');
+ h+='<button class="btn" style="margin-top:8px" onclick="closeModal()">Cerrar</button></div>';
+ openModal('cruz',h);
+}
+function startCruzada(id,tipo){
+ if(player.cruzada){ toast('Ya hay una cruzada en curso.'); return; }
+ const c=CRUZADAS[tipo];
+ player.cruzada={id,tipo,endsAt:Date.now()+c.dur};
+ sfx('ok'); markDirty();
+ toast('⚔ '+PETS[id].n+' partió en '+c.n+'. Vuelve en '+(c.dur>=36e5?Math.round(c.dur/36e5)+' h':Math.round(c.dur/6e4)+' min')+'.');
+ openCruzadas();
+}
+function resolveCruzada(){
+ const cz=player.cruzada; if(!cz)return; if(Date.now()<cz.endsAt){ toast('Aún no regresa.'); return; }
+ const c=CRUZADAS[cz.tipo], s=petStat(cz.id), pt=PETS[cz.id];
+ const win=Math.random()<(c.base+petWinBonus(cz.id)) || (s.lv>=8 && Math.random()<.5);
+ player.cruzada=null;
+ let msg='', reel=[];
+ if(win){
+  const oro=Math.round((c.oro[0]+Math.random()*(c.oro[1]-c.oro[0]))*petLootMult(cz.id)); addOro(oro); reel.push('+'+oro+' 🪙');
+  let recN=c.recN + (s.lv>=5&&Math.random()<.4?1:0);
+  for(let i=0;i<recN;i++){ const rk=RECS_CRUZADA[Math.floor(Math.random()*RECS_CRUZADA.length)]; addRec(rk,1); reel.push(RECURSOS[rk].e+'+1'); }
+  petGiveXp(cz.id,c.xp);
+  sfx('win'); confetti();
+  msg='🏆 ¡Victoria! '+pt.n+' regresó triunfante.';
+ } else {
+  const consuelo=(s.lv>=8)?Math.round(c.oro[0]/2):0; if(consuelo){addOro(consuelo);reel.push('+'+consuelo+' 🪙');}
+  petGiveXp(cz.id,Math.round(c.xp/3)); reel.push('+'+Math.round(c.xp/3)+' XP');
+  sfx('bad');
+  msg='🩹 Derrota. '+pt.n+' volvió maltrecho, pero aprendió algo.';
+ }
+ markDirty(); renderHud();
+ openModal('cruz','<div class="modal-box" style="text-align:center"><div class="kicker">'+(win?'Cruzada ganada':'Cruzada perdida')+'</div><div style="font-size:44px;margin:8px 0" class="'+(win?'bump':'')+'">'+spriteHTML(SPR[cz.id],4)+'</div><h3 style="font-family:\'Archivo Black\';font-size:18px">'+msg+'</h3><p style="font-size:15px;font-weight:700;margin:8px 0 0">'+(reel.join(' · ')||'Sin botín')+'</p><p style="font-size:12px;color:var(--muted);margin:6px 0 0">'+pt.n+' · Nv '+s.lv+' ('+s.xp+'/'+petXpNeeded(s.lv)+' XP) · ventajas: '+(petAbilities(s.lv).join(', ')||'—')+'</p><button class="btn btn-acc" style="margin-top:12px" onclick="openCruzadas()">Continuar</button></div>');
 }
 function openBiblioteca(){
  const leidos=(WORLD.mazmorras||[]).filter(m=>player.leidos&&player.leidos[m.id]);
