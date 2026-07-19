@@ -1,13 +1,14 @@
 ---
 tags:
   - concepto
-libros: 1
+libros: 0
+trabajos: 1
 ---
 
 # Familia
 
-La relación entre los miembros de una familia.
+un grupo de personas relacionadas por sangre o matrimonio
 
-## Libros que tratan este concepto
+## ✍️ En tus trabajos
 
-- [[Psicologia del Mexicano - Desconocido]]
+- [[Trabajos/Desarrollo Psicosocial en la Edad Media|Desarrollo Psicosocial en la Edad Media]]
