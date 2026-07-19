@@ -282,6 +282,7 @@ button{ font-family:inherit; cursor:pointer; color:inherit; -webkit-appearance:n
     </div>
     <div id="dungeonList"></div>
     <div id="dragonCard"></div>
+    <div id="abismoCard"></div>
   </div>
 
   <!-- SALAS (detalle mazmorra) -->
@@ -1217,8 +1218,9 @@ function bulkAction(kind){
    if(p.crop&&cropProgress(p)>=1){ const c=CROPS[p.crop]; oroT+=Math.round(c.coins*(p.fert?1.5:1)*cropGoldMult()); if(Math.random()<.6)mad++; delete t.plots[i]; questProg('cosecha',1); n++; }
    else if(p.animal){ if(animalCycles(p)>=1){ const h=harvestAnimal(p); oroT+=h.oro; if(Math.random()<.5)cuero++; n++; } }
    else if(p.tree&&treeFruitReady(p)){ const tr=TREES[p.tree]; p.fruitAt=Date.now(); oroT+=Math.round(tr.coins*cropGoldMult()); if(tr.rec)addRec(tr.rec,tr.recAmt); n++; }
+   else if(p.tree){}
   }
-  if(n){ addOro(oroT); if(mad)addRec('madera',mad); if(cuero)addRec('cuero',cuero); sfx('coin'); coinBurst(Math.min(8,n*2));
+  if(n){ addOro(oroT); addXP(Math.max(1,Math.round(n*2))); if(mad)addRec('madera',mad); if(cuero)addRec('cuero',cuero); sfx('coin'); coinBurst(Math.min(8,n*2));
    toast('🧺 '+n+' cosecha(s) · +'+oroT+' 🪙'+(mad?' · 🪵+'+mad:'')+(cuero?' · 🟤+'+cuero:'')); }
   else toast('Nada listo para cosechar.');
  }
@@ -1372,8 +1374,8 @@ function plotAction(i){ const t=G(); let p=t.plots[i];
  if(tool==='regar'){ const cw=CLIMAS[climaHoy()]; if(cw.agua===0){toast(cw.e+' El cielo riega por ti hoy.');return;} if(!p.crop){toast('Solo se riegan cultivos.');return;} if(cropProgress(p)>=1){toast('Ya está listo: cosecha.');return;} if(p.waterUntil>Date.now()){toast('Ya está regado. 💧');return;} if((t.supply.agua||0)<cw.agua){toast('Sin agua'+(cw.agua>1?' (la sequía duplica el costo)':'')+'.');return;} t.supply.agua-=cw.agua; p.waterUntil=Date.now()+WATER_MS; sfx('ok'); markDirty(); renderTools(); renderIsland(); return; }
  if(tool==='abonar'){ if(!p.crop){toast('Solo se abonan cultivos.');return;} if(p.fert){toast('Ya tiene abono. ✨');return;} if((t.supply.abono||0)<1){toast('Sin abono. Compra en la Tienda.');return;} t.supply.abono--; p.fert=true; sfx('ok'); markDirty(); renderTools(); renderIsland(); return; }
  if(tool==='cosechar'){
-  if(p.crop){ if(cropProgress(p)<1){toast('Aún no está listo ('+fmtRemain(p)+').');return;} const c=CROPS[p.crop]; const oro=Math.round(c.coins*(p.fert?1.5:1)*cropGoldMult()); delete t.plots[i]; addOro(oro); questProg('cosecha',1); sfx('coin'); coinBurst(5); let drop=''; if(Math.random()<.6)drop=' · '+addRec('madera',1); toast('🧺 '+c.n+' cosechada · +'+oro+' 🪙'+drop); renderIsland(); renderHud(); return; }
-  if(p.animal){ const a=ANIMALS[p.animal]; const cyc=animalCycles(p); if(cyc<1){toast(a.n+' aún no produce.');return;} const h=harvestAnimal(p); const oro=h.oro; addOro(oro); sfx('coin'); coinBurst(3); let dropA=''; if(Math.random()<.5)dropA=' · '+addRec('cuero',1); toast(a.n+' produce +'+oro+' 🪙'+(h.fed?' 🌾💩':'')+(cyc>1?' (×'+cyc+')':'')+dropA); renderIsland(); renderHud(); return; }
+  if(p.crop){ if(cropProgress(p)<1){toast('Aún no está listo ('+fmtRemain(p)+').');return;} const c=CROPS[p.crop]; const oro=Math.round(c.coins*(p.fert?1.5:1)*cropGoldMult()); delete t.plots[i]; addOro(oro); addXP(3); questProg('cosecha',1); sfx('coin'); coinBurst(5); let drop=''; if(Math.random()<.6)drop=' · '+addRec('madera',1); toast('🧺 '+c.n+' cosechada · +'+oro+' 🪙'+drop); renderIsland(); renderHud(); return; }
+  if(p.animal){ const a=ANIMALS[p.animal]; const cyc=animalCycles(p); if(cyc<1){toast(a.n+' aún no produce.');return;} const h=harvestAnimal(p); const oro=h.oro; addOro(oro); addXP(2); sfx('coin'); coinBurst(3); let dropA=''; if(Math.random()<.5)dropA=' · '+addRec('cuero',1); toast(a.n+' produce +'+oro+' 🪙'+(h.fed?' 🌾💩':'')+(cyc>1?' (×'+cyc+')':'')+dropA); renderIsland(); renderHud(); return; }
   toast('Nada que cosechar aquí.'); return;
  }
 }
@@ -1389,7 +1391,7 @@ function openPlantModal(i){ const t=G();
  h+='<button class="btn" style="margin-top:12px" onclick="closeModal()">Cancelar</button></div>';
  openModal('plant',h);
 }
-function doPlant(i,id){ const t=G(); if((player.semillas[id]||0)<1)return; if(!spendMana(2))return; player.semillas[id]--; t.plots[i]={crop:id,at:Date.now()}; questProg('siembra',1); sfx('ok'); markDirty(); closeModal(); renderTorre(); }
+function doPlant(i,id){ const t=G(); if((player.semillas[id]||0)<1)return; if(!spendMana(2))return; player.semillas[id]--; t.plots[i]={crop:id,at:Date.now()}; questProg('siembra',1); addXP(1); sfx('ok'); markDirty(); closeModal(); renderTorre(); }
 function doPlace(i,d){ const t=G();
  if(d.indexOf('build:')===0){ const id=d.slice(6),b=BUILDS[id]; const N=islaN(),r=Math.floor(i/N),c=i%N; if(c+b.w>N||r+b.h>N){ toast('No cabe aquí: necesita '+b.w+'×'+b.h+' casillas libres.'); return; } let ok=true; for(let dr=0;dr<b.h&&ok;dr++)for(let dc=0;dc<b.w;dc++){ const j=(r+dr)*N+(c+dc); if(t.plots[j]||j===magoIdx()||j===magoIdx()+1){ok=false;break;} } if(!ok){ toast('Espacio ocupado: necesita '+b.w+'×'+b.h+' casillas libres.'); return; } const idx=t.inv.indexOf(d); if(idx<0)return; t.inv.splice(idx,1); t.plots[i]={build:id,at:Date.now()}; for(let dr=0;dr<b.h;dr++)for(let dc=0;dc<b.w;dc++){ if(dr===0&&dc===0)continue; t.plots[(r+dr)*N+(c+dc)]={link:i}; } sfx('lvl'); confetti(); markDirty(); closeModal(); renderTorre(); toast('🏚 '+b.n+' construido.'); return; }
  if(d.indexOf('tree:')===0){ if(!treeLinkOk(i)){ toast('Un árbol necesita 2 casillas libres en fila. Elige otra.'); return; } const idx=t.inv.indexOf(d); if(idx<0)return; t.inv.splice(idx,1); const id=d.slice(5); t.plots[i]={tree:id,at:Date.now(),fruitAt:0}; t.plots[i+1]={link:i}; sfx('ok'); markDirty(); closeModal(); renderTorre(); toast('🌳 '+TREES[id].n+' plantado. Dará fruto una y otra vez.'); return; }
@@ -1451,11 +1453,15 @@ function dominioStats(m){
  const jefe=!!player.jefes[m.id], leido=!!player.leidos[m.id];
  const cartas=(WORLD.cartas||[]).filter(c=>c.libro&&m.libro&&c.libro.split(':')[0]===m.libro.split(':')[0]);
  const domin=cartas.filter(c=>player.srs[c.id]&&(player.srs[c.id].box||0)>=3).length;
+ const dorada=cartas.length>0 && cartas.every(c=>player.srs[c.id]&&(player.srs[c.id].box||0)>=5);
  const repFrac=cartas.length?domin/cartas.length:0;
  const pct=esArchivada(m)?100:Math.round(((leido?1:0)*0.2 + (salasTot?salasDone/salasTot:0)*0.4 + (jefe?1:0)*0.2 + repFrac*0.2)*100);
- let nivelTxt='Sin abrir'; if(pct>=100)nivelTxt='Dominado'; else if(pct>=60)nivelTxt='Avanzado'; else if(pct>=25)nivelTxt='En estudio'; else if(pct>0)nivelTxt='Iniciado';
- return {pct,nivelTxt,leido,salasDone,salasTot,jefe,repFrac};
+ let nivelTxt='Sin abrir'; if(dorada)nivelTxt='Maestría dorada'; else if(pct>=100)nivelTxt='Dominado'; else if(pct>=60)nivelTxt='Avanzado'; else if(pct>=25)nivelTxt='En estudio'; else if(pct>0)nivelTxt='Iniciado';
+ return {pct,nivelTxt,leido,salasDone,salasTot,jefe,repFrac,dorada,cartasN:cartas.length};
 }
+function librosDorados(){ return (WORLD.mazmorras||[]).filter(m=>dominioStats(m).dorada).length; }
+function masteryOroMult(){ return 1+0.05*librosDorados(); }
+function masteryXpMult(){ return 1+0.05*librosDorados(); }
 function esArchivada(m){ const p=dgProgress(m); return p.done>=p.total && p.boss; }
 function renderMapa(){
   $('worldVer').textContent='Mundo v'+(WORLD.version||'?')+' · generado desde tu vault de Obsidian';
@@ -1464,11 +1470,11 @@ function renderMapa(){
       '<div style="display:flex;gap:12px;align-items:flex-start">'+
       '<div style="flex:none">'+spriteHTML(arch?SPR.trofeo:SPR.puerta,4)+'</div>'+
       '<div style="flex:1;min-width:0"><div class="kicker">'+escapeHtml(m.autor)+'</div>'+
-      '<div style="font-family:\'Archivo Black\';font-size:18px;line-height:1.15">'+escapeHtml(m.nombre)+'</div>'+
+      '<div style="font-family:\'Archivo Black\';font-size:18px;line-height:1.15">'+(d.dorada?'👑 ':'')+escapeHtml(m.nombre)+'</div>'+
       '<div style="font-size:12px;color:var(--muted);margin-top:2px">'+escapeHtml(m.libro)+'</div>'+
-      '<div style="display:flex;align-items:center;gap:6px;margin-top:6px"><span style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Dominio</span><span class="tag" style="font-size:9px">'+d.nivelTxt+'</span></div>'+
+      '<div style="display:flex;align-items:center;gap:6px;margin-top:6px"><span style="font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)">Dominio</span><span class="tag" style="font-size:9px'+(d.dorada?';background:var(--gold);border-color:var(--gold);color:#fff':'')+'">'+d.nivelTxt+'</span></div>'+
       '<div class="bar" style="margin-top:6px"><i style="width:'+d.pct+'%;background:'+(d.pct>=100?'var(--ok)':'var(--accent)')+'"></i></div></div>'+
-      (arch?'<span class="tag tag-ok">🏆</span>':(pct>0?'<span class="tag">'+pct+'%</span>':''))+
+      (arch?'<span class="tag tag-ok">'+(d.dorada?'👑':'🏆')+'</span>':(pct>0?'<span class="tag">'+pct+'%</span>':''))+
       '</div></div>'; };
   const activas=(WORLD.mazmorras||[]).filter(m=>!esArchivada(m));
   const arch=(WORLD.mazmorras||[]).filter(m=>esArchivada(m));
@@ -1488,6 +1494,16 @@ function renderMapa(){
         :(ready?'<button class="btn btn-acc" style="margin-top:12px" onclick="startDragon()">⚔ Enfrentar al dragón</button>'
         :'<p style="font-size:12px;opacity:.75;margin:10px 0 0">🔒 Vence al menos 2 jefes de mazmorra para despertarlo. ('+jefes+'/2)</p>'))+'</div>';
   } else $('dragonCard').innerHTML='';
+  const ab=$('abismoCard');
+  if(ab){ const rec=player.abismoMax||0; const dorados=librosDorados();
+    ab.innerHTML='<hr class="rule"><div class="dcard" style="background:#26211f;color:#fff;border-color:#26211f">'+
+      '<div style="display:flex;gap:12px;align-items:center"><div style="font-size:34px">🌀</div>'+
+      '<div style="flex:1"><div class="kicker" style="color:var(--a200)">Modo infinito</div>'+
+      '<div style="font-family:\'Archivo Black\';font-size:18px">Abismo del Saber</div>'+
+      '<div style="font-size:12px;opacity:.75;margin-top:2px">Oleadas sin fin de todo tu vault; suben de dificultad. Huye cuando quieras para cobrar el botín.</div></div></div>'+
+      '<p style="font-size:12px;opacity:.8;margin:10px 0 0">Récord: oleada '+rec+(dorados?' · 👑 '+dorados+' libro(s) con maestría dorada (+'+(dorados*5)+'% oro/XP)':'')+'</p>'+
+      '<button class="btn btn-acc" style="margin-top:10px" onclick="startAbismo()">🌀 Entrar al Abismo</button></div>';
+  }
 }
 let archOpen=false;
 function toggleArchivo(){ archOpen=!archOpen; renderMapa(); }
@@ -1554,6 +1570,55 @@ function openCombat(){
   renderCombatBars(); loadQuestion();
 }
 function maxHp(){ return player.mascota==='cerbero'?4:3; }
+/* ===== ABISMO DEL SABER: repaso infinito por oleadas ===== */
+const ABISMO_MONS=['slime','bat','snake','ghost','imp','golem','eye','cultist','wolf','lich'];
+const ABISMO_NOMBRES=['Larva del Olvido','Sombra Tenue','Eco Confuso','Espectro Gris','Diablillo Tramposo','Golem de Dudas','Ojo Vigilante','Acólito del Caos','Lobo del Abismo','Liche de la Amnesia'];
+function abismoPool(){
+  const qs=[];
+  (WORLD.mazmorras||[]).forEach(m=>{ m.salas.forEach(s=>s.preguntas.forEach(q=>qs.push(q))); if(m.jefe)m.jefe.preguntas.forEach(q=>qs.push(q)); });
+  if(WORLD.dragon)WORLD.dragon.preguntas.forEach(q=>qs.push(q));
+  return qs;
+}
+function abismoWave(wave){
+  const pool=abismoPool();
+  const nQ=Math.min(2+Math.floor(wave/2),6);
+  const qs=shuffled(pool.sort(()=>Math.random()-.5).slice(0,Math.min(pool.length,nQ)));
+  const idx=Math.min(wave-1,ABISMO_MONS.length-1);
+  cb.spr=ABISMO_MONS[idx]; cb.mon=ABISMO_NOMBRES[idx]+' · Oleada '+wave;
+  cb.qs=qs; cb.i=0; cb.monHp=qs.length;
+  cb.noPista=wave>=4;
+}
+function startAbismo(){
+  const pool=abismoPool();
+  if(pool.length<3){ toast('Necesitas más contenido en el vault para el Abismo.'); return; }
+  curDg=null;
+  cb={tipo:'abismo',id:'abismo',dg:null,nombre:'Abismo del Saber',mon:'',spr:'slime',wave:1,hp:3,flawless:true,oroAcum:0,xpAcum:0};
+  abismoWave(1);
+  openCombat();
+}
+function abismoNextWave(){
+  cb.wave++;
+  const oro=20+cb.wave*10, xp=8+cb.wave*4;
+  cb.oroAcum+=oro; cb.xpAcum+=xp;
+  abismoWave(cb.wave);
+  $('cbMonster').textContent=cb.mon;
+  $('cbMonSpr').innerHTML=spriteHTML(SPR[cb.spr]||SPR.slime,6);
+  $('cbMonSpr').classList.remove('mondie');
+  $('cbFeedback').style.display='block'; $('cbFeedback').style.background=''; $('cbFeedback').style.color='';
+  $('cbFeedback').textContent='🌀 Oleada '+cb.wave+'. Botín acumulado: '+cb.oroAcum+' 🪙 · '+cb.xpAcum+' XP. ¡Huye para conservarlo!';
+  $('cbNext').style.display='none';
+  renderCombatBars(); sfx('lvl');
+  setTimeout(()=>{ $('cbFeedback').style.display='none'; loadQuestion(); },1500);
+}
+function abismoCobrar(huyendo){
+  const oro=cb.oroAcum||0, xp=cb.xpAcum||0, w=cb.wave;
+  player.abismoMax=Math.max(player.abismoMax||0, huyendo?w-1:w);
+  addOro(oro); addXP(xp);
+  const rec=Math.floor(w/3); if(rec>0)addRec('esencia',rec);
+  sfx('win'); if(w>=5)confetti();
+  openModal('abismo','<div class="modal-box" style="text-align:center"><div class="kicker">Abismo del Saber</div><div style="font-size:40px;margin:8px 0">🌀</div><h3 style="font-family:\'Archivo Black\';font-size:22px">Oleada '+w+' alcanzada</h3><p style="font-size:15px;font-weight:700;margin:8px 0 0">+'+oro+' 🪙 · +'+xp+' XP'+(rec>0?' · 💠×'+rec:'')+'</p><p style="font-size:12px;color:var(--muted);margin:6px 0 0">Récord: oleada '+(player.abismoMax||0)+'. El Abismo no se acaba: cuanto más lejos, mejor botín.</p><button class="btn btn-acc" style="margin-top:12px" onclick="closeModal();showTab(\'mapa\')">Salir</button></div>');
+  markDirty(); renderHud();
+}
 function renderCombatBars(){
   $('cbHearts').innerHTML=[...Array(maxHp())].map((_,i)=>'<span class="'+(i<cb.hp?'':'off')+'"></span>').join('');
   $('cbMonHp').innerHTML=cb.qs.map((_,i)=>'<span class="'+(i<cb.monHp?'':'off')+'"></span>').join('');
@@ -1668,6 +1733,7 @@ function nextQuestion(){
   loadQuestion();
 }
 function victory(){
+  if(cb.tipo==='abismo'){ setMusicCtx('victoria'); if(musicOn){clearTimeout(musicTimer);musicLoop();setTimeout(()=>{setMusicCtx('combate');},2000);} const ms=$('cbMonSpr'); if(ms)ms.classList.add('mondie'); sfx('win'); coinBurst(3); setTimeout(abismoNextWave,700); return; }
   setMusicCtx('victoria'); if(musicOn){clearTimeout(musicTimer);musicLoop();setTimeout(()=>{setMusicCtx('granja');},2600);}
   const ms=$('cbMonSpr'); if(ms)ms.classList.add('mondie');
   setTimeout(()=>{ if(ms)ms.classList.remove('mondie'); },800);
@@ -1677,8 +1743,8 @@ function victory(){
   if(cb.tipo==='sala'){ oro=cb.replay?ORO_REPLAY:ORO_SALA; xp=cb.replay?5:XP_SALA; if(!cb.replay){ player.salas[cb.id]=hoy(); questProg('salas',1); recTxt=addRec('piedra',2); dominioBump(cb.dg,'salas'); } gainMana(8); metaBump(); titulo2='Sala dominada'; }
   if(cb.tipo==='jefe'){ oro=cb.replay?ORO_REPLAY:ORO_JEFE; xp=cb.replay?8:XP_JEFE; if(!cb.replay){ player.jefes[cb.id]=hoy(); recTxt=addRec('piedra',3)+' · '+addRec('escama',1); const dgm=(WORLD.mazmorras||[]).find(m=>m.id===cb.dg); if(dgm&&esArchivada(dgm)){ player.archivadas=player.archivadas||{}; player.archivadas[cb.dg]=hoy(); setTimeout(()=>toast('🏆 ¡'+dgm.libro.split(':')[0]+' DOMINADO! Se archiva; sus preguntas volverán en el repaso diario.'),1400);} } gainMana(8); metaBump(); titulo2='¡Jefe vencido!'; }
   if(cb.tipo==='dragon'){ oro=cb.replay?ORO_REPLAY:ORO_DRAGON; xp=cb.replay?10:XP_DRAGON; if(!cb.replay){ player.dragones[cb.id]=hoy(); recTxt=addRec('escama',3)+' · '+addRec('esencia',3);} titulo2='¡El dragón cae!'; }
-  oro=Math.round(oro*(hasBuild('altar')?1.25:1)*(1+decoFx('oroC')));
-  xp=Math.round(xp*(1+decoFx('xp')));
+  oro=Math.round(oro*(hasBuild('altar')?1.25:1)*(1+decoFx('oroC'))*masteryOroMult());
+  xp=Math.round(xp*(1+decoFx('xp'))*masteryXpMult());
   if(cb.flawless){ questProg('flawless',1); player.cnt=player.cnt||{}; player.cnt.flawless=(player.cnt.flawless||0)+1; }
   addOro(oro); addXP(xp); sfx('coin');
   openModal('win','<div class="modal-box"><div class="kicker">'+titulo2+'</div><h2 style="font-family:\'Archivo Black\';font-size:26px;margin-top:4px">'+escapeHtml(cb.mon)+' derrotado</h2><div style="margin:12px 0" class="bump">'+spriteHTML(SPR[cb.spr]||SPR.slime,5)+'</div><p style="font-size:16px;font-weight:700">+'+oro+' 🪙 · +'+xp+' XP'+(cb.flawless?' · ⭐ Sin daño':'')+'</p>'+(recTxt?'<p style="font-size:14px;font-weight:700;color:var(--accent-deep)">Botín: '+recTxt+'</p>':'')+(cb.replay?'<p style="font-size:12px;color:var(--muted)">Repetición: recompensa reducida.</p>':'')+'<button class="btn btn-acc" style="margin-top:12px" onclick="closeModal();afterCombat()">Continuar</button></div>');
@@ -1686,11 +1752,13 @@ function victory(){
 function defeat(){
   setMusicCtx('granja');
   $('combat').classList.remove('active');
+  if(cb.tipo==='abismo'){ abismoCobrar(false); return; }
   openModal('lose','<div class="modal-box"><div class="kicker" style="color:var(--accent-deep)">Derrota</div><h2 style="font-family:\'Archivo Black\';font-size:26px;margin-top:4px">El monstruo resiste</h2><p style="font-size:14px;margin:8px 0 0">Repasa el libro en tu Grimorio y vuelve a intentarlo. El conocimiento es tu única arma.</p><button class="btn btn-acc" style="margin-top:14px" onclick="closeModal();afterCombat()">Volver</button></div>');
 }
 function afterCombat(){ if(cb&&cb.tipo==='dragon'){ showTab('mapa'); } else if(curDg){ openDg(curDg.id); renderHud(); } else showTab('mapa'); renderHud(); }
-function fleeCombat(){ setMusicCtx('granja'); $('combat').classList.remove('active'); afterCombat(); }
+function fleeCombat(){ setMusicCtx('granja'); $('combat').classList.remove('active'); if(cb&&cb.tipo==='abismo'){ abismoCobrar(true); return; } afterCombat(); }
 function usePista(){
+  if(cb.noPista){ toast('En el Abismo no hay pistas a partir de la oleada 4.'); return; }
   if(cb.mode&&cb.mode!=='mc'){ toast('La pista solo sirve en preguntas de opción múltiple.'); return; }
   if(cb.pistaGratis){ const q0=cb.qs[cb.i]; const w0=[...document.querySelectorAll('.copt')].map((el,i)=>({el,i})).filter(o=>o.i!==q0.c&&!o.el.classList.contains('dim')); if(w0.length){ cb.pistaGratis=false; w0[Math.floor(Math.random()*w0.length)].el.classList.add('dim'); sfx('ok'); toast('🐙 Tu Kraken susurra la respuesta (pista gratis).'); } return; }
   if((player.pociones.pista||0)<1){ toast('No tienes pistas. Cómpralas en la Tienda.'); return; }
@@ -1907,10 +1975,10 @@ function shopTab(t){
   }
   $('shopZone').innerHTML=h;
 }
-function buySemilla(id){ const c=CROPS[id]; if(player.oro<c.seed)return; player.oro-=c.seed; player.semillas[id]=(player.semillas[id]||0)+1; sfx('coin'); markDirty(); renderHud(); shopTab('semilla'); }
-function buyAnimal(id){ const a=ANIMALS[id]; if(player.oro<a.precio)return; player.oro-=a.precio; player.torre.inv.push('animal:'+id); sfx('coin'); markDirty(); renderHud(); shopTab('animal'); toast(a.n+' en tu inventario: colócalo con 🌱 Plantar.'); }
-function buyTree(id){ const tr=TREES[id]; if(player.oro<tr.precio)return; player.oro-=tr.precio; player.torre.inv.push('tree:'+id); sfx('coin'); markDirty(); renderHud(); shopTab('arbol'); toast('🌳 '+tr.n+' en tu inventario: plántalo con 🌱 (necesita 2 casillas).'); }
-function buyBuild(id){ const b=BUILDS[id]; if(player.oro<b.precio)return; player.oro-=b.precio; player.torre.inv.push('build:'+id); sfx('coin'); markDirty(); renderHud(); shopTab('construccion'); toast('🏚 '+b.n+' en tu inventario: colócalo con 🌱 ('+b.w+'×'+b.h+' casillas).'); }
+function buySemilla(id){ const c=CROPS[id]; if(player.oro<c.seed)return; player.oro-=c.seed; player.semillas[id]=(player.semillas[id]||0)+1; sfx('coin'); markDirty(); renderHud(); shopTab('cultivos'); }
+function buyAnimal(id){ const a=ANIMALS[id]; if(player.oro<a.precio)return; player.oro-=a.precio; player.torre.inv.push('animal:'+id); sfx('coin'); markDirty(); renderHud(); shopTab('granja'); toast(a.n+' en tu inventario: colócalo con 🌱 Plantar.'); }
+function buyTree(id){ const tr=TREES[id]; if(player.oro<tr.precio)return; player.oro-=tr.precio; player.torre.inv.push('tree:'+id); sfx('coin'); markDirty(); renderHud(); shopTab('cultivos'); toast('🌳 '+tr.n+' en tu inventario: plántalo con 🌱 (necesita 2 casillas).'); }
+function buyBuild(id){ const b=BUILDS[id]; if(player.oro<b.precio)return; player.oro-=b.precio; player.torre.inv.push('build:'+id); sfx('coin'); markDirty(); renderHud(); shopTab('granja'); toast('🏚 '+b.n+' en tu inventario: colócalo con 🌱 ('+b.w+'×'+b.h+' casillas).'); }
 function expandIsla(){
  const nv=player.islaNv||0; if(nv>=ISLA_PRECIOS.length-1)return;
  const precio=ISLA_PRECIOS[nv+1]; if(player.oro<precio){toast('Te faltan monedas.');return;}
@@ -1919,7 +1987,7 @@ function expandIsla(){
  const newN=islaN(); const np={};
  Object.entries(t.plots).forEach(([i,p])=>{ const r=Math.floor(i/oldN), c=i%oldN; np[r*newN+c]=p; });
  t.plots=np;
- sfx('lvl'); confetti(); markDirty(); renderHud(); shopTab('insumo');
+ sfx('lvl'); confetti(); markDirty(); renderHud(); shopTab('recursos');
  toast('🏝 ¡Isla ampliada a '+newN+'×'+newN+'!');
 }
 function openPen(i){
@@ -1946,7 +2014,7 @@ function penCosechar(i){
  const t=G(); const p=t.plots[i]; if(!p)return;
  let oroT=0,cuero=0,n=0;
  (p.animales||[]).forEach(a=>{ if(animalCycles(a)>=1){ const hh=harvestAnimal(a); oroT+=hh.oro; if(Math.random()<.5)cuero++; n++; } });
- if(n){ addOro(oroT); if(cuero)addRec('cuero',cuero); sfx('coin'); coinBurst(Math.min(8,n*2)); toast('🧺 '+n+' animal(es) · +'+oroT+' 🪙'+(cuero?' · 🟤+'+cuero:'')); }
+ if(n){ addOro(oroT); addXP(Math.max(1,n*2)); if(cuero)addRec('cuero',cuero); sfx('coin'); coinBurst(Math.min(8,n*2)); toast('🧺 '+n+' animal(es) · +'+oroT+' 🪙'+(cuero?' · 🟤+'+cuero:'')); }
  markDirty(); renderHud(); openPen(i);
 }
 function penSacar(i,id){
@@ -2046,9 +2114,9 @@ function openBiblioteca(){
 }
 function hireTrabajador(){ if(player.oro<TRAB_PRECIO){toast('Te faltan monedas.');return;} player.oro-=TRAB_PRECIO; player.trabajador={hired:true,desde:hoy()}; sfx('win'); confetti(); markDirty(); renderHud(); shopTab('granja'); toast('👷 ¡Peón contratado! Cuidará tu granja.'); }
 function estiercolAbono(){ const t=G(); if((t.supply.estiercol||0)<ESTIERCOL_POR_ABONO){toast('Necesitas '+ESTIERCOL_POR_ABONO+' de estiércol.');return;} t.supply.estiercol-=ESTIERCOL_POR_ABONO; t.supply.abono=(t.supply.abono||0)+1; sfx('coin'); markDirty(); shopTab('recursos'); toast('✨ +1 abono a partir de estiércol.'); }
-function buyInsumo(id){ const x=INSUMOS[id]; if(player.oro<x.precio)return; player.oro-=x.precio; const s=G().supply; s[x.k]=(s[x.k]||0)+x.amt; sfx('coin'); markDirty(); renderHud(); shopTab('insumo'); }
+function buyInsumo(id){ const x=INSUMOS[id]; if(player.oro<x.precio)return; player.oro-=x.precio; const s=G().supply; s[x.k]=(s[x.k]||0)+x.amt; sfx('coin'); markDirty(); renderHud(); shopTab('recursos'); }
 function buyDeco(id){ const d=DECOS[id]; if(player.oro<d.precio)return; player.oro-=d.precio; player.torre.inv.push(id); sfx('coin'); markDirty(); renderHud(); shopTab('deco'); toast(d.n+' en tu inventario: colócalo con 🌱 Plantar.'); }
-function buyPocion(id){ const p=POCIONES[id]; if(player.oro<p.precio)return; player.oro-=p.precio; player.pociones[id]=(player.pociones[id]||0)+1; sfx('coin'); markDirty(); renderHud(); shopTab('pocion'); }
+function buyPocion(id){ const p=POCIONES[id]; if(player.oro<p.precio)return; player.oro-=p.precio; player.pociones[id]=(player.pociones[id]||0)+1; sfx('coin'); markDirty(); renderHud(); shopTab('deco'); }
 function buyPet(id){ const p=PETS[id]; if(player.oro<p.precio){toast('Te faltan monedas.');return;} const rr=R(); if(p.costo&&!Object.entries(p.costo).every(([k,n])=>(rr[k]||0)>=n)){ toast('Te faltan recursos: '+Object.entries(p.costo).map(([k,n])=>RECURSOS[k].e+n).join(' ')); return; } player.oro-=p.precio; if(p.costo)Object.entries(p.costo).forEach(([k,n])=>rr[k]-=n); player.mascotas=player.mascotas||[]; player.mascotas.push(id); player.mascota=id; player.petAt=Date.now(); sfx('win'); confetti(); markDirty(); renderHud(); shopTab('mascota'); toast('🐾 '+p.n+' adoptada: te acompaña y te traerá recursos.'); }
 function setPet(id){ player.mascota=id; player.petAt=Date.now(); markDirty(); shopTab('mascota'); }
 function craft(id){
@@ -2061,7 +2129,7 @@ function craft(id){
   if(tipo==='pocion'){ player.pociones[key]=(player.pociones[key]||0)+amt; txt=POCIONES[key].n+' ×'+amt; }
   if(tipo==='deco'){ for(let i=0;i<amt;i++)t.inv.push(key); txt=DECOS[key].n+' (en inventario)'; }
   player.cnt=player.cnt||{}; player.cnt.craft=(player.cnt.craft||0)+1;
-  sfx('win'); markDirty(); renderHud(); shopTab('taller');
+  sfx('win'); markDirty(); renderHud(); shopTab('recursos');
   toast('⚒ Crafteado: '+txt);
 }
 function abrirCofreGratis(){ if((player.cofrePend||0)<1)return; player.cofrePend--; markDirty(); abrirCofre('raro',true); }
