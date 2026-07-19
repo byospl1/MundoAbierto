@@ -1452,7 +1452,7 @@ function dominioStats(m){
  const cartas=(WORLD.cartas||[]).filter(c=>c.libro&&m.libro&&c.libro.split(':')[0]===m.libro.split(':')[0]);
  const domin=cartas.filter(c=>player.srs[c.id]&&(player.srs[c.id].box||0)>=3).length;
  const repFrac=cartas.length?domin/cartas.length:0;
- const pct=Math.round(((leido?1:0)*0.2 + (salasTot?salasDone/salasTot:0)*0.4 + (jefe?1:0)*0.2 + repFrac*0.2)*100);
+ const pct=esArchivada(m)?100:Math.round(((leido?1:0)*0.2 + (salasTot?salasDone/salasTot:0)*0.4 + (jefe?1:0)*0.2 + repFrac*0.2)*100);
  let nivelTxt='Sin abrir'; if(pct>=100)nivelTxt='Dominado'; else if(pct>=60)nivelTxt='Avanzado'; else if(pct>=25)nivelTxt='En estudio'; else if(pct>0)nivelTxt='Iniciado';
  return {pct,nivelTxt,leido,salasDone,salasTot,jefe,repFrac};
 }
