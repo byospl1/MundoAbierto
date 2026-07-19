@@ -30,24 +30,38 @@ function sh(cmd) { return execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'] }).t
 
 console.log('\n🐉 Actualizando La Torre del Erudito…\n');
 
-// 1) Copiar trabajos de la universidad al vault
+// 1) Si dejaste un .zip del vault en  vault-zip/  , lo extrae a  vault/  y lo consume.
 try {
-  if (existsSync(UNI_SOURCE)) {
-    mkdirSync(UNI_DEST, { recursive: true });
-    let n = 0;
-    const walk = dir => {
-      for (const f of readdirSync(dir)) {
-        const p = path.join(dir, f);
-        if (statSync(p).isDirectory()) { walk(p); continue; }
-        if (f.endsWith('.md')) { copyFileSync(p, path.join(UNI_DEST, f)); n++; }
-      }
-    };
-    walk(UNI_SOURCE);
-    log(`Universidad: ${n} nota(s) copiadas desde ${UNI_SOURCE} → vault/Uni/`);
-  } else {
-    log(`(Sin carpeta de universidad en ${UNI_SOURCE} — se omite. Crea la carpeta o define UNI_SOURCE.)`);
+  const zipDir = path.join(ROOT, 'vault-zip');
+  if (existsSync(zipDir)) {
+    const zips = readdirSync(zipDir).filter(f => f.toLowerCase().endsWith('.zip'));
+    if (zips.length) {
+      // usa el zip más reciente por nombre
+      zips.sort();
+      const zip = path.join(zipDir, zips[zips.length - 1]);
+      const dest = path.join(ROOT, 'vault');
+      log(`Extrayendo ${zips[zips.length - 1]} → vault/`);
+      // descompacta con unzip del sistema (sobrescribe), aplanando "Lecturas/" si viene dentro
+      const tmp = path.join(ROOT, '.vault-tmp');
+      execSync(`rm -rf "${tmp}" && mkdir -p "${tmp}" && unzip -o -q "${zip}" -d "${tmp}"`, { stdio: 'inherit' });
+      // busca la carpeta que contenga Libros/ (por si el zip trae una carpeta raíz)
+      const findRoot = d => {
+        if (existsSync(path.join(d, 'Libros')) || existsSync(path.join(d, 'Conceptos'))) return d;
+        for (const f of readdirSync(d)) {
+          const p = path.join(d, f);
+          if (statSync(p).isDirectory() && !f.startsWith('__MACOSX')) { const r = findRoot(p); if (r) return r; }
+        }
+        return null;
+      };
+      const src = findRoot(tmp) || tmp;
+      execSync(`rm -rf "${dest}" && mkdir -p "${dest}" && cp -R "${src}/." "${dest}/"`, { stdio: 'inherit' });
+      execSync(`rm -rf "${tmp}"`);
+      log('Vault actualizado desde el .zip.');
+    } else {
+      log('(vault-zip/ existe pero no hay .zip dentro — uso el vault/ actual.)');
+    }
   }
-} catch (e) { log('Aviso al copiar universidad:', e.message); }
+} catch (e) { log('Aviso al extraer el .zip:', e.message); }
 
 // 2) Copia de seguridad del mundo anterior (local + rama en GitHub)
 try {

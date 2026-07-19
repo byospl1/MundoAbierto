@@ -785,24 +785,48 @@ function checkLogros(){
 }
 /* ============ GUARDADO ============ */
 function markDirty(){dirty=true;clearTimeout(saveTimer);saveTimer=setTimeout(saveNow,1200);checkLogros();renderHud();}
-let cloudState='off', cloudErr='';
-function setCloud(s,e){ cloudState=s; cloudErr=e||''; const el=$('hCloud'); if(el){ el.textContent=s==='ok'?'☁✓':(s==='err'?'☁✗':'☁…'); el.style.color=s==='err'?'var(--mal)':'inherit'; } }
+let cloudState='off', cloudErr='', lastSync=0;
+function setCloud(s,e){ cloudState=s; cloudErr=e||''; const el=$('hCloud'); if(el){ el.textContent=s==='ok'?'☁✓':(s==='err'?'☁✗':(s==='sync'?'☁…':'☁')); el.style.color=s==='err'?'var(--mal)':(s==='ok'?'var(--ok)':'inherit'); } }
+// Guardado LOCAL automático. La nube NO se toca sola: solo al pulsar el botón ☁.
 async function saveNow(){
   if(!player)return;
   localStorage.setItem('torre_save',JSON.stringify(player));
-  if(db&&player.email){
-    try{
-      const clean=JSON.parse(JSON.stringify(player)); // elimina undefined que Firestore rechaza
-      await db.collection(COL).doc(player.email).set(clean);
-      setCloud('ok');
-    }catch(e){ setCloud('err',e.message||String(e)); console.warn('Firebase save:',e); }
-  }
   dirty=false;
+  if(cloudState==='ok') setCloud('idle'); // hay cambios sin subir
+}
+// Empuje/mezcla manual con Firebase. Siempre gana el respaldo con MÁS experiencia.
+async function cloudSync(silent){
+  if(!db){ if(!silent)toast('Sin conexión a Firebase.'); return; }
+  if(!player)return;
+  setCloud('sync');
+  try{
+    const doc=await db.collection(COL).doc(player.email).get();
+    const remoto=doc.exists?doc.data():null;
+    const xpLocal=player.xp||0, xpRemoto=remoto?(remoto.xp||0):-1;
+    if(remoto && xpRemoto>xpLocal){
+      // la nube está más avanzada: la traemos
+      player=Object.assign(freshPlayer(player.nombre,player.email),remoto);
+      localStorage.setItem('torre_save',JSON.stringify(player));
+      setCloud('ok'); lastSync=Date.now();
+      renderHud(); showTab(tab||'torre');
+      if(!silent)toast('☁⬇ Progreso de la nube cargado ('+xpRemoto+' XP > '+xpLocal+' XP local).');
+      return 'pulled';
+    }
+    // el local es igual o mayor: lo subimos
+    const clean=JSON.parse(JSON.stringify(player));
+    await db.collection(COL).doc(player.email).set(clean);
+    setCloud('ok'); lastSync=Date.now();
+    if(!silent)toast('☁⬆ Progreso subido a la nube ('+xpLocal+' XP).');
+    return 'pushed';
+  }catch(e){ setCloud('err',e.message||String(e)); console.warn('Firebase sync:',e); if(!silent)toast('☁✗ Error al sincronizar. Toca de nuevo para ver el detalle.'); }
 }
 async function loadPlayer(email){
-  if(db&&email){ try{ const doc=await db.collection(COL).doc(email).get(); if(doc.exists) return doc.data(); }catch(e){} }
-  try{ const raw=localStorage.getItem('torre_save'); if(raw){ const p=JSON.parse(raw); if(!email||p.email===email) return p; } }catch(e){}
-  return null;
+  let local=null, remoto=null;
+  try{ const raw=localStorage.getItem('torre_save'); if(raw){ const p=JSON.parse(raw); if(!email||p.email===email) local=p; } }catch(e){}
+  if(db&&email){ try{ const doc=await db.collection(COL).doc(email).get(); if(doc.exists) remoto=doc.data(); }catch(e){} }
+  // Prioriza SIEMPRE el respaldo con más experiencia (el más avanzado).
+  if(local&&remoto) return ((remoto.xp||0)>(local.xp||0))?remoto:local;
+  return remoto||local;
 }
 /* ============ LOGIN ============ */
 async function doLogin(){
@@ -819,8 +843,8 @@ async function init(){
   $('loginHero').innerHTML=magoSprite(7,{});
   if('serviceWorker' in navigator){ try{ navigator.serviceWorker.register('sw.js'); }catch(e){} }
   try{ const r=await fetch('world.json?v='+Date.now()); WORLD=await r.json(); }catch(e){ WORLD={version:'?',mazmorras:[],cartas:[],dragon:null}; }
-  if(db){ try{ await db.collection(COL).doc('_ping').set({t:Date.now()}); setCloud('ok'); }catch(e){ setCloud('err',e.message||String(e)); console.warn('Firebase ping:',e); } }
-  setInterval(()=>{ if(player&&(dirty||cloudState==='err')) saveNow(); },30000);
+  if(db){ try{ await db.collection(COL).doc('_ping').set({t:Date.now()}); setCloud('idle'); }catch(e){ setCloud('err',e.message||String(e)); console.warn('Firebase ping:',e); } }
+  setInterval(()=>{ if(player&&dirty) saveNow(); },30000);
   const sess='hugo-bracamontes';
   let p=await loadPlayer(sess);
   player=p?Object.assign(freshPlayer('Hugo Bracamontes',sess),p):freshPlayer('Hugo Bracamontes',sess);
@@ -946,9 +970,9 @@ function showTab(t){
   window.scrollTo(0,0);
 }
 function cloudInfo(){
-  if(cloudState==='ok'){ toast('☁ Progreso guardado en Firebase.'); return; }
-  if(cloudState==='err'){ openModal('cloud','<div class="modal-box"><div class="kicker" style="color:var(--mal)">Nube sin conexión</div><h3 style="font-family:\'Archivo Black\';font-size:18px;margin-top:6px">No se pudo guardar en Firebase</h3><p style="font-size:13px;margin:8px 0 0;word-break:break-word"><code>'+escapeHtml(cloudErr)+'</code></p><p style="font-size:13px;color:var(--muted);margin:8px 0 0">Causa más común: falta la regla en Firestore. En Firebase Console → Firestore → Reglas añade:<br><code>match /mazmorra_arcana/{doc} { allow read, write: if true; }</code><br>Tu progreso sigue guardándose en este dispositivo.</p><button class="btn" style="margin-top:12px" onclick="closeModal();saveNow()">Reintentar</button></div>'); return; }
-  toast('☁ Conectando…');
+  if(cloudState==='err'){ openModal('cloud','<div class="modal-box"><div class="kicker" style="color:var(--mal)">Nube sin conexión</div><h3 style="font-family:\'Archivo Black\';font-size:18px;margin-top:6px">No se pudo sincronizar</h3><p style="font-size:13px;margin:8px 0 0;word-break:break-word"><code>'+escapeHtml(cloudErr)+'</code></p><p style="font-size:13px;color:var(--muted);margin:8px 0 0">Causa más común: falta la regla en Firestore. En Firebase Console → Firestore → Reglas añade:<br><code>match /mazmorra_arcana/{doc} { allow read, write: if true; }</code><br>Tu progreso sigue guardado en este dispositivo.</p><button class="btn btn-acc" style="margin-top:12px" onclick="closeModal();cloudSync()">Reintentar sincronización</button></div>'); return; }
+  const info = lastSync?('Última sincronización hace '+Math.max(1,Math.round((Date.now()-lastSync)/6e4))+' min.'):'Todavía no has sincronizado en esta sesión.';
+  openModal('cloud','<div class="modal-box" style="text-align:center"><div class="kicker">Sincronización manual</div><div style="font-size:40px;margin:8px 0">☁️</div><h3 style="font-family:\'Archivo Black\';font-size:20px">'+(player.xp||0)+' XP en este dispositivo</h3><p style="font-size:13px;color:var(--muted);margin:8px 0 0">La nube ya no se guarda sola: así no se pisa tu avance entre el celular y la web. Al sincronizar, <b>siempre gana el respaldo con más experiencia</b>.</p><p style="font-size:12px;color:var(--muted);margin:6px 0 0">'+info+'</p><button class="btn btn-acc" style="margin-top:14px" onclick="closeModal();cloudSync()">Sincronizar ahora</button><button class="btn" style="margin-top:8px" onclick="closeModal()">Cerrar</button></div>');
 }
 function openModal(id,html){ $('modalHost').innerHTML='<div class="backdrop" onclick="if(event.target===this)closeModal()">'+html+'</div>'; }
 function closeModal(){ $('modalHost').innerHTML=''; }
@@ -986,8 +1010,8 @@ const TREES={
  nogal:{n:'Nogal dorado',precio:2800,coins:700,madurez:36*36e5,cada:8*36e5,spr:'arbol_nogal',fruto:'🌰'},
  arbolarcano:{n:'Árbol arcano',precio:5500,coins:1600,madurez:48*36e5,cada:10*36e5,spr:'arbol_arcano',fruto:'💠',rec:'esencia',recAmt:2}};
 const BUILDS={
- corral:{n:'Corral',precio:4000,w:3,h:3,spr:'corral',d:'Recoge a los animales para que no vaguen por la granja. Producen 30% más rápido. Tócalo para cosechar de todos.'},
- establo:{n:'Establo',precio:8000,w:3,h:3,spr:'establo',d:'Mantiene a los animales quietos. 50% más rápidos y +20% de oro. Recoge de todos con un toque.'},
+ corral:{n:'Corral',precio:4000,w:3,h:3,spr:'corral',d:'Los animales sueltos entran solos (hasta 9). Producen 30% más rápido. Tócalo para cosechar de todos a la vez.'},
+ establo:{n:'Establo',precio:8000,w:3,h:3,spr:'establo',d:'Aloja hasta 9 animales; entran solos. 50% más rápidos y +20% de oro. Tócalo para cosechar de todos.'},
  invernadero:{n:'Invernadero',precio:5000,w:3,h:2,spr:'invernadero',d:'Todos tus cultivos crecen 35% más rápido mientras esté construido.'},
  granero:{n:'Granero',precio:4500,w:2,h:2,spr:'granero',d:'Tus cosechas de cultivos y árboles dan +25% de oro.'},
  molino:{n:'Molino',precio:6000,w:2,h:2,spr:'molino',passive:{type:'oro',amt:90,cada:30*6e4},d:'Genera oro pasivamente (≈90 🪙 cada 30 min). Tócalo para recogerlo.'},
@@ -1007,9 +1031,19 @@ function manaRegenBonus(){ return decoCount('cristal')+decoCount('runa')+decoCou
 const TRAB_PRECIO=6000;
 function trabajadorSpeed(){ return (player.trabajador&&player.trabajador.hired)?0.8:1; } // cultivos 20% más rápidos
 function animalesPenned(){ return hasBuild('corral')||hasBuild('establo'); }
+function penCap(p){ const b=BUILDS[p.build]; return b.w*b.h; } // 1 por casilla → 9 en un 3×3
+function findPen(){ const t=G(); for(const k in t.plots){ const p=t.plots[k]; if(p&&(p.build==='corral'||p.build==='establo')){ p.animales=p.animales||[]; if(p.animales.length<penCap(p)) return {i:+k,p}; } } return null; }
+function anyPen(){ const t=G(); for(const k in t.plots){ const p=t.plots[k]; if(p&&(p.build==='corral'||p.build==='establo')){ p.animales=p.animales||[]; return {i:+k,p}; } } return null; }
 function moveRoamingAnimals(){
  if(!player||!player.torre)return; const sc=$('s-torre'); if(!sc||!sc.classList.contains('active'))return;
- const t=G(); if(animalesPenned())return; const N=islaN();
+ const t=G(); const N=islaN();
+ // Si hay corral/establo, los animales sueltos entran solos (1 por casilla, hasta llenar).
+ if(animalesPenned()){
+  let moved=false;
+  for(const iStr of Object.keys(t.plots)){ const p=t.plots[iStr]; if(!p||!p.animal)continue; const pen=findPen(); if(!pen)break; pen.p.animales.push({animal:p.animal,animalAt:p.animalAt||Date.now()}); delete t.plots[iStr]; moved=true; }
+  if(moved){ markDirty(); renderIsland(); toast('🏚 Tus animales entraron al establo/corral.'); }
+  return;
+ }
  let moved=false;
  Object.keys(t.plots).forEach(iStr=>{ const p=t.plots[iStr]; if(!p||!p.animal)return; if(Math.random()<.45)return;
   const i=+iStr, r=Math.floor(i/N), c=i%N;
@@ -1205,7 +1239,7 @@ function renderIsland(){ const mm=new Date().getMinutes(); if(mm!==lastSkyMin){ 
   } else if(p&&p.build){ const b=BUILDS[p.build]; tileStyle+=';position:relative;overflow:visible;z-index:30';
    let bBadge='';
    if(b.passive){ if(!p.prodAt)p.prodAt=p.at||Date.now(); if(Date.now()-p.prodAt>=b.passive.cada)bBadge='<span class="pbadge" style="z-index:31">'+(b.passive.type==='oro'?'🪙':'💧')+'</span>'; }
-   else { const readyN=Object.values(t.plots).filter(x=>x&&x.animal&&animalCycles(x)>=1).length; if(readyN)bBadge='<span class="pbadge" style="z-index:31">🪙'+readyN+'</span>'; }
+   else { let readyN=Object.values(t.plots).filter(x=>x&&x.animal&&animalCycles(x)>=1).length; if(p.animales){ readyN+=p.animales.filter(a=>animalCycles(a)>=1).length; } const total=(p.animales||[]).length; if(readyN)bBadge='<span class="pbadge" style="z-index:31">🪙'+readyN+'</span>'; else if((p.build==='corral'||p.build==='establo')&&total)bBadge='<span class="pbadge" style="z-index:31;font-size:9px">'+total+'/'+penCap(p)+'</span>'; }
    inner='<span style="position:absolute;left:0;top:0;width:'+(tile*b.w)+'px;height:'+(tile*b.h)+'px;display:flex;align-items:center;justify-content:center;pointer-events:none">'+spriteHTML(SPR[b.spr],Math.max(3,Math.floor(tile*b.w/11)))+'</span>'+bBadge;
   } else if(p&&p.link!=null){ inner=''; }
   else if(p&&p.crop){ const pr=cropProgress(p),ready=pr>=1; const badge=(p.waterUntil>Date.now())?'💧':(p.fert?'✨':'');
@@ -1242,15 +1276,18 @@ function plotAction(i){ const t=G(); let p=t.plots[i];
   toast(tr_hint(p)); return;
  }
  if(p&&p.build){
+  const esPen=(p.build==='corral'||p.build==='establo');
   if(tool==='mover'){ toast('Los edificios no se pueden mover.'); return; }
-  if(tool==='plantar'){ const b=BUILDS[p.build]; const N=islaN(),r=Math.floor(i/N),c=i%N; for(let dr=0;dr<b.h;dr++)for(let dc=0;dc<b.w;dc++)delete t.plots[(r+dr)*N+(c+dc)]; t.inv.push('build:'+p.build); markDirty(); renderTorre(); toast('🏚 '+b.n+' guardado en inventario.'); return; }
+  if(tool==='plantar'){ const b=BUILDS[p.build]; const N=islaN(),r=Math.floor(i/N),c=i%N; if(esPen&&(p.animales||[]).length){ p.animales.forEach(a=>t.inv.push('animal:'+a.animal)); toast('🐄 '+p.animales.length+' animal(es) devueltos a tu inventario.'); } for(let dr=0;dr<b.h;dr++)for(let dc=0;dc<b.w;dc++)delete t.plots[(r+dr)*N+(c+dc)]; t.inv.push('build:'+p.build); markDirty(); renderTorre(); toast('🏚 '+b.n+' guardado en inventario.'); return; }
   const bd=BUILDS[p.build];
   if(p.build==='biblioteca' && tool!=='plantar'){ openBiblioteca(); return; }
   if(bd.passive){ if(!p.prodAt)p.prodAt=p.at||Date.now(); const cyc=Math.min(24,Math.floor((Date.now()-p.prodAt)/bd.passive.cada)); if(cyc>0){ p.prodAt=Date.now(); const amt=bd.passive.amt*cyc; if(bd.passive.type==='oro'){ addOro(amt); coinBurst(5); toast('🏚 '+bd.n+' produce +'+amt+' 🪙'); } else { G().supply.agua=(G().supply.agua||0)+amt; toast('🏚 '+bd.n+': +'+amt+' 💧 agua'); } sfx('coin'); markDirty(); renderIsland(); renderHud(); } else toast('🏚 '+bd.n+': aún produciendo…'); return; }
-  // cualquier otra herramienta: recoger todos los animales listos
-  let oroT=0,cuero=0,n=0; Object.values(t.plots).forEach(x=>{ if(x&&x.animal){ if(animalCycles(x)>=1){ const h=harvestAnimal(x); oroT+=h.oro; if(Math.random()<.5)cuero++; n++; } } });
+  // Pen (corral/establo): cosecha de los animales alojados dentro + los sueltos listos
+  let oroT=0,cuero=0,n=0;
+  if(esPen){ (p.animales||[]).forEach(a=>{ if(animalCycles(a)>=1){ const h=harvestAnimal(a); oroT+=h.oro; if(Math.random()<.5)cuero++; n++; } }); }
+  Object.values(t.plots).forEach(x=>{ if(x&&x.animal){ if(animalCycles(x)>=1){ const h=harvestAnimal(x); oroT+=h.oro; if(Math.random()<.5)cuero++; n++; } } });
   if(n){ addOro(oroT); if(cuero)addRec('cuero',cuero); sfx('coin'); coinBurst(Math.min(8,n*2)); toast('🏚 '+BUILDS[p.build].n+': '+n+' animal(es) recogidos · +'+oroT+' 🪙'+(cuero?' · 🟤+'+cuero:'')); renderIsland(); renderHud(); }
-  else toast('🏚 '+BUILDS[p.build].n+': ningún animal listo aún.');
+  else toast('🏚 '+BUILDS[p.build].n+(esPen?' ('+(p.animales||[]).length+'/'+penCap(p)+' animales)':'')+': ningún animal listo aún.');
   return;
  }
  if(tool==='mover'){ if(moveSel==null){ if(!p){toast('Elige primero qué mover.');return;} moveSel=i; } else { const a=t.plots[moveSel]; const b=t.plots[i]; delete t.plots[moveSel]; delete t.plots[i]; if(a)t.plots[i]=a; if(b)t.plots[moveSel]=b; moveSel=null; markDirty(); } renderIsland(); return; }

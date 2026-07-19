@@ -122,7 +122,7 @@ function fallbackDungeon(book, allBooks) {
 const cache = existsSync(CACHE_FILE) ? JSON.parse(readFileSync(CACHE_FILE, 'utf8')) : {};
 const prev = existsSync(OUT) ? JSON.parse(readFileSync(OUT, 'utf8')) : { mazmorras: [] };
 
-const books = [...listMd('Libros'), ...listMd('Uni')].map(({ name, txt }) => {
+const books = [...listMd('Libros'), ...listMd('Trabajos')].map(({ name, txt }) => {
   const { fm, sec, bullets } = parseNote(txt);
   const b = {
     id: slug(fm.titulo || name), titulo: fm.titulo || name, autor: fm.autor || 'Desconocido',

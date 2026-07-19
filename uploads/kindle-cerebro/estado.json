@@ -1,0 +1,1934 @@
+{
+ "libros": {
+  "la_voluntad_de_saber_michel_foucault|michel foucault": {
+   "titulo": "La voluntad de saber",
+   "autor": "Michel Foucault",
+   "hashes": [
+    "0c898b907a1312ba",
+    "0f1c74a17314eef8",
+    "10857c69b2ca6b1e",
+    "20feba3fe952db31",
+    "26e160b4378d05ce",
+    "309132bf715ee9a9",
+    "31bfa669d51b8466",
+    "322153f2ac6f0570",
+    "3949937572dac253",
+    "6cce8a0d7a52efd7",
+    "719b1c05956e7a06",
+    "8432128600edbfc7",
+    "a5c452bfde1f308f",
+    "b7398960e8972d9b",
+    "ba8a8fb097783741",
+    "c50092ba3a94e2a5",
+    "c58ccd8df0f5c9fa",
+    "cfc77a69d9efb646",
+    "ddc496b4eeecc2f6",
+    "e483c8db6884d97e",
+    "f4d25f2b3fab9ed7",
+    "f8f37ba70c00e99a"
+   ],
+   "conceptos": [
+    "Discurso",
+    "Biopolítica",
+    "Confesión",
+    "Poder",
+    "Normalización"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Discurso",
+     "definicion": "La proliferación de enunciados y saberes institucionalizados que configuran, regulan y producen la realidad del sexo.",
+     "citas": [
+      "Nace hacia el siglo XVIII una incitación política, económica y técnica a hablar del sexo.",
+      "Se debe hablar del sexo, se debe hablar públicamente y de un modo que no se atenga a la división de lo lícito y lo ilícito, incluso si el locutor mantiene para sí la distinción (para mostrarlo sirven esas solemnes declaraciones liminares);",
+      "Se trata más bien de un tema que forma parte de la mecánica misma de las incitaciones: una manera de dar forma a la exigencia de hablar, una fábula indispensable para la economía indefinidamente proliferante del discurso sobre el sexo. Lo propio de las sociedades modernas no es que hayan obligado al sexo a permanecer en la sombra, sino que ellas se hayan destinado a hablar del sexo siempre, haciéndolo valer, poniéndolo de relieve como el secreto.",
+      "imagino que se acepta decir que el discurso sobre el sexo, desde hace ya tres siglos hoy, ha sido multiplicado más bien que rarificado;"
+     ]
+    },
+    {
+     "nombre": "Biopolítica",
+     "definicion": "La gestión estatal y técnica de la vida, la población y los cuerpos a través de la regulación de la conducta sexual.",
+     "citas": [
+      "Policía del sexo: es decir, no el rigor de una prohibición sino la necesidad de reglamentar el sexo mediante discursos útiles y públicos.",
+      "Pero es la primera vez que, al menos de una manera constante, una sociedad afirma que su futuro y su fortuna están ligados no sólo al número y virtud de sus ciudadanos, no sólo a las reglas de sus matrimonios y a la organización de las familias, sino también a la manera en que cada cual hace uso de su sexo.",
+      "¿acaso la puesta en discurso del sexo no está dirigida a la tarea de expulsar de la realidad las formas de sexualidad no sometidas a la economía estricta de la reproducción: decir no a las actividades infecundas, proscribir los placeres vecinos, reducir o excluir las prácticas que no tienen la generación como fin?"
+     ]
+    },
+    {
+     "nombre": "Confesión",
+     "definicion": "El ritual de producción de verdad mediante el cual el sujeto es constreñido a declarar sus deseos y prácticas íntimas.",
+     "citas": [
+      "Confidencia sutil o interrogatorio autoritario, refinado o rústico, el sexo debe ser dicho.",
+      "en todas partes donde existía el riesgo de que se manifestaran se instalaron dispositivos de vigilancia, se establecieron trampas para constreñir a la confesión, se impusieron discursos inagotables y correctivos;"
+     ]
+    },
+    {
+     "nombre": "Poder",
+     "definicion": "Red de relaciones y fuerzas que no solo prohíbe, sino que produce saber, placer y subjetividades.",
+     "citas": [
+      "espirales perpetuas del poder y del placer.",
+      "una distribución de puntos de poder, jerarquizados o enfrentados; de los placeres «perseguidos», es decir, a la vez deseados y hostigados;"
+     ]
+    },
+    {
+     "nombre": "Normalización",
+     "definicion": "El proceso de clasificar, patologizar y corregir las conductas sexuales desviadas de la norma reproductiva.",
+     "citas": [
+      "En la lista de los pecados graves, separados sólo por su importancia, figuraban el estupro (relaciones extramatrimoniales), el adulterio, el rapto, el incesto espiritual o carnal, pero también la sodomía y la «caricia» recíproca. En cuanto a los tribunales, podían condenar tanto la homosexualidad como la infidelidad, el matrimonio sin consentimiento de los padres como la bestialidad.",
+      "Durante mucho tiempo los hermafroditas fueron criminales, o retoños del crimen, puesto que su disposición anatómica, su ser mismo embrollaba y trastornaba la ley que distinguía los sexos y prescribía su conjunción.",
+      "Los pedagogos y los médicos han combatido el onanismo de los niños como a una epidemia que se quiere extinguir.",
+      "No hay que olvidar que la categoría psicológica, psiquiátrica, médica, de la homosexualidad se constituyó el día en que se la caracterizó —el famoso artículo de Westphal sobre las «sensaciones sexuales contrarias» (1870) puede valer como fecha de nacimiento—[16] no tanto por un tipo de relaciones sexuales como por cierta cualidad de la sensibilidad sexual, determinada manera de invertir en sí mismo lo masculino y lo femenino."
+     ]
+    }
+   ],
+   "ideas_clave": [
+    "La modernidad no silenció el sexo, sino que multiplicó los discursos y la necesidad de hablar públicamente sobre él.",
+    "La 'policía del sexo' no busca la prohibición absoluta, sino la reglamentación de la sexualidad mediante discursos útiles.",
+    "El futuro y la fortuna de las sociedades modernas se ligaron directamente al control y uso que los ciudadanos hacen de su cuerpo.",
+    "La psiquiatría del siglo XIX transformó las prácticas sexuales en categorías de identidad psicológica y médica, como ocurrió con la homosexualidad.",
+    "El poder y el placer no se oponen de forma binaria, sino que se alimentan mutuamente en espirales perpetuas de persecución y deseo.",
+    "Los dispositivos de vigilancia y confesión obligan a exteriorizar el sexo bajo la premisa de que oculta un secreto profundo que define nuestra verdad."
+   ],
+   "n_highlights": 22,
+   "actualizado": "2026-07-17",
+   "motor": "gemini",
+   "version": 2
+  },
+  "una_tribu_propia_steve_silberman|steve silberman": {
+   "titulo": "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente",
+   "autor": "Steve Silberman",
+   "hashes": [
+    "044d1ef22e128066",
+    "0df7114d5c7ceff5",
+    "0e2954e713cddda5",
+    "0ebf20f85083b27a",
+    "16a74cca26b75eb3",
+    "1b20401427e21f41",
+    "1de642266a9ac583",
+    "207cbdc4ac6e0d52",
+    "209cf9d703b7ddc9",
+    "2634544e15ef08fb",
+    "2ee62ef9609aa1f5",
+    "315e170af2807712",
+    "32bad3d15fce1ba1",
+    "3444b7105305a64d",
+    "373038901860c8a4",
+    "399a0f415ceb947e",
+    "39c8a7ed725a13cc",
+    "57d68b723cb97409",
+    "59510ebc7e03e2fb",
+    "5e41ef783a30e6d3",
+    "66a05bc2c35ba5ca",
+    "6fa93782eee4634c",
+    "719c6d34786ba9ef",
+    "7330cc55f5927b29",
+    "7391d38551928343",
+    "74cce24afd358160",
+    "7c55dcddcc96e15a",
+    "88273b04f54015ee",
+    "8925a08fe3844136",
+    "93ff576219f67525",
+    "9549fcb1f733faeb",
+    "99a1ed13557ab972",
+    "9a69efba26557be1",
+    "a02148c9d9d3bd2d",
+    "a52681fa180a986c",
+    "ab51874d17833108",
+    "b05f8e3a2336aab4",
+    "b3c673207f0dc534",
+    "b933626ae747e3ec",
+    "bc6a58feadd55d6c",
+    "bef2c6232ee3eb48",
+    "bf88e94aa70e5cb7",
+    "c0dc1758756fa7a5",
+    "c3dd5b0ca323bcda",
+    "c62c6fe72a1b99c2",
+    "cd655c702d0bd51f",
+    "d2c22772d84b7aa0",
+    "d6a70f6e8e2da5b4",
+    "d7b859ed0454c9de",
+    "d86cd84e5b995b9a",
+    "f01246afeb169f3d",
+    "f0cedf2dc6308abc",
+    "f567840d5a85bd6f",
+    "f679e9859a5cbb4b",
+    "fafcdd5fdb77acfc",
+    "fdd5944475c629ae"
+   ],
+   "conceptos": [
+    "Diagnóstico",
+    "Estigma",
+    "Neurodiversidad",
+    "Comunicación",
+    "Tecnología",
+    "Institucionalización"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Diagnóstico",
+     "definicion": "Proceso de identificación clínica que históricamente sufrió de imprecisiones, criterios restrictivos y solapamientos erróneos con la psicosis.",
+     "citas": [
+      "De hecho, mientras que la descripción del síndrome de Kanner era demasiado delimitada, la esquizofrenia infantil presentaba el problema opuesto: sus fronteras eran tan difusas que incluía tipologías muy dispares de pacientes.",
+      "su manual en 1948. Un año después agitó oficialmente la bandera blanca. «El autismo infantil precoz podría […] considerarse como la manifestación más temprana que existe de la esquizofrenia infantil»,28 escribió en American Journal of Orthopsychiatry. «Considero altamente improbable que el autismo infantil precoz tenga que diferenciarse en el futuro de las esquizofrenias.»",
+      "Para deshacer este embrollo, Lauretta Bender instó a Creak a convocar a un grupo de trabajo integrado por expertos a fin de diseñar el primer conjunto de criterios estandarizados para el diagnóstico de lo que denominó «síndrome esquizofrénico en la infancia». Tales criterios, que pasaron a conocerse como «Los nueve puntos»,9 se adoptaron en la investigación sobre el autismo a gran escala: 1.",
+      "Al no encajar en la limitada casilla de Kanner, a la mayoría de ellos se les había diagnosticado esquizofrenia."
+     ]
+    },
+    {
+     "nombre": "Estigma",
+     "definicion": "Atribución de culpa y etiquetas patologizantes a las familias y a los individuos que frena su desarrollo y aceptación social.",
+     "citas": [
+      "«Tu madre es así: fría y dura», le espetó el director mundialmente famoso de la Escuela Ortogénica Sonia Shankman a un niño autista que tenía a su cuidado, mientras señalaba una estatua de piedra que decoraba el jardín.",
+      "«El factor precipitante del autismo infantil es el deseo de los padres de que el niño no exista —escribió—. Si se abandona a un bebé por completo antes de que se haya desarrollado lo suficiente como para moverse por sí mismo, muere. Y, si se le proporcionan cuidados físicos suficientes para su supervivencia pero se lo abandona en el plano emocional o se lo empuja más allá de sus capacidades, deviene autista.»",
+      "Ekstein planteaba que el interés precoz de Tommy en la ciencia probablemente fuera el resultado de «intensos traumas sexuales en la primera infancia» provocados por la seducción de su madre o una niñera.",
+      "«Desembarazar a los padres de los niños autistas del peso de la vergüenza y la culpabilidad —escribió Rimland— desencadenó un enorme estallido de productividad y creatividad en nombre de aquellos niños.»90 Él y Sullivan habían alzado a un poderoso ejército. La batalla por el futuro de sus hijos se hallaba finalmente en camino."
+     ]
+    },
+    {
+     "nombre": "Neurodiversidad",
+     "definicion": "Perspectiva que entiende las variaciones neurológicas como diferencias naturales del desarrollo humano con talentos y necesidades específicas.",
+     "citas": [
+      "unos con un «funcionamiento alto» (Asperger) y otros con un «funcionamiento bajo» (Kanner).",
+      "Incluso los niños con «bajo funcionamiento» podían convertirse en adultos con «alto funcionamiento», aunque sólo si lograban mantenerse al margen de una institución y se les brindaba la oportunidad de desarrollar sus talentos innatos, tal como Asperger había predicho ya en 1938.",
+      "extraído de los archivos de Asperger: Jay S., que por entonces contaba ya casi 15 años, presentaba en los cursos inferiores dificultades considerables para sus maestros, que se mostraron excepcionalmente comprensivos con él y lo aceptaron tal como era. Vagaba sin rumbo por el aula, se masturbaba a la vista de todos y tenía rabietas. Aprendió a adaptarse al entorno, tuvo un rendimiento fenomenal en matemáticas, fue enviado a una escuela acelerada y en la actualidad está finalizando tercero de bachillerato con las máximas calificaciones. Es un joven peculiar, algo obeso, que dedica su tiempo libre a coleccionar mapas y sellos postales y se relaciona con las personas lo estrictamente necesario para mantener una relación superficial. En el test de inteligencia Binet, obtuvo un coeficiente superior al 150.57",
+      "aventuraba: «Tal vez no sea descabellado sugerir que algunos individuos autistas son genios incipientes cuyas excentricidades son tan severas e incapacitantes que sólo pueden tener una participación mínima en el mundo “normal”»."
+     ]
+    },
+    {
+     "nombre": "Comunicación",
+     "definicion": "Capacidad de transmitir y recibir mensajes que excede el lenguaje hablado e incluye gestos, tecnología y lenguajes alternativos.",
+     "citas": [
+      "El pequeño no volvió a pronunciar otra palabra en toda su vida, con una única excepción desgarradora. «¿Cuándo vas a hablar?», le preguntó angustiada su madre un día en el coche. «Cuando esté preparado», respondió él.",
+      "Por su parte, quienes disfrutaban de largas charlas también tenían la oportunidad de «darle a la sinhueso» con otros radioaficionados durante horas, empleando un léxico tan ingenioso y ritual como la jerga de los aficionados a la ciencia",
+      "Lettick constató que se ponía demasiado énfasis en enseñar a los niños autistas a hablar, cuando lo esencial era permitirles comunicarse.",
+      "Desplegando su perspicaz poder de observación, Sacks constató que, lejos de no ser comunicativos, sus pacientes se comunicaban en todo momento, pero no mediante palabras, sino mediante gestos y otras formas no verbales de afirmación, sobre todo entre ellos mismos."
+     ]
+    },
+    {
+     "nombre": "Tecnología",
+     "definicion": "Herramientas y sistemas interactivos que actúan como entornos seguros de aprendizaje y socialización para mentes neurodivergentes.",
+     "citas": [
+      "Por su parte, quienes disfrutaban de largas charlas también tenían la oportunidad de «darle a la sinhueso» con otros radioaficionados durante horas, empleando un léxico tan ingenioso y ritual como la jerga de los aficionados a la ciencia",
+      "Los conceptos de la presentación de Engelbart, refinados por el trabajo de Alan Kay y otros en Xerox PARC, inspiraron a Steve Jobs a construir el Macintosh, el primer ordenador personal (PC) diseñado para el mercado general.",
+      "Se dedicó entonces a otros proyectos, incluido el diseño del Osborne 1, el primer verdadero ordenador portátil, presentado tres años antes que el Macintosh.",
+      "Moore creía que «no hay nada que disuada más el aprendizaje que el miedo a equivocarse. Así el niño descubre que no pasa nada por cometer un error. La máquina nunca le regaña, nunca se impacienta».87 Tras ver una de las máquinas"
+     ]
+    },
+    {
+     "nombre": "Institucionalización",
+     "definicion": "Práctica de recluir a personas con diferencias cognitivas en asilos estatales, privándolas de educación y de su condición de sujetos de derecho.",
+     "citas": [
+      "Una vez se internaba a un niño diagnosticado de autismo o esquizofrenia infantil en un hospital estatal, dejaba de ser tratado como un niño.",
+      "Cuando los miembros del personal intentaban que John participara en los juegos, él se escabullía a las duchas para dar charlas acerca de «los misterios de los planetas» ante un público entusiasta de niños más pequeños. El personal consideraba que John tenía un problema de conducta. Robinson y Vitale destacaron que a los niños como Tom y John se los diagnosticaba como esquizofrénicos de manera rutinaria,",
+      "Puesto que la creencia popular era que los niños autistas eran incapaces de aprender, una idea errónea en gran medida causada por el hecho de que se los internara en instituciones para «retrasados mentales», donde la educación no figuraba en el programa,",
+      "«Sabes, amigo —dijo Bill a Morrow (Bill llamaba “amigo” a todo el mundo, incluso a su periquito)—, estuve tanto tiempo allí que no sabía que existía otro lugar.»"
+     ]
+    }
+   ],
+   "ideas_clave": [
+    "El solapamiento histórico entre el autismo y la esquizofrenia infantil retrasó décadas el diagnóstico y tratamiento adecuado.",
+    "La teoría de la culpa parental causó un daño psicológico severo tanto a los niños autistas como a sus familias.",
+    "La institucionalización sistemática anuló la capacidad de aprendizaje de los niños al tratarlos como casos perdidos.",
+    "El enfoque de Hans Asperger demostró que la aceptación y la educación adaptada permiten a las personas autistas integrarse con éxito.",
+    "La tecnología y la informática personal (como las computadoras y la radioafición) han servido históricamente como puentes de socialización idóneos para la mente autista.",
+    "La educación efectiva debe centrarse en facilitar la comunicación funcional en lugar de obsesionarse únicamente con el habla verbal.",
+    "El activismo de los padres fue el catalizador definitivo para liberar a las familias de la culpa y movilizar recursos científicos."
+   ],
+   "n_highlights": 56,
+   "actualizado": "2026-07-17",
+   "motor": "gemini",
+   "version": 2
+  },
+  "el nino superviviente. curar el trauma del - joyanna l. silberg|joyanna l. silberg": {
+   "titulo": "El niño superviviente: Curar el trauma del desarrollo",
+   "autor": "Joyanna L. Silberg",
+   "hashes": [
+    "003a1dfe31565886",
+    "1263af86d3c6f7e2",
+    "18ff75a43e60fe35",
+    "1cb2031830355a4b",
+    "1df18ce0f45b6d06",
+    "25288a47df947c4c",
+    "3e7d2cdb62418732",
+    "47bb5f5847c87eb8",
+    "4bcc2fa7446f629e",
+    "4d99f555c8169786",
+    "51cefb78854db499",
+    "569ef48d8aeba722",
+    "722cb7a01dad284c",
+    "763fd9109e66e514",
+    "7aff777489dd1914",
+    "8645833fb606bd81",
+    "8c5a4ce4bceb8857",
+    "9d385cd700ba1603",
+    "a76877c2fb6766e7",
+    "a7b93c5972e46627",
+    "b64642ef29522162",
+    "b753ab9510aee026",
+    "c0023f41f5dd6614",
+    "c0857dc86f045ed1",
+    "c2c6a22075ed4df1",
+    "c43e1a434caed88b",
+    "ca8511c3f05cdd59",
+    "cc2ac186cfbe75a8",
+    "d635f47634a48e5b",
+    "da6d62e907c7d806",
+    "e10822e29e358f6e",
+    "e14b4719fb1a00f2",
+    "e3ccd677492ff134",
+    "ec78d47c1bc78a9a",
+    "f58b1a90232ef9e2",
+    "f666acd4cbfaa980",
+    "fd14ca24ecb138e9"
+   ],
+   "conceptos": [
+    "Trauma",
+    "Disociación",
+    "Neurobiología",
+    "Adaptación",
+    "Afecto",
+    "Identidad"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Trauma",
+     "definicion": "Impacto acumulativo de múltiples formas de maltrato de inicio temprano que altera el desarrollo integral del niño.",
+     "citas": [
+      "La documentación de déficits en múltiples ámbitos de funcionamiento entre quienes han sufrido formas severas de trauma crónico llevó a Bessel van der Kolk a proponer una nueva categoría diagnóstica denominada Trastorno traumático del desarrollo para el DSM-5, el nuevo Manual diagnóstico y estadístico publicado por la Asociación Estadounidense de Psiquiatría (van der Kolk, 2005; van der Kolk et al., 2009).",
+      "Para el propósito de este libro, utilizaré el término trauma del desarrollo para referirme a los niños y adolescentes que han sufrido múltiples formas de trauma de inicio temprano.",
+      "El término niño superviviente hará referencia a niños y adolescentes que han experimentado múltiples formas de trauma y que han sufrido alguna inadecuada cobertura en los cuidados, a menudo debido a que alguno de sus cuidadores también ha sufrido un trauma temprano en su origen. Tabla 1.1. Síntomas del trauma del desarrollo"
+     ]
+    },
+    {
+     "nombre": "Disociación",
+     "definicion": "Alteración de las funciones integradas de la conciencia, memoria, identidad o percepción como mecanismo de evitación afectiva.",
+     "citas": [
+      "El manual diagnóstico y estadístico (APA, 2003) nos dice que la disociación es “una alteración de las funciones normalmente integradas de conciencia, memoria, identidad o percepción” (pág. 916).",
+      "La teoría de la evitación afectiva define la disociación como: La activación automática de patrones de acciones, pensamiento, percepción, identidad o relación (“guiones mentales afectivos”), que están sobreaprendidos y sirven de respuestas evitadoras condicionadas ante la activación afectiva que se asocia con señales traumáticas.",
+      "el niño o el adolescente disociativo ha desarrollado sistemas elaborados de evitación afectiva."
+     ]
+    },
+    {
+     "nombre": "Neurobiología",
+     "definicion": "Estudio de cómo el trauma afecta las vías de respuesta al miedo en el cerebro y cómo las relaciones interactivas moldean las rutas neuronales.",
+     "citas": [
+      "Joseph LeDoux (1996), un prestigioso neurocientífico, explica que hay dos “vías” para responder al miedo: la “vía lenta” implica procesar el miedo directamente desde el tálamo a la amígdala, con una reactividad fisiológica inmediata como resultado; en cambio, la “vía rápida” implica procesar las respuestas de miedo a través del córtex prefrontal, que permite establecer una correspondencia de lo mucho que se parece ese estímulo a la fuente de trauma original y también permite un análisis continuado que inhibe la reactividad inmediata. Las personas que han sufrido repetidos traumas pueden tener un acceso limitado a la “vía rápida” y, como resultado, las respuestas al trauma son inmediatas y no inhibidas.",
+      "las áreas del cerebro afectadas por el trauma temprano pueden convertirse en el objetivo indirecto de nuestros esfuerzos, mientras que los síntomas, las conductas, la reactividad crónica y las conductas protectoras del “cerebro del superviviente” se convierten en nuestros objetivos 31 directos.",
+      "La neurobiología interpersonal describe cómo las relaciones interactivas entre los niños y sus cuidadores promueven el crecimiento de rutas neuronales que regulan los afectos y crean una sensación estable del yo."
+     ]
+    },
+    {
+     "nombre": "Adaptación",
+     "definicion": "Desarrollo de síntomas y conductas disfuncionales como estrategias necesarias para sobrevivir y ajustarse a un entorno hostil.",
+     "citas": [
+      "En primer lugar, los síntomas que pueda presentar el niño traumatizado han sido desarrollados por necesidad. Todo lo que está haciendo, ya sea cortarse, mentir, golpear, robar o pelear, atiende a buenas e importantes razones. En segundo lugar, los niños tienen la capacidad de cambiar sus conductas y de desarrollar nuevas estrategias de afrontamiento que se adecuen a un entorno menos traumatizante. Y, en tercer lugar, no pierdo de vista la idea de que encontrar nuevas herramientas de afrontamiento ayudará al niño o a la niña a conseguir sus propios objetivos, independientemente de cuáles sean.",
+      "cómo los propios síntomas y las propias conductas del niño sirven para ayudarle a adaptarse post-trauma."
+     ]
+    },
+    {
+     "nombre": "Afecto",
+     "definicion": "Estados emocionales innatos y biológicos que actúan como el pegamento psíquico de la experiencia del yo.",
+     "citas": [
+      "la teoría de Putnam apunta a que los niños traumatizados desarrollan estados que se basan en el miedo y que pueden asociarse con recuerdos exclusivos dependientes de cada estado.",
+      "Tomkins (1962, 1963) propone la existencia de nueve estados afectivos innatos, discretos y biológicos, seis de los cuales son negativos: ira-rabia, miedo-terror, malestar-angustia, disgusto, desdén [“poner mala cara”] y vergüenza-humillación. La sorpresa-sobresalto es un afecto neutro y los dos afectos positivos son el interés-entusiasmo y el disfrute-alegría. Tomkins considera que los afectos son “el pegamento psíquico” que mantiene soldada la experiencia del yo (Monsen y Monsen, 1999)."
+     ]
+    },
+    {
+     "nombre": "Identidad",
+     "definicion": "Presencia de voces o amigos imaginarios de carácter malévolo que controlan y dominan al niño disociativo, fragmentando su sentido del yo.",
+     "citas": [
+      "También indicaron que los amigos imaginarios de los niños disociativos son más proclives a tener roles más complejos en las vidas de los niños.",
+      "Trujillo y sus colegas averiguaron que era más probable que se les atribuyeran características malévolas a los amigos imaginarios de los niños disociativos que a los de los niños normales.",
+      "Es bastante más probable que los niños disociativos indiquen que sus “amigos” toman el control y les obligan a hacer cosas (74% frente al 37% respectivamente) y también es más probable que se sientan “mandados” por el amigo imaginario o por la voz que sus homólogos normales (72% frente al 27% respectivamente).",
+      "Los niños disociativos hablan de presencias imaginarias que discuten con ellos, que les mandan, que les dominan y que por lo general les causan problemas."
+     ]
+    }
+   ],
+   "ideas_clave": [
+    "El trauma temprano altera gravemente seis áreas clave: regulación afectiva, conciencia, autopercepción, percepción del agresor, relaciones y sistemas de significado.",
+    "El 'trauma del desarrollo' describe a niños expuestos a múltiples traumas tempranos con cuidadores que a menudo también arrastran traumas no resueltos.",
+    "La disociación actúa como un mecanismo de defensa que permite al niño fragmentar su experiencia para evitar el dolor emocional intolerable.",
+    "Los síntomas del niño superviviente (como mentir, agredir o autolesionarse) son adaptaciones funcionales desarrolladas por necesidad para sobrevivir.",
+    "Los niños disociativos suelen experimentar amigos imaginarios o voces intrusivas con características malévolas que intentan controlarlos, a diferencia de los niños sanos.",
+    "La terapia eficaz debe enfocarse en los momentos de transición crítica y en enseñar conductas alternativas en lugar de castigar el síntoma.",
+    "Todo niño, por más desmoralizado que esté, conserva aspiraciones futuras que pueden usarse como motor para el cambio terapéutico."
+   ],
+   "n_highlights": 37,
+   "actualizado": "2026-07-17",
+   "motor": "gemini",
+   "version": 2
+  },
+  "triste tigre -- neige sinno -- 2024 -- editorial anagrama -- 0081ab0bd4aabb3e82b138f9b616135a -- anna’s archive|neige sinno": {
+   "titulo": "Triste tigre",
+   "autor": "Neige Sinno",
+   "hashes": [
+    "081071f36620058e",
+    "180c7d6ac173a6e0",
+    "18541f505c44da12",
+    "20f8b4e207675aae",
+    "2377ae21a15f45ca",
+    "2612f8d6eda95c9f",
+    "2cf3f8642a029e41",
+    "30aaea039eb39af0",
+    "314f1f46daa9b387",
+    "3603073c051521e2",
+    "3c90b1598c3e1aff",
+    "4c68143d7fcb89d2",
+    "556861a9e645f0f9",
+    "5ba3b8c9c63ccb77",
+    "5db8ca4969da0c1f",
+    "656d9ccddeba7735",
+    "74b830cd0e3ea96c",
+    "75a246b53a0e59c4",
+    "ba97c6abb436b329",
+    "bd145f7205ac2a87",
+    "bec58ec410c0615c",
+    "c308aabced7c1948",
+    "c4fb330124c606e8",
+    "dc3e3c8f181a149f",
+    "f9e8b55d20349095",
+    "fbb40c776c4a9aea"
+   ],
+   "conceptos": [
+    "Poder",
+    "Narrativa",
+    "Trauma",
+    "Impunidad",
+    "Perfilación"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Poder",
+     "definicion": "La fuerza motriz detrás de la agresión sexual, utilizada para dominar, someter y controlar la identidad y el cuerpo de la víctima.",
+     "citas": [
+      "Hay que considerar que la violación es más una cuestión de poder que de sexo.",
+      "En el artículo que habla de la violencia como válvula psicológica, Nicolas Estano, psicólogo clínico experto en el tribunal de París, explica que «la violación, en lugar de ser principalmente una expresión de deseo sexual, consiste más bien en el uso de la sexualidad para expresar cuestiones de poder o de ira. Se trata, pues, de un acto pseudosexual, un conjunto de comportamientos sexuales más relacionados con el estatus, la hostilidad, el control, la dominación, que con la sensualidad o la satisfacción sexual».",
+      "La dominación sexual es una manera de sumisión que llega hasta los fundamentos del ser.",
+      "Como muchos hombres que abusan de niños, mi padrastro me pedía a menudo que le practicara sexo oral. Es un acto que se puede realizar fácilmente, sin hacer ruido, que no deja rastro. Se podría decir que ofrece una buena relación calidad-precio. También es un acto que permite disfrutar de la dominación total. Meter el pene en la boca de un niño significa penetrar no solo su cuerpo, sino también su cabeza. Hay otras agresiones que van a la cabeza, es cierto, y al corazón también, pero el sexo en la boca, concreta y simbólicamente, denota una fuerte sumisión y obliga a la víctima a participar. No"
+     ]
+    },
+    {
+     "nombre": "Narrativa",
+     "definicion": "El acto terapéutico de poner el trauma en palabras para despojarlo de su poder destructivo y asimilar la experiencia.",
+     "citas": [
+      "Si una puede poner palabras a lo vivido, escribe Virginia Woolf, es que el acontecimiento está separado del sufrimiento puro, que se vive como irrealidad.",
+      "A modo de explicación me atreveré a decir que, en mi caso, el golpe va siempre seguido del deseo de explicarlo. Siento que he recibido un golpe; pero no se trata simplemente, como ocurría siendo niña, de un golpe asestado por un enemigo oculto tras el algodón en rama de la vida cotidiana; es, o llegará a ser, una revelación de un determinado orden; es una muestra de la existencia de algo real que se encuentra detrás de las apariencias; y yo lo hago real al expresarlo en palabras. Solo expresándolo en palabras le doy el carácter de algo íntegro, y esta integridad significa que ha perdido el poder de causarme daño; me produce un gran placer juntar las partes separadas. Tal vez se deba a que, al hacerlo, elimino el dolor. Quizá sea el placer más fuerte que conozco. La verdad, toda la verdad y nada más",
+      "Escupir me permitió, sobre todo, afirmar que ya era libre de hacer lo que quisiera."
+     ]
+    },
+    {
+     "nombre": "Trauma",
+     "definicion": "La huella profunda del abuso que afecta tanto la psique como la biología, el sistema neurológico y el ADN de la víctima.",
+     "citas": [
+      "No recuerdo esa historia, así que ella tiene que contarme que, al principio de nuestra convivencia con él, una vez, yo me había clavado un imperdible, un alfiler de gancho, en la vagina, y ella tuvo que intervenir para quitármelo.",
+      "El eslabón perdido llegó más tarde, con el desarrollo de la neurociencia, que muestra cómo el trauma afecta a la producción de hormonas, a los circuitos neuronales y, finalmente, al sistema inmunitario e incluso al ADN.",
+      "«Lo que importa no es lo que han hecho de nosotros, sino lo que hacemos con lo que han hecho de nosotros». Se trataba de elegir dentro de ese saco"
+     ]
+    },
+    {
+     "nombre": "Impunidad",
+     "definicion": "La facilitación social, familiar o institucional que permite que el abuso ocurra debido a la falta de límites y consecuencias.",
+     "citas": [
+      "El tabú en nuestra cultura no es la violencia sexual en sí, que se comete con frecuencia, sino hablar de ella, pensarla, analizarla.",
+      "La familia grande, libro de Camille Kouchner, y Ou peut-être une nuit, un pódcast de Charlotte Pudlowski. «Permitieron hablar del incesto, de la mecánica del silencio, del hecho de que esa dominación dirige y organiza toda la familia, no solo al par perpetrador-víctima.",
+      "A la pregunta de por qué los soldados cometen los peores abusos en los escenarios de conflicto, una vez escuché a un gran historiador de las dos guerras mundiales responder: «Porque pueden». Es una respuesta que puede sonar a nada, pero la dijo con una profunda melancolía, fruto de toda una vida de investigación sobre la guerra, el mal y la violencia. Violan porque pueden, porque la sociedad se lo permite, porque les han dado permiso; y cuando un hombre tiene permiso para violar, viola. Como si el mal fuera una posibilidad siempre presente en nosotros, que, en las condiciones de potencial barbarie, se manifestara automáticamente. Ese es el verdadero teatro de la crueldad."
+     ]
+    },
+    {
+     "nombre": "Perfilación",
+     "definicion": "El análisis de los rasgos psicológicos y conductuales que caracterizan y clasifican a los agresores sexuales.",
+     "citas": [
+      "Los estudios sobre violadores que abusan de niños y niñas muestran que no existe un perfil característico, salvo por el hecho de que la gran mayoría son varones. Proceden de todas las clases sociales, de todos los grupos de edad y de todos los países. Según algunos estudios psicopatológicos, existen dos familias principales de depredadores: los «fijados», que tienen trastornos de dependencia y evitación, y que se caracterizan por la sumisión, la pasividad y el aislamiento social; y los «regresivos», que presentan trastornos narcisistas, tendencias antisociales y psicopáticas, y se caracterizan por su deseo de poder y por el gusto por la dominación y la violencia.",
+      "Los estudios sobre agresores que consulté indican que aproximadamente un 20 % de los violadores de niños son antiguas víctimas.",
+      "que el hecho de haber sido víctima en la infancia es un factor de riesgo, pero no una condición necesaria para convertirse en agresor."
+     ]
+    }
+   ],
+   "ideas_clave": [
+    "El abuso sexual infantil no es un acto de deseo, sino un ejercicio de poder, dominación y control psicológico sobre la víctima.",
+    "El verdadero tabú social no radica en la existencia de la violencia sexual, sino en la resistencia colectiva a hablar de ella, pensarla y analizarla abiertamente.",
+    "No existe un perfil único de agresor sexual; sin embargo, la gran mayoría comparte la característica de ser hombres que operan bajo dinámicas de impunidad.",
+    "Haber sido víctima de abuso en la infancia es un factor de riesgo importante, pero no es una condición inevitable ni justificable para convertirse en agresor.",
+    "El trauma del abuso altera físicamente el sistema nervioso, la producción de hormonas y el ADN de la víctima, dejando una huella biológica duradera.",
+    "Nombrar y narrar el trauma a través de la palabra permite distanciar el sufrimiento, devolviendo la integridad al individuo y restando poder al daño recibido.",
+    "La violencia sexual ocurre a menudo simplemente 'porque se puede', cuando las estructuras sociales o familiares permiten y silencian la impunidad del agresor."
+   ],
+   "n_highlights": 26,
+   "actualizado": "2026-07-17",
+   "motor": "gemini",
+   "version": 2
+  },
+  "psicologia del mexicano - desconocido|unknown": {
+   "titulo": "Psicología del Mexicano",
+   "autor": "Desconocido",
+   "hashes": [
+    "50df9639ba7220c4",
+    "aed865ea8f9221e0"
+   ],
+   "conceptos": [
+    "Identidad",
+    "Valores",
+    "Modernidad",
+    "Tradicionalismo"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Identidad",
+     "definicion": "El conjunto de rasgos, roles y expectativas que definen el comportamiento de un grupo social o género dentro de una cultura.",
+     "citas": [
+      "Su perfil psicológico: es abnegada (no vive para sí, sino para otros; es masoquista), sometida (de niña al padre y a la madre, de adulta a su hombre, o tal vez al hermano mayor) y tradicionalista (la mujer tiende a simbolizar el pasado; el hombre, el presente). Es dulce, fiel, amorosa, abnegada, dependiente y no responsable de sí fuera del hogar. Muy recientemente, por influjo del cine extranjero y de los medios de comunicación masiva, se ha ido perfilando otro tipo de mujer: la moderna, liberada, ambiciosa, manipuladora, creativa, decidida, emprendedora, que lucha por un lugar en la sociedad, aunque con sentimientos de culpa, por no prestarle el tiempo que debiera a los hijos. De estos dos perfiles tendrá que salir el punto justo y de equilibrio para la mexicana del futuro inmediato."
+     ]
+    },
+    {
+     "nombre": "Valores",
+     "definicion": "Los principios fundamentales y pilares morales que rigen las prioridades y la conducta de una sociedad.",
+     "citas": [
+      "Los valores fundamentales para el mexicano son: familia, patria y religión."
+     ]
+    },
+    {
+     "nombre": "Modernidad",
+     "definicion": "El proceso de transformación social e ideológica impulsado por factores externos que desafía las estructuras tradicionales.",
+     "citas": [
+      "Su perfil psicológico: es abnegada (no vive para sí, sino para otros; es masoquista), sometida (de niña al padre y a la madre, de adulta a su hombre, o tal vez al hermano mayor) y tradicionalista (la mujer tiende a simbolizar el pasado; el hombre, el presente). Es dulce, fiel, amorosa, abnegada, dependiente y no responsable de sí fuera del hogar. Muy recientemente, por influjo del cine extranjero y de los medios de comunicación masiva, se ha ido perfilando otro tipo de mujer: la moderna, liberada, ambiciosa, manipuladora, creativa, decidida, emprendedora, que lucha por un lugar en la sociedad, aunque con sentimientos de culpa, por no prestarle el tiempo que debiera a los hijos. De estos dos perfiles tendrá que salir el punto justo y de equilibrio para la mexicana del futuro inmediato."
+     ]
+    },
+    {
+     "nombre": "Tradicionalismo",
+     "definicion": "La tendencia a conservar y valorar las pautas de comportamiento, roles y creencias heredadas del pasado.",
+     "citas": [
+      "Su perfil psicológico: es abnegada (no vive para sí, sino para otros; es masoquista), sometida (de niña al padre y a la madre, de adulta a su hombre, o tal vez al hermano mayor) y tradicionalista (la mujer tiende a simbolizar el pasado; el hombre, el presente). Es dulce, fiel, amorosa, abnegada, dependiente y no responsable de sí fuera del hogar. Muy recientemente, por influjo del cine extranjero y de los medios de comunicación masiva, se ha ido perfilando otro tipo de mujer: la moderna, liberada, ambiciosa, manipuladora, creativa, decidida, emprendedora, que lucha por un lugar en la sociedad, aunque con sentimientos de culpa, por no prestarle el tiempo que debiera a los hijos. De estos dos perfiles tendrá que salir el punto justo y de equilibrio para la mexicana del futuro inmediato.",
+      "Los valores fundamentales para el mexicano son: familia, patria y religión."
+     ]
+    }
+   ],
+   "ideas_clave": [
+    "La mujer mexicana tradicional se ha caracterizado históricamente por la abnegación, el sometimiento y una profunda orientación hacia el bienestar de los demás sobre el propio.",
+    "La modernidad y la influencia de los medios de comunicación han impulsado la emergencia de un nuevo perfil de mujer mexicana: liberada, emprendedora y ambiciosa.",
+    "La transición hacia la modernidad genera en la mujer mexicana un conflicto interno manifestado en sentimientos de culpa por el balance entre el desarrollo profesional y el cuidado de los hijos.",
+    "El futuro de la identidad femenina en México reside en encontrar un punto de equilibrio saludable entre el rol tradicional y el moderno.",
+    "La estructura de valores de la sociedad mexicana está fuertemente anclada en tres pilares fundamentales: la familia, la patria y la religión."
+   ],
+   "n_highlights": 2,
+   "actualizado": "2026-07-17",
+   "motor": "gemini",
+   "version": 2
+  }
+ },
+ "conceptos": {
+  "Discurso": {
+   "definicion": "La proliferación de enunciados y saberes institucionalizados que configuran, regulan y producen la realidad del sexo.",
+   "libros": [
+    "La voluntad de saber"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "La voluntad de saber": [
+     "Nace hacia el siglo XVIII una incitación política, económica y técnica a hablar del sexo.",
+     "Se debe hablar del sexo, se debe hablar públicamente y de un modo que no se atenga a la división de lo lícito y lo ilícito, incluso si el locutor mantiene para sí la distinción (para mostrarlo sirven esas solemnes declaraciones liminares);",
+     "Se trata más bien de un tema que forma parte de la mecánica misma de las incitaciones: una manera de dar forma a la exigencia de hablar, una fábula indispensable para la economía indefinidamente proliferante del discurso sobre el sexo. Lo propio de las sociedades modernas no es que hayan obligado al sexo a permanecer en la sombra, sino que ellas se hayan destinado a hablar del sexo siempre, haciéndolo valer, poniéndolo de relieve como el secreto.",
+     "imagino que se acepta decir que el discurso sobre el sexo, desde hace ya tres siglos hoy, ha sido multiplicado más bien que rarificado;"
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Biopolítica": {
+   "definicion": "La gestión estatal y técnica de la vida, la población y los cuerpos a través de la regulación de la conducta sexual.",
+   "libros": [
+    "La voluntad de saber"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "La voluntad de saber": [
+     "Policía del sexo: es decir, no el rigor de una prohibición sino la necesidad de reglamentar el sexo mediante discursos útiles y públicos.",
+     "Pero es la primera vez que, al menos de una manera constante, una sociedad afirma que su futuro y su fortuna están ligados no sólo al número y virtud de sus ciudadanos, no sólo a las reglas de sus matrimonios y a la organización de las familias, sino también a la manera en que cada cual hace uso de su sexo.",
+     "¿acaso la puesta en discurso del sexo no está dirigida a la tarea de expulsar de la realidad las formas de sexualidad no sometidas a la economía estricta de la reproducción: decir no a las actividades infecundas, proscribir los placeres vecinos, reducir o excluir las prácticas que no tienen la generación como fin?"
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Confesión": {
+   "definicion": "El ritual de producción de verdad mediante el cual el sujeto es constreñido a declarar sus deseos y prácticas íntimas.",
+   "libros": [
+    "La voluntad de saber"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "La voluntad de saber": [
+     "Confidencia sutil o interrogatorio autoritario, refinado o rústico, el sexo debe ser dicho.",
+     "en todas partes donde existía el riesgo de que se manifestaran se instalaron dispositivos de vigilancia, se establecieron trampas para constreñir a la confesión, se impusieron discursos inagotables y correctivos;"
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Poder": {
+   "definicion": "Red de relaciones y fuerzas que no solo prohíbe, sino que produce saber, placer y subjetividades.",
+   "libros": [
+    "La voluntad de saber",
+    "Triste tigre"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "La voluntad de saber": [
+     "espirales perpetuas del poder y del placer.",
+     "una distribución de puntos de poder, jerarquizados o enfrentados; de los placeres «perseguidos», es decir, a la vez deseados y hostigados;"
+    ],
+    "Triste tigre": [
+     "Hay que considerar que la violación es más una cuestión de poder que de sexo.",
+     "En el artículo que habla de la violencia como válvula psicológica, Nicolas Estano, psicólogo clínico experto en el tribunal de París, explica que «la violación, en lugar de ser principalmente una expresión de deseo sexual, consiste más bien en el uso de la sexualidad para expresar cuestiones de poder o de ira. Se trata, pues, de un acto pseudosexual, un conjunto de comportamientos sexuales más relacionados con el estatus, la hostilidad, el control, la dominación, que con la sensualidad o la satisfacción sexual».",
+     "La dominación sexual es una manera de sumisión que llega hasta los fundamentos del ser.",
+     "Como muchos hombres que abusan de niños, mi padrastro me pedía a menudo que le practicara sexo oral. Es un acto que se puede realizar fácilmente, sin hacer ruido, que no deja rastro. Se podría decir que ofrece una buena relación calidad-precio. También es un acto que permite disfrutar de la dominación total. Meter el pene en la boca de un niño significa penetrar no solo su cuerpo, sino también su cabeza. Hay otras agresiones que van a la cabeza, es cierto, y al corazón también, pero el sexo en la boca, concreta y simbólicamente, denota una fuerte sumisión y obliga a la víctima a participar. No"
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Normalización": {
+   "definicion": "El proceso de clasificar, patologizar y corregir las conductas sexuales desviadas de la norma reproductiva.",
+   "libros": [
+    "La voluntad de saber"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "La voluntad de saber": [
+     "En la lista de los pecados graves, separados sólo por su importancia, figuraban el estupro (relaciones extramatrimoniales), el adulterio, el rapto, el incesto espiritual o carnal, pero también la sodomía y la «caricia» recíproca. En cuanto a los tribunales, podían condenar tanto la homosexualidad como la infidelidad, el matrimonio sin consentimiento de los padres como la bestialidad.",
+     "Durante mucho tiempo los hermafroditas fueron criminales, o retoños del crimen, puesto que su disposición anatómica, su ser mismo embrollaba y trastornaba la ley que distinguía los sexos y prescribía su conjunción.",
+     "Los pedagogos y los médicos han combatido el onanismo de los niños como a una epidemia que se quiere extinguir.",
+     "No hay que olvidar que la categoría psicológica, psiquiátrica, médica, de la homosexualidad se constituyó el día en que se la caracterizó —el famoso artículo de Westphal sobre las «sensaciones sexuales contrarias» (1870) puede valer como fecha de nacimiento—[16] no tanto por un tipo de relaciones sexuales como por cierta cualidad de la sensibilidad sexual, determinada manera de invertir en sí mismo lo masculino y lo femenino."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Diagnóstico": {
+   "definicion": "Proceso de identificación clínica que históricamente sufrió de imprecisiones, criterios restrictivos y solapamientos erróneos con la psicosis.",
+   "libros": [
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente": [
+     "De hecho, mientras que la descripción del síndrome de Kanner era demasiado delimitada, la esquizofrenia infantil presentaba el problema opuesto: sus fronteras eran tan difusas que incluía tipologías muy dispares de pacientes.",
+     "su manual en 1948. Un año después agitó oficialmente la bandera blanca. «El autismo infantil precoz podría […] considerarse como la manifestación más temprana que existe de la esquizofrenia infantil»,28 escribió en American Journal of Orthopsychiatry. «Considero altamente improbable que el autismo infantil precoz tenga que diferenciarse en el futuro de las esquizofrenias.»",
+     "Para deshacer este embrollo, Lauretta Bender instó a Creak a convocar a un grupo de trabajo integrado por expertos a fin de diseñar el primer conjunto de criterios estandarizados para el diagnóstico de lo que denominó «síndrome esquizofrénico en la infancia». Tales criterios, que pasaron a conocerse como «Los nueve puntos»,9 se adoptaron en la investigación sobre el autismo a gran escala: 1.",
+     "Al no encajar en la limitada casilla de Kanner, a la mayoría de ellos se les había diagnosticado esquizofrenia."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Estigma": {
+   "definicion": "Atribución de culpa y etiquetas patologizantes a las familias y a los individuos que frena su desarrollo y aceptación social.",
+   "libros": [
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente": [
+     "«Tu madre es así: fría y dura», le espetó el director mundialmente famoso de la Escuela Ortogénica Sonia Shankman a un niño autista que tenía a su cuidado, mientras señalaba una estatua de piedra que decoraba el jardín.",
+     "«El factor precipitante del autismo infantil es el deseo de los padres de que el niño no exista —escribió—. Si se abandona a un bebé por completo antes de que se haya desarrollado lo suficiente como para moverse por sí mismo, muere. Y, si se le proporcionan cuidados físicos suficientes para su supervivencia pero se lo abandona en el plano emocional o se lo empuja más allá de sus capacidades, deviene autista.»",
+     "Ekstein planteaba que el interés precoz de Tommy en la ciencia probablemente fuera el resultado de «intensos traumas sexuales en la primera infancia» provocados por la seducción de su madre o una niñera.",
+     "«Desembarazar a los padres de los niños autistas del peso de la vergüenza y la culpabilidad —escribió Rimland— desencadenó un enorme estallido de productividad y creatividad en nombre de aquellos niños.»90 Él y Sullivan habían alzado a un poderoso ejército. La batalla por el futuro de sus hijos se hallaba finalmente en camino."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Neurodiversidad": {
+   "definicion": "Perspectiva que entiende las variaciones neurológicas como diferencias naturales del desarrollo humano con talentos y necesidades específicas.",
+   "libros": [
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente": [
+     "unos con un «funcionamiento alto» (Asperger) y otros con un «funcionamiento bajo» (Kanner).",
+     "Incluso los niños con «bajo funcionamiento» podían convertirse en adultos con «alto funcionamiento», aunque sólo si lograban mantenerse al margen de una institución y se les brindaba la oportunidad de desarrollar sus talentos innatos, tal como Asperger había predicho ya en 1938.",
+     "extraído de los archivos de Asperger: Jay S., que por entonces contaba ya casi 15 años, presentaba en los cursos inferiores dificultades considerables para sus maestros, que se mostraron excepcionalmente comprensivos con él y lo aceptaron tal como era. Vagaba sin rumbo por el aula, se masturbaba a la vista de todos y tenía rabietas. Aprendió a adaptarse al entorno, tuvo un rendimiento fenomenal en matemáticas, fue enviado a una escuela acelerada y en la actualidad está finalizando tercero de bachillerato con las máximas calificaciones. Es un joven peculiar, algo obeso, que dedica su tiempo libre a coleccionar mapas y sellos postales y se relaciona con las personas lo estrictamente necesario para mantener una relación superficial. En el test de inteligencia Binet, obtuvo un coeficiente superior al 150.57",
+     "aventuraba: «Tal vez no sea descabellado sugerir que algunos individuos autistas son genios incipientes cuyas excentricidades son tan severas e incapacitantes que sólo pueden tener una participación mínima en el mundo “normal”»."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Comunicación": {
+   "definicion": "Capacidad de transmitir y recibir mensajes que excede el lenguaje hablado e incluye gestos, tecnología y lenguajes alternativos.",
+   "libros": [
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente": [
+     "El pequeño no volvió a pronunciar otra palabra en toda su vida, con una única excepción desgarradora. «¿Cuándo vas a hablar?», le preguntó angustiada su madre un día en el coche. «Cuando esté preparado», respondió él.",
+     "Por su parte, quienes disfrutaban de largas charlas también tenían la oportunidad de «darle a la sinhueso» con otros radioaficionados durante horas, empleando un léxico tan ingenioso y ritual como la jerga de los aficionados a la ciencia",
+     "Lettick constató que se ponía demasiado énfasis en enseñar a los niños autistas a hablar, cuando lo esencial era permitirles comunicarse.",
+     "Desplegando su perspicaz poder de observación, Sacks constató que, lejos de no ser comunicativos, sus pacientes se comunicaban en todo momento, pero no mediante palabras, sino mediante gestos y otras formas no verbales de afirmación, sobre todo entre ellos mismos."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Tecnología": {
+   "definicion": "Herramientas y sistemas interactivos que actúan como entornos seguros de aprendizaje y socialización para mentes neurodivergentes.",
+   "libros": [
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente": [
+     "Por su parte, quienes disfrutaban de largas charlas también tenían la oportunidad de «darle a la sinhueso» con otros radioaficionados durante horas, empleando un léxico tan ingenioso y ritual como la jerga de los aficionados a la ciencia",
+     "Los conceptos de la presentación de Engelbart, refinados por el trabajo de Alan Kay y otros en Xerox PARC, inspiraron a Steve Jobs a construir el Macintosh, el primer ordenador personal (PC) diseñado para el mercado general.",
+     "Se dedicó entonces a otros proyectos, incluido el diseño del Osborne 1, el primer verdadero ordenador portátil, presentado tres años antes que el Macintosh.",
+     "Moore creía que «no hay nada que disuada más el aprendizaje que el miedo a equivocarse. Así el niño descubre que no pasa nada por cometer un error. La máquina nunca le regaña, nunca se impacienta».87 Tras ver una de las máquinas"
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Institucionalización": {
+   "definicion": "Práctica de recluir a personas con diferencias cognitivas en asilos estatales, privándolas de educación y de su condición de sujetos de derecho.",
+   "libros": [
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Una tribu propia: Vidas autistas y la esperanza de un mundo neurodivergente": [
+     "Una vez se internaba a un niño diagnosticado de autismo o esquizofrenia infantil en un hospital estatal, dejaba de ser tratado como un niño.",
+     "Cuando los miembros del personal intentaban que John participara en los juegos, él se escabullía a las duchas para dar charlas acerca de «los misterios de los planetas» ante un público entusiasta de niños más pequeños. El personal consideraba que John tenía un problema de conducta. Robinson y Vitale destacaron que a los niños como Tom y John se los diagnosticaba como esquizofrénicos de manera rutinaria,",
+     "Puesto que la creencia popular era que los niños autistas eran incapaces de aprender, una idea errónea en gran medida causada por el hecho de que se los internara en instituciones para «retrasados mentales», donde la educación no figuraba en el programa,",
+     "«Sabes, amigo —dijo Bill a Morrow (Bill llamaba “amigo” a todo el mundo, incluso a su periquito)—, estuve tanto tiempo allí que no sabía que existía otro lugar.»"
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Trauma": {
+   "definicion": "Impacto acumulativo de múltiples formas de maltrato de inicio temprano que altera el desarrollo integral del niño.",
+   "libros": [
+    "El niño superviviente: Curar el trauma del desarrollo",
+    "Triste tigre"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "El niño superviviente: Curar el trauma del desarrollo": [
+     "La documentación de déficits en múltiples ámbitos de funcionamiento entre quienes han sufrido formas severas de trauma crónico llevó a Bessel van der Kolk a proponer una nueva categoría diagnóstica denominada Trastorno traumático del desarrollo para el DSM-5, el nuevo Manual diagnóstico y estadístico publicado por la Asociación Estadounidense de Psiquiatría (van der Kolk, 2005; van der Kolk et al., 2009).",
+     "Para el propósito de este libro, utilizaré el término trauma del desarrollo para referirme a los niños y adolescentes que han sufrido múltiples formas de trauma de inicio temprano.",
+     "El término niño superviviente hará referencia a niños y adolescentes que han experimentado múltiples formas de trauma y que han sufrido alguna inadecuada cobertura en los cuidados, a menudo debido a que alguno de sus cuidadores también ha sufrido un trauma temprano en su origen. Tabla 1.1. Síntomas del trauma del desarrollo"
+    ],
+    "Triste tigre": [
+     "No recuerdo esa historia, así que ella tiene que contarme que, al principio de nuestra convivencia con él, una vez, yo me había clavado un imperdible, un alfiler de gancho, en la vagina, y ella tuvo que intervenir para quitármelo.",
+     "El eslabón perdido llegó más tarde, con el desarrollo de la neurociencia, que muestra cómo el trauma afecta a la producción de hormonas, a los circuitos neuronales y, finalmente, al sistema inmunitario e incluso al ADN.",
+     "«Lo que importa no es lo que han hecho de nosotros, sino lo que hacemos con lo que han hecho de nosotros». Se trataba de elegir dentro de ese saco"
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Disociación": {
+   "definicion": "Alteración de las funciones integradas de la conciencia, memoria, identidad o percepción como mecanismo de evitación afectiva.",
+   "libros": [
+    "El niño superviviente: Curar el trauma del desarrollo"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "El niño superviviente: Curar el trauma del desarrollo": [
+     "El manual diagnóstico y estadístico (APA, 2003) nos dice que la disociación es “una alteración de las funciones normalmente integradas de conciencia, memoria, identidad o percepción” (pág. 916).",
+     "La teoría de la evitación afectiva define la disociación como: La activación automática de patrones de acciones, pensamiento, percepción, identidad o relación (“guiones mentales afectivos”), que están sobreaprendidos y sirven de respuestas evitadoras condicionadas ante la activación afectiva que se asocia con señales traumáticas.",
+     "el niño o el adolescente disociativo ha desarrollado sistemas elaborados de evitación afectiva."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Neurobiología": {
+   "definicion": "Estudio de cómo el trauma afecta las vías de respuesta al miedo en el cerebro y cómo las relaciones interactivas moldean las rutas neuronales.",
+   "libros": [
+    "El niño superviviente: Curar el trauma del desarrollo"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "El niño superviviente: Curar el trauma del desarrollo": [
+     "Joseph LeDoux (1996), un prestigioso neurocientífico, explica que hay dos “vías” para responder al miedo: la “vía lenta” implica procesar el miedo directamente desde el tálamo a la amígdala, con una reactividad fisiológica inmediata como resultado; en cambio, la “vía rápida” implica procesar las respuestas de miedo a través del córtex prefrontal, que permite establecer una correspondencia de lo mucho que se parece ese estímulo a la fuente de trauma original y también permite un análisis continuado que inhibe la reactividad inmediata. Las personas que han sufrido repetidos traumas pueden tener un acceso limitado a la “vía rápida” y, como resultado, las respuestas al trauma son inmediatas y no inhibidas.",
+     "las áreas del cerebro afectadas por el trauma temprano pueden convertirse en el objetivo indirecto de nuestros esfuerzos, mientras que los síntomas, las conductas, la reactividad crónica y las conductas protectoras del “cerebro del superviviente” se convierten en nuestros objetivos 31 directos.",
+     "La neurobiología interpersonal describe cómo las relaciones interactivas entre los niños y sus cuidadores promueven el crecimiento de rutas neuronales que regulan los afectos y crean una sensación estable del yo."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Adaptación": {
+   "definicion": "Desarrollo de síntomas y conductas disfuncionales como estrategias necesarias para sobrevivir y ajustarse a un entorno hostil.",
+   "libros": [
+    "El niño superviviente: Curar el trauma del desarrollo"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "El niño superviviente: Curar el trauma del desarrollo": [
+     "En primer lugar, los síntomas que pueda presentar el niño traumatizado han sido desarrollados por necesidad. Todo lo que está haciendo, ya sea cortarse, mentir, golpear, robar o pelear, atiende a buenas e importantes razones. En segundo lugar, los niños tienen la capacidad de cambiar sus conductas y de desarrollar nuevas estrategias de afrontamiento que se adecuen a un entorno menos traumatizante. Y, en tercer lugar, no pierdo de vista la idea de que encontrar nuevas herramientas de afrontamiento ayudará al niño o a la niña a conseguir sus propios objetivos, independientemente de cuáles sean.",
+     "cómo los propios síntomas y las propias conductas del niño sirven para ayudarle a adaptarse post-trauma."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Afecto": {
+   "definicion": "Estados emocionales innatos y biológicos que actúan como el pegamento psíquico de la experiencia del yo.",
+   "libros": [
+    "El niño superviviente: Curar el trauma del desarrollo"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "El niño superviviente: Curar el trauma del desarrollo": [
+     "la teoría de Putnam apunta a que los niños traumatizados desarrollan estados que se basan en el miedo y que pueden asociarse con recuerdos exclusivos dependientes de cada estado.",
+     "Tomkins (1962, 1963) propone la existencia de nueve estados afectivos innatos, discretos y biológicos, seis de los cuales son negativos: ira-rabia, miedo-terror, malestar-angustia, disgusto, desdén [“poner mala cara”] y vergüenza-humillación. La sorpresa-sobresalto es un afecto neutro y los dos afectos positivos son el interés-entusiasmo y el disfrute-alegría. Tomkins considera que los afectos son “el pegamento psíquico” que mantiene soldada la experiencia del yo (Monsen y Monsen, 1999)."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Identidad": {
+   "definicion": "Presencia de voces o amigos imaginarios de carácter malévolo que controlan y dominan al niño disociativo, fragmentando su sentido del yo.",
+   "libros": [
+    "El niño superviviente: Curar el trauma del desarrollo",
+    "Psicología del Mexicano"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "El niño superviviente: Curar el trauma del desarrollo": [
+     "También indicaron que los amigos imaginarios de los niños disociativos son más proclives a tener roles más complejos en las vidas de los niños.",
+     "Trujillo y sus colegas averiguaron que era más probable que se les atribuyeran características malévolas a los amigos imaginarios de los niños disociativos que a los de los niños normales.",
+     "Es bastante más probable que los niños disociativos indiquen que sus “amigos” toman el control y les obligan a hacer cosas (74% frente al 37% respectivamente) y también es más probable que se sientan “mandados” por el amigo imaginario o por la voz que sus homólogos normales (72% frente al 27% respectivamente).",
+     "Los niños disociativos hablan de presencias imaginarias que discuten con ellos, que les mandan, que les dominan y que por lo general les causan problemas."
+    ],
+    "Psicología del Mexicano": [
+     "Su perfil psicológico: es abnegada (no vive para sí, sino para otros; es masoquista), sometida (de niña al padre y a la madre, de adulta a su hombre, o tal vez al hermano mayor) y tradicionalista (la mujer tiende a simbolizar el pasado; el hombre, el presente). Es dulce, fiel, amorosa, abnegada, dependiente y no responsable de sí fuera del hogar. Muy recientemente, por influjo del cine extranjero y de los medios de comunicación masiva, se ha ido perfilando otro tipo de mujer: la moderna, liberada, ambiciosa, manipuladora, creativa, decidida, emprendedora, que lucha por un lugar en la sociedad, aunque con sentimientos de culpa, por no prestarle el tiempo que debiera a los hijos. De estos dos perfiles tendrá que salir el punto justo y de equilibrio para la mexicana del futuro inmediato."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Narrativa": {
+   "definicion": "El acto terapéutico de poner el trauma en palabras para despojarlo de su poder destructivo y asimilar la experiencia.",
+   "libros": [
+    "Triste tigre"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Triste tigre": [
+     "Si una puede poner palabras a lo vivido, escribe Virginia Woolf, es que el acontecimiento está separado del sufrimiento puro, que se vive como irrealidad.",
+     "A modo de explicación me atreveré a decir que, en mi caso, el golpe va siempre seguido del deseo de explicarlo. Siento que he recibido un golpe; pero no se trata simplemente, como ocurría siendo niña, de un golpe asestado por un enemigo oculto tras el algodón en rama de la vida cotidiana; es, o llegará a ser, una revelación de un determinado orden; es una muestra de la existencia de algo real que se encuentra detrás de las apariencias; y yo lo hago real al expresarlo en palabras. Solo expresándolo en palabras le doy el carácter de algo íntegro, y esta integridad significa que ha perdido el poder de causarme daño; me produce un gran placer juntar las partes separadas. Tal vez se deba a que, al hacerlo, elimino el dolor. Quizá sea el placer más fuerte que conozco. La verdad, toda la verdad y nada más",
+     "Escupir me permitió, sobre todo, afirmar que ya era libre de hacer lo que quisiera."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Impunidad": {
+   "definicion": "La facilitación social, familiar o institucional que permite que el abuso ocurra debido a la falta de límites y consecuencias.",
+   "libros": [
+    "Triste tigre"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Triste tigre": [
+     "El tabú en nuestra cultura no es la violencia sexual en sí, que se comete con frecuencia, sino hablar de ella, pensarla, analizarla.",
+     "La familia grande, libro de Camille Kouchner, y Ou peut-être une nuit, un pódcast de Charlotte Pudlowski. «Permitieron hablar del incesto, de la mecánica del silencio, del hecho de que esa dominación dirige y organiza toda la familia, no solo al par perpetrador-víctima.",
+     "A la pregunta de por qué los soldados cometen los peores abusos en los escenarios de conflicto, una vez escuché a un gran historiador de las dos guerras mundiales responder: «Porque pueden». Es una respuesta que puede sonar a nada, pero la dijo con una profunda melancolía, fruto de toda una vida de investigación sobre la guerra, el mal y la violencia. Violan porque pueden, porque la sociedad se lo permite, porque les han dado permiso; y cuando un hombre tiene permiso para violar, viola. Como si el mal fuera una posibilidad siempre presente en nosotros, que, en las condiciones de potencial barbarie, se manifestara automáticamente. Ese es el verdadero teatro de la crueldad."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Perfilación": {
+   "definicion": "El análisis de los rasgos psicológicos y conductuales que caracterizan y clasifican a los agresores sexuales.",
+   "libros": [
+    "Triste tigre"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Triste tigre": [
+     "Los estudios sobre violadores que abusan de niños y niñas muestran que no existe un perfil característico, salvo por el hecho de que la gran mayoría son varones. Proceden de todas las clases sociales, de todos los grupos de edad y de todos los países. Según algunos estudios psicopatológicos, existen dos familias principales de depredadores: los «fijados», que tienen trastornos de dependencia y evitación, y que se caracterizan por la sumisión, la pasividad y el aislamiento social; y los «regresivos», que presentan trastornos narcisistas, tendencias antisociales y psicopáticas, y se caracterizan por su deseo de poder y por el gusto por la dominación y la violencia.",
+     "Los estudios sobre agresores que consulté indican que aproximadamente un 20 % de los violadores de niños son antiguas víctimas.",
+     "que el hecho de haber sido víctima en la infancia es un factor de riesgo, pero no una condición necesaria para convertirse en agresor."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Valores": {
+   "definicion": "Los principios fundamentales y pilares morales que rigen las prioridades y la conducta de una sociedad.",
+   "libros": [
+    "Psicología del Mexicano"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Psicología del Mexicano": [
+     "Los valores fundamentales para el mexicano son: familia, patria y religión."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Modernidad": {
+   "definicion": "El proceso de transformación social e ideológica impulsado por factores externos que desafía las estructuras tradicionales.",
+   "libros": [
+    "Psicología del Mexicano"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Psicología del Mexicano": [
+     "Su perfil psicológico: es abnegada (no vive para sí, sino para otros; es masoquista), sometida (de niña al padre y a la madre, de adulta a su hombre, o tal vez al hermano mayor) y tradicionalista (la mujer tiende a simbolizar el pasado; el hombre, el presente). Es dulce, fiel, amorosa, abnegada, dependiente y no responsable de sí fuera del hogar. Muy recientemente, por influjo del cine extranjero y de los medios de comunicación masiva, se ha ido perfilando otro tipo de mujer: la moderna, liberada, ambiciosa, manipuladora, creativa, decidida, emprendedora, que lucha por un lugar en la sociedad, aunque con sentimientos de culpa, por no prestarle el tiempo que debiera a los hijos. De estos dos perfiles tendrá que salir el punto justo y de equilibrio para la mexicana del futuro inmediato."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Tradicionalismo": {
+   "definicion": "La tendencia a conservar y valorar las pautas de comportamiento, roles y creencias heredadas del pasado.",
+   "libros": [
+    "Psicología del Mexicano"
+   ],
+   "trabajos": [],
+   "citas_por_libro": {
+    "Psicología del Mexicano": [
+     "Su perfil psicológico: es abnegada (no vive para sí, sino para otros; es masoquista), sometida (de niña al padre y a la madre, de adulta a su hombre, o tal vez al hermano mayor) y tradicionalista (la mujer tiende a simbolizar el pasado; el hombre, el presente). Es dulce, fiel, amorosa, abnegada, dependiente y no responsable de sí fuera del hogar. Muy recientemente, por influjo del cine extranjero y de los medios de comunicación masiva, se ha ido perfilando otro tipo de mujer: la moderna, liberada, ambiciosa, manipuladora, creativa, decidida, emprendedora, que lucha por un lugar en la sociedad, aunque con sentimientos de culpa, por no prestarle el tiempo que debiera a los hijos. De estos dos perfiles tendrá que salir el punto justo y de equilibrio para la mexicana del futuro inmediato.",
+     "Los valores fundamentales para el mexicano son: familia, patria y religión."
+    ]
+   },
+   "citas_por_trabajo": {}
+  },
+  "Agnosia visual": {
+   "definicion": "El trabajo la define como la incapacidad de reconocer estímulos visuales a pesar de mantener intactas las funciones sensoriales básicas.",
+   "libros": [],
+   "trabajos": [
+    "Ensayo El hombre que confundió a su mujer con un sombrero"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Ensayo El hombre que confundió a su mujer con un sombrero": [
+     "En este capítulo se trata a un paciente con agnosia visual, el cual se podría definir como la incapacidad para identificar objetos mediante la visión, en ausencia de alteraciones visuales o intelectuales significativas."
+    ]
+   }
+  },
+  "Hemiplejía": {
+   "definicion": "Trastorno motor caracterizado por la parálisis de un lado del cuerpo, abordado en el ensayo a través de diversas metodologías de reeducación física.",
+   "libros": [],
+   "trabajos": [
+    "Ensayo El hombre que confundió a su mujer con un sombrero"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Ensayo El hombre que confundió a su mujer con un sombrero": [
+     "En el capítulo cuatro «El hombre que se cayó de la cama» se habla de un joven que padece de hemiplejía",
+     "constituye el fundamento de tratamiento físico de la hemiplejía."
+    ]
+   }
+  },
+  "Negligencia unilateral": {
+   "definicion": "Déficit neuropsicológico que impide al paciente orientarse, responder o atender a estímulos presentados en el lado opuesto a la lesión cerebral.",
+   "libros": [],
+   "trabajos": [
+    "Ensayo El hombre que confundió a su mujer con un sombrero"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Ensayo El hombre que confundió a su mujer con un sombrero": [
+     "La negligencia unilateral es un déficit neuropsicológico que puede aparecer tanto por lesiones en el hemisferio derecho (HD) como en el hemisferio izquierdo (HI)"
+    ]
+   }
+  },
+  "Estimulación cognitiva": {
+   "definicion": "Intervención terapéutica estructurada que busca recuperar o compensar funciones cerebrales dañadas mediante el entrenamiento sistemático.",
+   "libros": [],
+   "trabajos": [
+    "Ensayo El hombre que confundió a su mujer con un sombrero"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Ensayo El hombre que confundió a su mujer con un sombrero": [
+     "donde se utiliza un programa de estimulación cognitiva principalmente basado en la rehabilitación jerárquica de la función dañada"
+    ]
+   }
+  },
+  "Corteza cerebral": {
+   "definicion": "Estructura cerebral organizada de forma jerárquica en áreas de proyección, asociación e integración que procesa la información sensorial.",
+   "libros": [],
+   "trabajos": [
+    "Ensayo El hombre que confundió a su mujer con un sombrero"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Ensayo El hombre que confundió a su mujer con un sombrero": [
+     "Dicho programa se fundamenta en la reorganización jerárquica de la corteza cerebral compuesta de áreas primarias (de proyección)"
+    ]
+   }
+  },
+  "Rehabilitación": {
+   "definicion": "Proceso clínico orientado a restablecer el nivel de funcionamiento físico, cognitivo o social de personas con lesiones neurológicas.",
+   "libros": [],
+   "trabajos": [
+    "Ensayo El hombre que confundió a su mujer con un sombrero"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Ensayo El hombre que confundió a su mujer con un sombrero": [
+     "Los primeros estudios de rehabilitación de la heminegligencia visual fueron realizados por Lawson (1962)."
+    ]
+   }
+  },
+  "Paramnesia": {
+   "definicion": "Distorsión o falsificación de la memoria en la que los hechos reales se confunden con fantasías o ilusiones.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Memoria"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Memoria": [
+     "La paramnesia se define como una memoria falsa.",
+     "un conjunto de anomalías o distorsiones de la memoria en las que los hechos reales se confunden con fantasías o ilusiones."
+    ]
+   }
+  },
+  "Olvido": {
+   "definicion": "Pérdida de la capacidad de recuperar o acceder a recuerdos debido al transcurso del tiempo, caracterizada por la omisión de detalles.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Memoria"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Memoria": [
+     "el olvido se manifiesta a medida que pasa el tiempo y los recuerdos se vuelven más esquemáticos",
+     "el olvido es la pérdida de la capacidad de recordar cosas debido al tiempo transcurrido"
+    ]
+   }
+  },
+  "Distorsión": {
+   "definicion": "Alteración de un recuerdo real mediante la modificación de sus detalles o la adición de elementos nuevos influenciados por fuentes internas o externas.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Memoria"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Memoria": [
+     "la distorsión ocurre cuando los detalles de un recuerdo cambian por otros más estereotipados o familiares",
+     "La distorsión mantiene una parte de la historia o recuerdo real mientras que otra parte es cambiada por información que no es fiel al recuerdo original"
+    ]
+   }
+  },
+  "Déjà vu": {
+   "definicion": "Anomalía del reconocimiento caracterizada por una inapropiada e involuntaria sensación de familiaridad ante una experiencia que objetivamente es nueva.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Memoria"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Memoria": [
+     "un fallo del reconocimiento involuntario en donde un individuo experimenta una extraña familiaridad ante un evento que sabe racionalmente que es nuevo.",
+     "cualquier impresión subjetiva inapropiada de familiaridad de una experiencia presente con un pasado indefinido"
+    ]
+   }
+  },
+  "Jamais vu": {
+   "definicion": "Alteración del reconocimiento en la que un sujeto experimenta una sensación subjetiva de falta de familiaridad ante una situación u objeto conocido del pasado.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Memoria"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Memoria": [
+     "una impresión subjetivamente inapropiada de falta de familiaridad ante una experiencia presente que pertenece a un pasado definido.",
+     "reconocimiento subjetivo negativo contrastado con un reconocimiento objetivo positivo"
+    ]
+   }
+  },
+  "Falsos recuerdos": {
+   "definicion": "Recuerdos de eventos o detalles inexistentes o modificados que el sujeto cree firmemente como verdaderos, originados por procesos normales de codificación o sugestión.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Memoria"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Memoria": [
+     "recuerdos autobiográficos de eventos o detalles que nunca ocurrieron o que sucedieron de una manera distinta a la reportada, pero que el sujeto cree firmemente como verdaderos",
+     "el falso recuerdo es el resultado de procesos fisiológicos normalmente en el momento de la codificación"
+    ]
+   }
+  },
+  "Confabulación": {
+   "definicion": "Relato falso o distorsionado producido sin intención de engañar para rellenar lagunas de memoria, asociado comúnmente a patologías orgánicas.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Memoria"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Memoria": [
+     "relatos falsos sin intención de engañar, explicados por patologías orgánicas",
+     "la confabulación como una mentira honesta.",
+     "falsificación de la memoria que ocurre habiendo claridad de conciencia en asociación con una amnesia de origen orgánico"
+    ]
+   }
+  },
+  "Percepción": {
+   "definicion": "Proceso mental activo mediante el cual el cerebro clasifica, organiza e interpreta la información sensorial para construir la conciencia del entorno.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Percepción"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Percepción": [
+     "La percepción es el proceso mental mediante el cual las piezas de información sensorial pura se clasifican, identifican y organizan en patrones significativos.",
+     "la percepción constituye la base de la conciencia al permitirnos entender lo que sucede dentro y fuera de nuestro cuerpo."
+    ]
+   }
+  },
+  "Transducción": {
+   "definicion": "Conversión de la energía física del entorno en impulsos electroquímicos realizada por células receptoras sensoriales especializadas.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Percepción"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Percepción": [
+     "la célula receptora convierte esa energía en señales electroquímicas.",
+     "ocurre la transducción en la cóclea cuando la presión mueve el líquido interno"
+    ]
+   }
+  },
+  "Hiperestesia": {
+   "definicion": "Aumento anormal de la intensidad de las sensaciones o de la sensibilidad cutánea debido a causas emocionales, fisiológicas o neurológicas.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Percepción"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Percepción": [
+     "identifica la hiperestesia como un aumento en la intensidad de las sensaciones debido a emociones intensas o un descenso del umbral fisiológico",
+     "la hiperestesia se trata como un síntoma positivo de dolor neuropático definido por un aumento de la sensibilidad cutánea"
+    ]
+   }
+  },
+  "Ilusión": {
+   "definicion": "Deformación o interpretación incorrecta de un estímulo sensorial real, originada por inatención, afectos intensos o heurísticas cognitivas.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Percepción"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Percepción": [
+     "el cerebro llena los huecos de un estímulo incompleto basándose en la experiencia previa",
+     "las ilusiones no son fallos de atención, sino el resultado de heurísticas o reglas rápidas que el cerebro utiliza para resolver la ambigüedad del entorno."
+    ]
+   }
+  },
+  "Alucinación": {
+   "definicion": "Experiencia sensorial percibida como real que ocurre en ausencia de un estímulo externo, basada en representaciones y estados cerebrales internos.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Percepción"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Percepción": [
+     "las alucinaciones son experiencias sensoriales que ocurren en ausencia de un estímulo externo.",
+     "la alucinación es una prueba de que percibimos el mundo de forma indirecta a través de construcciones cerebrales."
+    ]
+   }
+  },
+  "Agnosia": {
+   "definicion": "Trastorno de la integración sensorial que impide el reconocimiento de estímulos a pesar de conservar intactas las funciones sensoriales básicas.",
+   "libros": [],
+   "trabajos": [
+    "Alteraciones de la Percepción"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {
+    "Alteraciones de la Percepción": [
+     "Las agnosias visuales resultan de una lesión en la vía ventral (la vía del “qué”)",
+     "un paciente con agnosia puede ser incapaz de identificar un objeto visualmente, pero conserva la capacidad de interactuar con él físicamente"
+    ]
+   }
+  },
+  "Crisis de identidad": {
+   "definicion": "una frase",
+   "libros": [],
+   "trabajos": [
+    "Psicología del Mexicano"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Colonialismo": {
+   "definicion": "una frase",
+   "libros": [],
+   "trabajos": [
+    "Psicología del Mexicano"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Madre importada peninsular": {
+   "definicion": "una frase",
+   "libros": [],
+   "trabajos": [
+    "Psicología del Mexicano"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Matriarcal machista": {
+   "definicion": "una frase",
+   "libros": [],
+   "trabajos": [
+    "Psicología del Mexicano"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Imitación": {
+   "definicion": "La capacidad de los niños para replicar acciones y comportamientos observados.",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Cognoscitivo en los Primeros Tres Años"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Permanencia del objeto": {
+   "definicion": "La comprensión de que los objetos continúan existiendo incluso cuando no están visibles.",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Cognoscitivo en los Primeros Tres Años"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Pensamiento simbólico": {
+   "definicion": "La capacidad de los niños para usar símbolos y representaciones mentales.",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Cognoscitivo en los Primeros Tres Años"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Habilidades lingüísticas y motrices": {
+   "definicion": "La capacidad de los niños para comunicarse y realizar movimientos coordinados.",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Cognoscitivo en los Primeros Tres Años"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Adolescencia": {
+   "definicion": "Etapa de transición entre la infancia y la adultez.",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Físico y Cognoscitivo en la Adolescencia"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Pubertad": {
+   "definicion": "Período de cambios físicos y hormonales.",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Físico y Cognoscitivo en la Adolescencia"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Autoconcepto": {
+   "definicion": "la percepción personal de uno mismo",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Psicosocial en la Edad Media"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Empatía": {
+   "definicion": "la capacidad de entender y compartir los sentimientos de los demás",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Psicosocial en la Edad Media"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Crianza": {
+   "definicion": "el proceso de desarrollo y formación de un individuo",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Psicosocial en la Edad Media"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Pobreza": {
+   "definicion": "la falta de recursos económicos",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Psicosocial en la Edad Media"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Familia": {
+   "definicion": "un grupo de personas relacionadas por sangre o matrimonio",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Psicosocial en la Edad Media"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Adopción": {
+   "definicion": "la acogida de un niño por otra familia",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Psicosocial en la Edad Media"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Hermanos": {
+   "definicion": "personas nacidas en el mismo hogar",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Psicosocial en la Edad Media"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Tratamiento": {
+   "definicion": "el proceso de ayudar a alguien a superar problemas emocionales o de conducta",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Psicosocial en la Edad Media"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Edad Media": {
+   "definicion": "un período histórico entre el siglo V y el siglo XV",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Psicosocial en la Edad Media"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Desarrollo psicosocial": {
+   "definicion": "el proceso de crecimiento y cambio personal",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Psicosocial en la Edad Media"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Entorno cultural": {
+   "definicion": "la influencia de las normas, valores y prácticas de una sociedad",
+   "libros": [],
+   "trabajos": [
+    "Desarrollo Psicosocial en la Edad Media"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Fertilización": {
+   "definicion": "El proceso mediante el cual un óvulo y un espermatozoide se fusionan para formar un cigoto.",
+   "libros": [],
+   "trabajos": [
+    "Formación de una nueva vida"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "ADN": {
+   "definicion": "El material genético que contiene la información necesaria para el desarrollo y funcionamiento de los seres vivos.",
+   "libros": [],
+   "trabajos": [
+    "Formación de una nueva vida"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Fenotipo": {
+   "definicion": "La manifestación observable de los genes en un organismo.",
+   "libros": [],
+   "trabajos": [
+    "Formación de una nueva vida"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Heredidad": {
+   "definicion": "El proceso mediante el cual los rasgos genéticos se transmiten de una generación a otra.",
+   "libros": [],
+   "trabajos": [
+    "Formación de una nueva vida"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Ambiente": {
+   "definicion": "Las condiciones externas que rodean a un organismo y que pueden influir en su desarrollo.",
+   "libros": [],
+   "trabajos": [
+    "Formación de una nueva vida"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  },
+  "Nutrición": {
+   "definicion": "La dieta y los nutrientes que proporcionan energía y materiales esenciales para el crecimiento y mantenimiento de los organismos.",
+   "libros": [],
+   "trabajos": [
+    "Formación de una nueva vida"
+   ],
+   "citas_por_libro": {},
+   "citas_por_trabajo": {}
+  }
+ },
+ "ultima_sintesis": "2026-07-17",
+ "trabajos": {
+  "ensayo el hombre que confundió a su mujer con un sombrero": {
+   "titulo": "Ensayo El hombre que confundió a su mujer con un sombrero",
+   "archivo": "Ensayo El hombre que confundió a su mujer con un sombrero.docx",
+   "hash": "6fb6aa8bfd70525d",
+   "materia": "Biología del comportamiento",
+   "conceptos": [
+    "Agnosia visual",
+    "Hemiplejía",
+    "Negligencia unilateral",
+    "Estimulación cognitiva",
+    "Corteza cerebral",
+    "Rehabilitación"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Agnosia visual",
+     "definicion": "El trabajo la define como la incapacidad de reconocer estímulos visuales a pesar de mantener intactas las funciones sensoriales básicas.",
+     "citas": [
+      "En este capítulo se trata a un paciente con agnosia visual, el cual se podría definir como la incapacidad para identificar objetos mediante la visión, en ausencia de alteraciones visuales o intelectuales significativas."
+     ]
+    },
+    {
+     "nombre": "Hemiplejía",
+     "definicion": "Trastorno motor caracterizado por la parálisis de un lado del cuerpo, abordado en el ensayo a través de diversas metodologías de reeducación física.",
+     "citas": [
+      "En el capítulo cuatro «El hombre que se cayó de la cama» se habla de un joven que padece de hemiplejía",
+      "constituye el fundamento de tratamiento físico de la hemiplejía."
+     ]
+    },
+    {
+     "nombre": "Negligencia unilateral",
+     "definicion": "Déficit neuropsicológico que impide al paciente orientarse, responder o atender a estímulos presentados en el lado opuesto a la lesión cerebral.",
+     "citas": [
+      "La negligencia unilateral es un déficit neuropsicológico que puede aparecer tanto por lesiones en el hemisferio derecho (HD) como en el hemisferio izquierdo (HI)"
+     ]
+    },
+    {
+     "nombre": "Estimulación cognitiva",
+     "definicion": "Intervención terapéutica estructurada que busca recuperar o compensar funciones cerebrales dañadas mediante el entrenamiento sistemático.",
+     "citas": [
+      "donde se utiliza un programa de estimulación cognitiva principalmente basado en la rehabilitación jerárquica de la función dañada"
+     ]
+    },
+    {
+     "nombre": "Corteza cerebral",
+     "definicion": "Estructura cerebral organizada de forma jerárquica en áreas de proyección, asociación e integración que procesa la información sensorial.",
+     "citas": [
+      "Dicho programa se fundamenta en la reorganización jerárquica de la corteza cerebral compuesta de áreas primarias (de proyección)"
+     ]
+    },
+    {
+     "nombre": "Rehabilitación",
+     "definicion": "Proceso clínico orientado a restablecer el nivel de funcionamiento físico, cognitivo o social de personas con lesiones neurológicas.",
+     "citas": [
+      "Los primeros estudios de rehabilitación de la heminegligencia visual fueron realizados por Lawson (1962)."
+     ]
+    }
+   ],
+   "ideas_clave": [
+    "La agnosia visual se caracteriza por la incapacidad de identificar objetos mediante la vista, sin que existan alteraciones sensoriales o intelectuales de base.",
+    "El modelo PAINT de estimulación cognitiva busca la rehabilitación de la agnosia visual mediante la reorganización jerárquica de la corteza cerebral.",
+    "La hemiplejía puede ser abordada mediante múltiples técnicas de fisioterapia, incluyendo el método GDS, la cinesiterapia y la facilitación neuromuscular propioceptiva (FNP).",
+    "La negligencia unilateral es un déficit neuropsicológico comúnmente asociado a lesiones en el hemisferio cerebral derecho.",
+    "Existen diversas técnicas experimentales para tratar la heminegligencia visual, tales como la estimulación vestibular calórica, el 'eye patching' y el entrenamiento con señales visuales.",
+    "La obra de Oliver Sacks es fundamental para la divulgación académica, pero requiere que el estudiante profundice en la investigación científica de cada déficit."
+   ],
+   "actualizado": "2026-07-17",
+   "motor": "gemini",
+   "version": 2
+  },
+  "monografía _ alteraciones de la memoria": {
+   "titulo": "Alteraciones de la Memoria",
+   "archivo": "Monografía _ Alteraciones de la Memoria.docx",
+   "hash": "9a120d6bfe0ffdb0",
+   "materia": "Memoria y Percepción",
+   "conceptos": [
+    "Paramnesia",
+    "Olvido",
+    "Distorsión",
+    "Déjà vu",
+    "Jamais vu",
+    "Falsos recuerdos",
+    "Confabulación"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Paramnesia",
+     "definicion": "Distorsión o falsificación de la memoria en la que los hechos reales se confunden con fantasías o ilusiones.",
+     "citas": [
+      "La paramnesia se define como una memoria falsa.",
+      "un conjunto de anomalías o distorsiones de la memoria en las que los hechos reales se confunden con fantasías o ilusiones."
+     ]
+    },
+    {
+     "nombre": "Olvido",
+     "definicion": "Pérdida de la capacidad de recuperar o acceder a recuerdos debido al transcurso del tiempo, caracterizada por la omisión de detalles.",
+     "citas": [
+      "el olvido se manifiesta a medida que pasa el tiempo y los recuerdos se vuelven más esquemáticos",
+      "el olvido es la pérdida de la capacidad de recordar cosas debido al tiempo transcurrido"
+     ]
+    },
+    {
+     "nombre": "Distorsión",
+     "definicion": "Alteración de un recuerdo real mediante la modificación de sus detalles o la adición de elementos nuevos influenciados por fuentes internas o externas.",
+     "citas": [
+      "la distorsión ocurre cuando los detalles de un recuerdo cambian por otros más estereotipados o familiares",
+      "La distorsión mantiene una parte de la historia o recuerdo real mientras que otra parte es cambiada por información que no es fiel al recuerdo original"
+     ]
+    },
+    {
+     "nombre": "Déjà vu",
+     "definicion": "Anomalía del reconocimiento caracterizada por una inapropiada e involuntaria sensación de familiaridad ante una experiencia que objetivamente es nueva.",
+     "citas": [
+      "un fallo del reconocimiento involuntario en donde un individuo experimenta una extraña familiaridad ante un evento que sabe racionalmente que es nuevo.",
+      "cualquier impresión subjetiva inapropiada de familiaridad de una experiencia presente con un pasado indefinido"
+     ]
+    },
+    {
+     "nombre": "Jamais vu",
+     "definicion": "Alteración del reconocimiento en la que un sujeto experimenta una sensación subjetiva de falta de familiaridad ante una situación u objeto conocido del pasado.",
+     "citas": [
+      "una impresión subjetivamente inapropiada de falta de familiaridad ante una experiencia presente que pertenece a un pasado definido.",
+      "reconocimiento subjetivo negativo contrastado con un reconocimiento objetivo positivo"
+     ]
+    },
+    {
+     "nombre": "Falsos recuerdos",
+     "definicion": "Recuerdos de eventos o detalles inexistentes o modificados que el sujeto cree firmemente como verdaderos, originados por procesos normales de codificación o sugestión.",
+     "citas": [
+      "recuerdos autobiográficos de eventos o detalles que nunca ocurrieron o que sucedieron de una manera distinta a la reportada, pero que el sujeto cree firmemente como verdaderos",
+      "el falso recuerdo es el resultado de procesos fisiológicos normalmente en el momento de la codificación"
+     ]
+    },
+    {
+     "nombre": "Confabulación",
+     "definicion": "Relato falso o distorsionado producido sin intención de engañar para rellenar lagunas de memoria, asociado comúnmente a patologías orgánicas.",
+     "citas": [
+      "relatos falsos sin intención de engañar, explicados por patologías orgánicas",
+      "la confabulación como una mentira honesta.",
+      "falsificación de la memoria que ocurre habiendo claridad de conciencia en asociación con una amnesia de origen orgánico"
+     ]
+    }
+   ],
+   "ideas_clave": [
+    "La memoria es un proceso de reconstrucción activa y no una simple recuperación de información inerte.",
+    "Las paramnesias representan distorsiones donde los hechos reales se confunden con fantasías o ilusiones.",
+    "El olvido se caracteriza por la omisión y pérdida de accesibilidad, mientras que la distorsión implica la comisión o alteración de la información original.",
+    "El déjà vu y el jamais vu son anomalías del reconocimiento que implican un conflicto entre la familiaridad subjetiva y la realidad objetiva.",
+    "Los falsos recuerdos se originan comúnmente por fallos en la codificación en sujetos sanos, mientras que las confabulaciones son evocaciones falsas asociadas a patologías orgánicas sin intención de engañar.",
+    "Las etiologías de las alteraciones de la memoria se dividen en neurológicas (daños orgánicos) y psicógenas/cognitivas (mecanismos de defensa o límites del procesamiento)."
+   ],
+   "actualizado": "2026-07-17",
+   "motor": "gemini",
+   "version": 2
+  },
+  "monografía _ alteraciones de la percepción": {
+   "titulo": "Alteraciones de la Percepción",
+   "archivo": "Monografía _ Alteraciones de la Percepción.docx",
+   "hash": "0d0fd69ceef69d27",
+   "materia": "Memoria y Percepción",
+   "conceptos": [
+    "Percepción",
+    "Transducción",
+    "Hiperestesia",
+    "Ilusión",
+    "Alucinación",
+    "Agnosia"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Percepción",
+     "definicion": "Proceso mental activo mediante el cual el cerebro clasifica, organiza e interpreta la información sensorial para construir la conciencia del entorno.",
+     "citas": [
+      "La percepción es el proceso mental mediante el cual las piezas de información sensorial pura se clasifican, identifican y organizan en patrones significativos.",
+      "la percepción constituye la base de la conciencia al permitirnos entender lo que sucede dentro y fuera de nuestro cuerpo."
+     ]
+    },
+    {
+     "nombre": "Transducción",
+     "definicion": "Conversión de la energía física del entorno en impulsos electroquímicos realizada por células receptoras sensoriales especializadas.",
+     "citas": [
+      "la célula receptora convierte esa energía en señales electroquímicas.",
+      "ocurre la transducción en la cóclea cuando la presión mueve el líquido interno"
+     ]
+    },
+    {
+     "nombre": "Hiperestesia",
+     "definicion": "Aumento anormal de la intensidad de las sensaciones o de la sensibilidad cutánea debido a causas emocionales, fisiológicas o neurológicas.",
+     "citas": [
+      "identifica la hiperestesia como un aumento en la intensidad de las sensaciones debido a emociones intensas o un descenso del umbral fisiológico",
+      "la hiperestesia se trata como un síntoma positivo de dolor neuropático definido por un aumento de la sensibilidad cutánea"
+     ]
+    },
+    {
+     "nombre": "Ilusión",
+     "definicion": "Deformación o interpretación incorrecta de un estímulo sensorial real, originada por inatención, afectos intensos o heurísticas cognitivas.",
+     "citas": [
+      "el cerebro llena los huecos de un estímulo incompleto basándose en la experiencia previa",
+      "las ilusiones no son fallos de atención, sino el resultado de heurísticas o reglas rápidas que el cerebro utiliza para resolver la ambigüedad del entorno."
+     ]
+    },
+    {
+     "nombre": "Alucinación",
+     "definicion": "Experiencia sensorial percibida como real que ocurre en ausencia de un estímulo externo, basada en representaciones y estados cerebrales internos.",
+     "citas": [
+      "las alucinaciones son experiencias sensoriales que ocurren en ausencia de un estímulo externo.",
+      "la alucinación es una prueba de que percibimos el mundo de forma indirecta a través de construcciones cerebrales."
+     ]
+    },
+    {
+     "nombre": "Agnosia",
+     "definicion": "Trastorno de la integración sensorial que impide el reconocimiento de estímulos a pesar de conservar intactas las funciones sensoriales básicas.",
+     "citas": [
+      "Las agnosias visuales resultan de una lesión en la vía ventral (la vía del “qué”)",
+      "un paciente con agnosia puede ser incapaz de identificar un objeto visualmente, pero conserva la capacidad de interactuar con él físicamente"
+     ]
+    }
+   ],
+   "ideas_clave": [
+    "La percepción es una reconstrucción activa del cerebro y no una copia directa de la realidad exterior.",
+    "El cerebro funciona como una máquina de predicción que busca minimizar el error formulando hipótesis sobre el entorno.",
+    "El procesamiento visual se organiza en dos vías corticales disociables: la vía ventral (para el reconocimiento del 'qué') y la vía dorsal (para la localización y acción del 'dónde/cómo').",
+    "Las alteraciones cuantitativas de la percepción se explican tanto por factores psicopatológicos como por mecanismos de sensibilización neural periférica y central.",
+    "Las ilusiones pueden surgir por inatención, estados emocionales intensos (catatímicas) o como resultado de heurísticas cognitivas para resolver la ambigüedad.",
+    "Las alucinaciones apoyan la teoría del realismo indirecto, demostrando que la experiencia consciente se basa en representaciones cerebrales internas en ausencia de estímulos.",
+    "Las agnosias son trastornos de integración que evidencian fallos selectivos debido a daños en áreas de asociación cortical específicas."
+   ],
+   "actualizado": "2026-07-17",
+   "motor": "gemini",
+   "version": 2
+  },
+  "psicología del mexicano": {
+   "titulo": "Psicología del Mexicano",
+   "archivo": "Psicología del Mexicano.docx",
+   "hash": "f1af6103b749da86",
+   "materia": "Psicología",
+   "conceptos": [
+    "Crisis de identidad",
+    "Colonialismo",
+    "Madre importada peninsular",
+    "Matriarcal machista"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Crisis de identidad",
+     "definicion": "una frase",
+     "citas": []
+    },
+    {
+     "nombre": "Colonialismo",
+     "definicion": "una frase",
+     "citas": []
+    },
+    {
+     "nombre": "Madre importada peninsular",
+     "definicion": "una frase",
+     "citas": []
+    },
+    {
+     "nombre": "Matriarcal machista",
+     "definicion": "una frase",
+     "citas": []
+    }
+   ],
+   "ideas_clave": [
+    "4-6 ideas"
+   ],
+   "actualizado": "2026-07-17",
+   "motor": "local",
+   "version": 0
+  },
+  "reporte de lectura _desarrollo cognoscitivo en los primeros tres años_": {
+   "titulo": "Desarrollo Cognoscitivo en los Primeros Tres Años",
+   "archivo": "Reporte de Lectura _Desarrollo Cognoscitivo en los Primeros Tres Años_.docx",
+   "hash": "86db3f791730618e",
+   "materia": "Psicología",
+   "conceptos": [
+    "Imitación",
+    "Permanencia del objeto",
+    "Pensamiento simbólico",
+    "Habilidades lingüísticas y motrices"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Imitación",
+     "definicion": "La capacidad de los niños para replicar acciones y comportamientos observados.",
+     "citas": []
+    },
+    {
+     "nombre": "Permanencia del objeto",
+     "definicion": "La comprensión de que los objetos continúan existiendo incluso cuando no están visibles.",
+     "citas": []
+    },
+    {
+     "nombre": "Pensamiento simbólico",
+     "definicion": "La capacidad de los niños para usar símbolos y representaciones mentales.",
+     "citas": []
+    },
+    {
+     "nombre": "Habilidades lingüísticas y motrices",
+     "definicion": "La capacidad de los niños para comunicarse y realizar movimientos coordinados.",
+     "citas": []
+    }
+   ],
+   "ideas_clave": [
+    "Imitación",
+    "Permanencia del objeto",
+    "Pensamiento simbólico",
+    "Habilidades lingüísticas y motrices"
+   ],
+   "actualizado": "2026-07-17",
+   "motor": "local",
+   "version": 0
+  },
+  "reporte de _desarrollo físico y cognoscitivo en la adolescencia_": {
+   "titulo": "Desarrollo Físico y Cognoscitivo en la Adolescencia",
+   "archivo": "Reporte de _Desarrollo Físico y Cognoscitivo en la Adolescencia_.docx",
+   "hash": "bfd4833ff80a93cc",
+   "materia": "Educación",
+   "conceptos": [
+    "Adolescencia",
+    "Pubertad"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Adolescencia",
+     "definicion": "Etapa de transición entre la infancia y la adultez.",
+     "citas": []
+    },
+    {
+     "nombre": "Pubertad",
+     "definicion": "Período de cambios físicos y hormonales.",
+     "citas": []
+    }
+   ],
+   "ideas_clave": [
+    "Cambios físicos",
+    "Madurez cerebral",
+    "Relaciones sociales"
+   ],
+   "actualizado": "2026-07-17",
+   "motor": "local",
+   "version": 0
+  },
+  "reporte de _desarrollo psicosocial en la edad media_": {
+   "titulo": "Desarrollo Psicosocial en la Edad Media",
+   "archivo": "Reporte de _Desarrollo Psicosocial en la Edad Media_.docx",
+   "hash": "042160c740572286",
+   "materia": "Psicología",
+   "conceptos": [
+    "Autoconcepto",
+    "Empatía",
+    "Crianza",
+    "Pobreza",
+    "Familia",
+    "Adopción",
+    "Hermanos",
+    "Tratamiento",
+    "Edad Media",
+    "Desarrollo psicosocial",
+    "Entorno cultural"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Autoconcepto",
+     "definicion": "la percepción personal de uno mismo",
+     "citas": []
+    },
+    {
+     "nombre": "Empatía",
+     "definicion": "la capacidad de entender y compartir los sentimientos de los demás",
+     "citas": []
+    },
+    {
+     "nombre": "Crianza",
+     "definicion": "el proceso de desarrollo y formación de un individuo",
+     "citas": []
+    },
+    {
+     "nombre": "Pobreza",
+     "definicion": "la falta de recursos económicos",
+     "citas": []
+    },
+    {
+     "nombre": "Familia",
+     "definicion": "un grupo de personas relacionadas por sangre o matrimonio",
+     "citas": []
+    },
+    {
+     "nombre": "Adopción",
+     "definicion": "la acogida de un niño por otra familia",
+     "citas": []
+    },
+    {
+     "nombre": "Hermanos",
+     "definicion": "personas nacidas en el mismo hogar",
+     "citas": []
+    },
+    {
+     "nombre": "Tratamiento",
+     "definicion": "el proceso de ayudar a alguien a superar problemas emocionales o de conducta",
+     "citas": []
+    },
+    {
+     "nombre": "Edad Media",
+     "definicion": "un período histórico entre el siglo V y el siglo XV",
+     "citas": []
+    },
+    {
+     "nombre": "Desarrollo psicosocial",
+     "definicion": "el proceso de crecimiento y cambio personal",
+     "citas": []
+    },
+    {
+     "nombre": "Entorno cultural",
+     "definicion": "la influencia de las normas, valores y prácticas de una sociedad",
+     "citas": []
+    }
+   ],
+   "ideas_clave": [
+    "familia",
+    "adopción",
+    "hermanos",
+    "pares",
+    "tratamiento",
+    "desafíos culturales"
+   ],
+   "actualizado": "2026-07-17",
+   "motor": "local",
+   "version": 0
+  },
+  "reporte de lectura “formación de una nueva vida”": {
+   "titulo": "Formación de una nueva vida",
+   "archivo": "Reporte de lectura “Formación de una nueva vida”.docx",
+   "hash": "0ce8fbd6daee393a",
+   "materia": "Biología",
+   "conceptos": [
+    "Fertilización",
+    "ADN",
+    "Fenotipo",
+    "Heredidad",
+    "Ambiente",
+    "Nutrición"
+   ],
+   "conceptos_detalle": [
+    {
+     "nombre": "Fertilización",
+     "definicion": "El proceso mediante el cual un óvulo y un espermatozoide se fusionan para formar un cigoto.",
+     "citas": []
+    },
+    {
+     "nombre": "ADN",
+     "definicion": "El material genético que contiene la información necesaria para el desarrollo y funcionamiento de los seres vivos.",
+     "citas": []
+    },
+    {
+     "nombre": "Fenotipo",
+     "definicion": "La manifestación observable de los genes en un organismo.",
+     "citas": []
+    },
+    {
+     "nombre": "Heredidad",
+     "definicion": "El proceso mediante el cual los rasgos genéticos se transmiten de una generación a otra.",
+     "citas": []
+    },
+    {
+     "nombre": "Ambiente",
+     "definicion": "Las condiciones externas que rodean a un organismo y que pueden influir en su desarrollo.",
+     "citas": []
+    },
+    {
+     "nombre": "Nutrición",
+     "definicion": "La dieta y los nutrientes que proporcionan energía y materiales esenciales para el crecimiento y mantenimiento de los organismos.",
+     "citas": []
+    }
+   ],
+   "ideas_clave": [
+    "La fertilización es el inicio de la vida.",
+    "El ADN y el genotipo determinan el fenotipo.",
+    "La herencia y el ambiente influyen en el desarrollo.",
+    "Factores ambientales afectan la calidad de los espermatozoides.",
+    "La exposición a plomo, marihuana, humo, alcohol, radiación, dietilestilbestrol, insecticidas y ozono puede ser dañina.",
+    "La nutrición adecuada es crucial para el desarrollo saludable."
+   ],
+   "actualizado": "2026-07-17",
+   "motor": "local",
+   "version": 0
+  }
+ },
+ "sintesis_conceptos": {
+  "Poder": {
+   "huella": "[[\"La voluntad de saber\", \"Triste tigre\"], [], {\"La voluntad de saber\": [\"espirales perpetuas del poder y del placer.\", \"una distribución de puntos de poder, jerarquizados o enfrentados; de los placeres «perseguidos», es decir, a la vez deseados y hostigados;\"], \"Triste tigre\": [\"Hay que considerar que la violación es más una cuestión de poder que de sexo.\", \"En el artículo que habla de la violencia como válvula psicológica, Nicolas Estano, psicólogo clínico experto en el tribunal de París, explica que «la violación, en lugar de ser principalmente una expresión de deseo sexual, consiste más bien en el uso de la sexualidad para expresar cuestiones de poder o de ira. Se trata, pues, de un acto pseudosexual, un conjunto de comportamientos sexuales más relacionados con el estatus, la hostilidad, el control, la dominación, que con la sensualidad o la satisfacción sexual».\", \"La dominación sexual es una manera de sumisión que llega hasta los fundamentos del ser.\", \"Como muchos hombres que abusan de niños, mi padrastro me pedía a menudo que le practicara sexo oral. Es un acto que se puede realizar fácilmente, sin hacer ruido, que no deja rastro. Se podría decir que ofrece una buena relación calidad-precio. También es un acto que permite disfrutar de la dominación total. Meter el pene en la boca de un niño significa penetrar no solo su cuerpo, sino también su cabeza. Hay otras agresiones que van a la cabeza, es cierto, y al corazón también, pero el sexo en la boca, concreta y simbólicamente, denota una fuerte sumisión y obliga a la víctima a participar. No\"]}, {}]",
+   "analisis": {
+    "sintesis": "El concepto de poder se despliega en estas lecturas no como una fuerza puramente restrictiva, sino como un mecanismo intrínsecamente ligado a la esfera de lo íntimo, lo corporal y lo placentero. Mientras que en «La voluntad de saber» se teoriza una espiral productiva donde el poder y el placer se alimentan mutuamente a través de redes de persecución y deseo, «Triste tigre» aterriza esta abstracción teórica en la crudeza del abuso, revelando cómo la sexualidad es instrumentalizada como un vehículo de dominación absoluta. Ambas fuentes coinciden en que el sexo no es ajeno al poder, sino uno de sus escenarios más potentes de manifestación, donde el placer y el control se entrelazan de manera indisoluble.\n\nDe la intersección de estas perspectivas emerge una comprensión perturbadora que ninguna fuente posee por separado: el placer del dominador no es un subproducto del deseo sexual, sino el resultado directo del ejercicio del poder sobre la subjetividad del otro. Así, la \"espiral perpetua\" foucaultiana encuentra su expresión más sombría y asimétrica en la violencia sexual, donde la búsqueda de \"dominación total\" destruye la reciprocidad de la red de relaciones para instaurar una sumisión que anula el ser. El conjunto de las lecturas nos obliga a ver que el poder no solo produce subjetividades, sino que también tiene la capacidad de devastarlas por completo mediante la erotización del sometimiento.",
+    "por_fuente": [
+     {
+      "fuente": "LIBRO «La voluntad de saber» (lectura)",
+      "posicion": "El poder se entiende como una red productiva y relacional que coexiste en una espiral infinita con el placer, donde la prohibición y la persecución actúan como catalizadores del deseo y la subjetividad."
+     },
+     {
+      "fuente": "LIBRO «Triste tigre» (lectura)",
+      "posicion": "El poder se manifiesta como dominación absoluta a través de la violencia sexual, utilizando el acto físico no por deseo, sino como un instrumento pseudosexual para someter los fundamentos del ser de la víctima."
+     }
+    ],
+    "friccion": "Existe una tensión profunda entre la visión foucaultiana del poder como una red difusa, móvil y productiva de placeres, y la vivencia del abuso en «Triste tigre», donde el poder se revela como una dominación unilateral, destructiva y asimétrica que aniquila la capacidad de resistencia del sujeto sometido.",
+    "pregunta": "¿Hasta qué punto la teorización del poder como una red productiva y difusa de placeres corre el riesgo de invisibilizar o relativizar la violencia unilateral y asimétrica del abuso real, donde el poder no produce saber, sino la destrucción del ser?"
+   }
+  },
+  "Trauma": {
+   "huella": "[[\"El niño superviviente: Curar el trauma del desarrollo\", \"Triste tigre\"], [], {\"El niño superviviente: Curar el trauma del desarrollo\": [\"La documentación de déficits en múltiples ámbitos de funcionamiento entre quienes han sufrido formas severas de trauma crónico llevó a Bessel van der Kolk a proponer una nueva categoría diagnóstica denominada Trastorno traumático del desarrollo para el DSM-5, el nuevo Manual diagnóstico y estadístico publicado por la Asociación Estadounidense de Psiquiatría (van der Kolk, 2005; van der Kolk et al., 2009).\", \"Para el propósito de este libro, utilizaré el término trauma del desarrollo para referirme a los niños y adolescentes que han sufrido múltiples formas de trauma de inicio temprano.\", \"El término niño superviviente hará referencia a niños y adolescentes que han experimentado múltiples formas de trauma y que han sufrido alguna inadecuada cobertura en los cuidados, a menudo debido a que alguno de sus cuidadores también ha sufrido un trauma temprano en su origen. Tabla 1.1. Síntomas del trauma del desarrollo\"], \"Triste tigre\": [\"No recuerdo esa historia, así que ella tiene que contarme que, al principio de nuestra convivencia con él, una vez, yo me había clavado un imperdible, un alfiler de gancho, en la vagina, y ella tuvo que intervenir para quitármelo.\", \"El eslabón perdido llegó más tarde, con el desarrollo de la neurociencia, que muestra cómo el trauma afecta a la producción de hormonas, a los circuitos neuronales y, finalmente, al sistema inmunitario e incluso al ADN.\", \"«Lo que importa no es lo que han hecho de nosotros, sino lo que hacemos con lo que han hecho de nosotros». Se trataba de elegir dentro de ese saco\"]}, {}]",
+   "analisis": {
+    "sintesis": "La conceptualización del trauma transita desde la delimitación clínica y sistémica en «El niño superviviente» hacia la encarnación biológica y existencial en «Triste tigre». Mientras la primera fuente propone el \"Trastorno traumático del desarrollo\" para clasificar el impacto acumulativo del maltrato temprano y la negligencia intergeneracional del cuidador, la segunda dota de materialidad a este diagnóstico al mostrar cómo el trauma se inscribe físicamente en el cuerpo, alterando desde los circuitos neuronales hasta el ADN, y manifestándose en la amnesia y la memoria somática. Ambas perspectivas coinciden en que el trauma no es un evento aislado, sino una fuerza destructiva que altera el desarrollo integral y la biología del individuo.\n\nLa comprensión profunda que emerge de este cruce radica en la transición de la supervivencia pasiva a la agencia activa. El \"niño superviviente\" de la perspectiva clínica, condicionado por un entorno de cuidados deficientes, encuentra en la narrativa de «Triste tigre» un puente hacia la resiliencia existencial: el trauma altera la biología y la historia personal, pero no anula la capacidad de elección posterior. Al integrar ambas visiones, se revela que el trauma del desarrollo es una reconfiguración neurobiológica profunda que requiere tanto el reconocimiento de su daño sistémico como la reclamación activa de la propia soberanía vital.",
+    "por_fuente": [
+     {
+      "fuente": "LIBRO «El niño superviviente: Curar el trauma del desarrollo» (lectura)",
+      "posicion": "Define el trauma como un trastorno del desarrollo acumulativo e intergeneracional, abogando por una categoría diagnóstica específica que reconozca el impacto de la negligencia de cuidadores previamente traumatizados."
+     },
+     {
+      "fuente": "LIBRO «Triste tigre» (lectura)",
+      "posicion": "Aborda el trauma desde la vivencia encarnada y la neurobiología, entendiéndolo como una huella física que altera el organismo (ADN, inmunidad) pero que exige una respuesta existencial de agencia frente al daño recibido."
+     }
+    ],
+    "friccion": "Existe una tensión sutil entre la necesidad clínica de categorizar y diagnosticar el trauma del desarrollo (lo que puede encasillar al sujeto en el rol pasivo de 'víctima' o 'paciente' con déficits multisistémicos) y la postura existencialista de «Triste tigre», que se resiste a que el sujeto sea definido por lo que hicieron de él, priorizando la agencia y la reconstrucción activa del self por encima del determinismo biológico.",
+    "pregunta": "¿Cómo puede la intervención clínica diagnosticar y tratar el trauma del desarrollo sin reducir la identidad del 'niño superviviente' a sus alteraciones neurobiológicas, garantizando un espacio para su agencia existencial?"
+   }
+  },
+  "Identidad": {
+   "huella": "[[\"El niño superviviente: Curar el trauma del desarrollo\", \"Psicología del Mexicano\"], [], {\"El niño superviviente: Curar el trauma del desarrollo\": [\"También indicaron que los amigos imaginarios de los niños disociativos son más proclives a tener roles más complejos en las vidas de los niños.\", \"Trujillo y sus colegas averiguaron que era más probable que se les atribuyeran características malévolas a los amigos imaginarios de los niños disociativos que a los de los niños normales.\", \"Es bastante más probable que los niños disociativos indiquen que sus “amigos” toman el control y les obligan a hacer cosas (74% frente al 37% respectivamente) y también es más probable que se sientan “mandados” por el amigo imaginario o por la voz que sus homólogos normales (72% frente al 27% respectivamente).\", \"Los niños disociativos hablan de presencias imaginarias que discuten con ellos, que les mandan, que les dominan y que por lo general les causan problemas.\"], \"Psicología del Mexicano\": [\"Su perfil psicológico: es abnegada (no vive para sí, sino para otros; es masoquista), sometida (de niña al padre y a la madre, de adulta a su hombre, o tal vez al hermano mayor) y tradicionalista (la mujer tiende a simbolizar el pasado; el hombre, el presente). Es dulce, fiel, amorosa, abnegada, dependiente y no responsable de sí fuera del hogar. Muy recientemente, por influjo del cine extranjero y de los medios de comunicación masiva, se ha ido perfilando otro tipo de mujer: la moderna, liberada, ambiciosa, manipuladora, creativa, decidida, emprendedora, que lucha por un lugar en la sociedad, aunque con sentimientos de culpa, por no prestarle el tiempo que debiera a los hijos. De estos dos perfiles tendrá que salir el punto justo y de equilibrio para la mexicana del futuro inmediato.\"]}, {}]",
+   "analisis": {
+    "sintesis": "El concepto de identidad en estas lecturas se revela como un territorio de disputa donde la autonomía del \"yo\" es usurpada por fuerzas dominantes, ya sean internas o externas. Lo que en \"El niño superviviente\" se describe como una fragmentación disociativa controlada por \"amigos imaginarios malévolos\", en \"Psicología del Mexicano\" se traduce en la \"abnegación y sumisión\" de la mujer ante figuras de autoridad. En ambos casos, el mecanismo subyacente es el mismo bajo diferente nombre: la pérdida de agencia y la entrega del control personal a un \"otro\" (una voz interna hostil o un mandato familiar) que dicta las acciones y anula la responsabilidad sobre el propio ser.\n\nAl integrar ambas perspectivas, emerge una comprensión que ninguna fuente posee por sí sola: la disociación psíquica y la sumisión cultural operan de manera análoga en la estructuración de la identidad. Mientras que el trauma infantil fragmenta el yo creando entidades internas controladoras para sobrevivir, el condicionamiento social moldea un perfil de dependencia que normaliza la entrega del control personal como un rol de género. Aunque en esta selección no se presentan trabajos universitarios propios para contrastar, el diálogo entre estas lecturas sugiere que la identidad es un equilibrio vulnerable susceptible de ser colonizado tanto por la psicopatología del desarrollo como por la normatividad sociocultural.",
+    "por_fuente": [
+     {
+      "fuente": "LIBRO «El niño superviviente: Curar el trauma del desarrollo» (lectura)",
+      "posicion": "Aborda la identidad desde la fragmentación disociativa infantil, donde el sentido del yo es dominado y controlado por presencias o amigos imaginarios de carácter malévolo."
+     },
+     {
+      "fuente": "LIBRO «Psicología del Mexicano» (lectura)",
+      "posicion": "Define la identidad de la mujer tradicional a través de la sumisión, la abnegación y la dependencia, donde el yo se anula para vivir en función de los demás."
+     }
+    ],
+    "friccion": "La fricción radica en la normalización y valoración de la pérdida de agencia: mientras que en el trauma infantil el control externo de la personalidad (las voces o amigos imaginarios) se reconoce como una patología disociativa grave, en el perfil cultural de la mujer mexicana la sumisión y la falta de responsabilidad sobre sí misma se describen como rasgos tradicionales e incluso deseables ('dulce, fiel, amorosa'), invisibilizando el carácter potencialmente traumático o limitante de dicha anulación del yo.",
+    "pregunta": "¿Hasta qué punto las identidades estructuradas bajo la sumisión cultural y la abnegación son, en realidad, mecanismos de disociación colectiva y adaptativa frente a entornos hostiles?"
+   }
+  }
+ }
+}

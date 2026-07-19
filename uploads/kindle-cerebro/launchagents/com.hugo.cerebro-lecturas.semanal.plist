@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key><string>com.hugo.cerebro-lecturas.semanal</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/hugo/Library/CerebroLecturas/cerebro_agente</string>
+        <string>/usr/bin/python3</string>
+        <string>/Users/hugo/Documents/kindle-cerebro/procesar.py</string>
+        <string>--sintesis</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <dict><key>Weekday</key><integer>0</integer><key>Hour</key><integer>10</integer><key>Minute</key><integer>0</integer></dict>
+    <key>StandardOutPath</key><string>/Users/hugo/Library/CerebroLecturas/logs/launchd-semanal.log</string>
+    <key>StandardErrorPath</key><string>/Users/hugo/Library/CerebroLecturas/logs/launchd-semanal.log</string>
+</dict>
+</plist>

@@ -1,0 +1,482 @@
+2026-07-16 21:34:44,170 INFO === inicio (vault=/private/tmp/claude-501/-Users-hugo-Documents/015d90fc-5381-4f58-98ef-3600c46af06a/scratchpad/vault-prueba) ===
+2026-07-16 21:34:44,171 INFO Highlights únicos tras deduplicar: 5
+2026-07-16 21:34:44,172 INFO Procesando libro: Hábitos atómicos (3 highlights)
+2026-07-16 21:34:44,541 ERROR Fallo procesando 'Hábitos atómicos'
+Traceback (most recent call last):
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 107, in gemini
+    with urllib.request.urlopen(peticion, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 509, in main
+    analisis = procesar_libro(grupo, grupo["entradas"], clave)
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 252, in procesar_libro
+    return gemini(prompt, clave)
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 121, in gemini
+    raise RuntimeError(f"Gemini HTTP {e.code}: {detalle}") from e
+RuntimeError: Gemini HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-07-16 21:34:44,546 INFO Procesando libro: Deep Work (2 highlights)
+2026-07-16 21:34:44,930 ERROR Fallo procesando 'Deep Work'
+Traceback (most recent call last):
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 107, in gemini
+    with urllib.request.urlopen(peticion, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 509, in main
+    analisis = procesar_libro(grupo, grupo["entradas"], clave)
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 252, in procesar_libro
+    return gemini(prompt, clave)
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 121, in gemini
+    raise RuntimeError(f"Gemini HTTP {e.code}: {detalle}") from e
+RuntimeError: Gemini HTTP 404: {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use a newer model for the latest features and improvements.",
+    "status": "NOT_FOUND"
+  }
+}
+
+2026-07-16 21:34:44,933 INFO Notas de concepto actualizadas: 0
+2026-07-16 21:34:44,933 INFO Sin libros en estado; no hay nada que sintetizar
+2026-07-16 21:34:44,934 INFO === fin: 2 libros actualizados, 2 errores ===
+2026-07-16 21:35:12,381 INFO === inicio (vault=/private/tmp/claude-501/-Users-hugo-Documents/015d90fc-5381-4f58-98ef-3600c46af06a/scratchpad/vault-prueba) ===
+2026-07-16 21:35:12,381 INFO Highlights únicos tras deduplicar: 5
+2026-07-16 21:35:12,381 INFO Procesando libro: Hábitos atómicos (3 highlights)
+2026-07-16 21:35:19,303 INFO Nota de libro escrita: Hábitos atómicos.md
+2026-07-16 21:35:26,307 INFO Procesando libro: Deep Work (2 highlights)
+2026-07-16 21:35:34,965 INFO Nota de libro escrita: Deep Work.md
+2026-07-16 21:35:41,972 INFO Notas de concepto actualizadas: 8
+2026-07-16 21:35:51,024 WARNING Respuesta no parseable (intento 1): Expecting ',' delimiter: line 31 column 681 (char 3797)
+2026-07-16 21:36:06,397 INFO Sintesis semanal escrita: 2026-S29.md
+2026-07-16 21:36:06,399 INFO === fin: 2 libros actualizados ===
+2026-07-16 21:36:45,267 INFO === inicio (vault=/private/tmp/claude-501/-Users-hugo-Documents/015d90fc-5381-4f58-98ef-3600c46af06a/scratchpad/vault-prueba) ===
+2026-07-16 21:36:45,268 INFO Highlights únicos tras deduplicar: 5
+2026-07-16 21:36:45,269 INFO Notas de concepto actualizadas: 8
+2026-07-16 21:36:54,120 INFO Sintesis semanal escrita: 2026-S29.md
+2026-07-16 21:36:54,122 INFO === fin: 0 libros actualizados ===
+2026-07-16 21:49:01,828 INFO === inicio (vault=/Users/hugo/Library/Mobile Documents/com~apple~CloudDocs/Obsidian/Lecturas) ===
+2026-07-16 21:49:01,831 INFO Highlights únicos tras deduplicar: 24
+2026-07-16 21:49:01,831 INFO Procesando libro: La_voluntad_de_saber_Michel_Foucault (3 highlights)
+2026-07-16 21:49:12,535 INFO Nota de libro escrita: La_voluntad_de_saber_Michel_Foucault.md
+2026-07-16 21:49:19,539 INFO Procesando libro: Una_tribu_propia_Steve_Silberman (9 highlights)
+2026-07-16 21:49:27,677 WARNING Respuesta no parseable (intento 1): Extra data: line 40 column 1 (char 2133)
+2026-07-16 21:49:41,685 INFO Nota de libro escrita: Una_tribu_propia_Steve_Silberman.md
+2026-07-16 21:49:48,690 INFO Procesando libro: El nino superviviente. Curar el trauma del - Joyanna L. Silberg (10 highlights)
+2026-07-16 21:49:58,621 INFO Nota de libro escrita: El nino superviviente. Curar el trauma del - Joyanna L. Silberg.md
+2026-07-16 21:50:05,628 INFO Procesando libro: Psicologia del Mexicano - Desconocido (2 highlights)
+2026-07-16 21:50:51,652 INFO === inicio (vault=/Users/hugo/Library/Mobile Documents/com~apple~CloudDocs/Obsidian/Lecturas) ===
+2026-07-16 21:50:51,655 INFO Highlights únicos tras deduplicar: 143
+2026-07-16 21:50:51,656 INFO Procesando libro: La_voluntad_de_saber_Michel_Foucault (22 highlights)
+2026-07-16 21:51:03,911 INFO Nota de libro escrita: La voluntad de saber.md
+2026-07-16 21:51:10,917 INFO Procesando libro: Una_tribu_propia_Steve_Silberman (56 highlights)
+2026-07-16 21:51:29,586 INFO Nota de libro escrita: Una tribu propia Autismo y el futuro de la neurodiversidad.md
+2026-07-16 21:51:36,592 INFO Procesando libro: El nino superviviente. Curar el trauma del - Joyanna L. Silberg (37 highlights)
+2026-07-16 21:51:50,209 WARNING Respuesta no parseable (intento 1): Extra data: line 69 column 1 (char 4466)
+2026-07-16 21:52:11,511 INFO Nota de libro escrita: El niño superviviente Curar el trauma del desarrollo.md
+2026-07-16 21:52:18,518 INFO Procesando libro: TRISTE TIGRE -- Neige Sinno -- 2024 -- Editorial Anagrama -- 0081ab0bd4aabb3e82b138f9b616135a -- Anna’s Archive (26 highlights)
+2026-07-16 21:52:18,756 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 21:52:39,215 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 21:53:19,540 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 21:54:32,954 INFO Nota de libro escrita: Triste tigre.md
+2026-07-16 21:54:39,959 INFO Procesando libro: Psicologia del Mexicano - Desconocido (2 highlights)
+2026-07-16 21:54:40,199 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 21:55:02,132 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 21:55:42,384 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 21:56:42,624 ERROR Fallo procesando 'Psicologia del Mexicano - Desconocido'
+Traceback (most recent call last):
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 107, in gemini
+    with urllib.request.urlopen(peticion, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 523, in main
+    analisis = procesar_libro(grupo, grupo["entradas"], clave)
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 254, in procesar_libro
+    return gemini(prompt, clave)
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 121, in gemini
+    raise RuntimeError(f"Gemini HTTP {e.code}: {detalle}") from e
+RuntimeError: Gemini HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 21:56:42,637 INFO Notas de concepto actualizadas: 23
+2026-07-16 21:56:42,893 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 21:57:03,129 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 21:57:55,089 INFO Sintesis semanal escrita: 2026-S29.md
+2026-07-16 21:57:55,090 INFO === fin: 5 libros actualizados, 1 errores ===
+2026-07-16 21:58:31,143 INFO === inicio (vault=/Users/hugo/Library/Mobile Documents/com~apple~CloudDocs/Obsidian/Lecturas) ===
+2026-07-16 21:58:31,146 INFO Highlights únicos tras deduplicar: 143
+2026-07-16 21:58:31,146 INFO Procesando libro: Psicologia del Mexicano - Desconocido (2 highlights)
+2026-07-16 21:58:31,694 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 21:58:51,987 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 21:59:32,257 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 22:00:32,998 ERROR Fallo procesando 'Psicologia del Mexicano - Desconocido'
+Traceback (most recent call last):
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 107, in gemini
+    with urllib.request.urlopen(peticion, timeout=180) as resp:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 187, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 493, in open
+    response = meth(req, response)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 602, in http_response
+    response = self.parent.error(
+        'http', request, response, code, msg, hdrs)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 531, in error
+    return self._call_chain(*args)
+           ~~~~~~~~~~~~~~~~^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 464, in _call_chain
+    result = func(*args)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/urllib/request.py", line 611, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 429: Too Many Requests
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 523, in main
+    analisis = procesar_libro(grupo, grupo["entradas"], clave)
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 254, in procesar_libro
+    return gemini(prompt, clave)
+  File "/Users/hugo/Documents/kindle-cerebro/procesar.py", line 121, in gemini
+    raise RuntimeError(f"Gemini HTTP {e.code}: {detalle}") from e
+RuntimeError: Gemini HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 22:00:33,009 INFO Notas de concepto actualizadas: 23
+2026-07-16 22:00:35,142 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 22:00:55,504 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 22:03:53,784 INFO === inicio (vault=/Users/hugo/Library/Mobile Documents/com~apple~CloudDocs/Obsidian/Lecturas) ===
+2026-07-16 22:03:53,787 INFO Highlights únicos tras deduplicar: 143
+2026-07-16 22:03:53,788 INFO Procesando libro: Psicologia del Mexicano - Desconocido (2 highlights)
+2026-07-16 22:03:54,021 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 22:04:14,357 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 22:04:54,729 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 22:05:54,987 WARNING Gemini sin cuota; uso el modelo local de Apple
+2026-07-16 22:05:55,019 INFO Modelo local de Apple cargado
+2026-07-16 22:06:01,376 INFO Nota de libro escrita: Psicologia del Mexicano - Desconocido.md
+2026-07-16 22:06:08,395 INFO Notas de concepto actualizadas: 29
+2026-07-16 22:06:08,810 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 22:06:29,119 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 22:07:09,406 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-16 22:08:09,640 WARNING Gemini sin cuota para la sintesis; uso el modelo local
+2026-07-16 22:08:13,164 INFO Sintesis semanal escrita: 2026-S29.md
+2026-07-16 22:08:13,165 INFO === fin: 1 libros actualizados ===
+2026-07-16 22:15:59,110 INFO Notas de concepto actualizadas: 1
+2026-07-16 22:15:59,111 INFO Sintesis semanal escrita: 2026-S29.md
+2026-07-16 22:16:17,255 INFO Sintesis semanal escrita: 2026-S29.md
+2026-07-17 18:15:27,839 INFO Nota de trabajo escrita: Rasgos de la personalidad del mexicano.md
+2026-07-17 18:15:27,840 INFO Notas de concepto actualizadas: 2
+2026-07-17 18:15:27,840 INFO Sintesis semanal escrita: 2026-S29.md
+2026-07-17 18:16:26,166 INFO === inicio (vault=/Users/hugo/Library/Mobile Documents/com~apple~CloudDocs/Obsidian/Lecturas) ===
+2026-07-17 18:16:26,170 INFO Highlights únicos tras deduplicar: 143
+2026-07-17 18:16:26,171 INFO Procesando libro: La_voluntad_de_saber_Michel_Foucault (22 highlights)
+2026-07-17 18:16:37,195 INFO Nota de libro escrita: La voluntad de saber.md
+2026-07-17 18:16:44,201 INFO Procesando libro: Una_tribu_propia_Steve_Silberman (56 highlights)
+2026-07-17 18:17:03,256 INFO Nota de libro escrita: Una tribu propia Vidas autistas y la esperanza de un mundo neurodivergente.md
+2026-07-17 18:17:10,260 INFO Procesando libro: El nino superviviente. Curar el trauma del - Joyanna L. Silberg (37 highlights)
+2026-07-17 18:17:25,944 WARNING Respuesta no parseable (intento 1): Extra data: line 64 column 3 (char 3626)
+2026-07-17 18:17:47,232 INFO Nota de libro escrita: El niño superviviente Curar el trauma del desarrollo.md
+2026-07-17 18:17:54,236 INFO Procesando libro: TRISTE TIGRE -- Neige Sinno -- 2024 -- Editorial Anagrama -- 0081ab0bd4aabb3e82b138f9b616135a -- Anna’s Archive (26 highlights)
+2026-07-17 18:18:09,904 INFO Nota de libro escrita: Triste tigre.md
+2026-07-17 18:18:16,911 INFO Procesando libro: Psicologia del Mexicano - Desconocido (2 highlights)
+2026-07-17 18:18:27,719 INFO Nota de libro escrita: Psicología del Mexicano.md
+2026-07-17 18:18:34,826 INFO Procesando trabajo: 2026-07-14 Psicología del Mexicano.pdf (29003 chars)
+2026-07-17 18:18:51,502 INFO Nota de trabajo escrita: Psicología del Mexicano.md
+2026-07-17 18:18:59,198 WARNING HTTP 503 (intento 1), espero 20s: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.",
+    "status": "UNAVAILABLE"
+  }
+}
+
+2026-07-17 18:19:46,025 WARNING Respuesta no parseable (intento 1): Expecting ',' delimiter: line 18 column 219 (char 3094)
+2026-07-17 18:20:02,380 WARNING Respuesta no parseable (intento 2): Extra data: line 20 column 1 (char 3110)
+2026-07-17 18:20:18,577 WARNING Respuesta no parseable (intento 3): Expecting ',' delimiter: line 19 column 273 (char 3531)
+2026-07-17 18:20:52,454 WARNING Respuesta no parseable (intento 1): Expecting ',' delimiter: line 18 column 237 (char 3116)
+2026-07-17 18:21:07,299 WARNING Respuesta no parseable (intento 2): Expecting ',' delimiter: line 18 column 243 (char 2995)
+2026-07-17 18:21:30,108 INFO Notas de concepto actualizadas: 27
+2026-07-17 18:21:56,429 INFO Sintesis semanal escrita: 2026-S29.md
+2026-07-17 18:21:56,432 INFO === fin: 5 libros, 1 trabajos · actualizado ===
+2026-07-17 18:23:23,780 INFO === inicio (vault=/Users/hugo/Library/Mobile Documents/com~apple~CloudDocs/Obsidian/Lecturas) ===
+2026-07-17 18:23:23,783 INFO Highlights únicos tras deduplicar: 143
+2026-07-17 18:23:32,990 WARNING Respuesta no parseable (intento 1): Expecting ',' delimiter: line 14 column 310 (char 3084)
+2026-07-17 18:24:10,757 INFO Notas de concepto actualizadas: 23
+2026-07-17 18:24:34,206 INFO Sintesis semanal escrita: 2026-S29.md
+2026-07-17 18:24:34,209 INFO === fin: sin novedades · actualizado ===
+2026-07-17 20:13:54,893 INFO === inicio (vault=/Users/hugo/Library/Mobile Documents/com~apple~CloudDocs/Obsidian/Lecturas) ===
+2026-07-17 20:13:54,896 INFO Highlights únicos tras deduplicar: 143
+2026-07-17 20:13:54,903 INFO Procesando trabajo: Ensayo El hombre que confundió a su mujer con un sombrero.docx (9265 chars)
+2026-07-17 20:14:07,778 INFO Nota de trabajo escrita: Ensayo El hombre que confundió a su mujer con un sombrero.md
+2026-07-17 20:14:14,798 INFO Procesando trabajo: Monografía _ Alteraciones de la Memoria.docx (15595 chars)
+2026-07-17 20:14:28,600 INFO Nota de trabajo escrita: Alteraciones de la Memoria.md
+2026-07-17 20:14:35,621 INFO Procesando trabajo: Monografía _ Alteraciones de la Percepción.docx (20005 chars)
+2026-07-17 20:14:56,856 INFO Nota de trabajo escrita: Alteraciones de la Percepción.md
+2026-07-17 20:15:03,862 WARNING Trabajo con muy poco texto (44 chars), lo salto: Presentación Sueño y desarrollo cognitivo.docx
+2026-07-17 20:15:03,864 INFO Procesando trabajo: Psicología del Mexicano.docx (2268 chars)
+2026-07-17 20:15:04,109 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:15:24,697 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:16:04,928 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:17:05,149 WARNING Gemini sin cuota; modelo local para el trabajo
+2026-07-17 20:17:05,221 INFO Modelo local de Apple cargado
+2026-07-17 20:17:10,802 INFO Nota de trabajo escrita: Psicología del Mexicano.md
+2026-07-17 20:17:17,815 INFO Procesando trabajo: Reporte de Lectura _Desarrollo Cognoscitivo en los Primeros Tres Años_.docx (9718 chars)
+2026-07-17 20:17:18,054 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:17:38,398 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:18:18,869 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:19:19,174 WARNING Gemini sin cuota; modelo local para el trabajo
+2026-07-17 20:19:27,517 INFO Nota de trabajo escrita: Desarrollo Cognoscitivo en los Primeros Tres Años.md
+2026-07-17 20:19:34,532 INFO Procesando trabajo: Reporte de _Desarrollo Físico y Cognoscitivo en la Adolescencia_.docx (12111 chars)
+2026-07-17 20:19:34,948 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:19:55,170 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:20:35,432 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:21:35,694 WARNING Gemini sin cuota; modelo local para el trabajo
+2026-07-17 20:21:44,809 INFO Nota de trabajo escrita: Desarrollo Físico y Cognoscitivo en la Adolescencia.md
+2026-07-17 20:21:51,825 INFO Procesando trabajo: Reporte de _Desarrollo Psicosocial en la Edad Media_.docx (10134 chars)
+2026-07-17 20:21:52,051 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:22:12,278 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:22:52,919 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:23:53,149 WARNING Gemini sin cuota; modelo local para el trabajo
+2026-07-17 20:24:05,453 INFO Nota de trabajo escrita: Desarrollo Psicosocial en la Edad Media.md
+2026-07-17 20:24:12,471 INFO Procesando trabajo: Reporte de lectura “Formación de una nueva vida”.docx (10536 chars)
+2026-07-17 20:24:12,732 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:24:32,961 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:25:13,194 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:26:13,499 WARNING Gemini sin cuota; modelo local para el trabajo
+2026-07-17 20:26:25,337 INFO Nota de trabajo escrita: Formación de una nueva vida.md
+2026-07-17 20:26:32,366 INFO Notas de concepto actualizadas: 69
+2026-07-17 20:26:32,655 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:26:52,950 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:27:33,288 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:28:33,606 WARNING Gemini sin cuota para la sintesis; uso el modelo local
+2026-07-17 20:28:36,625 INFO Sintesis semanal escrita: 2026-S29.md
+2026-07-17 20:28:36,626 INFO === fin: 9 trabajos · actualizado ===
+2026-07-17 20:29:04,051 INFO === inicio (vault=/Users/hugo/Library/Mobile Documents/com~apple~CloudDocs/Obsidian/Lecturas) ===
+2026-07-17 20:29:04,055 INFO Highlights únicos tras deduplicar: 143
+2026-07-17 20:29:04,063 WARNING Trabajo con muy poco texto (44 chars), lo salto: Presentación Sueño y desarrollo cognitivo.docx
+2026-07-17 20:29:04,063 INFO Procesando trabajo: Psicología del Mexicano.docx (2268 chars)
+2026-07-17 20:29:04,288 WARNING HTTP 429 (intento 1), espero 20s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:29:24,512 WARNING HTTP 429 (intento 2), espero 40s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:30:04,755 WARNING HTTP 429 (intento 3), espero 60s: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota ex
+2026-07-17 20:31:04,982 WARNING Sin cuota para mejorar 'Psicología del Mexicano.docx'; pendiente
+2026-07-17 20:31:04,988 INFO Procesando trabajo: Reporte de Lectura _Desarrollo Cognoscitivo en los Primeros Tres Años_.docx (9718 chars)
+2026-07-17 20:31:04,989 WARNING Sin cuota para mejorar 'Reporte de Lectura _Desarrollo Cognoscitivo en los Primeros Tres Años_.docx'; pendiente
+2026-07-17 20:31:04,991 INFO Procesando trabajo: Reporte de _Desarrollo Físico y Cognoscitivo en la Adolescencia_.docx (12111 chars)
+2026-07-17 20:31:04,991 WARNING Sin cuota para mejorar 'Reporte de _Desarrollo Físico y Cognoscitivo en la Adolescencia_.docx'; pendiente
+2026-07-17 20:31:04,994 INFO Procesando trabajo: Reporte de _Desarrollo Psicosocial en la Edad Media_.docx (10134 chars)
+2026-07-17 20:31:04,994 WARNING Sin cuota para mejorar 'Reporte de _Desarrollo Psicosocial en la Edad Media_.docx'; pendiente
+2026-07-17 20:31:04,997 INFO Procesando trabajo: Reporte de lectura “Formación de una nueva vida”.docx (10536 chars)
+2026-07-17 20:31:04,997 WARNING Sin cuota para mejorar 'Reporte de lectura “Formación de una nueva vida”.docx'; pendiente
+2026-07-17 20:31:05,009 INFO Notas de concepto actualizadas: 69
+2026-07-17 20:31:05,010 INFO Nota huérfana eliminada: Libros/Psicologia del Mexicano - Desconocido.md
+2026-07-17 20:31:05,010 INFO Nota huérfana eliminada: Libros/Una tribu propia Autismo y el futuro de la neurodiversidad.md
+2026-07-17 20:31:05,011 INFO Nota huérfana eliminada: Conceptos/Religión.md
+2026-07-17 20:31:05,011 INFO Nota huérfana eliminada: Conceptos/Mecanismo de adaptación.md
+2026-07-17 20:31:05,011 INFO Nota huérfana eliminada: Conceptos/Individualismo.md
+2026-07-17 20:31:05,012 INFO Nota huérfana eliminada: Conceptos/Abnegado.md
+2026-07-17 20:31:05,012 INFO Nota huérfana eliminada: Conceptos/Neurobiología interpersonal.md
+2026-07-17 20:31:05,012 INFO Nota huérfana eliminada: Conceptos/Estados afectivos.md
+2026-07-17 20:31:05,012 INFO Nota huérfana eliminada: Conceptos/Paternalismo.md
+2026-07-17 20:31:05,012 INFO Nota huérfana eliminada: Conceptos/Sometido.md
+2026-07-17 20:31:05,013 INFO Nota huérfana eliminada: Conceptos/Trauma del desarrollo.md
+2026-07-17 20:31:05,013 INFO Nota huérfana eliminada: Conceptos/Sincretismo.md
+2026-07-17 20:31:05,013 INFO Nota huérfana eliminada: Conceptos/Resiliencia.md
+2026-07-17 20:31:05,013 INFO Nota huérfana eliminada: Conceptos/Patria.md
+2026-07-17 20:31:05,013 INFO Nota huérfana eliminada: Conceptos/Tradicionalista.md
+2026-07-17 20:31:05,014 INFO Nota huérfana eliminada: Conceptos/Estigmatización.md
+2026-07-17 20:31:05,014 INFO Nota huérfana eliminada: Conceptos/Dominación.md
+2026-07-17 20:31:05,014 INFO Nota huérfana eliminada: Conceptos/Conductismo.md
+2026-07-17 20:31:05,014 INFO Nota huérfana eliminada: Conceptos/Evitación afectiva.md
+2026-07-17 20:31:05,015 INFO Nota huérfana eliminada: Conceptos/Placer.md
+2026-07-17 20:31:05,015 INFO Nota huérfana eliminada: Conceptos/Silencio.md
+2026-07-17 20:31:05,015 INFO Nota huérfana eliminada: Conceptos/Tecnología asistiva.md
+2026-07-17 20:31:05,015 INFO Nota huérfana eliminada: Conceptos/Autodevaluación.md
+2026-07-17 20:31:05,015 WARNING Gemini sin cuota para la sintesis; uso el modelo local
+2026-07-17 20:31:05,049 INFO Modelo local de Apple cargado
+2026-07-17 20:31:07,990 INFO Sintesis semanal escrita: 2026-S29.md
+2026-07-17 20:31:07,991 INFO === fin: 6 trabajos · actualizado ===

@@ -1,0 +1,23 @@
+2026-07-16 21:46:27 Kindle (MTP) detectado
+2026-07-16 21:46:38 MTP: descargado My Clippings.txt (id 1039)
+2026-07-16 21:46:38 Captura vacía, la descarto
+2026-07-16 21:49:00 Kindle (MTP) detectado
+Device 0 (VID=1949 and PID=9981) is a Amazon Kindle Scribe 32GB.
+OK /var/folders/s6/4_fcpjtx7qd6nqq0x5f0s2z80000gn/T/tmp.fs4UjkH49Q/clippings.txt
+2026-07-16 21:49:01 MTP: descargado My Clippings.txt
+2026-07-16 21:49:01 Copiado a /Users/hugo/Documents/kindle-cerebro/archivo/clippings-20260716-214901.txt — lanzando pipeline
+2026-07-16 21:49:01,828 INFO === inicio (vault=/Users/hugo/Library/Mobile Documents/com~apple~CloudDocs/Obsidian/Lecturas) ===
+2026-07-16 21:49:01,831 INFO Highlights únicos tras deduplicar: 24
+2026-07-16 21:49:01,831 INFO Procesando libro: La_voluntad_de_saber_Michel_Foucault (3 highlights)
+2026-07-16 21:49:12,535 INFO Nota de libro escrita: La_voluntad_de_saber_Michel_Foucault.md
+2026-07-16 21:49:19,539 INFO Procesando libro: Una_tribu_propia_Steve_Silberman (9 highlights)
+2026-07-16 21:49:27,677 WARNING Respuesta no parseable (intento 1): Extra data: line 40 column 1 (char 2133)
+2026-07-16 21:49:41,685 INFO Nota de libro escrita: Una_tribu_propia_Steve_Silberman.md
+2026-07-16 21:49:48,690 INFO Procesando libro: El nino superviviente. Curar el trauma del - Joyanna L. Silberg (10 highlights)
+2026-07-16 21:49:58,621 INFO Nota de libro escrita: El nino superviviente. Curar el trauma del - Joyanna L. Silberg.md
+2026-07-16 21:50:05,628 INFO Procesando libro: Psicologia del Mexicano - Desconocido (2 highlights)
+2026-07-17 06:25:01 Kindle (MTP) detectado
+Device 0 (VID=1949 and PID=9981) is a Amazon Kindle Scribe 32GB.
+OK /var/folders/s6/4_fcpjtx7qd6nqq0x5f0s2z80000gn/T/tmp.HIh0OuY0rg/clippings.txt
+2026-07-17 06:25:01 MTP: descargado My Clippings.txt
+2026-07-17 06:25:01 Sin cambios respecto a la última copia

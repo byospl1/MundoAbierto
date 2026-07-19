@@ -65,24 +65,23 @@ Abre la URL en Safari → Compartir → **Añadir a pantalla de inicio**. Funcio
 
 ## 🔄 Automatización semanal (elige una)
 
-Todo el vault (libros + `vault/Uni/`) se convierte en preguntas con IA y se sube solo. Hay dos caminos que hacen lo mismo cada **domingo**; usa el que prefieras.
+Todo tu vault de Obsidian se convierte en preguntas con IA y se sube solo. Tus trabajos de la universidad ya los procesa tu pipeline del Kindle (carpeta `Trabajos/` del vault), así que aquí no hay que copiarlos aparte. Dos caminos que hacen lo mismo cada **domingo**; usa el que prefieras.
 
 ### A) Automático en la nube — sin tu Mac (recomendado)
 La GitHub Action `build-world.yml` corre **cada domingo** (y en cada push del vault). Regenera `world.json` desde lo que haya en `vault/` y republica. Solo necesita el secret `GEMINI_API_KEY`. Si usas obsidian-git, tus notas ya llegan solas al repo.
 
-### B) Un clic en tu Mac — para los trabajos de la universidad
-Los archivos de la uni que viven solo en tu Mac los sube este ejecutable:
+### B) Un clic en tu Mac — subes el .zip del vault
+Cuando exportas/actualizas tu vault de Obsidian y quieres reflejarlo en el juego:
 
-1. **Prepara** (una vez): copia `.env.example` como `.env` y pon tu `GEMINI_API_KEY`. Si tus trabajos están en otra carpeta, define `UNI_SOURCE` (por defecto `~/Documents/Universidad`).
-2. **Doble clic en `Actualizar.command`.** El script copia tus `.md` de la universidad a `vault/Uni/`, genera las preguntas con Gemini (sin repetir nada), respalda el mundo anterior en `backups/`, y hace commit + push → GitHub Pages republica. *(Primera vez, si macOS lo bloquea: clic derecho → Abrir.)*
+1. **Prepara** (una vez): copia `.env.example` como `.env` y pon tu `GEMINI_API_KEY`.
+2. **Deja el `.zip` de tu vault en la carpeta `vault-zip/`** del repo (ver `vault-zip/LEEME.txt`).
+3. **Doble clic en `Actualizar.command`.** Extrae el zip a `vault/`, genera las preguntas con Gemini (sin repetir nada — solo retrabaja libros con cambios), respalda el mundo anterior en `backups/` y en una rama `backup/FECHA`, y hace commit + push → GitHub Pages republica. *(Primera vez, si macOS lo bloquea: clic derecho → Abrir.)*
 
-**Hacerlo automático cada domingo** (opción B sin tocar nada): edita la ruta dentro de `com.hugo.torre-erudito.plist`, cópialo a `~/Library/LaunchAgents/` y cárgalo con `launchctl load` (instrucciones dentro del archivo). Tu Mac lo correrá solo los domingos a las 18:00.
+**Hacerlo automático cada domingo**: edita la ruta dentro de `com.hugo.torre-erudito.plist`, cópialo a `~/Library/LaunchAgents/` y cárgalo con `launchctl load` (instrucciones dentro del archivo). Tu Mac lo correrá solo los domingos a las 18:00.
 
-> La carpeta de la universidad solo la ve la opción B (tu Mac). La opción A ve lo que ya esté en el repo. Puedes usar las dos.
+## Cómo se alimenta el juego
 
-## Notas para la uni
-
-**¿En qué momento se integran?** Cuando quieras, en cualquier subida semanal. Crea la carpeta `vault/Uni/` y mete ahí tus notas de la universidad con el mismo formato que los libros (`## Resumen`, `## Ideas clave`, `## Conceptos`). El generador ya lee `vault/Uni/` automáticamente (además de `vault/Libros/`): cada documento nuevo se vuelve una mazmorra. **No se repiten preguntas ni conceptos** entre libros — el generador deduplica por texto, así que al añadir material nuevo no verás preguntas repetidas.
+El generador lee de `vault/`: `Libros/` y `Trabajos/` se vuelven **mazmorras**, `Conceptos/` son las **flashcards** del grimorio y `Convergencias/` alimenta al **dragón** semanal. **No se repiten preguntas ni conceptos** — el generador deduplica por texto, así que al añadir material nuevo no verás repetidos, y los libros sin cambios no se regeneran (ahorro de tokens).
 
 ## Mecánicas de estudio (adherencia)
 
@@ -95,8 +94,6 @@ Los archivos de la uni que viven solo en tu Mac los sube este ejecutable:
 ## Mecánicas de granja
 
 Árboles frutales, edificios (corral, establo, invernadero, granero, molino, pozo, **biblioteca sagrada** donde se acomodan tus libros leídos, altar), **trabajador** contratable, **forraje → estiércol → abono**, **depredadores** (cuervos/zorro/plaga) que repeles con defensas o respondiendo, **barco mercante** cada 2 días, clima, eventos, cofres, mascotas legendarias, crafteo y logros.
-
-## Notas para la uni (formato)
 
 ## Ajustes rápidos (dentro de index.html)
 

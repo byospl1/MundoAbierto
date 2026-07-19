@@ -1,0 +1,18 @@
+Carpeta de actualización del vault
+==================================
+
+Deja aquí el .zip de tu vault de Obsidian (por ejemplo "Lecturas.zip").
+
+Al hacer doble clic en Actualizar.command:
+  1. Se toma el .zip MÁS RECIENTE de esta carpeta.
+  2. Se extrae sobre la carpeta vault/ del repo (si el zip trae una
+     carpeta raíz como "Lecturas/", se aplana automáticamente).
+  3. Se generan las preguntas con Gemini y se sube todo a GitHub.
+
+El generador usa estas subcarpetas del vault:
+  - Libros/      -> mazmorras
+  - Trabajos/    -> mazmorras (tus trabajos de la universidad)
+  - Conceptos/   -> flashcards del grimorio
+  - Convergencias/ -> dragón semanal
+
+Nota: solo se relee lo que cambió, así no se gastan tokens de más.

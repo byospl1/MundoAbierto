@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key><string>com.hugo.cerebro-lecturas.captura</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/hugo/Library/CerebroLecturas/cerebro_agente</string>
+        <string>/bin/bash</string>
+        <string>/Users/hugo/Documents/kindle-cerebro/capturar.sh</string>
+    </array>
+    <key>StartOnMount</key><true/>
+    <key>StartInterval</key><integer>120</integer>
+    <key>StandardOutPath</key><string>/Users/hugo/Library/CerebroLecturas/logs/launchd-captura.log</string>
+    <key>StandardErrorPath</key><string>/Users/hugo/Library/CerebroLecturas/logs/launchd-captura.log</string>
+</dict>
+</plist>
