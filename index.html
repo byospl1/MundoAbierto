@@ -1324,7 +1324,7 @@ function visitanteAccion(){
  const t=G(); const anims=Object.values(t.plots).filter(p=>p&&p.animal);
  const r=Math.random();
  if(r<0.55 && anims.length){ const a=anims[Math.floor(Math.random()*anims.length)]; a.animalAt=Date.now()-ANIMALS[a.animal].cada*animalCadaMult(); markDirty(); toast('👋 Un visitante alimentó a tu '+ANIMALS[a.animal].n+'.'); }
- else if(r<0.72){ player.cofrePend=(player.cofrePend||0)+1; markDirty(); sfx('coin'); toast('🎁 ¡Un visitante te dejó un cofre! (Tienda → Cofres)'); }
+ else if(r<0.72){ player.cofreVisita=player.cofreVisita||{d:'',n:0}; if(player.cofreVisita.d!==hoy()){ player.cofreVisita={d:hoy(),n:0}; } if(player.cofreVisita.n>=3){ return; } player.cofreVisita.n++; player.cofrePend=(player.cofrePend||0)+1; markDirty(); sfx('coin'); toast('🎁 ¡Un visitante te dejó un cofre! ('+player.cofreVisita.n+'/3 hoy · Tienda → Cofres)'); }
 }
 function renderMuelle(){
  const frame=$('islandFrame'); if(!frame)return;
