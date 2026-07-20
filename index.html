@@ -1018,6 +1018,7 @@ const CROPS={
  girasol:{n:'Girasol',seed:90,coins:300,grow:3*36e5,spr:'girasol'},
  hongomagic:{n:'Hongo mágico',seed:180,coins:650,grow:6*36e5,spr:'hongomagic'},
  cristalveg:{n:'Cristal vegetal',seed:400,coins:1600,grow:18*36e5,spr:'cristalveg'}};
+Object.keys(CROPS).forEach(id=>{ const c=CROPS[id]; CROPS[id+'_x']={n:'✨ '+c.n+' ancestral',seed:c.seed,coins:Math.round(c.coins*2.4),grow:Math.round(c.grow*1.25),spr:c.spr,evo:true,base:id}; });
 const ANIMALS={
  pollo:{n:'Pollo',precio:200,prod:30,cada:30*6e4,spr:'pollo'},
  conejo:{n:'Conejo',precio:350,prod:65,cada:60*6e4,spr:'conejo'},
@@ -1029,6 +1030,8 @@ const ANIMALS={
  abeja:{n:'Enjambre de abejas',precio:700,prod:150,cada:2*36e5,spr:'abeja'},
  buhogranja:{n:'Búho mensajero',precio:1600,prod:420,cada:5*36e5,spr:'buhogranja'},
  dragongranja:{n:'Dragón de granja',precio:3000,prod:900,cada:8*36e5,spr:'dragongranja'}};
+// Evoluciones: cada animal/cultivo puede evolucionar a una forma ancestral (crafteo con recursos).
+Object.keys(ANIMALS).forEach(id=>{ const a=ANIMALS[id]; ANIMALS[id+'_x']={n:'✨ '+a.n+' ancestral',precio:a.precio,prod:Math.round(a.prod*2.3),cada:a.cada,spr:a.spr,evo:true,base:id}; });
 const TREES={
  manzanoBig:{n:'Manzano frutal',precio:900,coins:170,madurez:12*36e5,cada:4*36e5,spr:'arbol_manzano',fruto:'🍎'},
  cerezo:{n:'Cerezo',precio:1600,coins:330,madurez:20*36e5,cada:5*36e5,spr:'arbol_cerezo',fruto:'🍒'},
@@ -1195,7 +1198,7 @@ function climaHoy(){
 function climaBoost(){ const c=CLIMAS[climaHoy()]; return c.boost||0; }
 const ISLA_PRECIOS=[0,500,1400,3000,6000]; // nivel 0=8x8 ... 4=12x12
 function islaN(){ return 8+(player.islaNv||0); }
-function magoIdx(){ const N=islaN(); return Math.floor(N/2)*N+Math.floor(N/2)-1; }
+function magoIdx(){ const N=islaN(); const def=Math.floor(N/2)*N+Math.floor(N/2)-1; if(player&&player.magoPos!=null&&player.magoPos<N*N)return player.magoPos; return def; }
 let tool='plantar', granjaTick=null, moveSel=null;
 function fmtMs(ms){const m=Math.round(ms/6e4); if(m<60)return m+' min'; const h=Math.round(m/60); return h+' h';}
 function G(){const t=player.torre; t.plots=t.plots||{}; t.supply=t.supply||{agua:3,abono:1}; player.semillas=player.semillas||{zanahoria:2}; return t;}
@@ -1405,7 +1408,7 @@ function plotAction(i){ const t=G(); let p=t.plots[i];
    if(i===moveSel){ moveSel=null; toast('Movimiento cancelado.'); renderIsland(); return; }
    if(tryMoveBuild(moveSel,i)){ moveSel=null; sfx('ok'); markDirty(); } renderIsland(); return;
   }
-  if(moveSel==null){ if(!p){toast('Elige primero qué mover.');return;} moveSel=i; } else { const a=t.plots[moveSel]; const b=t.plots[i]; delete t.plots[moveSel]; delete t.plots[i]; if(a)t.plots[i]=a; if(b)t.plots[moveSel]=b; moveSel=null; markDirty(); } renderIsland(); return; }
+  if(moveSel==null){ if(!p){ player.magoPos=i; markDirty(); sfx('ok'); renderIsland(); toast('🧙 Granjero movido aquí.'); return; } moveSel=i; } else { const a=t.plots[moveSel]; const b=t.plots[i]; delete t.plots[moveSel]; delete t.plots[i]; if(a)t.plots[i]=a; if(b)t.plots[moveSel]=b; moveSel=null; markDirty(); } renderIsland(); return; }
  if(tool==='plantar'){ if(p&&p.deco){ delete t.plots[i]; t.inv.push(p.deco); markDirty(); renderTorre(); toast('Objeto guardado en inventario.'); return;} if(p&&p.animal){ delete t.plots[i]; t.inv.push('animal:'+p.animal); markDirty(); renderTorre(); toast('Animal guardado en inventario.'); return;} if(p){toast('Parcela ocupada.');return;} if(i===magoIdx()){openAvatar();return;} openPlantModal(i); return; }
  if(!p){ if(i===magoIdx()){openAvatar();return;} toast('Parcela vacía: usa 🌱 Plantar.'); return; }
  if(tool==='regar'){ const cw=CLIMAS[climaHoy()]; if(cw.agua===0){toast(cw.e+' El cielo riega por ti hoy.');return;} if(!p.crop){toast('Solo se riegan cultivos.');return;} if(cropProgress(p)>=1){toast('Ya está listo: cosecha.');return;} if(p.waterUntil>Date.now()){toast('Ya está regado. 💧');return;} if((t.supply.agua||0)<cw.agua){toast('Sin agua'+(cw.agua>1?' (la sequía duplica el costo)':'')+'.');return;} t.supply.agua-=cw.agua; p.waterUntil=Date.now()+WATER_MS; sfx('ok'); markDirty(); renderTools(); renderIsland(); return; }
@@ -1930,8 +1933,8 @@ function aplicarPremioRuleta(p){
 }
 /* ============ TIENDA ============ */
 let shopCur='cultivos';
-const SHOP_SECS={cultivos:['semilla','arbol'],granja:['animal','construccion'],recursos:['insumo','taller'],cofre:['cofre'],deco:['deco','pocion','ropa'],mascota:['mascota']};
-const SEC_TIT={semilla:'🌱 Semillas',arbol:'🌳 Árboles',animal:'🐔 Animales',construccion:'🏚 Edificios',insumo:'💧 Insumos y terreno',taller:'⚒ Taller',cofre:'🎁 Cofres',deco:'🕯 Objetos',pocion:'🧪 Pociones',ropa:'👗 Atuendo',mascota:'🐾 Mascotas'};
+const SHOP_SECS={cultivos:['semilla','arbol'],granja:['animal','construccion'],recursos:['insumo','taller','evolucion','vender'],cofre:['cofre'],deco:['deco','pocion','ropa'],mascota:['mascota']};
+const SEC_TIT={semilla:'🌱 Semillas',arbol:'🌳 Árboles',animal:'🐔 Animales',construccion:'🏚 Edificios',insumo:'💧 Insumos y terreno',taller:'⚒ Taller',evolucion:'✨ Evolución',vender:'💰 Vender',cofre:'🎁 Cofres',deco:'🕯 Objetos',pocion:'🧪 Pociones',ropa:'👗 Atuendo',mascota:'🐾 Mascotas'};
 function shopTab(t){
   if(!SHOP_SECS[t])t='cultivos';
   shopCur=t;
@@ -1992,6 +1995,27 @@ function shopTab(t){
       const reqs=Object.entries(rc.req).map(([k,n])=>'<span style="color:'+((r[k]||0)>=n?'var(--ok)':'var(--mal)')+'">'+RECURSOS[k].e+n+'</span>').join(' ');
       return '<div class="shopitem"><span style="font-size:28px">'+rc.e+'</span><b style="font-size:13px">'+rc.n+'</b><span style="font-size:11px;color:var(--muted)">'+rc.d+'</span><span style="font-size:13px;font-weight:800">'+reqs+'</span><button class="pricebtn" '+(can?'':'disabled')+' onclick="craft(\''+rc.id+'\')">⚒ Craftear</button></div>';
     }).join('')+'</div>';
+  }
+  if(secs.includes('evolucion')){
+    h+=SEC('evolucion')+'<p style="font-size:12px;color:var(--muted);margin:8px 0 0">Fusiona un animal (del inventario) o 2 semillas iguales con 💠 esencia / 🐲 escama para obtener su forma <b>ancestral</b>: mucho más productiva.</p>';
+    const t=G(); const inv={}; (t.inv||[]).forEach(d=>inv[d]=(inv[d]||0)+1);
+    let rows='';
+    Object.keys(inv).forEach(d=>{ if(d.indexOf('animal:')!==0)return; const id=d.slice(7); if(ANIMALS[id].evo)return; const cost=evoAnimalCost(id); rows+='<div class="shopitem"><span class="sspr">'+spriteHTML(SPR[ANIMALS[id].spr],2)+'</span><b style="font-size:13px">'+ANIMALS[id].n+' → ✨</b><span style="font-size:11px;color:var(--muted)">Prod ×2.3 · cuesta '+costStr(cost)+'</span><button class="pricebtn" '+(costOk(cost)?'':'disabled')+' onclick="evolveAnimal(\''+id+'\')">✨ Evolucionar</button></div>'; });
+    Object.entries(player.semillas||{}).forEach(([id,n])=>{ if(n<2||!CROPS[id]||CROPS[id].evo)return; const cost=evoCropCost(id); rows+='<div class="shopitem"><span class="sspr">'+spriteHTML(SPR[CROPS[id].spr],2)+'</span><b style="font-size:13px">'+CROPS[id].n+' ×2 → ✨</b><span style="font-size:11px;color:var(--muted)">+140% oro · cuesta '+costStr(cost)+'</span><button class="pricebtn" '+(costOk(cost)?'':'disabled')+' onclick="evolveSeed(\''+id+'\')">✨ Evolucionar</button></div>'; });
+    h+='<div class="shopgrid">'+(rows||'<p style="font-size:13px;color:var(--muted)">Necesitas un animal en el inventario o 2 semillas iguales para evolucionar.</p>')+'</div>';
+  }
+  if(secs.includes('vender')){
+    h+=SEC('vender')+'<p style="font-size:12px;color:var(--muted);margin:8px 0 0">Vende lo que te sobre. Precio de venta = mitad (o menos) de su valor. Vende de 1 en 1 o todo.</p>';
+    const RECV={madera:8,piedra:10,esencia:45,cuero:14,escama:130};
+    const r=R(); const filas=[];
+    Object.entries(RECV).forEach(([k,pr])=>{ const n=r[k]||0; if(n>0)filas.push({e:RECURSOS[k].e,nom:RECURSOS[k].n,n,pr,fn:'\''+k+'\''}); });
+    let rows=filas.map(f=>'<div class="shopitem"><span style="font-size:26px">'+f.e+'</span><b style="font-size:13px">'+f.nom+' <span style="color:var(--muted)">×'+f.n+'</span></b><span style="font-size:11px;color:var(--muted)">'+f.pr+' 🪙 c/u</span><div style="display:flex;gap:6px"><button class="pricebtn" style="width:auto" onclick="sellRec('+f.fn+',1)">Vender 1</button><button class="pricebtn" style="width:auto" onclick="sellRec('+f.fn+',999)">Todo</button></div></div>').join('');
+    // semillas sobrantes
+    Object.entries(player.semillas||{}).forEach(([id,n])=>{ if(n>0&&CROPS[id]){ const pr=Math.max(1,Math.floor(CROPS[id].seed/2)); rows+='<div class="shopitem"><span class="sspr">'+spriteHTML(SPR[CROPS[id].spr],2)+'</span><b style="font-size:13px">'+CROPS[id].n+' <span style="color:var(--muted)">×'+n+'</span></b><span style="font-size:11px;color:var(--muted)">'+pr+' 🪙 c/u</span><div style="display:flex;gap:6px"><button class="pricebtn" style="width:auto" onclick="sellSeed(\''+id+'\',1)">Vender 1</button><button class="pricebtn" style="width:auto" onclick="sellSeed(\''+id+'\',999)">Todo</button></div></div>'; } });
+    // objetos de inventario
+    const t=G(); const inv={}; (t.inv||[]).forEach(d=>inv[d]=(inv[d]||0)+1);
+    Object.entries(inv).forEach(([d,n])=>{ let nom,spr,base; if(d.indexOf('animal:')===0){const a=ANIMALS[d.slice(7)];nom=a.n;spr=SPR[a.spr];base=a.precio;} else if(d.indexOf('tree:')===0){const tr=TREES[d.slice(5)];nom=tr.n;spr=SPR[tr.spr];base=tr.precio;} else if(d.indexOf('build:')===0){const b=BUILDS[d.slice(6)];nom=b.n;spr=SPR[b.spr];base=b.precio;} else {const dd=DECOS[d];if(!dd)return;nom=dd.n;spr=SPR[d];base=dd.precio;} const pr=Math.max(1,Math.floor(base*0.4)); rows+='<div class="shopitem"><span class="sspr">'+spriteHTML(spr,2)+'</span><b style="font-size:13px">'+nom+' <span style="color:var(--muted)">×'+n+'</span></b><span style="font-size:11px;color:var(--muted)">'+pr+' 🪙 c/u</span><button class="pricebtn" onclick="sellInv(\''+d+'\','+pr+')">Vender 1</button></div>'; });
+    h+='<div class="shopgrid">'+(rows||'<p style="font-size:13px;color:var(--muted)">No tienes nada de sobra para vender.</p>')+'</div>';
   }
   if(secs.includes('deco')){
     h+=SEC('deco')+'<div class="shopgrid">'+Object.entries(DECOS).map(([id,d])=>
@@ -2164,6 +2188,16 @@ function openBiblioteca(){
 }
 function hireTrabajador(){ if(player.oro<TRAB_PRECIO){toast('Te faltan monedas.');return;} player.oro-=TRAB_PRECIO; player.trabajador={hired:true,desde:hoy()}; sfx('win'); confetti(); markDirty(); renderHud(); shopTab('granja'); toast('👷 ¡Peón contratado! Cuidará tu granja.'); }
 function estiercolAbono(){ const t=G(); if((t.supply.estiercol||0)<ESTIERCOL_POR_ABONO){toast('Necesitas '+ESTIERCOL_POR_ABONO+' de estiércol.');return;} t.supply.estiercol-=ESTIERCOL_POR_ABONO; t.supply.abono=(t.supply.abono||0)+1; sfx('coin'); markDirty(); shopTab('recursos'); toast('✨ +1 abono a partir de estiércol.'); }
+function evoAnimalCost(id){ const a=ANIMALS[id]; const t=Math.max(1,Math.round(a.precio/400)); return {esencia:t+1,escama:Math.max(1,Math.round(t/2))}; }
+function evoCropCost(id){ const c=CROPS[id]; const t=Math.max(1,Math.round(c.coins/200)); return {esencia:t}; }
+function costOk(cost){ const r=R(); return Object.entries(cost).every(([k,n])=>(r[k]||0)>=n); }
+function payCost(cost){ const r=R(); Object.entries(cost).forEach(([k,n])=>r[k]-=n); }
+function costStr(cost){ const r=R(); return Object.entries(cost).map(([k,n])=>'<span style="color:'+((r[k]||0)>=n?'var(--ok)':'var(--mal)')+'">'+RECURSOS[k].e+n+'</span>').join(' '); }
+function evolveAnimal(id){ const t=G(); const i=t.inv.indexOf('animal:'+id); if(i<0){toast('Necesitas ese animal en el inventario.');return;} const cost=evoAnimalCost(id); if(!costOk(cost)){toast('Te faltan recursos.');return;} payCost(cost); t.inv.splice(i,1); t.inv.push('animal:'+id+'_x'); sfx('win'); confetti(); markDirty(); renderHud(); shopTab('recursos'); toast('✨ ¡'+ANIMALS[id].n+' evolucionó a forma ancestral!'); }
+function evolveSeed(id){ if((player.semillas[id]||0)<2){toast('Necesitas 2 semillas de ese cultivo.');return;} const cost=evoCropCost(id); if(!costOk(cost)){toast('Te faltan recursos.');return;} payCost(cost); player.semillas[id]-=2; player.semillas[id+'_x']=(player.semillas[id+'_x']||0)+1; sfx('win'); confetti(); markDirty(); renderHud(); shopTab('recursos'); toast('✨ ¡Semilla ancestral de '+CROPS[id].n+' creada!'); }
+function sellRec(k,n){ const r=R(); const have=r[k]||0; const RECV={madera:8,piedra:10,esencia:45,cuero:14,escama:130}; const q=Math.min(n,have); if(q<1){toast('No tienes.');return;} r[k]-=q; const oro=q*RECV[k]; addOro(oro); sfx('coin'); markDirty(); renderHud(); shopTab('recursos'); toast('Vendiste '+RECURSOS[k].e+'×'+q+' · +'+oro+' 🪙'); }
+function sellSeed(id,n){ const have=player.semillas[id]||0; const q=Math.min(n,have); if(q<1)return; player.semillas[id]-=q; const oro=q*Math.max(1,Math.floor(CROPS[id].seed/2)); addOro(oro); sfx('coin'); markDirty(); renderHud(); shopTab('recursos'); toast('Vendiste '+CROPS[id].n+'×'+q+' · +'+oro+' 🪙'); }
+function sellInv(d,pr){ const t=G(); const i=t.inv.indexOf(d); if(i<0)return; t.inv.splice(i,1); addOro(pr); sfx('coin'); markDirty(); renderHud(); shopTab('recursos'); toast('Vendido · +'+pr+' 🪙'); }
 function buyInsumo(id){ const x=INSUMOS[id]; if(player.oro<x.precio)return; player.oro-=x.precio; const s=G().supply; s[x.k]=(s[x.k]||0)+x.amt; sfx('coin'); markDirty(); renderHud(); shopTab('recursos'); }
 function buyDeco(id){ const d=DECOS[id]; if(player.oro<d.precio)return; player.oro-=d.precio; player.torre.inv.push(id); sfx('coin'); markDirty(); renderHud(); shopTab('deco'); toast(d.n+' en tu inventario: colócalo con 🌱 Plantar.'); }
 function buyPocion(id){ const p=POCIONES[id]; if(player.oro<p.precio)return; player.oro-=p.precio; player.pociones[id]=(player.pociones[id]||0)+1; sfx('coin'); markDirty(); renderHud(); shopTab('deco'); }
