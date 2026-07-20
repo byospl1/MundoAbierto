@@ -147,6 +147,9 @@ button{ font-family:inherit; cursor:pointer; color:inherit; -webkit-appearance:n
 @keyframes waterShift{0%,100%{background-position:0 0}50%{background-position:8px 4px}}
 @keyframes cloudDrift{from{transform:translateX(-80px)}to{transform:translateX(620px)}}
 @keyframes firefly{0%,100%{opacity:0;transform:translate(0,0)}20%{opacity:1}50%{opacity:.6;transform:translate(9px,-14px)}80%{opacity:1}}
+@keyframes ufoFly{0%{left:-14%;opacity:0}8%{opacity:1}45%{top:14%}55%{top:6%}92%{opacity:1}100%{left:110%;opacity:0}}
+@keyframes ufoGlow{0%,100%{filter:drop-shadow(0 0 4px #7ad3e0)}50%{filter:drop-shadow(0 0 9px #b391cf)}}
+.ufo{position:absolute;top:10%;z-index:7;animation:ufoFly 9s linear forwards,ufoGlow 1.1s ease-in-out infinite;pointer-events:none}
 @keyframes shine{from{left:-40%}to{left:110%}}
 @keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
 .animalspr{display:inline-block;animation:hop .6s ease}
@@ -465,14 +468,14 @@ arbol_manzano:['..GGRGGG..','.GRGGGGRG.','GGGGGRGGGG','GRGGGGGGGG','.GGGRGGGG.',
 arbol_cerezo:['..GRGRGG..','.RGGRGGRG.','GGRGGGRGGG','GGGRGGGGGG','.GRGGGRGG.','..GGRGGG..','....NN....','...NNNN...'],
 arbol_nogal:['..GGGGGG..','.GGYGGYGG.','GGGGGGGGGG','GGYGGGGYGG','.GGGGGGGG.','..GGGGGG..','....NN....','...NNNN...'],
 arbol_arcano:['..PCPCPP..','.CPPCPPCP.','PCPCPCPCPC','CPCPCPCPCP','.PCPCPCPP.','..CPCPCP..','....PP....','...PPPP...'],
-corral:['NN.NN.NN.N','NNNNNNNNNN','N........N','N..YY....N','N.YYYY.O.N','N..YY..OON','NNNNNNNNNN','NN.NN.NN.N'],
-establo:['....RR....','...RRRR...','..RRRRRR..','.RRRRRRRR.','RRRRRRRRRR','RNNN..NNNR','RNN.NN.NNR','RNNNNNNNNR'],
-invernadero:['CCCCCCCCCC','C.C.C.C.CC','CCCCCCCCCC','CGGCGGCGGC','CGGCGGCGGC','CCCCCCCCCC','.NNNNNNNN.','.N......N.'],
-granero:['..NNNNNN..','.NNNNNNNN.','NNNNNNNNNN','NYYNNNYYN.','NNNNNNNNNN','NYYNNNYYN.','NNNNNNNNNN','NNNNNNNNNN'],
-molino:['R...R...R.','.R.R.R.R..','..RRRRR...','...NNN....','...NNN....','..NNNNN...','..NNNNN...','..NNNNN...'],
-pozoedif:['..MMMMMM..','.M.....M..','.MBBBBBM..','.MBBBBBM..','.MMMMMMM..','..N...N...','..N...N...','..NNNNN...'],
-biblioteca:['NNNNNNNNNN','NRBGYPBRGN','NNNNNNNNNN','NBYRGBPYBN','NNNNNNNNNN','NGPBYRGPRN','NNNNNNNNNN','NNNNNNNNNN'],
-altarG:['...PCP....','..PCPCP...','..PPPPP...','...PPP....','..MMMMM...','.MMMMMMM..','.MMMMMMM..','MMMMMMMMMM'],
+corral:['N.N.N.N.N.','NNNNNNNNNN','N........N','N..G...G.N','N........N','N.G....G.N','N........N','NNNNNNNNNN','N.N.N.N.N.'],
+establo:['...KKKK...','..KKKKKK..','.KKKKKKKK.','KKKKKKKKKK','RRRRRRRRRR','RWWRRRRWWR','RWWRRRRWWR','RRRnnRRRRR','RRRnnRRRRR','RRRnnRRRRR'],
+invernadero:['.KKKKKKKK.','KCCKCCKCCK','KCCKCCKCCK','KGGKGGKGGK','KGGKGGKGGK','KKKKKKKKKK','.K......K.'],
+granero:['..MMMM..','.MMMMMM.','.rNNNNr.','.NyyyyN.','.NNNNNN.','.NyyyyN.','.NNNNNN.','.MMMMMM.'],
+molino:['W...W...','.W.W.W..','..WWW...','..RNR...','..NNN...','.NNNNN..','.NNNNN..','.NNNNN..'],
+pozoedif:['..N..N..','.NRRRRN.','.RRRRRR.','.MMMMM..','.MBBBM..','.MBBBM..','.MMMMM..','.MMMMM..'],
+biblioteca:['KKKKKKKKKK','NRBGYRBGYN','NNNNNNNNNN','NGYRBGYRBN','NNNNNNNNNN','NBGYRBGYRN','NNNNNNNNNN'],
+altarG:['...PP...','..PCCP..','..PCCP..','.MMMMMM.','.MMMMMM.','MMMMMMMM','MMMMMMMM','MM....MM'],
 comida:['..NNNNNN..','.NYYYYYYN.','.NYWWWWYN.','.NYYYYYYN.','.NNNNNNNN.'],
 estiercol:['..........','...NN.N...','..NNNNNN..','.NNNNNNNN.','..NNNNNN..','...gNNg...'],
 espanta:['....W.....','...WWW....','..W.N.W...','....N.....','.NNNNNNN..','....N.....','...N.N....'],
@@ -481,8 +484,12 @@ perro:['.N....N...','.NN..NN...','..NNNNN...','..NKNKN...','..NNNNN...','.N.NNN.
 cuervo:['..K.......','.KKK..K...','KKKKKKKK..','.KKKKKK...','..K..K....'],
 zorro:['.O....O...','.OO..OO...','..OOOOO...','..OWOWO...','..OOOOO...','.OO.O.OO..','O........O'],
 plaga:['.G..G..G..','G.GG.GG.G.','.GGGGGGG..','G.GG.GG.G.','.G..G..G..'],
+ovni:['..CCCC....','.CCCCCCC..','MMMMMMMMMM','.MLLLLLM..','..M.MM....','..y....y..'],
+turi1:['..RRR..','..SSS..','WBBBBBW','.BBBBB.','.N...N.'],
+turi2:['..YYY..','..SSS..','WRRRRRW','.RRRRR.','.N...N.'],
+turi3:['.WWWWW.','..SSS..','WGGGGGW','.GGGGG.','.N...N.'],
 barco:['...W......','...W......','..WWW.....','NNNNNNNNN.','.NNNNNNN..','..NBNBN...'],
-puerto_ed:['NN..NN..NN','NNNNNNNNNN','NN..NN..NN','.M.M.M.M..','.MMMMMMM..','BBBBBBBBBB','.BBBBBBBB.','BBBBBBBBBB'],
+puerto_ed:['..RRRR....','.RRRRRR...','.NWWNWWN..','.NNNNNNN..','NNNNNNNNNN','.M.M.M.M..','.M.M.M.M..','.M.M.M.M..'],
 barca:['..........','....YY....','...YWWY...','..NNNNNN..','.NNNNNNNN.','..BBBBBB..'],
 mercante:['....W.....','....WW....','...WWWW...','...WWWW...','.NNNNNNNN.','..NNNNNN..','..BBBBBB..'],
 galeon:['..W..W..W.','..WW.WW.WW','.WWWWWWWWW','.WWWWWWWWW','NNNNNNNNNN','.NNNNNNNN.','..NNNNNN..','..BBBBBB..'],
@@ -1231,7 +1238,7 @@ function setTool(t){
  if(['regar','abonar','cosechar'].includes(t)&&tool===t){ bulkAction(t); return; }
  if(['regar','abonar','cosechar'].includes(t)){ tool=t; moveSel=null; renderTools(); renderIsland(); bulkAction(t); return; }
  tool=t;moveSel=null;renderTools();renderIsland();
- $('torreHint').textContent={plantar:'Toca una parcela vacía para sembrar o colocar objetos y animales.',regar:'Riega todo lo posible de un toque; crece 35% más rápido 6 h.',abonar:'Abona todos tus cultivos de un toque: +50% al cosechar.',cosechar:'Cosecha todo lo listo de un toque (cultivos y animales).',mover:'Toca un elemento y luego su nueva casilla.'}[t]||'';}
+ $('torreHint').textContent={plantar:'Toca una parcela vacía para sembrar o colocar objetos y animales.',regar:'Riega todo lo posible de un toque; crece 35% más rápido 6 h.',abonar:'Abona todos tus cultivos de un toque: +50% al cosechar.',cosechar:'Cosecha todo lo listo de un toque (cultivos y animales).',mover:'Toca un elemento (o edificio) y luego su nueva casilla. En edificios, la casilla destino es la esquina superior-izquierda.'}[t]||'';}
 function renderTools(){['plantar','regar','abonar','cosechar','mover'].forEach(k=>{const b=$('t-'+k); if(b)b.classList.toggle('on',tool===k);});
  const s=G().supply; if($('supAgua'))$('supAgua').textContent='Regar ×'+(s.agua||0); if($('supAbono'))$('supAbono').textContent='Abonar ×'+(s.abono||0);}
 function renderTorre(){ G();
@@ -1259,6 +1266,7 @@ function renderSky(){
  sky.querySelectorAll('.cloud').forEach(c=>c.style.opacity=night?.15:.85);
  if(fx){ let fh='';
   if(night) fh+=[...Array(7)].map(()=>'<span class="firefly" style="left:'+(8+Math.random()*84)+'%;top:'+(20+Math.random()*70)+'%;animation-delay:-'+(Math.random()*4)+'s"></span>').join('');
+  if(night && Math.random()<0.5) fh+='<span class="ufo" style="animation-delay:'+(Math.random()*6).toFixed(1)+'s,0s">'+spriteHTML(SPR.ovni,2)+'</span>';
   if(clima==='lluvia') fh+=[...Array(14)].map(()=>'<span class="gota" style="left:'+(Math.random()*100)+'%;animation-delay:-'+(Math.random()*1.2)+'s"></span>').join('');
   if(clima==='tormenta') fh+=[...Array(24)].map(()=>'<span class="gota" style="left:'+(Math.random()*100)+'%;animation-duration:.5s;animation-delay:-'+(Math.random()*.8)+'s"></span>').join('')+'<span class="rayo"></span>';
   if(clima==='niebla') fh+='<span class="bruma"></span>';
@@ -1293,6 +1301,30 @@ function renderIsland(){ const mm=new Date().getMinutes(); if(mm!==lastSkyMin){ 
  }
  grid.innerHTML=out;
  renderMuelle();
+ stepVisitantes();
+}
+const VISITANTE_SPR=['turi1','turi2','turi3'];
+function ensureVisitantes(){
+ if(!barcoEnPuerto()){ window._visits=null; return; }
+ if(window._visits) return;
+ const n=2+Math.floor(Math.random()*3); window._visits=[];
+ for(let k=0;k<n;k++) window._visits.push({spr:VISITANTE_SPR[Math.floor(Math.random()*3)], x:20+Math.random()*60, y:25+Math.random()*55, tx:20+Math.random()*60, ty:25+Math.random()*55});
+}
+function stepVisitantes(){
+ ensureVisitantes();
+ const grid=$('torreGrid'); if(!grid) return;
+ if(!window._visits){ const ov=$('visitLayer'); if(ov)ov.remove(); return; }
+ window._visits.forEach(v=>{ v.x+=(v.tx-v.x)*0.5; v.y+=(v.ty-v.y)*0.5; if(Math.abs(v.tx-v.x)<3&&Math.abs(v.ty-v.y)<3){ v.tx=15+Math.random()*70; v.ty=22+Math.random()*60; } });
+ let ov=document.createElement('div'); ov.id='visitLayer'; ov.style.cssText='position:absolute;inset:0;pointer-events:none;z-index:40';
+ ov.innerHTML=window._visits.map(v=>'<span class="animalspr" style="position:absolute;left:'+v.x.toFixed(1)+'%;top:'+v.y.toFixed(1)+'%;transform:translate(-50%,-50%)">'+spriteHTML(SPR[v.spr],2)+'</span>').join('');
+ grid.appendChild(ov);
+ if(Math.random()<0.22) visitanteAccion();
+}
+function visitanteAccion(){
+ const t=G(); const anims=Object.values(t.plots).filter(p=>p&&p.animal);
+ const r=Math.random();
+ if(r<0.55 && anims.length){ const a=anims[Math.floor(Math.random()*anims.length)]; a.animalAt=Date.now()-ANIMALS[a.animal].cada*animalCadaMult(); markDirty(); toast('👋 Un visitante alimentó a tu '+ANIMALS[a.animal].n+'.'); }
+ else if(r<0.72){ player.cofrePend=(player.cofrePend||0)+1; markDirty(); sfx('coin'); toast('🎁 ¡Un visitante te dejó un cofre! (Tienda → Cofres)'); }
 }
 function renderMuelle(){
  const frame=$('islandFrame'); if(!frame)return;
@@ -1358,7 +1390,7 @@ function plotAction(i){ const t=G(); let p=t.plots[i];
  }
  if(p&&p.build){
   const esPen=(p.build==='corral'||p.build==='establo');
-  if(tool==='mover'){ toast('Los edificios no se pueden mover.'); return; }
+  if(tool==='mover'){ moveSel=i; toast('🏚 '+BUILDS[p.build].n+' seleccionado. Toca la esquina superior-izquierda del nuevo lugar.'); renderIsland(); return; }
   if(tool==='plantar'){ const b=BUILDS[p.build]; const N=islaN(),r=Math.floor(i/N),c=i%N; if(esPen&&(p.animales||[]).length){ p.animales.forEach(a=>t.inv.push('animal:'+a.animal)); toast('🐄 '+p.animales.length+' animal(es) devueltos a tu inventario.'); } for(let dr=0;dr<b.h;dr++)for(let dc=0;dc<b.w;dc++)delete t.plots[(r+dr)*N+(c+dc)]; t.inv.push('build:'+p.build); markDirty(); renderTorre(); toast('🏚 '+b.n+' guardado en inventario.'); return; }
   const bd=BUILDS[p.build];
   if(p.build==='biblioteca' && tool!=='plantar'){ openBiblioteca(); return; }
@@ -1368,7 +1400,12 @@ function plotAction(i){ const t=G(); let p=t.plots[i];
   toast('🏚 '+bd.n+': '+bd.d);
   return;
  }
- if(tool==='mover'){ if(moveSel==null){ if(!p){toast('Elige primero qué mover.');return;} moveSel=i; } else { const a=t.plots[moveSel]; const b=t.plots[i]; delete t.plots[moveSel]; delete t.plots[i]; if(a)t.plots[i]=a; if(b)t.plots[moveSel]=b; moveSel=null; markDirty(); } renderIsland(); return; }
+ if(tool==='mover'){
+  if(moveSel!=null && t.plots[moveSel] && t.plots[moveSel].build){
+   if(i===moveSel){ moveSel=null; toast('Movimiento cancelado.'); renderIsland(); return; }
+   if(tryMoveBuild(moveSel,i)){ moveSel=null; sfx('ok'); markDirty(); } renderIsland(); return;
+  }
+  if(moveSel==null){ if(!p){toast('Elige primero qué mover.');return;} moveSel=i; } else { const a=t.plots[moveSel]; const b=t.plots[i]; delete t.plots[moveSel]; delete t.plots[i]; if(a)t.plots[i]=a; if(b)t.plots[moveSel]=b; moveSel=null; markDirty(); } renderIsland(); return; }
  if(tool==='plantar'){ if(p&&p.deco){ delete t.plots[i]; t.inv.push(p.deco); markDirty(); renderTorre(); toast('Objeto guardado en inventario.'); return;} if(p&&p.animal){ delete t.plots[i]; t.inv.push('animal:'+p.animal); markDirty(); renderTorre(); toast('Animal guardado en inventario.'); return;} if(p){toast('Parcela ocupada.');return;} if(i===magoIdx()){openAvatar();return;} openPlantModal(i); return; }
  if(!p){ if(i===magoIdx()){openAvatar();return;} toast('Parcela vacía: usa 🌱 Plantar.'); return; }
  if(tool==='regar'){ const cw=CLIMAS[climaHoy()]; if(cw.agua===0){toast(cw.e+' El cielo riega por ti hoy.');return;} if(!p.crop){toast('Solo se riegan cultivos.');return;} if(cropProgress(p)>=1){toast('Ya está listo: cosecha.');return;} if(p.waterUntil>Date.now()){toast('Ya está regado. 💧');return;} if((t.supply.agua||0)<cw.agua){toast('Sin agua'+(cw.agua>1?' (la sequía duplica el costo)':'')+'.');return;} t.supply.agua-=cw.agua; p.waterUntil=Date.now()+WATER_MS; sfx('ok'); markDirty(); renderTools(); renderIsland(); return; }
@@ -1380,6 +1417,19 @@ function plotAction(i){ const t=G(); let p=t.plots[i];
  }
 }
 function tr_hint(p){ return treeFruitReady(p)?('🌳 '+TREES[p.tree].n+': ¡fruto listo! Usa 🧺 Cosechar.'):('🌳 '+TREES[p.tree].n+': '+treeStatus(p).timer+' restantes.'); }
+function tryMoveBuild(from,to){
+ const t=G(),N=islaN(),b=BUILDS[t.plots[from].build];
+ const r=Math.floor(to/N),c=to%N;
+ if(c+b.w>N||r+b.h>N){ toast('No cabe aquí: necesita '+b.w+'×'+b.h+' casillas.'); return false; }
+ const fr=Math.floor(from/N),fc=from%N, src=[];
+ for(let dr=0;dr<b.h;dr++)for(let dc=0;dc<b.w;dc++)src.push((fr+dr)*N+(fc+dc));
+ for(let dr=0;dr<b.h;dr++)for(let dc=0;dc<b.w;dc++){ const j=(r+dr)*N+(c+dc); if(src.includes(j))continue; if(t.plots[j]||j===magoIdx()||j===magoIdx()+1){ toast('Espacio ocupado: necesita '+b.w+'×'+b.h+' libres.'); return false; } }
+ const data=t.plots[from];
+ src.forEach(j=>delete t.plots[j]);
+ t.plots[to]=data;
+ for(let dr=0;dr<b.h;dr++)for(let dc=0;dc<b.w;dc++){ if(dr===0&&dc===0)continue; t.plots[(r+dr)*N+(c+dc)]={link:to}; }
+ toast('🏚 '+b.n+' movido.'); return true;
+}
 function openPlantModal(i){ const t=G();
  const seeds=Object.entries(player.semillas).filter(x=>x[1]>0);
  const counts={}; t.inv.forEach(d=>counts[d]=(counts[d]||0)+1);
