@@ -4,9 +4,9 @@ tags:
 libros: 1
 ---
 
-# Familia
+# Abnegado
 
-La relación entre los miembros de una familia.
+Ser dispuesto a sacrificarse por los demás.
 
 ## Libros que tratan este concepto
 

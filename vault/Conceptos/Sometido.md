@@ -4,9 +4,9 @@ tags:
 libros: 1
 ---
 
-# Familia
+# Sometido
 
-La relación entre los miembros de una familia.
+Ser de carácter dócil y obediente.
 
 ## Libros que tratan este concepto
 

@@ -488,6 +488,11 @@ ovni:['..CCCC....','.CCCCCCC..','MMMMMMMMMM','.MLLLLLM..','..M.MM....','..y....y
 turi1:['..RRR..','..SSS..','WBBBBBW','.BBBBB.','.N...N.'],
 turi2:['..YYY..','..SSS..','WRRRRRW','.RRRRR.','.N...N.'],
 turi3:['.WWWWW.','..SSS..','WGGGGGW','.GGGGG.','.N...N.'],
+obelisco:['...CC...','..CYYC..','..CYYC..','..CYYC..','.CYYYY C'.replace(' ','C'),'.CYYYYC.','MMMMMMMM','MMMMMMMM'],
+arbol_vida:['..GYGYG..','.GYGGGYG.','GYGGGGGYG','.GGYGYGG.','..GGGGG..','...NNN...','...NNN...','..NNNNN..'],
+faro:['...RR...','..RWWR..','..RWWR..','..MWWM..','..MMMM..','.MMMMMM.','.MMMMMM.','MMMMMMMM'],
+estatua_dragon:['..GG..GG','.GGGGGGG','GRGGGGRG','.GGGGGG.','..GGGG..','..MMMM..','.MMMMMM.','MMMMMMMM'],
+reloj_astral:['..PCCP..','.PCYYCP.','PCYKKYCP','PCYKKYCP','PCYYYYCP','.PCYYCP.','..PCCP..','..MMMM..'],
 barco:['...W......','...W......','..WWW.....','NNNNNNNNN.','.NNNNNNN..','..NBNBN...'],
 puerto_ed:['..RRRR....','.RRRRRR...','.NWWNWWN..','.NNNNNNN..','NNNNNNNNNN','.M.M.M.M..','.M.M.M.M..','.M.M.M.M..'],
 barca:['..........','....YY....','...YWWY...','..NNNNNN..','.NNNNNNNN.','..BBBBBB..'],
@@ -548,7 +553,8 @@ const DECOS={
  jaula:{n:'Jaula de duende',precio:110},barril:{n:'Barril de taberna',precio:80},runa:{n:'Piedra rúnica',precio:280},
  portal:{n:'Portal arcano',precio:500},huesos:{n:'Huesos de aventurero',precio:65},gema:{n:'Gema del dragón',precio:350},
  fuente:{n:'Fuente de maná',precio:300},banderin:{n:'Banderín de misión',precio:95},mimico:{n:'Mímico domesticado',precio:450},
- espanta:{n:'Espantapájaros',precio:180,def:true},cerca:{n:'Cerca de madera',precio:150,def:true},perro:{n:'Perro guardián',precio:500,def:true}
+ espanta:{n:'Espantapájaros',precio:180,def:true},cerca:{n:'Cerca de madera',precio:150,def:true},perro:{n:'Perro guardián',precio:500,def:true},
+ obelisco:{n:'⭐ Obelisco del Saber',precio:25000},arbol_vida:{n:'⭐ Árbol de la Vida',precio:40000},faro:{n:'⭐ Gran Faro',precio:60000},estatua_dragon:{n:'⭐ Coloso de Dragón',precio:120000},reloj_astral:{n:'⭐ Reloj Astral',precio:200000}
 };
 const POCIONES={pista:{n:'Pista arcana',d:'Elimina una opción incorrecta en combate.',precio:25,emoji:'🔮'},elixir:{n:'Elixir vital',d:'Recupera un corazón en combate.',precio:40,emoji:'🧪'}};
 const ROPA={hats:['#3c6c9c','#ec3013','#4e8163','#7a4f9e','#1c1917','#d9a52c'],robes:['#7a4f9e','#1c1917','#3c6c9c','#a81f0a','#3f8a7a','#513c28']};
@@ -1058,7 +1064,8 @@ const DECO_FX={
  tumba:{xp:.03}, hongo:{xp:.02}, reloj:{oro:.02}, trofeo:{oro:.02,oroC:.02}, antorcha:{xp:.02}, espada:{oroC:.02},
  escudo:{def:1,oroC:.02}, yunque:{oroC:.02}, pozo:{mana:1}, gargola:{def:1}, jaula:{def:1}, barril:{oro:.01},
  runa:{mana:1}, portal:{mana:1,xp:.03}, huesos:{xp:.03}, gema:{oro:.03,oroC:.03}, fuente:{mana:1}, banderin:{oroC:.03},
- mimico:{xp:.05,oro:.02}, espanta:{def:1}, cerca:{def:1}, perro:{def:1}
+ mimico:{xp:.05,oro:.02}, espanta:{def:1}, cerca:{def:1}, perro:{def:1},
+ obelisco:{xp:.15,oroC:.10}, arbol_vida:{oro:.15,mana:3}, faro:{oroC:.15,def:3}, estatua_dragon:{oro:.20,oroC:.15,def:2}, reloj_astral:{oro:.25,xp:.25,mana:4,oroC:.20,def:3}
 };
 function cropGoldMult(){ return (hasBuild('granero')?1.25:1)*(player.trabajador&&player.trabajador.hired?1.15:1)*(1+decoFx('oro')); }
 function decoCount(id){ const t=(player.torre&&player.torre.plots)||{}; let n=0; for(const k in t){ if(t[k]&&t[k].deco===id)n++; } return n; }
@@ -2106,9 +2113,9 @@ function penMeter(i,id){
 }
 /* ===== CRUZADAS DE MASCOTAS ===== */
 const CRUZADAS={
- corta:{n:'Patrulla',dur:15*6e4,base:.80,oro:[40,90],recN:1,xp:10,e:'🌾'},
- media:{n:'Expedición',dur:45*6e4,base:.62,oro:[120,240],recN:2,xp:24,e:'🏔'},
- larga:{n:'Cruzada épica',dur:2*36e5,base:.42,oro:[350,700],recN:3,xp:55,e:'🐉'}
+ corta:{n:'Patrulla',dur:15*6e4,base:.80,oro:[70,150],recN:1,xp:10,e:'🌾',costo:60},
+ media:{n:'Expedición',dur:45*6e4,base:.62,oro:[220,420],recN:2,xp:24,e:'🏔',costo:180},
+ larga:{n:'Cruzada épica',dur:2*36e5,base:.42,oro:[600,1200],recN:3,xp:55,e:'🐉',costo:450}
 };
 const RECS_CRUZADA=['madera','piedra','esencia','cuero','escama'];
 function petStat(id){ player.petLv=player.petLv||{}; player.petLv[id]=player.petLv[id]||{lv:1,xp:0}; return player.petLv[id]; }
@@ -2122,40 +2129,35 @@ function petGiveXp(id,xp){
  if(subio){ sfx('lvl'); confetti(); toast('⭐ '+(PETS[id].n)+' subió a nivel '+s.lv+'!'); }
  markDirty(); return subio;
 }
+function cruzMap(){ if(player.cruzada && !player.cruzadas){ player.cruzadas={[player.cruzada.id]:player.cruzada}; player.cruzada=null; } player.cruzadas=player.cruzadas||{}; return player.cruzadas; }
 function openCruzadas(){
- player.mascotas=player.mascotas||[];
+ player.mascotas=player.mascotas||[]; const cm=cruzMap();
  if(!player.mascotas.length){ toast('Aún no tienes mascotas. Adopta una primero.'); return; }
- const cz=player.cruzada;
- let h='<div class="modal-box"><div class="kicker">⚔ Cruzadas</div>';
- if(cz){
-  const pt=PETS[cz.id], s=petStat(cz.id), c=CRUZADAS[cz.tipo];
-  const listo=Date.now()>=cz.endsAt;
-  h+='<h3 style="font-family:\'Archivo Black\';font-size:18px;margin-top:4px">'+c.e+' '+pt.n+' en '+c.n+'</h3>';
-  if(listo){ h+='<p style="font-size:13px;color:var(--muted);margin:8px 0 0">¡Regresó! Lanza la moneda del destino…</p><button class="btn btn-acc" style="margin-top:12px" onclick="resolveCruzada()">🪙 Resolver cruzada</button>'; }
-  else { const min=Math.ceil((cz.endsAt-Date.now())/6e4); h+='<p style="font-size:13px;color:var(--muted);margin:8px 0 0">Regresa en '+(min>=60?Math.ceil(min/60)+' h':min+' min')+'. Prob. de victoria: '+Math.round((c.base+petWinBonus(cz.id))*100)+'%.</p>'; }
-  h+='<button class="btn" style="margin-top:10px" onclick="closeModal()">Cerrar</button></div>';
-  openModal('cruz',h); return;
- }
- h+='<p style="font-size:12px;color:var(--muted);margin:6px 0 0">Elige mascota y misión. Cuanto más larga, mejor botín pero menos probabilidad de ganar. El nivel de la mascota mejora su suerte y su botín.</p>';
- h+='<p style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:12px 0 4px">Tus mascotas</p>';
- h+=player.mascotas.map(id=>{ const s=petStat(id); return '<div class="reto" style="margin-top:6px"><span>'+spriteHTML(SPR[id],2)+'</span><span style="flex:1;font-size:13px;font-weight:700">'+PETS[id].n+' <span style="color:var(--muted);font-weight:600">· Nv '+s.lv+' ('+s.xp+'/'+petXpNeeded(s.lv)+' XP)</span></span></div>'+
-  '<div style="display:flex;gap:6px;margin:4px 0 8px">'+Object.entries(CRUZADAS).map(([t,c])=>'<button class="pricebtn" style="width:auto;font-size:11px" onclick="startCruzada(\''+id+'\',\''+t+'\')">'+c.e+' '+c.n+'</button>').join('')+'</div>'; }).join('');
+ const listas=player.mascotas.filter(id=>cm[id]&&Date.now()>=cm[id].endsAt);
+ let h='<div class="modal-box"><div class="kicker">⚔ Cruzadas</div><p style="font-size:12px;color:var(--muted);margin:6px 0 0">Manda a <b>todas</b> tus mascotas a la vez. Cada misión cuesta 🪙 y el resultado es al azar; más larga = mejor botín pero menos probabilidad.</p>';
+ if(listas.length){ h+='<button class="btn btn-acc" style="margin:10px 0 0" onclick="resolveTodas()">🪙 Resolver '+listas.length+' que regresaron</button>'; }
+ h+='<p style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:14px 0 4px">Tus mascotas</p>';
+ h+=player.mascotas.map(id=>{ const s=petStat(id), cz=cm[id]; let estado='';
+   if(cz){ const listo=Date.now()>=cz.endsAt; const c=CRUZADAS[cz.tipo]; estado = listo? '<button class="pricebtn" style="width:auto;font-size:11px" onclick="resolveCruzada(\''+id+'\')">🪙 Resolver</button>' : '<span style="font-size:11px;color:var(--muted)">'+c.e+' '+c.n+' · vuelve en '+(()=>{const m=Math.ceil((cz.endsAt-Date.now())/6e4);return m>=60?Math.ceil(m/60)+'h':m+'m';})()+'</span>'; }
+   else { estado='<div style="display:flex;gap:6px;flex-wrap:wrap">'+Object.entries(CRUZADAS).map(([t,c])=>'<button class="pricebtn" style="width:auto;font-size:11px" '+(player.oro<c.costo?'disabled':'')+' onclick="startCruzada(\''+id+'\',\''+t+'\')">'+c.e+' '+c.n+' ('+c.costo+'🪙)</button>').join('')+'</div>'; }
+   return '<div class="reto" style="margin-top:6px"><span>'+spriteHTML(SPR[id],2)+'</span><span style="flex:1;font-size:13px;font-weight:700">'+PETS[id].n+' <span style="color:var(--muted);font-weight:600">· Nv '+s.lv+'</span></span></div><div style="margin:4px 0 8px">'+estado+'</div>'; }).join('');
  h+='<button class="btn" style="margin-top:8px" onclick="closeModal()">Cerrar</button></div>';
  openModal('cruz',h);
 }
+function resolveTodas(){ const cm=cruzMap(); player.mascotas.filter(id=>cm[id]&&Date.now()>=cm[id].endsAt).forEach(id=>resolveCruzada(id,true)); renderHud(); openCruzadas(); }
 function startCruzada(id,tipo){
- if(player.cruzada){ toast('Ya hay una cruzada en curso.'); return; }
- const c=CRUZADAS[tipo];
- player.cruzada={id,tipo,endsAt:Date.now()+c.dur};
- sfx('ok'); markDirty();
- toast('⚔ '+PETS[id].n+' partió en '+c.n+'. Vuelve en '+(c.dur>=36e5?Math.round(c.dur/36e5)+' h':Math.round(c.dur/6e4)+' min')+'.');
+ const cm=cruzMap(); if(cm[id]){ toast(PETS[id].n+' ya está en una cruzada.'); return; }
+ const c=CRUZADAS[tipo]; if(player.oro<c.costo){ toast('Necesitas '+c.costo+' 🪙 para esta cruzada.'); return; }
+ player.oro-=c.costo; cm[id]={id,tipo,endsAt:Date.now()+c.dur};
+ sfx('ok'); markDirty(); renderHud();
+ toast('⚔ '+PETS[id].n+' partió en '+c.n+' (−'+c.costo+' 🪙).');
  openCruzadas();
 }
-function resolveCruzada(){
- const cz=player.cruzada; if(!cz)return; if(Date.now()<cz.endsAt){ toast('Aún no regresa.'); return; }
+function resolveCruzada(id,silent){
+ const cm=cruzMap(); const cz=cm[id]; if(!cz)return; if(Date.now()<cz.endsAt){ toast('Aún no regresa.'); return; }
  const c=CRUZADAS[cz.tipo], s=petStat(cz.id), pt=PETS[cz.id];
  const win=Math.random()<(c.base+petWinBonus(cz.id)) || (s.lv>=8 && Math.random()<.5);
- player.cruzada=null;
+ delete cm[id];
  let msg='', reel=[];
  if(win){
   const oro=Math.round((c.oro[0]+Math.random()*(c.oro[1]-c.oro[0]))*petLootMult(cz.id)); addOro(oro); reel.push('+'+oro+' 🪙');
@@ -2171,6 +2173,7 @@ function resolveCruzada(){
   msg='🩹 Derrota. '+pt.n+' volvió maltrecho, pero aprendió algo.';
  }
  markDirty(); renderHud();
+ if(silent){ toast((win?'🏆 ':'🩹 ')+pt.n+': '+(reel.join(' · ')||'sin botín')); return; }
  openModal('cruz','<div class="modal-box" style="text-align:center"><div class="kicker">'+(win?'Cruzada ganada':'Cruzada perdida')+'</div><div style="font-size:44px;margin:8px 0" class="'+(win?'bump':'')+'">'+spriteHTML(SPR[cz.id],4)+'</div><h3 style="font-family:\'Archivo Black\';font-size:18px">'+msg+'</h3><p style="font-size:15px;font-weight:700;margin:8px 0 0">'+(reel.join(' · ')||'Sin botín')+'</p><p style="font-size:12px;color:var(--muted);margin:6px 0 0">'+pt.n+' · Nv '+s.lv+' ('+s.xp+'/'+petXpNeeded(s.lv)+' XP) · ventajas: '+(petAbilities(s.lv).join(', ')||'—')+'</p><button class="btn btn-acc" style="margin-top:12px" onclick="openCruzadas()">Continuar</button></div>');
 }
 function openBiblioteca(){

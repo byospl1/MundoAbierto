@@ -4,9 +4,9 @@ tags:
 libros: 1
 ---
 
-# Familia
+# Tradicionalista
 
-La relación entre los miembros de una familia.
+Valorizar las costumbres y tradiciones establecidas.
 
 ## Libros que tratan este concepto
 
